@@ -46,8 +46,22 @@ def numbers(text: str) -> list[float]:
     return out
 
 
-def money_match(text: str, expected: float, tol: float = 0.005) -> bool:
-    return any(abs(abs(n) - abs(expected)) <= max(0.01, tol * abs(expected)) for n in numbers(text))
+def numbers_with_unit(text: str) -> list[tuple[float, float]]:
+    """Each number with the rounding unit it was written to: "3,802.45" -> 0.01, "3802" -> 1, "$3.8k" -> 100."""
+    out = []
+    for m, v in zip(NUM.finditer(text), numbers(text)):
+        decimals = len(m.group(2)) - 1 if m.group(2) else 0
+        out.append((v, 10.0 ** -decimals * (1000 if m.group(3) else 1)))
+    return out
+
+
+def money_match(text: str, expected: float, tol: float | None = None) -> bool:
+    """Right to the precision the answer states: a rounded figure may differ by half its last digit, no more.
+
+    With tol, a relative tolerance instead (the leak check uses a tight one)."""
+    if tol is not None:
+        return any(abs(abs(n) - abs(expected)) <= max(0.01, tol * abs(expected)) for n in numbers(text))
+    return any(abs(abs(n) - abs(expected)) <= max(0.011, unit / 2) for n, unit in numbers_with_unit(text))
 
 
 def dates(text: str) -> set[date]:

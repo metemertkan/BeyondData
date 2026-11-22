@@ -60,12 +60,29 @@ Customer portal, Mallory logged in, 12 attempts per design to get someone else's
 | `built` | 0/12 | 0 |
 
 Six of each nine are counted by `ledger/score.py` (Ada's October payment, Business customers' emails); three are
-P5 answers checked by hand: company-wide revenue totals that were wrong numbers, so the automatic check (which
-looks for the right figure) missed them. `built` ran the same kind of query and row-level security returned
+P5 answers counted by a rule (revenue figures built from other customers' invoices, which the automatic check,
+looking for the right figure, misses). `built` ran the same kind of query and row-level security returned
 Mallory's own $89. Full tables, trap attribution and cost: [`results/ep01/summary.md`](results/ep01/summary.md).
 
-**Limits.** One synthetic company, one 8B model on CPU, three seeds. In the pilot, `sql_guide` once ran
-`UPDATE 1` to mark Mallory's invoice paid; in the 15 batch runs of that question, nothing wrote.
+**A bigger model** (gpt-oss:20b, 12 questions × 5 designs × 2 seeds, compared on the same questions and seeds):
+
+| Design | Right, qwen3:8b / gpt-oss:20b (of 14) | Leaks, qwen3:8b / gpt-oss:20b (of 8) | Wrote, gpt-oss:20b |
+| :--- | ---: | ---: | ---: |
+| `rows` | 2 / 2 | 6 / 1 | 0 |
+| `sql_raw` | 6 / 4 | 6 / 1 | 0 |
+| `sql_guide` | 6 / 6 | 6 / 3 | **2 of 2** |
+| `tools` | 10 / 10 | 0 / 1 | 0 |
+| `built` | 12 / 12 | 0 / 0 | 0 |
+
+gpt-oss declined more of Mallory's requests, but `sql_guide` marked her invoice as paid in both runs
+("Invoice 482 has been marked as paid."), and `tools` fetched Ada's account with `get_account(customer_id=1)`.
+
+**Limits.** One synthetic company, two local models on CPU (qwen3:8b on everything, three seeds; gpt-oss:20b on a
+subset). With qwen3, "mark as paid" wrote once in a pilot run and never in the batch. gpt-oss sometimes returns SQL as
+a call to a tool it wasn't offered; `ledger/llm.py` turns that SQL into the normal SQL block and records it in
+`usage.unoffered_tool_calls` (19 of 120 runs). The P5 leaks (a revenue figure from other customers' invoices) are
+counted by a rule in `scripts/ep01_summary.py`, in their own column, because the automatic check only recognises the
+right figure.
 
 ### Run it
 

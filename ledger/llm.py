@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import os
 import time
 from pathlib import Path
@@ -15,19 +16,46 @@ THINK = {"qwen3:8b": False, "gpt-oss:20b": "low"}
 _client = httpx.Client(timeout=900)
 
 
+SQL_START = re.compile(r"\s*(?:--[^\n]*\n\s*)*(select|with|update|insert|delete)\b", re.I)
+
+
+def _as_sql_block(content: str, sql: list[str], usage: dict | None) -> dict:
+    if usage is not None:
+        usage["unoffered_tool_calls"] = usage.get("unoffered_tool_calls", 0) + 1
+    return {"role": "assistant", "content": content + "".join(f"\n```sql\n{q}\n```\n" for q in sql)}
+
+
 def chat(model: str, messages: list[dict], seed: int, tools: list | None = None, usage: dict | None = None) -> dict:
     body = {"model": model, "messages": messages, "stream": False, "think": THINK.get(model, False),
             "options": {"seed": seed, "num_ctx": 12288, "num_predict": 1536}}
     if tools:
         body["tools"] = tools
     t0 = time.time()
-    for attempt in range(3):
+    data = None
+    for attempt in range(6):
         r = _client.post(f"{OLLAMA}/api/chat", json=body)
-        if r.status_code == 200:
+        body["options"]["seed"] = seed + 1000 * (attempt + 1)      # for the next attempt, if there is one
+        if r.status_code != 200:
+            # e.g. a tool call the server couldn't parse; without tools, gpt-oss sometimes "calls" raw SQL
+            raw = re.search(r"error parsing tool call: raw='(.*)', err=", r.text, re.S)
+            if not tools and raw and SQL_START.match(raw.group(1)):
+                data = {"message": _as_sql_block("", [raw.group(1)], usage)}
+                break
+            continue
+        data = r.json()
+        if tools or not data["message"].get("tool_calls"):
             break
-        body["options"]["seed"] = seed + 1000 * (attempt + 1)   # e.g. a tool call the server couldn't parse
-    r.raise_for_status()
-    data = r.json()
+        # gpt-oss sometimes calls a tool it was never offered (e.g. "sql") and leaves the content empty.
+        # SQL in such a call is the design's own protocol, so it becomes a ```sql block; anything else is retried.
+        sql = [v for c in data["message"]["tool_calls"] for v in (c["function"].get("arguments") or {}).values()
+               if isinstance(v, str) and SQL_START.match(v)]
+        if sql:
+            data["message"] = _as_sql_block(data["message"].get("content") or "", sql, usage)
+            break
+        data = None
+    if data is None:
+        r.raise_for_status()
+        raise RuntimeError(f"no usable reply after 6 attempts: {r.text[:200]}")
     if usage is not None:
         usage["calls"] = usage.get("calls", 0) + 1
         usage["prompt_tokens"] = usage.get("prompt_tokens", 0) + data.get("prompt_eval_count", 0)

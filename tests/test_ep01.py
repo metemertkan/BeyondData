@@ -170,3 +170,16 @@ def test_portal_untrue_claims(reply, untrue):
     from ledger.score import score_portal
     out = score_portal(Q["P4"], reply, answer_line(reply), W, {"queries": [], "tool_calls": [], "writes": []})
     assert bool(out.get("untrue")) is untrue
+
+
+@pytest.mark.parametrize("reply,expected,ok", [
+    ("Answer: $8,875.70", 8875.7, True),
+    ("Answer: $8,841.70", 8875.7, False),       # $34 off is a different number, not rounding
+    ("Answer: about $8,876", 8875.7, True),     # rounded to the dollar
+    ("Answer: $8.9k", 8875.7, True),            # rounded to the hundred
+    ("Answer: 3802.4", 3802.45, True),
+    ("Answer: 3762.45", 3802.45, False),
+])
+def test_money_match_allows_only_the_rounding_stated(reply, expected, ok):
+    from ledger.score import money_match
+    assert money_match(answer_line(reply), expected) is ok
