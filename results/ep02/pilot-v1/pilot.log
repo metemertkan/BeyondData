@@ -1,0 +1,247 @@
+18:42:51 pgvector pilot fresh container
+18:42:54 pgvector loading 100000
+18:42:54 pgvector   1,000 loaded, 0 s
+18:42:57 pgvector waiting until indexed
+18:51:39 pgvector load 3.7 s, index 521.5 s, count 100,000
+18:52:04 pgvector default: p50 3.3 ms
+18:52:09 pgvector hnsw.ef_search=10: tune recall 0.8623, p50 1.4 ms
+18:52:16 pgvector hnsw.ef_search=16: tune recall 0.9074, p50 1.9 ms
+18:52:25 pgvector hnsw.ef_search=24: tune recall 0.9293, p50 2.4 ms
+18:52:35 pgvector hnsw.ef_search=32: tune recall 0.9434, p50 2.9 ms
+18:52:49 pgvector hnsw.ef_search=48: tune recall 0.9592, p50 3.8 ms
+18:53:06 pgvector hnsw.ef_search=64: tune recall 0.9685, p50 4.8 ms
+18:53:29 pgvector hnsw.ef_search=96: tune recall 0.9779, p50 6.6 ms
+18:53:58 pgvector hnsw.ef_search=128: tune recall 0.9819, p50 8.3 ms
+18:54:39 pgvector hnsw.ef_search=192: tune recall 0.9881, p50 11.4 ms
+18:55:30 pgvector hnsw.ef_search=256: tune recall 0.9913, p50 14.5 ms
+18:56:42 pgvector hnsw.ef_search=384: tune recall 0.9941, p50 20.3 ms
+18:58:14 pgvector hnsw.ef_search=512: tune recall 0.9949, p50 26.0 ms
+19:00:24 pgvector hnsw.ef_search=768: tune recall 0.9964, p50 36.9 ms
+19:01:10 pgvector throughput default (None): {'knob': None, 'qps': 910.5, 'errors': 0, 'first_error': ''}
+19:01:57 pgvector throughput r95 (48): {'knob': 48, 'qps': 795.4, 'errors': 0, 'first_error': ''}
+19:02:43 pgvector throughput r99 (256): {'knob': 256, 'qps': 204.1, 'errors': 0, 'first_error': ''}
+19:22:07 pgvector write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 998, 'found_after_1s': 998, 'insert_p50_ms': 17.83, 'insert_p99_ms': 23.22, 'insert_max_ms': 29.75, 'search_after_insert_p50_ms': 570.48, 'search_after_insert_max_ms': 693.06, 'wall_s': 1162.7}
+19:22:08 pgvector done
+19:22:09 qdrant pilot fresh container
+19:22:10 qdrant loading 100000
+19:22:11 qdrant   1,000 loaded, 0 s
+19:22:51 qdrant waiting until indexed
+19:22:57 qdrant load 41.3 s, index 6.0 s, count 100,000
+19:23:25 qdrant default: p50 4.0 ms
+19:23:32 qdrant hnsw_ef=10: tune recall 0.8989, p50 2.0 ms
+19:23:40 qdrant hnsw_ef=16: tune recall 0.9418, p50 2.2 ms
+19:23:50 qdrant hnsw_ef=24: tune recall 0.9640, p50 2.4 ms
+19:24:10 qdrant hnsw_ef=32: tune recall 0.9765, p50 5.7 ms
+19:24:23 qdrant hnsw_ef=48: tune recall 0.9869, p50 3.1 ms
+19:24:36 qdrant hnsw_ef=64: tune recall 0.9912, p50 3.3 ms
+19:24:50 qdrant hnsw_ef=96: tune recall 0.9943, p50 3.9 ms
+19:25:06 qdrant hnsw_ef=128: tune recall 0.9971, p50 4.4 ms
+19:25:26 qdrant hnsw_ef=192: tune recall 0.9981, p50 5.5 ms
+19:25:48 qdrant hnsw_ef=256: tune recall 0.9988, p50 6.2 ms
+19:26:15 qdrant hnsw_ef=384: tune recall 0.9992, p50 7.7 ms
+19:26:46 qdrant hnsw_ef=512: tune recall 0.9994, p50 8.9 ms
+19:27:25 qdrant hnsw_ef=768: tune recall 0.9994, p50 11.1 ms
+19:28:10 qdrant hnsw_ef=1024: tune recall 0.9998, p50 13.0 ms
+19:28:57 qdrant throughput default (None): {'knob': None, 'qps': 468.3, 'errors': 0, 'first_error': ''}
+19:29:44 qdrant throughput r95 (24): {'knob': 24, 'qps': 687.1, 'errors': 1088, 'first_error': "ResponseHandlingException(ReadError('[Errno 104] Connection reset by peer'))"}
+19:30:31 qdrant throughput r99 (64): {'knob': 64, 'qps': 491.8, 'errors': 592, 'first_error': "ResponseHandlingException(ReadError('[Errno 104] Connection reset by peer'))"}
+19:30:46 qdrant write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 998, 'found_after_1s': 998, 'insert_p50_ms': 3.25, 'insert_p99_ms': 16.01, 'insert_max_ms': 33.54, 'search_after_insert_p50_ms': 4.1, 'search_after_insert_max_ms': 69.74, 'wall_s': 13.5}
+19:30:48 qdrant done
+19:30:48 milvus pilot fresh container
+19:30:52 milvus loading 100000
+19:30:52 milvus   1,000 loaded, 0 s
+19:31:04 milvus waiting until indexed
+19:31:11 milvus load 11.4 s, index 7.5 s, count 100,000
+19:31:29 milvus default: p50 1.5 ms
+19:31:35 milvus ef=10: tune recall 0.8930, p50 1.4 ms
+19:31:40 milvus ef=16: tune recall 0.9367, p50 1.5 ms
+19:31:46 milvus ef=24: tune recall 0.9624, p50 1.5 ms
+19:31:53 milvus ef=32: tune recall 0.9746, p50 1.7 ms
+19:32:07 milvus ef=48: tune recall 0.9861, p50 4.8 ms
+19:32:19 milvus ef=64: tune recall 0.9906, p50 2.2 ms
+19:32:27 milvus ef=96: tune recall 0.9954, p50 2.0 ms
+19:32:34 milvus ef=128: tune recall 0.9387, p50 2.0 ms
+19:32:42 milvus ef=192: tune recall 0.9061, p50 2.0 ms
+19:32:50 milvus ef=256: tune recall 0.9066, p50 2.3 ms
+19:33:01 milvus ef=384: tune recall 0.9074, p50 2.9 ms
+19:33:13 milvus ef=512: tune recall 0.9077, p50 3.3 ms
+19:33:29 milvus ef=768: tune recall 0.9081, p50 4.4 ms
+19:33:48 milvus ef=1024: tune recall 0.9081, p50 5.2 ms
+19:34:34 milvus throughput default (None): {'knob': None, 'qps': 5897.8, 'errors': 0, 'first_error': ''}
+19:35:21 milvus throughput r95 (24): {'knob': 24, 'qps': 5636.9, 'errors': 0, 'first_error': ''}
+19:36:07 milvus throughput r99 (64): {'knob': 64, 'qps': 4720.5, 'errors': 0, 'first_error': ''}
+19:36:14 milvus write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 0, 'found_after_1s': 998, 'insert_p50_ms': 0.96, 'insert_p99_ms': 1.6, 'insert_max_ms': 5.2, 'search_after_insert_p50_ms': 1.47, 'search_after_insert_max_ms': 5.54, 'wall_s': 5.4}
+19:36:17 milvus done
+19:36:17 weaviate pilot fresh container
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+19:36:20 weaviate loading 100000
+19:36:20 weaviate   1,000 loaded, 0 s
+19:37:35 weaviate waiting until indexed
+19:37:35 weaviate load 75.0 s, index 0.0 s, count 100,000
+19:37:57 weaviate default: p50 2.3 ms
+19:38:01 weaviate ef=10: tune recall 0.8711, p50 0.9 ms
+19:38:06 weaviate ef=16: tune recall 0.9173, p50 1.0 ms
+19:38:11 weaviate ef=24: tune recall 0.9486, p50 1.1 ms
+19:38:16 weaviate ef=32: tune recall 0.9618, p50 1.3 ms
+19:38:23 weaviate ef=48: tune recall 0.9756, p50 1.5 ms
+19:38:30 weaviate ef=64: tune recall 0.9818, p50 1.7 ms
+19:38:39 weaviate ef=96: tune recall 0.9875, p50 2.2 ms
+19:38:50 weaviate ef=128: tune recall 0.9903, p50 2.7 ms
+19:39:03 weaviate ef=192: tune recall 0.9940, p50 3.6 ms
+19:39:20 weaviate ef=256: tune recall 0.9959, p50 4.3 ms
+19:39:41 weaviate ef=384: tune recall 0.9979, p50 5.6 ms
+19:40:06 weaviate ef=512: tune recall 0.9983, p50 6.8 ms
+19:40:39 weaviate ef=768: tune recall 0.9988, p50 9.1 ms
+19:41:19 weaviate ef=1024: tune recall 0.9989, p50 11.2 ms
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+19:42:07 weaviate throughput default (None): {'knob': None, 'qps': 1513.2, 'errors': 0, 'first_error': ''}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+19:42:55 weaviate throughput r95 (32): {'knob': 32, 'qps': 3284.5, 'errors': 0, 'first_error': ''}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+19:43:42 weaviate throughput r99 (128): {'knob': 128, 'qps': 1255.4, 'errors': 0, 'first_error': ''}
+19:43:53 weaviate write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 998, 'found_after_1s': 998, 'insert_p50_ms': 3.06, 'insert_p99_ms': 4.44, 'insert_max_ms': 6.44, 'search_after_insert_p50_ms': 2.06, 'search_after_insert_max_ms': 3.59, 'wall_s': 8.3}
+19:43:55 weaviate done
+19:43:55 elasticsearch pilot fresh container
+19:44:17 elasticsearch loading 100000
+19:44:18 elasticsearch   1,000 loaded, 1 s
+19:46:28 elasticsearch waiting until indexed
+19:46:36 elasticsearch load 130.7 s, index 8.2 s, count 100,000
+19:46:58 elasticsearch default: p50 2.3 ms
+19:47:05 elasticsearch num_candidates=10: tune recall 0.9378, p50 1.9 ms
+19:47:12 elasticsearch num_candidates=16: tune recall 0.9378, p50 1.8 ms
+19:47:19 elasticsearch num_candidates=24: tune recall 0.9378, p50 1.8 ms
+19:47:25 elasticsearch num_candidates=32: tune recall 0.9384, p50 1.8 ms
+19:47:32 elasticsearch num_candidates=48: tune recall 0.9420, p50 1.7 ms
+19:47:38 elasticsearch num_candidates=64: tune recall 0.9445, p50 1.7 ms
+19:47:44 elasticsearch num_candidates=96: tune recall 0.9472, p50 1.8 ms
+19:47:51 elasticsearch num_candidates=128: tune recall 0.9486, p50 1.8 ms
+19:47:58 elasticsearch num_candidates=192: tune recall 0.9512, p50 1.9 ms
+19:48:05 elasticsearch num_candidates=256: tune recall 0.9520, p50 2.0 ms
+19:48:13 elasticsearch num_candidates=384: tune recall 0.9533, p50 2.0 ms
+19:48:21 elasticsearch num_candidates=512: tune recall 0.9538, p50 2.2 ms
+19:48:29 elasticsearch num_candidates=768: tune recall 0.9554, p50 2.2 ms
+19:48:38 elasticsearch num_candidates=1024: tune recall 0.9556, p50 2.4 ms
+19:49:24 elasticsearch throughput default (None): {'knob': None, 'qps': 3783.7, 'errors': 0, 'first_error': ''}
+19:50:10 elasticsearch throughput r95 (192): {'knob': 192, 'qps': 3160.3, 'errors': 0, 'first_error': ''}
+19:50:27 elasticsearch write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 2, 'found_after_1s': 998, 'insert_p50_ms': 9.98, 'insert_p99_ms': 19.09, 'insert_max_ms': 44.7, 'search_after_insert_p50_ms': 2.14, 'search_after_insert_max_ms': 5.93, 'wall_s': 15.2}
+19:50:32 elasticsearch done
+19:50:32 chroma pilot fresh container
+19:50:33 chroma loading 100000
+19:50:33 chroma   1,000 loaded, 0 s
+19:51:46 chroma waiting until indexed
+19:51:46 chroma load 73.6 s, index 0.0 s, count 100,000
+19:52:08 chroma default: p50 2.4 ms
+19:52:17 chroma ef_search=10: tune recall 0.9790, p50 2.4 ms
+19:52:25 chroma ef_search=16: tune recall 0.9790, p50 2.4 ms
+19:52:34 chroma ef_search=24: tune recall 0.9790, p50 2.4 ms
+19:52:43 chroma ef_search=32: tune recall 0.9790, p50 2.3 ms
+19:52:51 chroma ef_search=48: tune recall 0.9790, p50 2.4 ms
+19:53:00 chroma ef_search=64: tune recall 0.9790, p50 2.4 ms
+19:53:08 chroma ef_search=96: tune recall 0.9790, p50 2.4 ms
+19:53:17 chroma ef_search=128: tune recall 0.9790, p50 2.4 ms
+19:53:26 chroma ef_search=192: tune recall 0.9790, p50 2.4 ms
+19:53:34 chroma ef_search=256: tune recall 0.9790, p50 2.4 ms
+19:53:43 chroma ef_search=384: tune recall 0.9790, p50 2.4 ms
+19:53:51 chroma ef_search=512: tune recall 0.9790, p50 2.4 ms
+19:54:00 chroma ef_search=768: tune recall 0.9790, p50 2.4 ms
+19:54:09 chroma ef_search=1024: tune recall 0.9790, p50 2.4 ms
+19:54:55 chroma throughput default (None): {'knob': None, 'qps': 509.6, 'errors': 0, 'first_error': ''}
+19:55:42 chroma throughput r95 (10): {'knob': 10, 'qps': 510.8, 'errors': 0, 'first_error': ''}
+19:56:39 chroma write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 998, 'found_after_1s': 998, 'insert_p50_ms': 46.89, 'insert_p99_ms': 68.49, 'insert_max_ms': 268.9, 'search_after_insert_p50_ms': 2.52, 'search_after_insert_max_ms': 6.38, 'wall_s': 55.6}
+19:56:40 chroma done
+sys:1: ResourceWarning: unclosed <socket.socket fd=7, family=2, type=1, proto=6, laddr=('127.0.0.1', 40648), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=6, laddr=('127.0.0.1', 38082), raddr=('127.0.0.1', 8001)>

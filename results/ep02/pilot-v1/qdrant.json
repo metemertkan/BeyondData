@@ -1,0 +1,124 @@
+{
+  "db": "qdrant",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-22 19:22:09",
+  "startup_s": 0.4,
+  "load_s": 41.3,
+  "indexed": {
+    "points": 100000,
+    "indexed_vectors": 100000
+  },
+  "index_wait_s": 6.0,
+  "count": 100000,
+  "settings": {
+    "status": "green",
+    "segments_count": 6,
+    "config": {
+      "params": {
+        "vectors": {
+          "size": 1024,
+          "distance": "Cosine",
+          "hnsw_config": null,
+          "quantization_config": null,
+          "on_disk": null,
+          "memory": null,
+          "datatype": null,
+          "multivector_config": null
+        },
+        "shard_number": 1,
+        "sharding_method": null,
+        "replication_factor": 1,
+        "write_consistency_factor": 1,
+        "read_fan_out_factor": null,
+        "read_fan_out_delay_ms": null,
+        "on_disk_payload": true,
+        "payload": null,
+        "id_tracker": null,
+        "sparse_vectors": null
+      },
+      "hnsw_config": {
+        "m": 16,
+        "ef_construct": 100,
+        "full_scan_threshold": 10000,
+        "max_indexing_threads": 0,
+        "on_disk": false,
+        "memory": null,
+        "payload_m": null,
+        "inline_storage": null
+      },
+      "optimizer_config": {
+        "deleted_threshold": 0.2,
+        "vacuum_min_vector_number": 1000,
+        "default_segment_number": 0,
+        "max_segment_size": null,
+        "memmap_threshold": null,
+        "indexing_threshold": 10000,
+        "flush_interval_sec": 5,
+        "max_optimization_threads": null,
+        "prevent_unoptimized": null
+      },
+      "wal_config": {
+        "wal_capacity_mb": 32,
+        "wal_segments_ahead": 0,
+        "wal_retain_closed": 1
+      },
+      "quantization_config": null,
+      "strict_mode_config": null,
+      "metadata": null
+    }
+  },
+  "mem_after_load_mib": 162.2,
+  "disk_bytes": 725820105,
+  "tune_recall": {
+    "10": 0.8989,
+    "16": 0.9418,
+    "24": 0.964,
+    "32": 0.9765,
+    "48": 0.9869,
+    "64": 0.9912,
+    "96": 0.9943,
+    "128": 0.9971,
+    "192": 0.9981,
+    "256": 0.9988,
+    "384": 0.9992,
+    "512": 0.9994,
+    "768": 0.9994,
+    "1024": 0.9998
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 468.3,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 24,
+      "qps": 687.1,
+      "errors": 1088,
+      "first_error": "ResponseHandlingException(ReadError('[Errno 104] Connection reset by peer'))"
+    },
+    "r99": {
+      "knob": 64,
+      "qps": 491.8,
+      "errors": 592,
+      "first_error": "ResponseHandlingException(ReadError('[Errno 104] Connection reset by peer'))"
+    }
+  },
+  "mem_after_queries_mib": 184.7,
+  "write_test": {
+    "passages": 998,
+    "duplicates_skipped": 2,
+    "found_immediately": 998,
+    "found_after_1s": 998,
+    "insert_p50_ms": 3.25,
+    "insert_p99_ms": 16.01,
+    "insert_max_ms": 33.54,
+    "search_after_insert_p50_ms": 4.1,
+    "search_after_insert_max_ms": 69.74,
+    "wall_s": 13.5
+  },
+  "disk_bytes_end": 759415556,
+  "finished": "2026-11-22 19:30:47"
+}

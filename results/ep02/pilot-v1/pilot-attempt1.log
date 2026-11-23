@@ -1,0 +1,1928 @@
+17:31:01 pgvector pilot fresh container
+17:31:04 pgvector loading 100000
+17:31:04 pgvector   1,000 loaded, 0 s
+17:31:08 pgvector waiting until indexed
+17:39:52 pgvector load 3.7 s, index 524.0 s, count 100,000
+17:40:19 pgvector default: p50 3.4 ms
+17:40:24 pgvector hnsw.ef_search=10: tune recall 0.8551, p50 1.4 ms
+17:40:31 pgvector hnsw.ef_search=16: tune recall 0.9015, p50 1.8 ms
+17:40:39 pgvector hnsw.ef_search=24: tune recall 0.9251, p50 2.3 ms
+17:40:50 pgvector hnsw.ef_search=32: tune recall 0.9423, p50 2.9 ms
+17:41:03 pgvector hnsw.ef_search=48: tune recall 0.9587, p50 3.8 ms
+17:41:20 pgvector hnsw.ef_search=64: tune recall 0.9693, p50 4.8 ms
+17:41:44 pgvector hnsw.ef_search=96: tune recall 0.9782, p50 6.6 ms
+17:42:13 pgvector hnsw.ef_search=128: tune recall 0.9821, p50 8.3 ms
+17:42:54 pgvector hnsw.ef_search=192: tune recall 0.9880, p50 11.5 ms
+17:43:46 pgvector hnsw.ef_search=256: tune recall 0.9913, p50 14.5 ms
+17:44:58 pgvector hnsw.ef_search=384: tune recall 0.9942, p50 20.3 ms
+17:46:30 pgvector hnsw.ef_search=512: tune recall 0.9950, p50 26.0 ms
+17:48:40 pgvector hnsw.ef_search=768: tune recall 0.9966, p50 36.8 ms
+17:49:26 pgvector throughput default (None): 905.9 q/s
+17:50:13 pgvector throughput r95 (48): 793.8 q/s
+17:50:59 pgvector throughput r99 (256): 203.9 q/s
+18:10:28 pgvector write test {'passages': 998, 'duplicates_skipped': 2, 'found_immediately': 998, 'found_after_1s': 998, 'insert_p50_ms': 17.82}
+18:10:29 pgvector done
+18:10:29 qdrant pilot fresh container
+18:10:31 qdrant loading 100000
+18:10:31 qdrant   1,000 loaded, 0 s
+18:11:16 qdrant waiting until indexed
+18:11:22 qdrant load 45.0 s, index 6.0 s, count 100,000
+18:11:50 qdrant default: p50 4.2 ms
+18:11:58 qdrant hnsw_ef=10: tune recall 0.8971, p50 2.2 ms
+18:12:06 qdrant hnsw_ef=16: tune recall 0.9378, p50 2.3 ms
+18:12:17 qdrant hnsw_ef=24: tune recall 0.9618, p50 2.6 ms
+18:12:37 qdrant hnsw_ef=32: tune recall 0.9745, p50 6.2 ms
+18:12:51 qdrant hnsw_ef=48: tune recall 0.9858, p50 3.2 ms
+18:13:04 qdrant hnsw_ef=64: tune recall 0.9895, p50 3.5 ms
+18:13:19 qdrant hnsw_ef=96: tune recall 0.9950, p50 4.1 ms
+18:13:35 qdrant hnsw_ef=128: tune recall 0.9969, p50 4.6 ms
+18:13:56 qdrant hnsw_ef=192: tune recall 0.9981, p50 5.7 ms
+18:14:19 qdrant hnsw_ef=256: tune recall 0.9987, p50 6.4 ms
+18:14:46 qdrant hnsw_ef=384: tune recall 0.9994, p50 7.8 ms
+18:15:19 qdrant hnsw_ef=512: tune recall 0.9998, p50 9.1 ms
+18:15:58 qdrant hnsw_ef=768: tune recall 0.9999, p50 11.4 ms
+18:16:44 qdrant hnsw_ef=1024: tune recall 1.0000, p50 13.1 ms
+18:17:31 qdrant throughput default (None): 431.5 q/s
+Process SpawnProcess-79:
+Process SpawnProcess-71:
+Process SpawnProcess-75:
+Process SpawnProcess-76:
+Process SpawnProcess-72:
+Process SpawnProcess-77:
+Process SpawnProcess-78:
+Process SpawnProcess-67:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Process SpawnProcess-74:
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+
+The above exception was the direct cause of the following exception:
+
+httpcore.ReadError: [Errno 104] Connection reset by peer
+httpcore.ReadError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+Traceback (most recent call last):
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+Traceback (most recent call last):
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+
+The above exception was the direct cause of the following exception:
+
+httpx.ReadError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+Process SpawnProcess-80:
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+httpx.ReadError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+httpcore.ReadError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Process SpawnProcess-68:
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+Process SpawnProcess-70:
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+Process SpawnProcess-73:
+Process SpawnProcess-66:
+Process SpawnProcess-65:
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpcore.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The above exception was the direct cause of the following exception:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Process SpawnProcess-69:
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+httpcore.ReadError: [Errno 104] Connection reset by peer
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpx.ReadError: [Errno 104] Connection reset by peer
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+Traceback (most recent call last):
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 138, in send_inner
+    response = self._client.send(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 59, in _qps_worker
+    E.search(qv[i % len(qv)], K)
+  File "/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py", line 148, in search
+    return [p.id for p in self.c.query_points(NAME, query=vec.tolist(), limit=k, search_params=params).points]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_client.py", line 426, in query_points
+    return self._client.query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py", line 598, in query_points
+    query_result = self.http.search_api.query_points(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 341, in query_points
+    return self._build_for_query_points(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api/search_api.py", line 113, in _build_for_query_points
+    return self.api_client.request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 113, in request
+    return self.send(request, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 116, in send
+    response = self.middleware(request, self.send_inner)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 153, in new_middleware
+    return middleware(request, inner_send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/context_headers.py", line 39, in rest_headers_middleware
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 151, in inner_send
+    return current_middleware(request, call_next)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 240, in __call__
+    return call_next(request)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/http/api_client.py", line 140, in send_inner
+    raise ResponseHandlingException(e)
+qdrant_client.http.exceptions.ResponseHandlingException: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 188, in <module>
+    if __name__ == "__main__":
+                ^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 145, in run
+    res["qps"][label] = {"knob": knob, "qps": throughput(db, knob, qv[data.test])}
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in throughput
+    total = sum(out.get(timeout=QPS_SECONDS + 300) for _ in ps)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in <genexpr>
+    total = sum(out.get(timeout=QPS_SECONDS + 300) for _ in ps)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+18:23:04 qdrant FAILED Empty()
+18:23:05 milvus pilot fresh container
+18:23:09 milvus loading 100000
+18:23:09 milvus   1,000 loaded, 0 s
+18:23:21 milvus waiting until indexed
+18:23:26 milvus load 11.7 s, index 5.5 s, count 100,000
+18:23:45 milvus default: p50 1.5 ms
+18:23:50 milvus ef=10: tune recall 0.8875, p50 1.4 ms
+18:23:56 milvus ef=16: tune recall 0.9356, p50 1.4 ms
+18:24:01 milvus ef=24: tune recall 0.9619, p50 1.5 ms
+18:24:07 milvus ef=32: tune recall 0.9747, p50 1.6 ms
+18:24:21 milvus ef=48: tune recall 0.9879, p50 3.9 ms
+18:24:35 milvus ef=64: tune recall 0.9915, p50 4.8 ms
+18:24:43 milvus ef=96: tune recall 0.9952, p50 2.1 ms
+18:24:50 milvus ef=128: tune recall 0.9493, p50 1.9 ms
+18:24:57 milvus ef=192: tune recall 0.9064, p50 1.9 ms
+18:25:05 milvus ef=256: tune recall 0.9072, p50 2.2 ms
+18:25:15 milvus ef=384: tune recall 0.9077, p50 2.7 ms
+18:25:27 milvus ef=512: tune recall 0.9079, p50 3.2 ms
+18:25:42 milvus ef=768: tune recall 0.9082, p50 4.3 ms
+18:26:00 milvus ef=1024: tune recall 0.9082, p50 5.2 ms
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 188, in <module>
+    later.append(E.search(v, 1)[:1] == [HOLDOUT_BASE + j])
+        ^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 145, in run
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in throughput
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+18:26:46 milvus FAILED TypeError("unsupported operand type(s) for +: 'int' and 'tuple'")
+18:26:48 weaviate pilot fresh container
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+18:26:52 weaviate loading 100000
+18:26:52 weaviate   1,000 loaded, 0 s
+18:28:07 weaviate waiting until indexed
+18:28:07 weaviate load 75.0 s, index 0.0 s, count 100,000
+18:28:29 weaviate default: p50 2.3 ms
+18:28:33 weaviate ef=10: tune recall 0.8688, p50 0.9 ms
+18:28:38 weaviate ef=16: tune recall 0.9186, p50 1.0 ms
+18:28:43 weaviate ef=24: tune recall 0.9512, p50 1.1 ms
+18:28:48 weaviate ef=32: tune recall 0.9640, p50 1.3 ms
+18:28:55 weaviate ef=48: tune recall 0.9759, p50 1.5 ms
+18:29:02 weaviate ef=64: tune recall 0.9833, p50 1.7 ms
+18:29:11 weaviate ef=96: tune recall 0.9882, p50 2.3 ms
+18:29:22 weaviate ef=128: tune recall 0.9912, p50 2.7 ms
+18:29:36 weaviate ef=192: tune recall 0.9950, p50 3.6 ms
+18:29:52 weaviate ef=256: tune recall 0.9962, p50 4.3 ms
+18:30:13 weaviate ef=384: tune recall 0.9980, p50 5.7 ms
+18:30:39 weaviate ef=512: tune recall 0.9986, p50 6.9 ms
+18:31:12 weaviate ef=768: tune recall 0.9990, p50 9.2 ms
+18:31:53 weaviate ef=1024: tune recall 0.9991, p50 11.2 ms
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 188, in <module>
+    later.append(E.search(v, 1)[:1] == [HOLDOUT_BASE + j])
+        ^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 145, in run
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in throughput
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+18:32:40 weaviate FAILED TypeError("unsupported operand type(s) for +: 'int' and 'tuple'")
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/weaviate/warnings.py:355: ResourceWarning: Con004: The connection to Weaviate was not closed properly. This can lead to memory leaks.
+            Please make sure to close the connection using `client.close()`.
+  warnings.warn(
+18:32:42 elasticsearch pilot fresh container
+/home/server/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/re/_parser.py:176: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=6, laddr=('127.0.0.1', 53132), raddr=('127.0.0.1', 8081)>
+  def append(self, code):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+18:33:03 elasticsearch loading 100000
+18:33:05 elasticsearch   1,000 loaded, 1 s
+18:35:19 elasticsearch waiting until indexed
+18:35:19 elasticsearch load 135.8 s, index 0.2 s, count 100,000
+18:35:43 elasticsearch default: p50 2.4 ms
+18:35:50 elasticsearch num_candidates=10: tune recall 0.9391, p50 1.9 ms
+18:35:56 elasticsearch num_candidates=16: tune recall 0.9391, p50 1.8 ms
+18:36:03 elasticsearch num_candidates=24: tune recall 0.9391, p50 1.8 ms
+18:36:09 elasticsearch num_candidates=32: tune recall 0.9397, p50 1.8 ms
+18:36:16 elasticsearch num_candidates=48: tune recall 0.9439, p50 1.7 ms
+18:36:22 elasticsearch num_candidates=64: tune recall 0.9466, p50 1.7 ms
+18:36:29 elasticsearch num_candidates=96: tune recall 0.9483, p50 1.8 ms
+18:36:35 elasticsearch num_candidates=128: tune recall 0.9495, p50 1.8 ms
+18:36:42 elasticsearch num_candidates=192: tune recall 0.9511, p50 1.9 ms
+18:36:50 elasticsearch num_candidates=256: tune recall 0.9517, p50 2.0 ms
+18:36:57 elasticsearch num_candidates=384: tune recall 0.9524, p50 2.0 ms
+18:37:05 elasticsearch num_candidates=512: tune recall 0.9534, p50 2.1 ms
+18:37:13 elasticsearch num_candidates=768: tune recall 0.9544, p50 2.3 ms
+18:37:22 elasticsearch num_candidates=1024: tune recall 0.9556, p50 2.4 ms
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 188, in <module>
+    later.append(E.search(v, 1)[:1] == [HOLDOUT_BASE + j])
+        ^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 145, in run
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in throughput
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+18:38:08 elasticsearch FAILED TypeError("unsupported operand type(s) for +: 'int' and 'tuple'")
+18:38:12 chroma pilot fresh container
+18:38:13 chroma loading 100000
+18:38:13 chroma   1,000 loaded, 0 s
+18:39:27 chroma waiting until indexed
+18:39:27 chroma load 73.9 s, index 0.0 s, count 100,000
+18:39:48 chroma default: p50 2.4 ms
+18:39:56 chroma ef_search=10: tune recall 0.9788, p50 2.3 ms
+18:40:05 chroma ef_search=16: tune recall 0.9788, p50 2.4 ms
+18:40:14 chroma ef_search=24: tune recall 0.9788, p50 2.3 ms
+18:40:22 chroma ef_search=32: tune recall 0.9788, p50 2.4 ms
+18:40:31 chroma ef_search=48: tune recall 0.9788, p50 2.4 ms
+18:40:40 chroma ef_search=64: tune recall 0.9788, p50 2.4 ms
+18:40:48 chroma ef_search=96: tune recall 0.9788, p50 2.4 ms
+18:40:57 chroma ef_search=128: tune recall 0.9788, p50 2.4 ms
+18:41:06 chroma ef_search=192: tune recall 0.9788, p50 2.4 ms
+18:41:14 chroma ef_search=256: tune recall 0.9788, p50 2.3 ms
+18:41:23 chroma ef_search=384: tune recall 0.9788, p50 2.4 ms
+18:41:32 chroma ef_search=512: tune recall 0.9788, p50 2.4 ms
+18:41:40 chroma ef_search=768: tune recall 0.9788, p50 2.4 ms
+18:41:49 chroma ef_search=1024: tune recall 0.9788, p50 2.4 ms
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 188, in <module>
+    later.append(E.search(v, 1)[:1] == [HOLDOUT_BASE + j])
+        ^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 145, in run
+  File "/home/server/Projects/AIContentCreator/BeyondData/scripts/ep02_run.py", line 73, in throughput
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+18:42:35 chroma FAILED TypeError("unsupported operand type(s) for +: 'int' and 'tuple'")
+sys:1: ResourceWarning: unclosed <socket.socket fd=39, family=2, type=1, proto=6, laddr=('127.0.0.1', 35452), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=38, family=2, type=1, proto=6, laddr=('127.0.0.1', 35444), raddr=('127.0.0.1', 8001)>

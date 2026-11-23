@@ -1,0 +1,80 @@
+{
+  "db": "pgvector",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-22 21:20:27",
+  "startup_s": 2.1,
+  "load_s": 30.1,
+  "indexed": {
+    "index_build_s": 3036.4,
+    "notices": [
+      "hnsw graph no longer fits into maintenance_work_mem after 13170 tuples"
+    ]
+  },
+  "index_wait_s": 3036.4,
+  "recall_just_indexed": 0.9235,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "hnsw.ef_search": "40",
+    "hnsw.iterative_scan": "off",
+    "maintenance_work_mem": "64MB",
+    "max_parallel_maintenance_workers": "2",
+    "shared_buffers": "128MB",
+    "version": "0.8.7",
+    "plan_limit_1": "index scan",
+    "limit_1_ms": 11.8,
+    "plan_limit_10": "index scan",
+    "limit_10_ms": 3.3,
+    "toast_bytes": 5530271744
+  },
+  "mem_after_load_mib": 586.6,
+  "disk_bytes": 14897346877,
+  "tune_recall": {
+    "10": 0.7923,
+    "16": 0.8521,
+    "24": 0.8918,
+    "32": 0.9137,
+    "48": 0.9282,
+    "64": 0.9405,
+    "96": 0.9549,
+    "128": 0.9628,
+    "192": 0.9704,
+    "256": 0.975,
+    "384": 0.9799,
+    "512": 0.9826,
+    "768": 0.9856
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 680.7,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 96,
+      "qps": 354.4,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 586.8,
+  "write_test": {
+    "passages": 991,
+    "duplicates_skipped": 9,
+    "found_immediately": 991,
+    "found_after_1s": 991,
+    "insert_p50_ms": 9.85,
+    "insert_p99_ms": 15.68,
+    "insert_max_ms": 19.66,
+    "search_after_insert_p50_ms": 1.06,
+    "search_after_insert_max_ms": 3.36,
+    "wall_s": 16.1
+  },
+  "disk_bytes_end": 14911093053,
+  "finished": "2026-11-22 22:24:52"
+}

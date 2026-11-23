@@ -1,0 +1,86 @@
+{
+  "db": "chroma",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-22 23:55:44",
+  "startup_s": 0.3,
+  "load_s": 1108.3,
+  "indexed": {},
+  "index_wait_s": 0.0,
+  "recall_just_indexed": 0.9625,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "1.0.0",
+    "configuration": {
+      "hnsw": {
+        "space": "cosine",
+        "ef_construction": 100,
+        "ef_search": 100,
+        "max_neighbors": 16,
+        "resize_factor": 1.2,
+        "sync_threshold": 1000
+      },
+      "spann": null,
+      "embedding_function": {
+        "type": "known",
+        "name": "default",
+        "config": {}
+      }
+    }
+  },
+  "mem_after_load_mib": 4361.2,
+  "disk_bytes": 4419547884,
+  "tune_recall": {
+    "10": 0.7671,
+    "16": 0.833,
+    "24": 0.8768,
+    "32": 0.9026,
+    "48": 0.9274,
+    "64": 0.9387,
+    "96": 0.9575,
+    "128": 0.9644,
+    "192": 0.9717,
+    "256": 0.976,
+    "384": 0.9806,
+    "512": 0.9828,
+    "768": 0.9872,
+    "1024": 0.9903
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 495.1,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 96,
+      "qps": 507.0,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r99": {
+      "knob": 1024,
+      "qps": 110.1,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 4360.2,
+  "write_test": {
+    "passages": 991,
+    "duplicates_skipped": 9,
+    "found_immediately": 991,
+    "found_after_1s": 991,
+    "insert_p50_ms": 46.29,
+    "insert_p99_ms": 61.42,
+    "insert_max_ms": 738.16,
+    "search_after_insert_p50_ms": 2.45,
+    "search_after_insert_max_ms": 5.68,
+    "wall_s": 54.1
+  },
+  "disk_bytes_end": 4423965408,
+  "finished": "2026-11-23 00:23:27"
+}

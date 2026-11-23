@@ -1,0 +1,250 @@
+{
+  "db": "milvus",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-22 22:42:40",
+  "startup_s": 1.3,
+  "load_s": 128.8,
+  "indexed": {
+    "index_type": "AUTOINDEX",
+    "indexed_rows": 1000000,
+    "total_rows": 1000000,
+    "state": "Finished"
+  },
+  "index_wait_s": 155.9,
+  "recall_just_indexed": 0.9335,
+  "settle": {
+    "settle_s": 380,
+    "segment_history": [
+      {
+        "t_s": 0,
+        "segments": 27,
+        "rows": [
+          86000,
+          31000,
+          29000,
+          29510,
+          28000,
+          29510,
+          27980,
+          31000,
+          148490,
+          30510,
+          28490,
+          30510,
+          29000,
+          28000,
+          87000,
+          28000,
+          30490,
+          28000,
+          29000,
+          30000,
+          29000,
+          30020,
+          30490,
+          29490,
+          30510,
+          28000,
+          3000
+        ]
+      },
+      {
+        "t_s": 20,
+        "segments": 25,
+        "rows": [
+          29510,
+          28000,
+          29510,
+          27980,
+          31000,
+          148490,
+          30510,
+          28490,
+          30510,
+          29000,
+          28000,
+          87000,
+          28000,
+          30490,
+          28000,
+          29000,
+          30000,
+          29000,
+          30020,
+          30490,
+          29490,
+          146000,
+          30510,
+          28000,
+          3000
+        ]
+      },
+      {
+        "t_s": 70,
+        "segments": 20,
+        "rows": [
+          148490,
+          28490,
+          30510,
+          29000,
+          28000,
+          87000,
+          28000,
+          30490,
+          28000,
+          29000,
+          30000,
+          29000,
+          30020,
+          30490,
+          29490,
+          146000,
+          30510,
+          28000,
+          3000,
+          176510
+        ]
+      },
+      {
+        "t_s": 110,
+        "segments": 15,
+        "rows": [
+          148490,
+          30510,
+          29000,
+          87000,
+          30490,
+          30000,
+          30020,
+          30490,
+          29490,
+          146000,
+          30510,
+          28000,
+          3000,
+          176510,
+          170490
+        ]
+      },
+      {
+        "t_s": 180,
+        "segments": 10,
+        "rows": [
+          148490,
+          30490,
+          29490,
+          146000,
+          30510,
+          28000,
+          3000,
+          176510,
+          237020,
+          170490
+        ]
+      },
+      {
+        "t_s": 200,
+        "segments": 6,
+        "rows": [
+          148490,
+          146000,
+          176510,
+          237020,
+          170490,
+          121490
+        ]
+      }
+    ]
+  },
+  "settle_s": 380.1,
+  "count": 1000000,
+  "settings": {
+    "index": {
+      "index_type": "AUTOINDEX",
+      "metric_type": "COSINE",
+      "field_name": "vector",
+      "index_name": "vector",
+      "total_rows": 1000000,
+      "indexed_rows": 1000000,
+      "pending_index_rows": 0,
+      "state": "Finished"
+    },
+    "autoindex_built_as": [
+      "[index_type=HNSW_SQ] [sq_type=SQ4U] [refine=true] [refine_type=FP16] [metric_type=COSINE] [traceID=1378ca21f16a58b9c67c67cf93f5fd5f] [spanID=d565f2f069f38dae]"
+    ],
+    "consistency_level": 2,
+    "fields": [
+      {
+        "field_id": 100,
+        "name": "id",
+        "description": "",
+        "type": 5,
+        "params": {},
+        "is_primary": true
+      },
+      {
+        "field_id": 101,
+        "name": "vector",
+        "description": "",
+        "type": 101,
+        "params": {
+          "dim": 1024
+        }
+      }
+    ]
+  },
+  "mem_after_load_mib": 3319.8,
+  "disk_bytes": 22267328449,
+  "tune_recall": {
+    "10": 0.866,
+    "16": 0.9112,
+    "24": 0.9364,
+    "32": 0.9521,
+    "48": 0.9684,
+    "64": 0.9785,
+    "96": 0.984,
+    "128": 0.988,
+    "192": 0.9917,
+    "256": 0.9928,
+    "384": 0.9952,
+    "512": 0.9968,
+    "768": 0.9978,
+    "1024": 0.9981
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 2176.4,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 32,
+      "qps": 1710.6,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r99": {
+      "knob": 192,
+      "qps": 599.2,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 3376.1,
+  "write_test": {
+    "passages": 991,
+    "duplicates_skipped": 9,
+    "found_immediately": 0,
+    "found_after_1s": 991,
+    "insert_p50_ms": 1.23,
+    "insert_p99_ms": 2.07,
+    "insert_max_ms": 11.21,
+    "search_after_insert_p50_ms": 2.3,
+    "search_after_insert_max_ms": 8.08,
+    "wall_s": 7.2
+  },
+  "disk_bytes_end": 22271951694,
+  "finished": "2026-11-22 23:00:23"
+}

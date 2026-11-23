@@ -1,0 +1,127 @@
+{
+  "db": "qdrant",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-22 22:24:53",
+  "startup_s": 0.4,
+  "load_s": 503.7,
+  "indexed": {
+    "points": 1000000,
+    "indexed_vectors": 1000000
+  },
+  "index_wait_s": 56.1,
+  "recall_just_indexed": 0.979,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "status": "green",
+    "segments_count": 6,
+    "config": {
+      "params": {
+        "vectors": {
+          "size": 1024,
+          "distance": "Cosine",
+          "hnsw_config": null,
+          "quantization_config": null,
+          "on_disk": null,
+          "memory": null,
+          "datatype": null,
+          "multivector_config": null
+        },
+        "shard_number": 1,
+        "sharding_method": null,
+        "replication_factor": 1,
+        "write_consistency_factor": 1,
+        "read_fan_out_factor": null,
+        "read_fan_out_delay_ms": null,
+        "on_disk_payload": true,
+        "payload": null,
+        "id_tracker": null,
+        "sparse_vectors": null
+      },
+      "hnsw_config": {
+        "m": 16,
+        "ef_construct": 100,
+        "full_scan_threshold": 10000,
+        "max_indexing_threads": 0,
+        "on_disk": false,
+        "memory": null,
+        "payload_m": null,
+        "inline_storage": null
+      },
+      "optimizer_config": {
+        "deleted_threshold": 0.2,
+        "vacuum_min_vector_number": 1000,
+        "default_segment_number": 0,
+        "max_segment_size": null,
+        "memmap_threshold": null,
+        "indexing_threshold": 10000,
+        "flush_interval_sec": 5,
+        "max_optimization_threads": null,
+        "prevent_unoptimized": null
+      },
+      "wal_config": {
+        "wal_capacity_mb": 32,
+        "wal_segments_ahead": 0,
+        "wal_retain_closed": 1
+      },
+      "quantization_config": null,
+      "strict_mode_config": null,
+      "metadata": null
+    }
+  },
+  "mem_after_load_mib": 391.1,
+  "disk_bytes": 4480350013,
+  "tune_recall": {
+    "10": 0.8361,
+    "16": 0.8864,
+    "24": 0.9158,
+    "32": 0.9326,
+    "48": 0.9513,
+    "64": 0.9609,
+    "96": 0.971,
+    "128": 0.9763,
+    "192": 0.9825,
+    "256": 0.9862,
+    "384": 0.9894,
+    "512": 0.9915,
+    "768": 0.9938,
+    "1024": 0.9953
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 403.2,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 48,
+      "qps": 661.8,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r99": {
+      "knob": 512,
+      "qps": 117.8,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 373.2,
+  "write_test": {
+    "passages": 991,
+    "duplicates_skipped": 9,
+    "found_immediately": 991,
+    "found_after_1s": 991,
+    "insert_p50_ms": 2.95,
+    "insert_p99_ms": 15.59,
+    "insert_max_ms": 25.62,
+    "search_after_insert_p50_ms": 4.28,
+    "search_after_insert_max_ms": 6.79,
+    "wall_s": 13.1
+  },
+  "disk_bytes_end": 4513945462,
+  "finished": "2026-11-22 22:42:38"
+}

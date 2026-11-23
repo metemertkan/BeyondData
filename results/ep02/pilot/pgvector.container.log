@@ -1,0 +1,72 @@
+oom_killed=false exit=0 running=true
+
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-11-22 19:18:02.488 UTC [53] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-22 19:18:02.495 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-22 19:18:02.517 UTC [59] LOG:  database system was shut down at 2026-11-22 19:18:02 UTC
+2026-11-22 19:18:02.527 UTC [53] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2026-11-22 19:18:02.690 UTC [53] LOG:  received fast shutdown request
+.2026-11-22 19:18:02.697 UTC [53] LOG:  aborting any active transactions
+2026-11-22 19:18:02.699 UTC [53] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+2026-11-22 19:18:02.699 UTC [57] LOG:  shutting down
+2026-11-22 19:18:02.705 UTC [57] LOG:  checkpoint starting: shutdown immediate
+2026-11-22 19:18:02.876 UTC [57] LOG:  checkpoint complete: wrote 950 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.032 s, sync=0.114 s, total=0.178 s; sync files=303, longest=0.007 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/1BBA2B0, redo lsn=0/1BBA2B0
+2026-11-22 19:18:02.902 UTC [53] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-22 19:18:03.026 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-22 19:18:03.027 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-22 19:18:03.027 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-22 19:18:03.039 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-22 19:18:03.055 UTC [75] LOG:  database system was shut down at 2026-11-22 19:18:02 UTC
+2026-11-22 19:18:03.065 UTC [1] LOG:  database system is ready to accept connections
+2026-11-22 19:18:33.108 UTC [80] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:19:33.127 UTC [83] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:20:33.146 UTC [86] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:21:33.163 UTC [89] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:22:33.182 UTC [92] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:23:03.790 UTC [73] LOG:  checkpoint starting: time
+2026-11-22 19:23:33.190 UTC [95] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:24:33.209 UTC [98] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:24:35.625 UTC [73] LOG:  checkpoint complete: wrote 28 buffers (0.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 28 recycled; write=91.245 s, sync=0.124 s, total=91.835 s; sync files=104, longest=0.076 s, average=0.002 s; distance=457006 kB, estimate=457006 kB; lsn=0/1DAD5D70, redo lsn=0/1DA05D00
+2026-11-22 19:25:33.228 UTC [101] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:26:33.246 UTC [104] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-22 19:28:03.435 UTC [73] LOG:  checkpoint starting: time
+2026-11-22 19:28:03.699 UTC [73] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 27 recycled; write=0.007 s, sync=0.027 s, total=0.264 s; sync files=16, longest=0.007 s, average=0.002 s; distance=440467 kB, estimate=455352 kB; lsn=0/3882A9D8, redo lsn=0/3882A948
+2026-11-22 19:38:03.762 UTC [73] LOG:  checkpoint starting: time

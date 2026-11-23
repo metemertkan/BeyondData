@@ -1,0 +1,86 @@
+{
+  "db": "pgvector",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-22 20:18:00",
+  "startup_s": 2.1,
+  "load_s": 3.7,
+  "indexed": {
+    "index_build_s": 520.9,
+    "notices": [
+      "hnsw graph no longer fits into maintenance_work_mem after 13932 tuples"
+    ]
+  },
+  "index_wait_s": 520.9,
+  "recall_just_indexed": 0.961,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 100000,
+  "settings": {
+    "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "hnsw.ef_search": "40",
+    "hnsw.iterative_scan": "off",
+    "maintenance_work_mem": "64MB",
+    "max_parallel_maintenance_workers": "2",
+    "shared_buffers": "128MB",
+    "version": "0.8.7",
+    "plan_limit_1": "sequential scan",
+    "limit_1_ms": 561.6,
+    "plan_limit_10": "index scan",
+    "limit_10_ms": 6.2,
+    "toast_bytes": 553074688
+  },
+  "mem_after_load_mib": 217.6,
+  "disk_bytes": 1899460925,
+  "tune_recall": {
+    "10": 0.8594,
+    "16": 0.9,
+    "24": 0.929,
+    "32": 0.9446,
+    "48": 0.961,
+    "64": 0.9683,
+    "96": 0.9782,
+    "128": 0.9827,
+    "192": 0.9884,
+    "256": 0.9913,
+    "384": 0.9941,
+    "512": 0.995,
+    "768": 0.9964
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 902.2,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 48,
+      "qps": 791.6,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r99": {
+      "knob": 256,
+      "qps": 203.9,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 218.4,
+  "write_test": {
+    "passages": 998,
+    "duplicates_skipped": 2,
+    "found_immediately": 998,
+    "found_after_1s": 998,
+    "insert_p50_ms": 9.21,
+    "insert_p99_ms": 13.89,
+    "insert_max_ms": 23.45,
+    "search_after_insert_p50_ms": 1.09,
+    "search_after_insert_max_ms": 3.11,
+    "wall_s": 15.0
+  },
+  "disk_bytes_end": 1913264445,
+  "finished": "2026-11-22 20:38:14"
+}

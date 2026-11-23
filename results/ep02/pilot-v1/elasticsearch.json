@@ -1,0 +1,82 @@
+{
+  "db": "elasticsearch",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-22 19:43:55",
+  "startup_s": 20.3,
+  "load_s": 130.7,
+  "indexed": {
+    "segments": 12,
+    "docs": 100000
+  },
+  "index_wait_s": 8.2,
+  "count": 100000,
+  "settings": {
+    "version": "9.5.5",
+    "license": "basic",
+    "mapping": {
+      "type": "dense_vector",
+      "element_type": "float",
+      "dims": 1024,
+      "index": true,
+      "similarity": "cosine",
+      "index_options": {
+        "type": "bbq_hnsw",
+        "m": 16,
+        "ef_construction": 100,
+        "rescore_vector": {
+          "oversample": 3.0
+        }
+      },
+      "meta": {}
+    },
+    "segments": 5
+  },
+  "mem_after_load_mib": 8965.1,
+  "disk_bytes": 597487105,
+  "tune_recall": {
+    "10": 0.9378,
+    "16": 0.9378,
+    "24": 0.9378,
+    "32": 0.9384,
+    "48": 0.942,
+    "64": 0.9445,
+    "96": 0.9472,
+    "128": 0.9486,
+    "192": 0.9512,
+    "256": 0.952,
+    "384": 0.9533,
+    "512": 0.9538,
+    "768": 0.9554,
+    "1024": 0.9556
+  },
+  "qps": {
+    "default": {
+      "knob": null,
+      "qps": 3783.7,
+      "errors": 0,
+      "first_error": ""
+    },
+    "r95": {
+      "knob": 192,
+      "qps": 3160.3,
+      "errors": 0,
+      "first_error": ""
+    }
+  },
+  "mem_after_queries_mib": 9098.2,
+  "write_test": {
+    "passages": 998,
+    "duplicates_skipped": 2,
+    "found_immediately": 2,
+    "found_after_1s": 998,
+    "insert_p50_ms": 9.98,
+    "insert_p99_ms": 19.09,
+    "insert_max_ms": 44.7,
+    "search_after_insert_p50_ms": 2.14,
+    "search_after_insert_max_ms": 5.93,
+    "wall_s": 15.2
+  },
+  "disk_bytes_end": 589568330,
+  "finished": "2026-11-22 19:50:27"
+}
