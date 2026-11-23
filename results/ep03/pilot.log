@@ -1,0 +1,776 @@
+03:13:52 pgvector base fresh container
+03:13:55 pgvector base   1,000 loaded, 0 s
+03:17:39 pgvector base load 3.9 s, index 218.3 s, settle 0.0 s, count 100,000
+03:17:41 pgvector default hnsw.ef_search=None none: p50 3.4 ms, mean returned 10.00, short 0.0%
+03:17:43 pgvector default hnsw.ef_search=None region: p50 3.5 ms, mean returned 10.00, short 0.0%
+03:18:39 pgvector default hnsw.ef_search=None dept: p50 88.8 ms, mean returned 10.00, short 0.0%
+03:18:49 pgvector default hnsw.ef_search=None team: p50 15.0 ms, mean returned 10.00, short 0.0%
+03:18:53 pgvector default hnsw.ef_search=None project: p50 6.3 ms, mean returned 10.00, short 0.0%
+03:19:03 pgvector default hnsw.ef_search=None topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:19:08 pgvector default hnsw.ef_search=None subtopic: p50 6.8 ms, mean returned 10.00, short 0.0%
+03:19:11 pgvector default hnsw.ef_search=64 none: p50 5.0 ms, mean returned 10.00, short 0.0%
+03:21:18 pgvector default hnsw.ef_search=64 region: p50 361.9 ms, mean returned 10.00, short 0.0% (sampled)
+03:22:13 pgvector default hnsw.ef_search=64 dept: p50 88.3 ms, mean returned 10.00, short 0.0%
+03:22:23 pgvector default hnsw.ef_search=64 team: p50 15.0 ms, mean returned 10.00, short 0.0%
+03:22:27 pgvector default hnsw.ef_search=64 project: p50 6.4 ms, mean returned 10.00, short 0.0%
+03:22:37 pgvector default hnsw.ef_search=64 topic: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:22:41 pgvector default hnsw.ef_search=64 subtopic: p50 6.8 ms, mean returned 10.00, short 0.0%
+03:22:47 pgvector default hnsw.ef_search=128 none: p50 8.5 ms, mean returned 10.00, short 0.0%
+03:22:52 pgvector default hnsw.ef_search=128 region: p50 8.5 ms, mean returned 10.00, short 0.0%
+03:23:48 pgvector default hnsw.ef_search=128 dept: p50 89.1 ms, mean returned 10.00, short 0.0%
+03:23:58 pgvector default hnsw.ef_search=128 team: p50 15.1 ms, mean returned 10.00, short 0.0%
+03:24:02 pgvector default hnsw.ef_search=128 project: p50 6.3 ms, mean returned 10.00, short 0.0%
+03:24:12 pgvector default hnsw.ef_search=128 topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:24:17 pgvector default hnsw.ef_search=128 subtopic: p50 6.9 ms, mean returned 10.00, short 0.0%
+03:24:26 pgvector default hnsw.ef_search=256 none: p50 14.7 ms, mean returned 10.00, short 0.0%
+03:24:36 pgvector default hnsw.ef_search=256 region: p50 14.8 ms, mean returned 10.00, short 0.0%
+03:25:32 pgvector default hnsw.ef_search=256 dept: p50 88.6 ms, mean returned 10.00, short 0.0%
+03:25:41 pgvector default hnsw.ef_search=256 team: p50 15.0 ms, mean returned 10.00, short 0.0%
+03:25:45 pgvector default hnsw.ef_search=256 project: p50 6.3 ms, mean returned 10.00, short 0.0%
+03:25:55 pgvector default hnsw.ef_search=256 topic: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:26:00 pgvector default hnsw.ef_search=256 subtopic: p50 6.9 ms, mean returned 10.00, short 0.0%
+03:26:17 pgvector default hnsw.ef_search=512 none: p50 26.4 ms, mean returned 10.00, short 0.0%
+03:26:34 pgvector default hnsw.ef_search=512 region: p50 26.4 ms, mean returned 10.00, short 0.0%
+03:27:30 pgvector default hnsw.ef_search=512 dept: p50 89.0 ms, mean returned 10.00, short 0.0%
+03:27:40 pgvector default hnsw.ef_search=512 team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:27:44 pgvector default hnsw.ef_search=512 project: p50 6.5 ms, mean returned 10.00, short 0.0%
+03:27:54 pgvector default hnsw.ef_search=512 topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:27:58 pgvector default hnsw.ef_search=512 subtopic: p50 6.9 ms, mean returned 10.00, short 0.0%
+03:28:29 pgvector default hnsw.ef_search=1000 none: p50 47.5 ms, mean returned 10.00, short 0.0%
+03:28:59 pgvector default hnsw.ef_search=1000 region: p50 47.2 ms, mean returned 10.00, short 0.0%
+03:29:55 pgvector default hnsw.ef_search=1000 dept: p50 88.6 ms, mean returned 10.00, short 0.0%
+03:30:05 pgvector default hnsw.ef_search=1000 team: p50 15.1 ms, mean returned 10.00, short 0.0%
+03:30:09 pgvector default hnsw.ef_search=1000 project: p50 6.1 ms, mean returned 10.00, short 0.0%
+03:30:19 pgvector default hnsw.ef_search=1000 topic: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:30:23 pgvector default hnsw.ef_search=1000 subtopic: p50 6.9 ms, mean returned 10.00, short 0.0%
+03:30:26 pgvector iterative hnsw.ef_search=None none: p50 3.5 ms, mean returned 10.00, short 0.0%
+03:30:28 pgvector iterative hnsw.ef_search=None region: p50 3.5 ms, mean returned 10.00, short 0.0%
+03:31:24 pgvector iterative hnsw.ef_search=None dept: p50 89.8 ms, mean returned 10.00, short 0.0%
+03:31:34 pgvector iterative hnsw.ef_search=None team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:31:38 pgvector iterative hnsw.ef_search=None project: p50 6.4 ms, mean returned 10.00, short 0.0%
+03:31:48 pgvector iterative hnsw.ef_search=None topic: p50 15.4 ms, mean returned 10.00, short 0.0%
+03:31:53 pgvector iterative hnsw.ef_search=None subtopic: p50 7.0 ms, mean returned 10.00, short 0.0%
+03:31:56 pgvector iterative hnsw.ef_search=64 none: p50 4.9 ms, mean returned 10.00, short 0.0%
+03:31:59 pgvector iterative hnsw.ef_search=64 region: p50 5.0 ms, mean returned 10.00, short 0.0%
+03:32:56 pgvector iterative hnsw.ef_search=64 dept: p50 90.0 ms, mean returned 10.00, short 0.0%
+03:33:06 pgvector iterative hnsw.ef_search=64 team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:33:10 pgvector iterative hnsw.ef_search=64 project: p50 6.3 ms, mean returned 10.00, short 0.0%
+03:33:20 pgvector iterative hnsw.ef_search=64 topic: p50 15.5 ms, mean returned 10.00, short 0.0%
+03:33:24 pgvector iterative hnsw.ef_search=64 subtopic: p50 7.0 ms, mean returned 10.00, short 0.0%
+03:33:30 pgvector iterative hnsw.ef_search=128 none: p50 8.6 ms, mean returned 10.00, short 0.0%
+03:33:35 pgvector iterative hnsw.ef_search=128 region: p50 8.6 ms, mean returned 10.00, short 0.0%
+03:34:32 pgvector iterative hnsw.ef_search=128 dept: p50 89.6 ms, mean returned 10.00, short 0.0%
+03:34:42 pgvector iterative hnsw.ef_search=128 team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:34:46 pgvector iterative hnsw.ef_search=128 project: p50 6.5 ms, mean returned 10.00, short 0.0%
+03:34:56 pgvector iterative hnsw.ef_search=128 topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:35:00 pgvector iterative hnsw.ef_search=128 subtopic: p50 6.9 ms, mean returned 10.00, short 0.0%
+03:35:10 pgvector iterative hnsw.ef_search=256 none: p50 15.1 ms, mean returned 10.00, short 0.0%
+03:35:20 pgvector iterative hnsw.ef_search=256 region: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:36:16 pgvector iterative hnsw.ef_search=256 dept: p50 89.4 ms, mean returned 10.00, short 0.0%
+03:36:26 pgvector iterative hnsw.ef_search=256 team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:36:30 pgvector iterative hnsw.ef_search=256 project: p50 6.5 ms, mean returned 10.00, short 0.0%
+03:36:40 pgvector iterative hnsw.ef_search=256 topic: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:36:45 pgvector iterative hnsw.ef_search=256 subtopic: p50 6.8 ms, mean returned 10.00, short 0.0%
+03:37:02 pgvector iterative hnsw.ef_search=512 none: p50 26.7 ms, mean returned 10.00, short 0.0%
+03:37:20 pgvector iterative hnsw.ef_search=512 region: p50 26.9 ms, mean returned 10.00, short 0.0%
+03:38:16 pgvector iterative hnsw.ef_search=512 dept: p50 89.9 ms, mean returned 10.00, short 0.0%
+03:38:26 pgvector iterative hnsw.ef_search=512 team: p50 15.1 ms, mean returned 10.00, short 0.0%
+03:38:30 pgvector iterative hnsw.ef_search=512 project: p50 6.5 ms, mean returned 10.00, short 0.0%
+03:38:40 pgvector iterative hnsw.ef_search=512 topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:38:45 pgvector iterative hnsw.ef_search=512 subtopic: p50 7.0 ms, mean returned 10.00, short 0.0%
+03:39:16 pgvector iterative hnsw.ef_search=1000 none: p50 48.3 ms, mean returned 10.00, short 0.0%
+03:39:47 pgvector iterative hnsw.ef_search=1000 region: p50 48.8 ms, mean returned 10.00, short 0.0%
+03:40:43 pgvector iterative hnsw.ef_search=1000 dept: p50 89.5 ms, mean returned 10.00, short 0.0%
+03:40:53 pgvector iterative hnsw.ef_search=1000 team: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:40:57 pgvector iterative hnsw.ef_search=1000 project: p50 6.4 ms, mean returned 10.00, short 0.0%
+03:41:07 pgvector iterative hnsw.ef_search=1000 topic: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:41:12 pgvector iterative hnsw.ef_search=1000 subtopic: p50 7.0 ms, mean returned 10.00, short 0.0%
+03:41:14 pgvector btree hnsw.ef_search=None none: p50 3.5 ms, mean returned 10.00, short 0.0%
+03:41:17 pgvector btree hnsw.ef_search=None region: p50 3.5 ms, mean returned 10.00, short 0.0%
+03:42:10 pgvector btree hnsw.ef_search=None dept: p50 84.6 ms, mean returned 10.00, short 0.0%
+03:42:16 pgvector btree hnsw.ef_search=None team: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:42:17 pgvector btree hnsw.ef_search=None project: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:42:24 pgvector btree hnsw.ef_search=None topic: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:42:25 pgvector btree hnsw.ef_search=None subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:42:28 pgvector btree hnsw.ef_search=64 none: p50 5.0 ms, mean returned 10.00, short 0.0%
+03:42:31 pgvector btree hnsw.ef_search=64 region: p50 5.1 ms, mean returned 10.00, short 0.0%
+03:43:24 pgvector btree hnsw.ef_search=64 dept: p50 84.2 ms, mean returned 10.00, short 0.0%
+03:43:30 pgvector btree hnsw.ef_search=64 team: p50 10.2 ms, mean returned 10.00, short 0.0%
+03:43:31 pgvector btree hnsw.ef_search=64 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:43:38 pgvector btree hnsw.ef_search=64 topic: p50 10.0 ms, mean returned 10.00, short 0.0%
+03:43:39 pgvector btree hnsw.ef_search=64 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:43:44 pgvector btree hnsw.ef_search=128 none: p50 8.8 ms, mean returned 10.00, short 0.0%
+03:43:50 pgvector btree hnsw.ef_search=128 region: p50 8.7 ms, mean returned 10.00, short 0.0%
+03:44:43 pgvector btree hnsw.ef_search=128 dept: p50 84.0 ms, mean returned 10.00, short 0.0%
+03:44:49 pgvector btree hnsw.ef_search=128 team: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:44:50 pgvector btree hnsw.ef_search=128 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:44:57 pgvector btree hnsw.ef_search=128 topic: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:44:57 pgvector btree hnsw.ef_search=128 subtopic: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:45:07 pgvector btree hnsw.ef_search=256 none: p50 15.0 ms, mean returned 10.00, short 0.0%
+03:45:17 pgvector btree hnsw.ef_search=256 region: p50 15.3 ms, mean returned 10.00, short 0.0%
+03:46:10 pgvector btree hnsw.ef_search=256 dept: p50 84.0 ms, mean returned 10.00, short 0.0%
+03:46:16 pgvector btree hnsw.ef_search=256 team: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:46:17 pgvector btree hnsw.ef_search=256 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:46:23 pgvector btree hnsw.ef_search=256 topic: p50 10.0 ms, mean returned 10.00, short 0.0%
+03:46:24 pgvector btree hnsw.ef_search=256 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:46:42 pgvector btree hnsw.ef_search=512 none: p50 27.0 ms, mean returned 10.00, short 0.0%
+03:46:59 pgvector btree hnsw.ef_search=512 region: p50 26.9 ms, mean returned 10.00, short 0.0%
+03:47:52 pgvector btree hnsw.ef_search=512 dept: p50 83.8 ms, mean returned 10.00, short 0.0%
+03:47:58 pgvector btree hnsw.ef_search=512 team: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:47:59 pgvector btree hnsw.ef_search=512 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:48:06 pgvector btree hnsw.ef_search=512 topic: p50 10.0 ms, mean returned 10.00, short 0.0%
+03:48:06 pgvector btree hnsw.ef_search=512 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:48:38 pgvector btree hnsw.ef_search=1000 none: p50 48.8 ms, mean returned 10.00, short 0.0%
+03:49:09 pgvector btree hnsw.ef_search=1000 region: p50 48.5 ms, mean returned 10.00, short 0.0%
+03:50:02 pgvector btree hnsw.ef_search=1000 dept: p50 83.9 ms, mean returned 10.00, short 0.0%
+03:50:08 pgvector btree hnsw.ef_search=1000 team: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:50:09 pgvector btree hnsw.ef_search=1000 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+03:50:15 pgvector btree hnsw.ef_search=1000 topic: p50 10.0 ms, mean returned 10.00, short 0.0%
+03:50:16 pgvector btree hnsw.ef_search=1000 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+03:50:18 pgvector done
+03:50:18 qdrant noindex fresh container
+03:50:20 qdrant noindex   1,000 loaded, 0 s
+03:51:09 qdrant noindex load 43.0 s, index 6.0 s, settle 0.0 s, count 100,000
+03:51:12 qdrant default hnsw_ef=None none: p50 4.3 ms, mean returned 10.00, short 0.0%
+03:51:16 qdrant default hnsw_ef=None region: p50 5.2 ms, mean returned 10.00, short 0.0%
+03:51:31 qdrant default hnsw_ef=None dept: p50 23.7 ms, mean returned 10.00, short 0.0%
+03:51:46 qdrant default hnsw_ef=None team: p50 22.6 ms, mean returned 10.00, short 0.0%
+03:52:01 qdrant default hnsw_ef=None project: p50 22.7 ms, mean returned 10.00, short 0.0%
+03:52:17 qdrant default hnsw_ef=None topic: p50 24.1 ms, mean returned 10.00, short 0.0%
+03:52:32 qdrant default hnsw_ef=None subtopic: p50 22.3 ms, mean returned 10.00, short 0.0%
+03:52:34 qdrant default hnsw_ef=64 none: p50 3.2 ms, mean returned 10.00, short 0.0%
+03:52:36 qdrant default hnsw_ef=64 region: p50 4.2 ms, mean returned 10.00, short 0.0%
+03:52:52 qdrant default hnsw_ef=64 dept: p50 23.0 ms, mean returned 10.00, short 0.0%
+03:53:07 qdrant default hnsw_ef=64 team: p50 22.3 ms, mean returned 10.00, short 0.0%
+03:53:21 qdrant default hnsw_ef=64 project: p50 22.3 ms, mean returned 10.00, short 0.0%
+03:53:36 qdrant default hnsw_ef=64 topic: p50 23.1 ms, mean returned 10.00, short 0.0%
+03:53:51 qdrant default hnsw_ef=64 subtopic: p50 21.5 ms, mean returned 10.00, short 0.0%
+03:53:54 qdrant default hnsw_ef=128 none: p50 4.3 ms, mean returned 10.00, short 0.0%
+03:53:58 qdrant default hnsw_ef=128 region: p50 6.0 ms, mean returned 10.00, short 0.0%
+03:54:14 qdrant default hnsw_ef=128 dept: p50 24.6 ms, mean returned 10.00, short 0.0%
+03:54:29 qdrant default hnsw_ef=128 team: p50 22.3 ms, mean returned 10.00, short 0.0%
+03:54:43 qdrant default hnsw_ef=128 project: p50 21.7 ms, mean returned 10.00, short 0.0%
+03:54:58 qdrant default hnsw_ef=128 topic: p50 23.0 ms, mean returned 10.00, short 0.0%
+03:55:13 qdrant default hnsw_ef=128 subtopic: p50 22.6 ms, mean returned 10.00, short 0.0%
+03:55:17 qdrant default hnsw_ef=256 none: p50 6.1 ms, mean returned 10.00, short 0.0%
+03:55:23 qdrant default hnsw_ef=256 region: p50 10.1 ms, mean returned 10.00, short 0.0%
+03:55:39 qdrant default hnsw_ef=256 dept: p50 23.4 ms, mean returned 10.00, short 0.0%
+03:55:54 qdrant default hnsw_ef=256 team: p50 22.6 ms, mean returned 10.00, short 0.0%
+03:56:09 qdrant default hnsw_ef=256 project: p50 22.5 ms, mean returned 10.00, short 0.0%
+03:56:23 qdrant default hnsw_ef=256 topic: p50 22.0 ms, mean returned 10.00, short 0.0%
+03:56:38 qdrant default hnsw_ef=256 subtopic: p50 22.8 ms, mean returned 10.00, short 0.0%
+03:56:44 qdrant default hnsw_ef=512 none: p50 8.7 ms, mean returned 10.00, short 0.0%
+03:56:54 qdrant default hnsw_ef=512 region: p50 15.2 ms, mean returned 10.00, short 0.0%
+03:57:10 qdrant default hnsw_ef=512 dept: p50 24.7 ms, mean returned 10.00, short 0.0%
+03:57:25 qdrant default hnsw_ef=512 team: p50 23.5 ms, mean returned 10.00, short 0.0%
+03:57:41 qdrant default hnsw_ef=512 project: p50 24.1 ms, mean returned 10.00, short 0.0%
+03:57:55 qdrant default hnsw_ef=512 topic: p50 22.5 ms, mean returned 10.00, short 0.0%
+03:58:10 qdrant default hnsw_ef=512 subtopic: p50 23.0 ms, mean returned 10.00, short 0.0%
+03:58:19 qdrant default hnsw_ef=1024 none: p50 12.8 ms, mean returned 10.00, short 0.0%
+03:58:36 qdrant default hnsw_ef=1024 region: p50 26.2 ms, mean returned 10.00, short 0.0%
+03:58:54 qdrant default hnsw_ef=1024 dept: p50 27.7 ms, mean returned 10.00, short 0.0%
+03:59:09 qdrant default hnsw_ef=1024 team: p50 23.2 ms, mean returned 10.00, short 0.0%
+03:59:23 qdrant default hnsw_ef=1024 project: p50 21.5 ms, mean returned 10.00, short 0.0%
+03:59:38 qdrant default hnsw_ef=1024 topic: p50 22.0 ms, mean returned 10.00, short 0.0%
+03:59:53 qdrant default hnsw_ef=1024 subtopic: p50 23.5 ms, mean returned 10.00, short 0.0%
+04:00:09 qdrant index_later hnsw_ef=None none: p50 3.9 ms, mean returned 10.00, short 0.0%
+04:00:10 qdrant index_later hnsw_ef=None region: p50 2.9 ms, mean returned 10.00, short 0.0%
+04:00:13 qdrant index_later hnsw_ef=None dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:00:14 qdrant index_later hnsw_ef=None team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:00:15 qdrant index_later hnsw_ef=None project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:00:16 qdrant index_later hnsw_ef=None topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:00:17 qdrant index_later hnsw_ef=None subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:19 qdrant index_later hnsw_ef=64 none: p50 3.1 ms, mean returned 10.00, short 0.0%
+04:00:20 qdrant index_later hnsw_ef=64 region: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:00:23 qdrant index_later hnsw_ef=64 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:00:24 qdrant index_later hnsw_ef=64 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:00:25 qdrant index_later hnsw_ef=64 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:26 qdrant index_later hnsw_ef=64 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:00:27 qdrant index_later hnsw_ef=64 subtopic: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:00:29 qdrant index_later hnsw_ef=128 none: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:00:31 qdrant index_later hnsw_ef=128 region: p50 3.1 ms, mean returned 10.00, short 0.0%
+04:00:34 qdrant index_later hnsw_ef=128 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:00:35 qdrant index_later hnsw_ef=128 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:00:36 qdrant index_later hnsw_ef=128 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:37 qdrant index_later hnsw_ef=128 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:00:38 qdrant index_later hnsw_ef=128 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:42 qdrant index_later hnsw_ef=256 none: p50 6.1 ms, mean returned 10.00, short 0.0%
+04:00:45 qdrant index_later hnsw_ef=256 region: p50 4.5 ms, mean returned 10.00, short 0.0%
+04:00:47 qdrant index_later hnsw_ef=256 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:00:48 qdrant index_later hnsw_ef=256 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:00:49 qdrant index_later hnsw_ef=256 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:50 qdrant index_later hnsw_ef=256 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:00:51 qdrant index_later hnsw_ef=256 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:00:57 qdrant index_later hnsw_ef=512 none: p50 8.9 ms, mean returned 10.00, short 0.0%
+04:01:01 qdrant index_later hnsw_ef=512 region: p50 6.2 ms, mean returned 10.00, short 0.0%
+04:01:03 qdrant index_later hnsw_ef=512 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:01:04 qdrant index_later hnsw_ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:01:05 qdrant index_later hnsw_ef=512 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:01:06 qdrant index_later hnsw_ef=512 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:01:07 qdrant index_later hnsw_ef=512 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:01:15 qdrant index_later hnsw_ef=1024 none: p50 12.8 ms, mean returned 10.00, short 0.0%
+04:01:21 qdrant index_later hnsw_ef=1024 region: p50 8.6 ms, mean returned 10.00, short 0.0%
+04:01:24 qdrant index_later hnsw_ef=1024 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:01:25 qdrant index_later hnsw_ef=1024 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:01:25 qdrant index_later hnsw_ef=1024 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:01:26 qdrant index_later hnsw_ef=1024 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:01:27 qdrant index_later hnsw_ef=1024 subtopic: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:01:28 qdrant index_first fresh container
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/qdrant_client/qdrant_remote.py:295: UserWarning: Failed to obtain server version. Unable to check client-server compatibility. Set check_compatibility=False to skip version check.
+  show_warning(
+04:01:36 qdrant index_first   1,000 loaded, 0 s
+04:02:48 qdrant index_first load 41.8 s, index 30.1 s, settle 0.0 s, count 100,000
+04:02:52 qdrant index_first hnsw_ef=None none: p50 5.9 ms, mean returned 10.00, short 0.0%
+04:02:55 qdrant index_first hnsw_ef=None region: p50 5.5 ms, mean returned 10.00, short 0.0%
+04:02:58 qdrant index_first hnsw_ef=None dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:02:59 qdrant index_first hnsw_ef=None team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:03:00 qdrant index_first hnsw_ef=None project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:03:01 qdrant index_first hnsw_ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:03:02 qdrant index_first hnsw_ef=None subtopic: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:03:05 qdrant index_first hnsw_ef=64 none: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:03:07 qdrant index_first hnsw_ef=64 region: p50 4.2 ms, mean returned 10.00, short 0.0%
+04:03:10 qdrant index_first hnsw_ef=64 dept: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:03:11 qdrant index_first hnsw_ef=64 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:03:12 qdrant index_first hnsw_ef=64 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:03:13 qdrant index_first hnsw_ef=64 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:03:14 qdrant index_first hnsw_ef=64 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:03:18 qdrant index_first hnsw_ef=128 none: p50 6.7 ms, mean returned 10.00, short 0.0%
+04:03:22 qdrant index_first hnsw_ef=128 region: p50 6.2 ms, mean returned 10.00, short 0.0%
+04:03:25 qdrant index_first hnsw_ef=128 dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:03:26 qdrant index_first hnsw_ef=128 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:03:27 qdrant index_first hnsw_ef=128 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:03:28 qdrant index_first hnsw_ef=128 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:03:28 qdrant index_first hnsw_ef=128 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:03:35 qdrant index_first hnsw_ef=256 none: p50 10.5 ms, mean returned 10.00, short 0.0%
+04:03:41 qdrant index_first hnsw_ef=256 region: p50 8.6 ms, mean returned 10.00, short 0.0%
+04:03:44 qdrant index_first hnsw_ef=256 dept: p50 4.5 ms, mean returned 10.00, short 0.0%
+04:03:45 qdrant index_first hnsw_ef=256 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:03:45 qdrant index_first hnsw_ef=256 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:03:46 qdrant index_first hnsw_ef=256 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:03:47 qdrant index_first hnsw_ef=256 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:03:57 qdrant index_first hnsw_ef=512 none: p50 15.8 ms, mean returned 10.00, short 0.0%
+04:04:05 qdrant index_first hnsw_ef=512 region: p50 11.7 ms, mean returned 10.00, short 0.0%
+04:04:08 qdrant index_first hnsw_ef=512 dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:04:09 qdrant index_first hnsw_ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:04:10 qdrant index_first hnsw_ef=512 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:04:11 qdrant index_first hnsw_ef=512 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:04:11 qdrant index_first hnsw_ef=512 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:04:25 qdrant index_first hnsw_ef=1024 none: p50 21.5 ms, mean returned 10.00, short 0.0%
+04:04:35 qdrant index_first hnsw_ef=1024 region: p50 14.6 ms, mean returned 10.00, short 0.0%
+04:04:38 qdrant index_first hnsw_ef=1024 dept: p50 4.5 ms, mean returned 10.00, short 0.0%
+04:04:39 qdrant index_first hnsw_ef=1024 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:04:40 qdrant index_first hnsw_ef=1024 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:04:41 qdrant index_first hnsw_ef=1024 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:04:42 qdrant index_first hnsw_ef=1024 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:04:46 qdrant acorn hnsw_ef=None none: p50 5.6 ms, mean returned 10.00, short 0.0%
+04:04:49 qdrant acorn hnsw_ef=None region: p50 5.3 ms, mean returned 10.00, short 0.0%
+04:04:53 qdrant acorn hnsw_ef=None dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:04:54 qdrant acorn hnsw_ef=None team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:04:54 qdrant acorn hnsw_ef=None project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:04:55 qdrant acorn hnsw_ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:04:56 qdrant acorn hnsw_ef=None subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:04:59 qdrant acorn hnsw_ef=64 none: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:05:02 qdrant acorn hnsw_ef=64 region: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:05:05 qdrant acorn hnsw_ef=64 dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:05:06 qdrant acorn hnsw_ef=64 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:05:07 qdrant acorn hnsw_ef=64 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:05:08 qdrant acorn hnsw_ef=64 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:05:09 qdrant acorn hnsw_ef=64 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:05:13 qdrant acorn hnsw_ef=128 none: p50 6.7 ms, mean returned 10.00, short 0.0%
+04:05:17 qdrant acorn hnsw_ef=128 region: p50 6.2 ms, mean returned 10.00, short 0.0%
+04:05:20 qdrant acorn hnsw_ef=128 dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:05:21 qdrant acorn hnsw_ef=128 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:05:22 qdrant acorn hnsw_ef=128 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:05:23 qdrant acorn hnsw_ef=128 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:05:24 qdrant acorn hnsw_ef=128 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:05:31 qdrant acorn hnsw_ef=256 none: p50 10.6 ms, mean returned 10.00, short 0.0%
+04:05:36 qdrant acorn hnsw_ef=256 region: p50 8.7 ms, mean returned 10.00, short 0.0%
+04:05:40 qdrant acorn hnsw_ef=256 dept: p50 4.5 ms, mean returned 10.00, short 0.0%
+04:05:41 qdrant acorn hnsw_ef=256 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:05:42 qdrant acorn hnsw_ef=256 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:05:43 qdrant acorn hnsw_ef=256 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:05:44 qdrant acorn hnsw_ef=256 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:05:54 qdrant acorn hnsw_ef=512 none: p50 15.9 ms, mean returned 10.00, short 0.0%
+04:06:02 qdrant acorn hnsw_ef=512 region: p50 11.7 ms, mean returned 10.00, short 0.0%
+04:06:06 qdrant acorn hnsw_ef=512 dept: p50 4.5 ms, mean returned 10.00, short 0.0%
+04:06:07 qdrant acorn hnsw_ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:06:08 qdrant acorn hnsw_ef=512 project: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:06:09 qdrant acorn hnsw_ef=512 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:06:09 qdrant acorn hnsw_ef=512 subtopic: p50 1.1 ms, mean returned 10.00, short 0.0%
+04:06:23 qdrant acorn hnsw_ef=1024 none: p50 21.4 ms, mean returned 10.00, short 0.0%
+04:06:33 qdrant acorn hnsw_ef=1024 region: p50 14.5 ms, mean returned 10.00, short 0.0%
+04:06:37 qdrant acorn hnsw_ef=1024 dept: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:06:38 qdrant acorn hnsw_ef=1024 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:06:39 qdrant acorn hnsw_ef=1024 project: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:06:40 qdrant acorn hnsw_ef=1024 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:06:41 qdrant acorn hnsw_ef=1024 subtopic: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:06:43 qdrant done
+04:06:43 milvus dynamic fresh container
+04:06:47 milvus dynamic   1,000 loaded, 0 s
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:210: PyMilvusDeprecationWarning: `connections.connect` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  connections.connect("ep02", uri="http://localhost:19530")
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+04:11:26 milvus dynamic load 12.6 s, index 5.5 s, settle 260.1 s, count 100,000
+04:11:27 milvus default ef=None none: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:11:28 milvus default ef=None region: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:29 milvus default ef=None dept: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:11:30 milvus default ef=None team: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:11:31 milvus default ef=None project: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:33 milvus default ef=None topic: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:11:34 milvus default ef=None subtopic: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:35 milvus default ef=64 none: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:11:36 milvus default ef=64 region: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:11:37 milvus default ef=64 dept: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:11:39 milvus default ef=64 team: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:11:40 milvus default ef=64 project: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:41 milvus default ef=64 topic: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:11:42 milvus default ef=64 subtopic: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:43 milvus default ef=128 none: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:11:45 milvus default ef=128 region: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:11:47 milvus default ef=128 dept: p50 3.7 ms, mean returned 10.00, short 0.0%
+04:11:48 milvus default ef=128 team: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:11:50 milvus default ef=128 project: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:11:51 milvus default ef=128 topic: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:11:52 milvus default ef=128 subtopic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:11:54 milvus default ef=256 none: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:11:56 milvus default ef=256 region: p50 3.0 ms, mean returned 10.00, short 0.0%
+04:11:59 milvus default ef=256 dept: p50 5.7 ms, mean returned 10.00, short 0.0%
+04:12:01 milvus default ef=256 team: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:12:02 milvus default ef=256 project: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:12:03 milvus default ef=256 topic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:12:05 milvus default ef=256 subtopic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:12:07 milvus default ef=512 none: p50 3.4 ms, mean returned 10.00, short 0.0%
+04:12:10 milvus default ef=512 region: p50 4.1 ms, mean returned 10.00, short 0.0%
+04:12:15 milvus default ef=512 dept: p50 8.1 ms, mean returned 10.00, short 0.0%
+04:12:16 milvus default ef=512 team: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:12:17 milvus default ef=512 project: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:12:19 milvus default ef=512 topic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:12:20 milvus default ef=512 subtopic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:12:24 milvus default ef=1024 none: p50 5.8 ms, mean returned 10.00, short 0.0%
+04:12:28 milvus default ef=1024 region: p50 6.0 ms, mean returned 10.00, short 0.0%
+04:12:35 milvus default ef=1024 dept: p50 11.6 ms, mean returned 10.00, short 0.0%
+04:12:37 milvus default ef=1024 team: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:12:38 milvus default ef=1024 project: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:12:40 milvus default ef=1024 topic: p50 2.6 ms, mean returned 10.00, short 0.0%
+04:12:41 milvus default ef=1024 subtopic: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:12:42 milvus schema fresh container
+2026-11-23 04:12:44,676 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+04:12:48 milvus schema   1,000 loaded, 0 s
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+04:17:27 milvus schema load 12.7 s, index 5.5 s, settle 260.0 s, count 100,000
+04:17:27 milvus schema ef=None none: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:17:28 milvus schema ef=None region: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:17:29 milvus schema ef=None dept: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:17:31 milvus schema ef=None team: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:17:32 milvus schema ef=None project: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:17:33 milvus schema ef=None topic: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:17:34 milvus schema ef=None subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:17:35 milvus schema ef=64 none: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:17:36 milvus schema ef=64 region: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:17:37 milvus schema ef=64 dept: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:17:38 milvus schema ef=64 team: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:17:39 milvus schema ef=64 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:17:40 milvus schema ef=64 topic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:17:41 milvus schema ef=64 subtopic: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:17:43 milvus schema ef=128 none: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:17:44 milvus schema ef=128 region: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:17:46 milvus schema ef=128 dept: p50 3.5 ms, mean returned 10.00, short 0.0%
+04:17:47 milvus schema ef=128 team: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:17:48 milvus schema ef=128 project: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:17:49 milvus schema ef=128 topic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:17:50 milvus schema ef=128 subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:17:52 milvus schema ef=256 none: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:17:54 milvus schema ef=256 region: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:17:57 milvus schema ef=256 dept: p50 5.0 ms, mean returned 10.00, short 0.0%
+04:17:58 milvus schema ef=256 team: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:17:59 milvus schema ef=256 project: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:00 milvus schema ef=256 topic: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:18:01 milvus schema ef=256 subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:04 milvus schema ef=512 none: p50 3.7 ms, mean returned 10.00, short 0.0%
+04:18:07 milvus schema ef=512 region: p50 4.1 ms, mean returned 10.00, short 0.0%
+04:18:12 milvus schema ef=512 dept: p50 7.7 ms, mean returned 10.00, short 0.0%
+04:18:13 milvus schema ef=512 team: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:18:14 milvus schema ef=512 project: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:15 milvus schema ef=512 topic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:18:16 milvus schema ef=512 subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:20 milvus schema ef=1024 none: p50 5.6 ms, mean returned 10.00, short 0.0%
+04:18:24 milvus schema ef=1024 region: p50 6.1 ms, mean returned 10.00, short 0.0%
+04:18:31 milvus schema ef=1024 dept: p50 11.6 ms, mean returned 10.00, short 0.0%
+04:18:33 milvus schema ef=1024 team: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:18:34 milvus schema ef=1024 project: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:35 milvus schema ef=1024 topic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:18:36 milvus schema ef=1024 subtopic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:44 milvus schema_index ef=None none: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:18:44 milvus schema_index ef=None region: p50 1.2 ms, mean returned 10.00, short 0.0%
+04:18:45 milvus schema_index ef=None dept: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:46 milvus schema_index ef=None team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:47 milvus schema_index ef=None project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:18:48 milvus schema_index ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:49 milvus schema_index ef=None subtopic: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:18:50 milvus schema_index ef=64 none: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:18:51 milvus schema_index ef=64 region: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:53 milvus schema_index ef=64 dept: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:18:54 milvus schema_index ef=64 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:55 milvus schema_index ef=64 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:18:56 milvus schema_index ef=64 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:18:57 milvus schema_index ef=64 subtopic: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:18:58 milvus schema_index ef=128 none: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:18:59 milvus schema_index ef=128 region: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:19:01 milvus schema_index ef=128 dept: p50 3.2 ms, mean returned 10.00, short 0.0%
+04:19:02 milvus schema_index ef=128 team: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:19:03 milvus schema_index ef=128 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:04 milvus schema_index ef=128 topic: p50 1.6 ms, mean returned 10.00, short 0.0%
+04:19:05 milvus schema_index ef=128 subtopic: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:07 milvus schema_index ef=256 none: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:19:08 milvus schema_index ef=256 region: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:19:12 milvus schema_index ef=256 dept: p50 5.3 ms, mean returned 10.00, short 0.0%
+04:19:13 milvus schema_index ef=256 team: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:19:14 milvus schema_index ef=256 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:15 milvus schema_index ef=256 topic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:19:16 milvus schema_index ef=256 subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:19:18 milvus schema_index ef=512 none: p50 3.6 ms, mean returned 10.00, short 0.0%
+04:19:21 milvus schema_index ef=512 region: p50 3.7 ms, mean returned 10.00, short 0.0%
+04:19:26 milvus schema_index ef=512 dept: p50 7.6 ms, mean returned 10.00, short 0.0%
+04:19:27 milvus schema_index ef=512 team: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:19:28 milvus schema_index ef=512 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:29 milvus schema_index ef=512 topic: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:19:30 milvus schema_index ef=512 subtopic: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:34 milvus schema_index ef=1024 none: p50 5.9 ms, mean returned 10.00, short 0.0%
+04:19:38 milvus schema_index ef=1024 region: p50 6.1 ms, mean returned 10.00, short 0.0%
+04:19:45 milvus schema_index ef=1024 dept: p50 11.5 ms, mean returned 10.00, short 0.0%
+04:19:47 milvus schema_index ef=1024 team: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:19:48 milvus schema_index ef=1024 project: p50 1.3 ms, mean returned 10.00, short 0.0%
+04:19:49 milvus schema_index ef=1024 topic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:19:50 milvus schema_index ef=1024 subtopic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:19:53 milvus done
+04:19:53 weaviate base fresh container
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/authlib/integrations/httpx_client/assertion_client.py:5: AuthlibDeprecationWarning: The httpx module is deprecated; please use httpx2 instead.
+  from ._compat import httpx2
+04:19:57 weaviate base   1,000 loaded, 0 s
+04:21:20 weaviate base load 82.7 s, index 0.0 s, settle 0.0 s, count 100,000
+04:21:23 weaviate default ef=None none: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:21:26 weaviate default ef=None region: p50 3.8 ms, mean returned 10.00, short 0.0%
+04:21:31 weaviate default ef=None dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:21:32 weaviate default ef=None team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:21:33 weaviate default ef=None project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:21:34 weaviate default ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:21:34 weaviate default ef=None subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:21:36 weaviate default ef=64 none: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:21:38 weaviate default ef=64 region: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:21:43 weaviate default ef=64 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:21:44 weaviate default ef=64 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:21:45 weaviate default ef=64 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:21:46 weaviate default ef=64 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:21:46 weaviate default ef=64 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:21:49 weaviate default ef=128 none: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:21:52 weaviate default ef=128 region: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:21:57 weaviate default ef=128 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:21:58 weaviate default ef=128 team: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:21:58 weaviate default ef=128 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:21:59 weaviate default ef=128 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:22:00 weaviate default ef=128 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:22:04 weaviate default ef=256 none: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:22:08 weaviate default ef=256 region: p50 7.0 ms, mean returned 10.00, short 0.0%
+04:22:13 weaviate default ef=256 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:22:14 weaviate default ef=256 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:22:15 weaviate default ef=256 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:22:16 weaviate default ef=256 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:22:16 weaviate default ef=256 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:22:22 weaviate default ef=512 none: p50 7.0 ms, mean returned 10.00, short 0.0%
+04:22:29 weaviate default ef=512 region: p50 11.5 ms, mean returned 10.00, short 0.0%
+04:22:34 weaviate default ef=512 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:22:35 weaviate default ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:22:36 weaviate default ef=512 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:22:37 weaviate default ef=512 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:22:37 weaviate default ef=512 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:22:45 weaviate default ef=1024 none: p50 11.4 ms, mean returned 10.00, short 0.0%
+04:22:57 weaviate default ef=1024 region: p50 18.7 ms, mean returned 10.00, short 0.0%
+04:23:03 weaviate default ef=1024 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:23:04 weaviate default ef=1024 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:23:04 weaviate default ef=1024 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:05 weaviate default ef=1024 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:23:05 weaviate default ef=1024 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:12 weaviate sweeping ef=None none: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:23:15 weaviate sweeping ef=None region: p50 3.8 ms, mean returned 10.00, short 0.0%
+04:23:20 weaviate sweeping ef=None dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:23:21 weaviate sweeping ef=None team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:23:21 weaviate sweeping ef=None project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:22 weaviate sweeping ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:23:23 weaviate sweeping ef=None subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:25 weaviate sweeping ef=64 none: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:23:27 weaviate sweeping ef=64 region: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:23:32 weaviate sweeping ef=64 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:23:33 weaviate sweeping ef=64 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:23:33 weaviate sweeping ef=64 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:34 weaviate sweeping ef=64 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:23:35 weaviate sweeping ef=64 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:38 weaviate sweeping ef=128 none: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:23:40 weaviate sweeping ef=128 region: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:23:46 weaviate sweeping ef=128 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:23:46 weaviate sweeping ef=128 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:23:47 weaviate sweeping ef=128 project: p50 0.6 ms, mean returned 10.00, short 0.0%
+04:23:48 weaviate sweeping ef=128 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:23:48 weaviate sweeping ef=128 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:23:52 weaviate sweeping ef=256 none: p50 4.3 ms, mean returned 10.00, short 0.0%
+04:23:57 weaviate sweeping ef=256 region: p50 6.9 ms, mean returned 10.00, short 0.0%
+04:24:02 weaviate sweeping ef=256 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:24:03 weaviate sweeping ef=256 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:24:03 weaviate sweeping ef=256 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:24:04 weaviate sweeping ef=256 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:24:04 weaviate sweeping ef=256 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:24:10 weaviate sweeping ef=512 none: p50 6.9 ms, mean returned 10.00, short 0.0%
+04:24:17 weaviate sweeping ef=512 region: p50 11.3 ms, mean returned 10.00, short 0.0%
+04:24:22 weaviate sweeping ef=512 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:24:23 weaviate sweeping ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:24:24 weaviate sweeping ef=512 project: p50 0.6 ms, mean returned 10.00, short 0.0%
+04:24:25 weaviate sweeping ef=512 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:24:25 weaviate sweeping ef=512 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:24:33 weaviate sweeping ef=1024 none: p50 11.2 ms, mean returned 10.00, short 0.0%
+04:24:45 weaviate sweeping ef=1024 region: p50 18.5 ms, mean returned 10.00, short 0.0%
+04:24:50 weaviate sweeping ef=1024 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:24:51 weaviate sweeping ef=1024 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:24:52 weaviate sweeping ef=1024 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:24:53 weaviate sweeping ef=1024 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:24:53 weaviate sweeping ef=1024 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:24:54 weaviate acorn is the shipped strategy: measured as default
+04:25:00 weaviate pathseer ef=None none: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:25:02 weaviate pathseer ef=None region: p50 3.3 ms, mean returned 10.00, short 0.0%
+04:25:07 weaviate pathseer ef=None dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:25:08 weaviate pathseer ef=None team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:25:09 weaviate pathseer ef=None project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:10 weaviate pathseer ef=None topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:25:10 weaviate pathseer ef=None subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:12 weaviate pathseer ef=64 none: p50 1.8 ms, mean returned 10.00, short 0.0%
+04:25:14 weaviate pathseer ef=64 region: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:25:19 weaviate pathseer ef=64 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:25:20 weaviate pathseer ef=64 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:25:21 weaviate pathseer ef=64 project: p50 0.6 ms, mean returned 10.00, short 0.0%
+04:25:21 weaviate pathseer ef=64 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:25:22 weaviate pathseer ef=64 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:25 weaviate pathseer ef=128 none: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:25:27 weaviate pathseer ef=128 region: p50 3.8 ms, mean returned 10.00, short 0.0%
+04:25:32 weaviate pathseer ef=128 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:25:33 weaviate pathseer ef=128 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:25:34 weaviate pathseer ef=128 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:35 weaviate pathseer ef=128 topic: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:25:35 weaviate pathseer ef=128 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:39 weaviate pathseer ef=256 none: p50 4.4 ms, mean returned 10.00, short 0.0%
+04:25:43 weaviate pathseer ef=256 region: p50 6.2 ms, mean returned 10.00, short 0.0%
+04:25:48 weaviate pathseer ef=256 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:25:49 weaviate pathseer ef=256 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:25:50 weaviate pathseer ef=256 project: p50 0.6 ms, mean returned 10.00, short 0.0%
+04:25:51 weaviate pathseer ef=256 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:25:51 weaviate pathseer ef=256 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:25:57 weaviate pathseer ef=512 none: p50 7.0 ms, mean returned 10.00, short 0.0%
+04:26:03 weaviate pathseer ef=512 region: p50 10.0 ms, mean returned 10.00, short 0.0%
+04:26:08 weaviate pathseer ef=512 dept: p50 7.9 ms, mean returned 10.00, short 0.0%
+04:26:09 weaviate pathseer ef=512 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:26:10 weaviate pathseer ef=512 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:26:11 weaviate pathseer ef=512 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:26:11 weaviate pathseer ef=512 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:26:19 weaviate pathseer ef=1024 none: p50 11.3 ms, mean returned 10.00, short 0.0%
+04:26:30 weaviate pathseer ef=1024 region: p50 16.7 ms, mean returned 10.00, short 0.0%
+04:26:35 weaviate pathseer ef=1024 dept: p50 7.8 ms, mean returned 10.00, short 0.0%
+04:26:36 weaviate pathseer ef=1024 team: p50 1.4 ms, mean returned 10.00, short 0.0%
+04:26:37 weaviate pathseer ef=1024 project: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:26:38 weaviate pathseer ef=1024 topic: p50 1.5 ms, mean returned 10.00, short 0.0%
+04:26:38 weaviate pathseer ef=1024 subtopic: p50 0.7 ms, mean returned 10.00, short 0.0%
+04:26:41 weaviate done
+04:26:42 elasticsearch base fresh container
+04:27:05 elasticsearch base   1,000 loaded, 2 s
+04:29:18 elasticsearch base load 134.2 s, index 0.3 s, settle 0.0 s, count 100,000
+04:29:22 elasticsearch default num_candidates=None none: p50 4.6 ms, mean returned 10.00, short 0.0%
+04:29:25 elasticsearch default num_candidates=None region: p50 4.1 ms, mean returned 10.00, short 0.0%
+04:29:27 elasticsearch default num_candidates=None dept: p50 3.5 ms, mean returned 10.00, short 0.0%
+04:29:29 elasticsearch default num_candidates=None team: p50 2.6 ms, mean returned 10.00, short 0.0%
+04:29:31 elasticsearch default num_candidates=None project: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:29:32 elasticsearch default num_candidates=None topic: p50 2.6 ms, mean returned 10.00, short 0.0%
+04:29:34 elasticsearch default num_candidates=None subtopic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:36 elasticsearch default num_candidates=64 none: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:29:38 elasticsearch default num_candidates=64 region: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:29:39 elasticsearch default num_candidates=64 dept: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:29:41 elasticsearch default num_candidates=64 team: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:42 elasticsearch default num_candidates=64 project: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:44 elasticsearch default num_candidates=64 topic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:45 elasticsearch default num_candidates=64 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:29:47 elasticsearch default num_candidates=128 none: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:29:49 elasticsearch default num_candidates=128 region: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:29:51 elasticsearch default num_candidates=128 dept: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:29:52 elasticsearch default num_candidates=128 team: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:29:54 elasticsearch default num_candidates=128 project: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:55 elasticsearch default num_candidates=128 topic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:29:56 elasticsearch default num_candidates=128 subtopic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:29:58 elasticsearch default num_candidates=256 none: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:30:00 elasticsearch default num_candidates=256 region: p50 3.0 ms, mean returned 10.00, short 0.0%
+04:30:02 elasticsearch default num_candidates=256 dept: p50 3.1 ms, mean returned 10.00, short 0.0%
+04:30:04 elasticsearch default num_candidates=256 team: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:30:05 elasticsearch default num_candidates=256 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:07 elasticsearch default num_candidates=256 topic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:08 elasticsearch default num_candidates=256 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:10 elasticsearch default num_candidates=512 none: p50 3.0 ms, mean returned 10.00, short 0.0%
+04:30:13 elasticsearch default num_candidates=512 region: p50 3.4 ms, mean returned 10.00, short 0.0%
+04:30:14 elasticsearch default num_candidates=512 dept: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:30:16 elasticsearch default num_candidates=512 team: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:30:17 elasticsearch default num_candidates=512 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:19 elasticsearch default num_candidates=512 topic: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:30:20 elasticsearch default num_candidates=512 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:23 elasticsearch default num_candidates=1024 none: p50 3.8 ms, mean returned 10.00, short 0.0%
+04:30:26 elasticsearch default num_candidates=1024 region: p50 4.2 ms, mean returned 10.00, short 0.0%
+04:30:28 elasticsearch default num_candidates=1024 dept: p50 3.2 ms, mean returned 10.00, short 0.0%
+04:30:30 elasticsearch default num_candidates=1024 team: p50 3.1 ms, mean returned 10.00, short 0.0%
+04:30:31 elasticsearch default num_candidates=1024 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:33 elasticsearch default num_candidates=1024 topic: p50 2.9 ms, mean returned 10.00, short 0.0%
+04:30:35 elasticsearch default num_candidates=1024 subtopic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:30:36 elasticsearch fanout num_candidates=None none: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:30:38 elasticsearch fanout num_candidates=None region: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:30:39 elasticsearch fanout num_candidates=None dept: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:30:41 elasticsearch fanout num_candidates=None team: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:30:42 elasticsearch fanout num_candidates=None project: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:30:43 elasticsearch fanout num_candidates=None topic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:30:45 elasticsearch fanout num_candidates=None subtopic: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:30:46 elasticsearch fanout num_candidates=64 none: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:30:48 elasticsearch fanout num_candidates=64 region: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:30:49 elasticsearch fanout num_candidates=64 dept: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:30:51 elasticsearch fanout num_candidates=64 team: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:30:52 elasticsearch fanout num_candidates=64 project: p50 1.9 ms, mean returned 10.00, short 0.0%
+04:30:53 elasticsearch fanout num_candidates=64 topic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:30:55 elasticsearch fanout num_candidates=64 subtopic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:30:56 elasticsearch fanout num_candidates=128 none: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:30:58 elasticsearch fanout num_candidates=128 region: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:31:00 elasticsearch fanout num_candidates=128 dept: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:31:01 elasticsearch fanout num_candidates=128 team: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:31:02 elasticsearch fanout num_candidates=128 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:04 elasticsearch fanout num_candidates=128 topic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:05 elasticsearch fanout num_candidates=128 subtopic: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:31:07 elasticsearch fanout num_candidates=256 none: p50 2.6 ms, mean returned 10.00, short 0.0%
+04:31:09 elasticsearch fanout num_candidates=256 region: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:31:11 elasticsearch fanout num_candidates=256 dept: p50 3.2 ms, mean returned 10.00, short 0.0%
+04:31:12 elasticsearch fanout num_candidates=256 team: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:14 elasticsearch fanout num_candidates=256 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:15 elasticsearch fanout num_candidates=256 topic: p50 2.2 ms, mean returned 10.00, short 0.0%
+04:31:16 elasticsearch fanout num_candidates=256 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:18 elasticsearch fanout num_candidates=512 none: p50 3.0 ms, mean returned 10.00, short 0.0%
+04:31:21 elasticsearch fanout num_candidates=512 region: p50 3.2 ms, mean returned 10.00, short 0.0%
+04:31:22 elasticsearch fanout num_candidates=512 dept: p50 2.8 ms, mean returned 10.00, short 0.0%
+04:31:24 elasticsearch fanout num_candidates=512 team: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:31:25 elasticsearch fanout num_candidates=512 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:27 elasticsearch fanout num_candidates=512 topic: p50 2.4 ms, mean returned 10.00, short 0.0%
+04:31:28 elasticsearch fanout num_candidates=512 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:31 elasticsearch fanout num_candidates=1024 none: p50 3.7 ms, mean returned 10.00, short 0.0%
+04:31:33 elasticsearch fanout num_candidates=1024 region: p50 4.1 ms, mean returned 10.00, short 0.0%
+04:31:36 elasticsearch fanout num_candidates=1024 dept: p50 3.2 ms, mean returned 10.00, short 0.0%
+04:31:38 elasticsearch fanout num_candidates=1024 team: p50 3.0 ms, mean returned 10.00, short 0.0%
+04:31:39 elasticsearch fanout num_candidates=1024 project: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:31:41 elasticsearch fanout num_candidates=1024 topic: p50 2.9 ms, mean returned 10.00, short 0.0%
+04:31:42 elasticsearch fanout num_candidates=1024 subtopic: p50 2.1 ms, mean returned 10.00, short 0.0%
+04:32:16 elasticsearch exact num_candidates=None none: p50 50.7 ms, mean returned 10.00, short 0.0%
+04:32:35 elasticsearch exact num_candidates=None region: p50 30.0 ms, mean returned 10.00, short 0.0%
+04:32:41 elasticsearch exact num_candidates=None dept: p50 9.1 ms, mean returned 10.00, short 0.0%
+04:32:43 elasticsearch exact num_candidates=None team: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:32:44 elasticsearch exact num_candidates=None project: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:32:46 elasticsearch exact num_candidates=None topic: p50 2.5 ms, mean returned 10.00, short 0.0%
+04:32:47 elasticsearch exact num_candidates=None subtopic: p50 1.7 ms, mean returned 10.00, short 0.0%
+04:32:52 elasticsearch done
+04:32:52 chroma base fresh container
+04:32:54 chroma base   1,000 loaded, 0 s
+04:34:23 chroma base load 89.3 s, index 0.0 s, settle 0.0 s, count 100,000
+04:34:31 chroma default ef_search=None none: p50 2.3 ms, mean returned 10.00, short 0.0%
+04:36:03 chroma default ef_search=None region: p50 141.2 ms, mean returned 10.00, short 0.0%
+04:36:38 chroma default ef_search=None dept: p50 53.1 ms, mean returned 10.00, short 0.0%
+04:37:16 chroma default ef_search=None team: p50 58.7 ms, mean returned 10.00, short 0.0%
+04:38:31 chroma default ef_search=None project: p50 115.4 ms, mean returned 10.00, short 0.0%
+04:38:49 chroma default ef_search=None topic: p50 25.1 ms, mean returned 10.00, short 0.0%
+04:39:31 chroma default ef_search=None subtopic: p50 46.6 ms, mean returned 10.00, short 0.0%
+04:39:35 chroma default ef_search=64 none: p50 2.0 ms, mean returned 10.00, short 0.0%
+04:41:06 chroma default ef_search=64 region: p50 139.1 ms, mean returned 10.00, short 0.0%
+04:41:39 chroma default ef_search=64 dept: p50 50.3 ms, mean returned 10.00, short 0.0%
+04:42:10 chroma default ef_search=64 team: p50 48.4 ms, mean returned 10.00, short 0.0%
+04:43:17 chroma default ef_search=64 project: p50 101.7 ms, mean returned 10.00, short 0.0%
+04:43:33 chroma default ef_search=64 topic: p50 24.1 ms, mean returned 10.00, short 0.0%
+04:43:56 chroma default ef_search=64 subtopic: p50 21.7 ms, mean returned 10.00, short 0.0%
+04:44:01 chroma default ef_search=128 none: p50 2.7 ms, mean returned 10.00, short 0.0%
+04:45:33 chroma default ef_search=128 region: p50 141.5 ms, mean returned 10.00, short 0.0%
+04:46:09 chroma default ef_search=128 dept: p50 54.4 ms, mean returned 10.00, short 0.0%
+04:46:51 chroma default ef_search=128 team: p50 64.8 ms, mean returned 10.00, short 0.0%
+04:48:06 chroma default ef_search=128 project: p50 116.2 ms, mean returned 10.00, short 0.0%
+04:48:25 chroma default ef_search=128 topic: p50 26.0 ms, mean returned 10.00, short 0.0%
+04:49:22 chroma default ef_search=128 subtopic: p50 114.4 ms, mean returned 10.00, short 0.0%
+04:49:27 chroma default ef_search=256 none: p50 3.9 ms, mean returned 10.00, short 0.0%
+04:51:01 chroma default ef_search=256 region: p50 143.1 ms, mean returned 10.00, short 0.0%
+04:51:41 chroma default ef_search=256 dept: p50 60.8 ms, mean returned 10.00, short 0.0%
+04:52:35 chroma default ef_search=256 team: p50 83.6 ms, mean returned 10.00, short 0.0%
+04:53:51 chroma default ef_search=256 project: p50 116.2 ms, mean returned 10.00, short 0.0%
+04:54:13 chroma default ef_search=256 topic: p50 29.7 ms, mean returned 10.00, short 0.0%
+04:55:29 chroma default ef_search=256 subtopic: p50 116.0 ms, mean returned 10.00, short 0.0%
+04:55:36 chroma default ef_search=512 none: p50 5.6 ms, mean returned 10.00, short 0.0%
+04:57:13 chroma default ef_search=512 region: p50 147.9 ms, mean returned 10.00, short 0.0%
+04:57:58 chroma default ef_search=512 dept: p50 70.8 ms, mean returned 10.00, short 0.0%
+04:59:05 chroma default ef_search=512 team: p50 102.9 ms, mean returned 10.00, short 0.0%
+05:00:21 chroma default ef_search=512 project: p50 115.9 ms, mean returned 10.00, short 0.0%
+05:00:53 chroma default ef_search=512 topic: p50 41.4 ms, mean returned 10.00, short 0.0%
+05:02:09 chroma default ef_search=512 subtopic: p50 116.5 ms, mean returned 10.00, short 0.0%
+05:02:17 chroma default ef_search=1024 none: p50 8.7 ms, mean returned 10.00, short 0.0%
+05:03:56 chroma default ef_search=1024 region: p50 151.3 ms, mean returned 10.00, short 0.0%
+05:04:51 chroma default ef_search=1024 dept: p50 84.9 ms, mean returned 10.00, short 0.0%
+05:06:11 chroma default ef_search=1024 team: p50 122.4 ms, mean returned 10.00, short 0.0%
+05:07:26 chroma default ef_search=1024 project: p50 115.9 ms, mean returned 10.00, short 0.0%
+05:08:29 chroma default ef_search=1024 topic: p50 112.3 ms, mean returned 10.00, short 0.0%
+05:09:44 chroma default ef_search=1024 subtopic: p50 115.8 ms, mean returned 10.00, short 0.0%
+05:09:49 chroma done
+sys:1: ResourceWarning: unclosed <socket.socket fd=7, family=2, type=1, proto=6, laddr=('127.0.0.1', 54802), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=6, laddr=('127.0.0.1', 50158), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=9, family=2, type=1, proto=6, laddr=('127.0.0.1', 50166), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=11, family=2, type=1, proto=6, laddr=('127.0.0.1', 50176), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=12, family=2, type=1, proto=6, laddr=('127.0.0.1', 50180), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=14, family=2, type=1, proto=6, laddr=('127.0.0.1', 49108), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=15, family=2, type=1, proto=6, laddr=('127.0.0.1', 49116), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=16, family=2, type=1, proto=6, laddr=('127.0.0.1', 52904), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=17, family=2, type=1, proto=6, laddr=('127.0.0.1', 52906), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=18, family=2, type=1, proto=6, laddr=('127.0.0.1', 36988), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=19, family=2, type=1, proto=6, laddr=('127.0.0.1', 39170), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=20, family=2, type=1, proto=6, laddr=('127.0.0.1', 33312), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=21, family=2, type=1, proto=6, laddr=('127.0.0.1', 33328), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=22, family=2, type=1, proto=6, laddr=('127.0.0.1', 33090), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=23, family=2, type=1, proto=6, laddr=('127.0.0.1', 33098), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=24, family=2, type=1, proto=6, laddr=('127.0.0.1', 33192), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=25, family=2, type=1, proto=6, laddr=('127.0.0.1', 33198), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=6, laddr=('127.0.0.1', 54790), raddr=('127.0.0.1', 8001)>

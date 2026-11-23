@@ -1,0 +1,201 @@
+oom_killed=false exit=0 running=true
+
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-11-23 04:13:09.300 UTC [53] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-23 04:13:09.308 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-23 04:13:09.332 UTC [59] LOG:  database system was shut down at 2026-11-23 04:13:08 UTC
+2026-11-23 04:13:09.341 UTC [53] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2026-11-23 04:13:09.498 UTC [53] LOG:  received fast shutdown request
+.2026-11-23 04:13:09.506 UTC [53] LOG:  aborting any active transactions
+2026-11-23 04:13:09.508 UTC [53] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+2026-11-23 04:13:09.508 UTC [57] LOG:  shutting down
+2026-11-23 04:13:09.517 UTC [57] LOG:  checkpoint starting: shutdown immediate
+2026-11-23 04:13:09.717 UTC [57] LOG:  checkpoint complete: wrote 950 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.027 s, sync=0.142 s, total=0.209 s; sync files=303, longest=0.010 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/1BBA2B0, redo lsn=0/1BBA2B0
+2026-11-23 04:13:09.745 UTC [53] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-23 04:13:09.841 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-23 04:13:09.841 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-23 04:13:09.841 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-23 04:13:09.853 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-23 04:13:09.873 UTC [75] LOG:  database system was shut down at 2026-11-23 04:13:09 UTC
+2026-11-23 04:13:09.884 UTC [1] LOG:  database system is ready to accept connections
+2026-11-23 04:13:14.589 UTC [73] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2026-11-23 04:13:14.589 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:14.589 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:19.187 UTC [73] LOG:  checkpoint complete: wrote 207 buffers (1.3%), wrote 3 SLRU buffers; 0 WAL file(s) added, 3 removed, 30 recycled; write=3.731 s, sync=0.469 s, total=4.599 s; sync files=89, longest=0.229 s, average=0.006 s; distance=532025 kB, estimate=532025 kB; lsn=0/432FDA80, redo lsn=0/22348A28
+2026-11-23 04:13:19.187 UTC [73] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2026-11-23 04:13:19.187 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:19.187 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:22.975 UTC [73] LOG:  checkpoint complete: wrote 309 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 4 removed, 32 recycled; write=3.139 s, sync=0.219 s, total=3.788 s; sync files=6, longest=0.182 s, average=0.037 s; distance=594141 kB, estimate=594141 kB; lsn=0/65B12058, redo lsn=0/46780130
+2026-11-23 04:13:22.975 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-23 04:13:22.975 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:22.975 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:26.647 UTC [73] LOG:  checkpoint complete: wrote 240 buffers (1.5%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 32 recycled; write=3.037 s, sync=0.224 s, total=3.673 s; sync files=8, longest=0.117 s, average=0.028 s; distance=569025 kB, estimate=591630 kB; lsn=0/881361E8, redo lsn=0/69330898
+2026-11-23 04:13:26.647 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-23 04:13:26.647 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:26.647 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:30.647 UTC [73] LOG:  checkpoint complete: wrote 176 buffers (1.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 31 recycled; write=3.219 s, sync=0.231 s, total=4.000 s; sync files=7, longest=0.161 s, average=0.033 s; distance=564550 kB, estimate=588922 kB; lsn=0/AB3216D0, redo lsn=0/8BA821D8
+2026-11-23 04:13:30.648 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-23 04:13:30.648 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:30.648 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:34.407 UTC [73] LOG:  checkpoint complete: wrote 222 buffers (1.4%), wrote 1 SLRU buffers; 0 WAL file(s) added, 4 removed, 32 recycled; write=3.133 s, sync=0.231 s, total=3.759 s; sync files=7, longest=0.176 s, average=0.033 s; distance=587930 kB, estimate=588823 kB; lsn=0/CEE55330, redo lsn=0/AF8A8DA8
+2026-11-23 04:13:34.407 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-23 04:13:34.407 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:34.407 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:38.100 UTC [73] LOG:  checkpoint complete: wrote 308 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 32 recycled; write=3.036 s, sync=0.227 s, total=3.693 s; sync files=8, longest=0.090 s, average=0.029 s; distance=568897 kB, estimate=586830 kB; lsn=0/F1400730, redo lsn=0/D24393E8
+2026-11-23 04:13:38.100 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-23 04:13:38.100 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:38.100 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:41.712 UTC [73] LOG:  checkpoint complete: wrote 248 buffers (1.5%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 31 recycled; write=2.935 s, sync=0.234 s, total=3.613 s; sync files=7, longest=0.172 s, average=0.034 s; distance=564181 kB, estimate=584565 kB; lsn=1/1419E338, redo lsn=0/F4B2E970
+2026-11-23 04:13:41.713 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-23 04:13:41.713 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:13:41.713 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:13:42.820 UTC [80] ERROR:  canceling autovacuum task
+2026-11-23 04:13:42.820 UTC [80] CONTEXT:  while scanning block 9703 of relation "public.docs"
+	automatic vacuum of table "bench.public.docs"
+2026-11-23 04:14:03.333 UTC [73] LOG:  checkpoint complete: wrote 271 buffers (1.7%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 33 recycled; write=20.767 s, sync=0.385 s, total=21.621 s; sync files=44, longest=0.158 s, average=0.009 s; distance=588726 kB, estimate=588726 kB; lsn=1/36CB6318, redo lsn=1/18A1C330
+2026-11-23 04:14:04.603 UTC [73] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2026-11-23 04:14:04.603 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:14:04.603 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:14:27.825 UTC [73] LOG:  checkpoint complete: wrote 88 buffers (0.5%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.577 s, sync=0.189 s, total=23.223 s; sync files=5, longest=0.091 s, average=0.038 s; distance=530345 kB, estimate=582888 kB; lsn=1/56F9CE50, redo lsn=1/39006800
+2026-11-23 04:14:29.770 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:14:29.770 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:14:29.770 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:14:39.917 UTC [85] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:14:52.701 UTC [73] LOG:  checkpoint complete: wrote 58 buffers (0.4%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.170 s, sync=0.222 s, total=22.932 s; sync files=3, longest=0.162 s, average=0.074 s; distance=540747 kB, estimate=578674 kB; lsn=1/77FC3810, redo lsn=1/5A0197F8
+2026-11-23 04:14:54.596 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:14:54.596 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:14:54.596 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:15:17.615 UTC [73] LOG:  checkpoint complete: wrote 46 buffers (0.3%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.179 s, sync=0.302 s, total=23.020 s; sync files=9, longest=0.132 s, average=0.034 s; distance=540826 kB, estimate=574889 kB; lsn=1/99116378, redo lsn=1/7B0401D0
+2026-11-23 04:15:19.432 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:15:19.432 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:15:19.432 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:15:39.936 UTC [88] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:15:42.586 UTC [73] LOG:  checkpoint complete: wrote 44 buffers (0.3%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.481 s, sync=0.236 s, total=23.155 s; sync files=4, longest=0.148 s, average=0.059 s; distance=540546 kB, estimate=571455 kB; lsn=1/BA156858, redo lsn=1/9C0209F8
+2026-11-23 04:15:44.413 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:15:44.413 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:15:44.413 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:16:07.632 UTC [73] LOG:  checkpoint complete: wrote 31 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.465 s, sync=0.321 s, total=23.219 s; sync files=3, longest=0.162 s, average=0.107 s; distance=540818 kB, estimate=568391 kB; lsn=1/DB232050, redo lsn=1/BD045408
+2026-11-23 04:16:09.447 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:16:09.447 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:16:09.447 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:16:32.477 UTC [73] LOG:  checkpoint complete: wrote 26 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.265 s, sync=0.295 s, total=23.031 s; sync files=4, longest=0.155 s, average=0.074 s; distance=540621 kB, estimate=565614 kB; lsn=1/FC1C50E8, redo lsn=1/DE038870
+2026-11-23 04:16:34.239 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-23 04:16:34.239 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:16:34.239 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:16:39.956 UTC [91] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:16:57.001 UTC [73] LOG:  checkpoint complete: wrote 26 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.176 s, sync=0.124 s, total=22.762 s; sync files=4, longest=0.062 s, average=0.031 s; distance=540715 kB, estimate=563124 kB; lsn=2/1CEDFF78, redo lsn=1/FF0437C8
+2026-11-23 04:16:58.922 UTC [73] LOG:  checkpoints are occurring too frequently (24 seconds apart)
+2026-11-23 04:16:58.922 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 04:16:58.922 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 04:17:39.976 UTC [94] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:18:16.611 UTC [73] LOG:  checkpoint complete: wrote 28 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=76.978 s, sync=0.256 s, total=77.690 s; sync files=5, longest=0.255 s, average=0.052 s; distance=540415 kB, estimate=560853 kB; lsn=2/20C9F608, redo lsn=2/20003728
+2026-11-23 04:18:39.994 UTC [97] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:19:40.013 UTC [100] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:20:40.033 UTC [103] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:21:40.033 UTC [106] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:22:40.052 UTC [109] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:23:40.072 UTC [112] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:24:40.090 UTC [115] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:25:40.109 UTC [118] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:26:40.128 UTC [121] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:27:40.149 UTC [124] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:28:40.156 UTC [127] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:29:40.175 UTC [130] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:30:40.182 UTC [133] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:31:40.194 UTC [136] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:32:40.214 UTC [139] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:33:40.234 UTC [142] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:34:40.252 UTC [145] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:35:40.272 UTC [148] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:36:40.289 UTC [151] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:37:40.309 UTC [154] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:38:40.329 UTC [157] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:39:40.348 UTC [160] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:40:40.367 UTC [163] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:41:40.386 UTC [166] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:42:40.406 UTC [169] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:43:40.426 UTC [172] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:44:40.445 UTC [175] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:45:40.465 UTC [178] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:46:40.484 UTC [181] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:47:40.503 UTC [184] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:48:40.522 UTC [187] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:49:40.543 UTC [190] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:50:40.562 UTC [193] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:51:40.581 UTC [196] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:52:40.601 UTC [199] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:53:40.620 UTC [202] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:54:40.639 UTC [205] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:55:40.658 UTC [208] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:56:40.677 UTC [211] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:57:40.695 UTC [214] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:58:40.715 UTC [217] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 04:59:40.734 UTC [220] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 05:00:40.754 UTC [223] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 05:01:40.773 UTC [226] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 05:01:58.717 UTC [73] LOG:  checkpoint starting: time
+2026-11-23 05:02:40.792 UTC [229] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 05:02:53.002 UTC [73] LOG:  checkpoint complete: wrote 25 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=53.619 s, sync=0.625 s, total=54.286 s; sync files=9, longest=0.111 s, average=0.070 s; distance=15264 kB, estimate=506294 kB; lsn=2/21058368, redo lsn=2/20EEB968
+2026-11-23 05:03:40.810 UTC [232] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 05:03:52.046 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:03:54.467 UTC [73] LOG:  checkpoint complete: wrote 549 buffers (3.4%), wrote 0 SLRU buffers; 0 WAL file(s) added, 7 removed, 26 recycled; write=1.399 s, sync=0.578 s, total=2.421 s; sync files=9, longest=0.230 s, average=0.065 s; distance=529564 kB, estimate=529564 kB; lsn=2/66401940, redo lsn=2/41412BC8
+2026-11-23 05:03:54.467 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-23 05:03:54.467 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 05:03:54.467 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:03:56.902 UTC [73] LOG:  checkpoint complete: wrote 570 buffers (3.5%), wrote 0 SLRU buffers; 0 WAL file(s) added, 16 removed, 29 recycled; write=1.620 s, sync=0.294 s, total=2.436 s; sync files=2, longest=0.242 s, average=0.147 s; distance=746021 kB, estimate=746021 kB; lsn=2/904098E8, redo lsn=2/6EC9C138
+2026-11-23 05:03:56.903 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-23 05:03:56.903 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 05:03:56.903 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:03:59.221 UTC [73] LOG:  checkpoint complete: wrote 550 buffers (3.4%), wrote 0 SLRU buffers; 0 WAL file(s) added, 14 removed, 30 recycled; write=1.614 s, sync=0.181 s, total=2.319 s; sync files=3, longest=0.098 s, average=0.061 s; distance=723903 kB, estimate=743809 kB; lsn=2/BB419690, redo lsn=2/9AF8BE10
+2026-11-23 05:03:59.222 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-23 05:03:59.222 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 05:03:59.222 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:04:01.560 UTC [73] LOG:  checkpoint complete: wrote 566 buffers (3.5%), wrote 0 SLRU buffers; 0 WAL file(s) added, 12 removed, 31 recycled; write=1.505 s, sync=0.284 s, total=2.339 s; sync files=2, longest=0.172 s, average=0.142 s; distance=695399 kB, estimate=738968 kB; lsn=2/E539A358, redo lsn=2/C56A5AA0
+2026-11-23 05:04:01.561 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-23 05:04:01.561 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 05:04:01.561 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:04:03.854 UTC [73] LOG:  checkpoint complete: wrote 622 buffers (3.8%), wrote 0 SLRU buffers; 0 WAL file(s) added, 11 removed, 31 recycled; write=1.602 s, sync=0.170 s, total=2.294 s; sync files=2, longest=0.169 s, average=0.085 s; distance=693878 kB, estimate=734459 kB; lsn=3/FC15E88, redo lsn=2/EFC433A0
+2026-11-23 05:04:03.855 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-23 05:04:03.855 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-23 05:04:03.855 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 05:08:33.401 UTC [73] LOG:  checkpoint complete: wrote 547 buffers (3.3%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 43 recycled; write=269.220 s, sync=0.012 s, total=269.547 s; sync files=17, longest=0.004 s, average=0.001 s; distance=698903 kB, estimate=730903 kB; lsn=3/2A2AAED0, redo lsn=3/1A6C9168
+2026-11-23 06:44:05.105 UTC [73] LOG:  checkpoint starting: time
+2026-11-23 06:44:05.280 UTC [73] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 18 recycled; write=0.007 s, sync=0.011 s, total=0.176 s; sync files=26, longest=0.002 s, average=0.001 s; distance=294763 kB, estimate=687289 kB; lsn=3/2C6A40C8, redo lsn=3/2C6A4070

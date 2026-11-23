@@ -1,0 +1,1162 @@
+{
+  "db": "qdrant",
+  "size": "pilot",
+  "passages": 100000,
+  "questions": 600,
+  "started": "2026-11-23 03:50:18",
+  "deployments": {
+    "noindex": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "hnsw_config": {
+              "m": 16,
+              "ef_construct": 100,
+              "full_scan_threshold": 10000,
+              "max_indexing_threads": 0,
+              "on_disk": false,
+              "memory": null,
+              "payload_m": null,
+              "inline_storage": null
+            },
+            "payload_schema": {},
+            "segments": 6,
+            "indexed_vectors": 99000
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.4
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.8
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.0
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.9
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.4
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.8
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.1
+            },
+            "default__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.5
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.7
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.7
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.0
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.4
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.9
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 16.2
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.8
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.5
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.1
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.8
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.5
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.6
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.0
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.8
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.6
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.9
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 16.0
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.2
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.4
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.9
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.9
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 8.3
+            },
+            "default__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.1
+            },
+            "default__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 18.1
+            },
+            "default__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.2
+            },
+            "default__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.2
+            },
+            "default__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 14.5
+            },
+            "default__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 15.3
+            }
+          }
+        },
+        "index_later": {
+          "apply": {
+            "payload_index_s": 6.9,
+            "after_index": {
+              "points": 100000,
+              "indexed_vectors": 99000
+            },
+            "wait_green_s": 6.0
+          },
+          "apply_s": 12.9,
+          "filter_settings": {
+            "hnsw_config": {
+              "m": 16,
+              "ef_construct": 100,
+              "full_scan_threshold": 10000,
+              "max_indexing_threads": 0,
+              "on_disk": false,
+              "memory": null,
+              "payload_m": null,
+              "inline_storage": null
+            },
+            "payload_schema": {
+              "topic": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "dept": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "team": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "region": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "project": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "subtopic": {
+                "data_type": "integer",
+                "points": 100000
+              }
+            },
+            "segments": 6,
+            "indexed_vectors": 99000
+          },
+          "cells": {
+            "index_later__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.6
+            },
+            "index_later__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.9
+            },
+            "index_later__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "index_later__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.0
+            },
+            "index_later__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "index_later__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.0
+            },
+            "index_later__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "index_later__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "index_later__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.7
+            },
+            "index_later__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "index_later__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "index_later__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 8.2
+            },
+            "index_later__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "index_later__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_later__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_later__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_later__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "index_later__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            }
+          }
+        }
+      },
+      "startup_s": 0.4,
+      "load_s": 43.0,
+      "indexed": {
+        "points": 100000,
+        "indexed_vectors": 99000
+      },
+      "index_wait_s": 6.0,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 100000,
+      "settings": {
+        "status": "green",
+        "segments_count": 6,
+        "config": {
+          "params": {
+            "vectors": {
+              "size": 1024,
+              "distance": "Cosine",
+              "hnsw_config": null,
+              "quantization_config": null,
+              "on_disk": null,
+              "memory": null,
+              "datatype": null,
+              "multivector_config": null
+            },
+            "shard_number": 1,
+            "sharding_method": null,
+            "replication_factor": 1,
+            "write_consistency_factor": 1,
+            "read_fan_out_factor": null,
+            "read_fan_out_delay_ms": null,
+            "on_disk_payload": true,
+            "payload": null,
+            "id_tracker": null,
+            "sparse_vectors": null
+          },
+          "hnsw_config": {
+            "m": 16,
+            "ef_construct": 100,
+            "full_scan_threshold": 10000,
+            "max_indexing_threads": 0,
+            "on_disk": false,
+            "memory": null,
+            "payload_m": null,
+            "inline_storage": null
+          },
+          "optimizer_config": {
+            "deleted_threshold": 0.2,
+            "vacuum_min_vector_number": 1000,
+            "default_segment_number": 0,
+            "max_segment_size": null,
+            "memmap_threshold": null,
+            "indexing_threshold": 10000,
+            "flush_interval_sec": 5,
+            "max_optimization_threads": null,
+            "prevent_unoptimized": null
+          },
+          "wal_config": {
+            "wal_capacity_mb": 32,
+            "wal_segments_ahead": 0,
+            "wal_retain_closed": 1
+          },
+          "quantization_config": null,
+          "strict_mode_config": null,
+          "metadata": null
+        }
+      },
+      "disk_bytes_after_load": 5391096162,
+      "disk_bytes_end": 911245949
+    },
+    "index_first": {
+      "options": {
+        "index_first": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "hnsw_config": {
+              "m": 16,
+              "ef_construct": 100,
+              "full_scan_threshold": 10000,
+              "max_indexing_threads": 0,
+              "on_disk": false,
+              "memory": null,
+              "payload_m": null,
+              "inline_storage": null
+            },
+            "payload_schema": {
+              "project": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "topic": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "subtopic": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "dept": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "team": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "region": {
+                "data_type": "integer",
+                "points": 100000
+              }
+            },
+            "segments": 6,
+            "indexed_vectors": 100000
+          },
+          "cells": {
+            "index_first__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.9
+            },
+            "index_first__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.6
+            },
+            "index_first__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_first__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "index_first__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "index_first__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_first__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.8
+            },
+            "index_first__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "index_first__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "index_first__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "index_first__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "index_first__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "index_first__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.8
+            },
+            "index_first__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "index_first__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "index_first__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.2
+            },
+            "index_first__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 7.6
+            },
+            "index_first__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.0
+            },
+            "index_first__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 13.9
+            },
+            "index_first__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "index_first__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.1
+            },
+            "index_first__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "index_first__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "index_first__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            }
+          }
+        },
+        "acorn": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "hnsw_config": {
+              "m": 16,
+              "ef_construct": 100,
+              "full_scan_threshold": 10000,
+              "max_indexing_threads": 0,
+              "on_disk": false,
+              "memory": null,
+              "payload_m": null,
+              "inline_storage": null
+            },
+            "payload_schema": {
+              "subtopic": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "region": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "team": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "topic": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "dept": {
+                "data_type": "integer",
+                "points": 100000
+              },
+              "project": {
+                "data_type": "integer",
+                "points": 100000
+              }
+            },
+            "segments": 6,
+            "indexed_vectors": 100000
+          },
+          "cells": {
+            "acorn__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.8
+            },
+            "acorn__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.5
+            },
+            "acorn__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.4
+            },
+            "acorn__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "acorn__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "acorn__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.9
+            },
+            "acorn__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.3
+            },
+            "acorn__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.4
+            },
+            "acorn__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "acorn__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.5
+            },
+            "acorn__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.9
+            },
+            "acorn__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "acorn__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.9
+            },
+            "acorn__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.3
+            },
+            "acorn__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 7.6
+            },
+            "acorn__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.4
+            },
+            "acorn__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 13.8
+            },
+            "acorn__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.4
+            },
+            "acorn__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.7
+            },
+            "acorn__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "acorn__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "acorn__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "acorn__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            }
+          }
+        }
+      },
+      "startup_s": 2.0,
+      "load_s": 41.8,
+      "indexed": {
+        "points": 100000,
+        "indexed_vectors": 100000
+      },
+      "index_wait_s": 30.1,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 100000,
+      "settings": {
+        "status": "green",
+        "segments_count": 6,
+        "config": {
+          "params": {
+            "vectors": {
+              "size": 1024,
+              "distance": "Cosine",
+              "hnsw_config": null,
+              "quantization_config": null,
+              "on_disk": null,
+              "memory": null,
+              "datatype": null,
+              "multivector_config": null
+            },
+            "shard_number": 1,
+            "sharding_method": null,
+            "replication_factor": 1,
+            "write_consistency_factor": 1,
+            "read_fan_out_factor": null,
+            "read_fan_out_delay_ms": null,
+            "on_disk_payload": true,
+            "payload": null,
+            "id_tracker": null,
+            "sparse_vectors": null
+          },
+          "hnsw_config": {
+            "m": 16,
+            "ef_construct": 100,
+            "full_scan_threshold": 10000,
+            "max_indexing_threads": 0,
+            "on_disk": false,
+            "memory": null,
+            "payload_m": null,
+            "inline_storage": null
+          },
+          "optimizer_config": {
+            "deleted_threshold": 0.2,
+            "vacuum_min_vector_number": 1000,
+            "default_segment_number": 0,
+            "max_segment_size": null,
+            "memmap_threshold": null,
+            "indexing_threshold": 10000,
+            "flush_interval_sec": 5,
+            "max_optimization_threads": null,
+            "prevent_unoptimized": null
+          },
+          "wal_config": {
+            "wal_capacity_mb": 32,
+            "wal_segments_ahead": 0,
+            "wal_retain_closed": 1
+          },
+          "quantization_config": null,
+          "strict_mode_config": null,
+          "metadata": null
+        }
+      },
+      "disk_bytes_after_load": 893146737,
+      "disk_bytes_end": 893146737
+    }
+  },
+  "finished": "2026-11-23 04:06:42"
+}

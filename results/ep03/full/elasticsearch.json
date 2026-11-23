@@ -1,0 +1,640 @@
+{
+  "db": "elasticsearch",
+  "size": "full",
+  "passages": 1000000,
+  "questions": 3452,
+  "started": "2026-11-23 14:27:00",
+  "deployments": {
+    "base": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "field_mappings": {
+              "region": {
+                "type": "long"
+              },
+              "dept": {
+                "type": "long"
+              },
+              "team": {
+                "type": "long"
+              },
+              "project": {
+                "type": "long"
+              },
+              "topic": {
+                "type": "long"
+              },
+              "subtopic": {
+                "type": "long"
+              }
+            },
+            "vector_settings": {
+              "defaults.index.load_fixed_bitset_filters_eagerly": "true",
+              "defaults.index.mapping.exclude_source_vectors": "true",
+              "defaults.index.dense_vector.hnsw_filter_heuristic": "ACORN",
+              "defaults.index.dense_vector.experimental_features": "false",
+              "defaults.index.dense_vector.hnsw_enable_early_termination": "true",
+              "defaults.index.dense_vector.post_filter_selectivity_threshold": "1.0",
+              "defaults.index.bloom_filter_for_id_field.enabled": "true",
+              "defaults.index.max_adjacency_matrix_filters": "100",
+              "defaults.index.synthetic_id.bloom_filter.large_segment_min_docs": "320000",
+              "defaults.index.synthetic_id.bloom_filter.optimized_merge": "true",
+              "defaults.index.synthetic_id.bloom_filter.low_bits_per_doc": "24.0",
+              "defaults.index.synthetic_id.bloom_filter.small_segment_max_docs": "160000",
+              "defaults.index.synthetic_id.bloom_filter.high_bits_per_doc": "128.0",
+              "defaults.index.synthetic_id.bloom_filter.num_hash_functions": "4",
+              "defaults.index.synthetic_id.bloom_filter.max_size": "8mb"
+            }
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.0
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 11.2
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.4
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 11.5
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.7
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.4
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.3
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.5
+            },
+            "default__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.1
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.1
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.1
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.8
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.9
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.6
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.4
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.2
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.9
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.9
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.0
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.5
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.7
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.4
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.4
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.1
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.0
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.8
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.3
+            },
+            "default__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.8
+            },
+            "default__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 14.0
+            },
+            "default__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.4
+            },
+            "default__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.2
+            },
+            "default__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.6
+            },
+            "default__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.9
+            }
+          },
+          "plans": {}
+        },
+        "fanout": {
+          "apply": {},
+          "apply_s": 0.1,
+          "filter_settings": {
+            "field_mappings": {
+              "region": {
+                "type": "long"
+              },
+              "dept": {
+                "type": "long"
+              },
+              "team": {
+                "type": "long"
+              },
+              "project": {
+                "type": "long"
+              },
+              "topic": {
+                "type": "long"
+              },
+              "subtopic": {
+                "type": "long"
+              }
+            },
+            "vector_settings": {
+              "settings.index.dense_vector.hnsw_filter_heuristic": "fanout",
+              "defaults.index.load_fixed_bitset_filters_eagerly": "true",
+              "defaults.index.mapping.exclude_source_vectors": "true",
+              "defaults.index.dense_vector.experimental_features": "false",
+              "defaults.index.dense_vector.post_filter_selectivity_threshold": "1.0",
+              "defaults.index.dense_vector.hnsw_enable_early_termination": "true",
+              "defaults.index.bloom_filter_for_id_field.enabled": "true",
+              "defaults.index.max_adjacency_matrix_filters": "100",
+              "defaults.index.synthetic_id.bloom_filter.large_segment_min_docs": "320000",
+              "defaults.index.synthetic_id.bloom_filter.optimized_merge": "true",
+              "defaults.index.synthetic_id.bloom_filter.low_bits_per_doc": "24.0",
+              "defaults.index.synthetic_id.bloom_filter.small_segment_max_docs": "160000",
+              "defaults.index.synthetic_id.bloom_filter.high_bits_per_doc": "128.0",
+              "defaults.index.synthetic_id.bloom_filter.num_hash_functions": "4",
+              "defaults.index.synthetic_id.bloom_filter.max_size": "8mb"
+            }
+          },
+          "cells": {
+            "fanout__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 8.6
+            },
+            "fanout__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.7
+            },
+            "fanout__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.3
+            },
+            "fanout__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.9
+            },
+            "fanout__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.2
+            },
+            "fanout__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.7
+            },
+            "fanout__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.3
+            },
+            "fanout__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.4
+            },
+            "fanout__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.9
+            },
+            "fanout__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.6
+            },
+            "fanout__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "fanout__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.1
+            },
+            "fanout__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.9
+            },
+            "fanout__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.1
+            },
+            "fanout__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.8
+            },
+            "fanout__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "fanout__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.3
+            },
+            "fanout__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "fanout__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.2
+            },
+            "fanout__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "fanout__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.2
+            },
+            "fanout__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "fanout__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.1
+            },
+            "fanout__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.4
+            },
+            "fanout__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.8
+            },
+            "fanout__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "fanout__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.9
+            },
+            "fanout__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "fanout__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "fanout__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.3
+            },
+            "fanout__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.2
+            },
+            "fanout__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "fanout__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.0
+            },
+            "fanout__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.6
+            },
+            "fanout__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "fanout__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.4
+            },
+            "fanout__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.3
+            },
+            "fanout__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 13.4
+            },
+            "fanout__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.5
+            },
+            "fanout__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.1
+            },
+            "fanout__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.6
+            },
+            "fanout__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.9
+            }
+          },
+          "plans": {}
+        },
+        "exact": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "field_mappings": {
+              "region": {
+                "type": "long"
+              },
+              "dept": {
+                "type": "long"
+              },
+              "team": {
+                "type": "long"
+              },
+              "project": {
+                "type": "long"
+              },
+              "topic": {
+                "type": "long"
+              },
+              "subtopic": {
+                "type": "long"
+              }
+            },
+            "vector_settings": {
+              "settings.index.dense_vector.hnsw_filter_heuristic": "fanout",
+              "defaults.index.load_fixed_bitset_filters_eagerly": "true",
+              "defaults.index.mapping.exclude_source_vectors": "true",
+              "defaults.index.dense_vector.experimental_features": "false",
+              "defaults.index.dense_vector.post_filter_selectivity_threshold": "1.0",
+              "defaults.index.dense_vector.hnsw_enable_early_termination": "true",
+              "defaults.index.bloom_filter_for_id_field.enabled": "true",
+              "defaults.index.max_adjacency_matrix_filters": "100",
+              "defaults.index.synthetic_id.bloom_filter.large_segment_min_docs": "320000",
+              "defaults.index.synthetic_id.bloom_filter.optimized_merge": "true",
+              "defaults.index.synthetic_id.bloom_filter.low_bits_per_doc": "24.0",
+              "defaults.index.synthetic_id.bloom_filter.small_segment_max_docs": "160000",
+              "defaults.index.synthetic_id.bloom_filter.high_bits_per_doc": "128.0",
+              "defaults.index.synthetic_id.bloom_filter.num_hash_functions": "4",
+              "defaults.index.synthetic_id.bloom_filter.max_size": "8mb"
+            }
+          },
+          "cells": {
+            "exact__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 859.6
+            },
+            "exact__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 444.9
+            },
+            "exact__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 106.1
+            },
+            "exact__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 19.6
+            },
+            "exact__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.3
+            },
+            "exact__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 20.1
+            },
+            "exact__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.5
+            }
+          },
+          "plans": {}
+        }
+      },
+      "startup_s": 20.3,
+      "load_s": 1559.7,
+      "indexed": {
+        "segments": 24,
+        "docs": 1000000
+      },
+      "index_wait_s": 128.5,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 1000000,
+      "settings": {
+        "version": "9.5.5",
+        "license": "basic",
+        "mapping": {
+          "type": "dense_vector",
+          "element_type": "float",
+          "dims": 1024,
+          "index": true,
+          "similarity": "cosine",
+          "index_options": {
+            "type": "bbq_hnsw",
+            "m": 16,
+            "ef_construction": 100,
+            "rescore_vector": {
+              "oversample": 3.0
+            }
+          },
+          "meta": {}
+        },
+        "segments": 17
+      },
+      "disk_bytes_after_load": 5903159991,
+      "disk_bytes_end": 4347815181
+    }
+  },
+  "finished": "2026-11-23 15:31:07"
+}

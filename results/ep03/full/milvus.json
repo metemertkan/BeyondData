@@ -1,0 +1,1149 @@
+{
+  "db": "milvus",
+  "size": "full",
+  "passages": 1000000,
+  "questions": 3452,
+  "started": "2026-11-23 12:43:07",
+  "deployments": {
+    "dynamic": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "enable_dynamic_field": true,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              }
+            ],
+            "indexes": {
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.2
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.0
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 14.2
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 16.6
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.7
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 16.9
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.6
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.1
+            },
+            "default__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.6
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 12.0
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.0
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.6
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.2
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.6
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.1
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.3
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 15.3
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.3
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.9
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.6
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.9
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.2
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 12.9
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.5
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.9
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.1
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.0
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.2
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 15.5
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 16.8
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.2
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.7
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.1
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.8
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.2
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 22.0
+            },
+            "default__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 23.5
+            },
+            "default__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 44.9
+            },
+            "default__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 13.0
+            },
+            "default__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.1
+            },
+            "default__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 13.1
+            },
+            "default__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.1
+            }
+          },
+          "plans": {}
+        }
+      },
+      "startup_s": 1.5,
+      "load_s": 141.8,
+      "indexed": {
+        "index_type": "AUTOINDEX",
+        "indexed_rows": 1000000,
+        "total_rows": 1000000,
+        "state": "Finished"
+      },
+      "index_wait_s": 310.3,
+      "settle": {
+        "settle_s": 230,
+        "segment_history": [
+          {
+            "t_s": 0,
+            "segments": 13,
+            "rows": [
+              146494,
+              142004,
+              29502,
+              28000,
+              29498,
+              28000,
+              29000,
+              89996,
+              29502,
+              11000,
+              145502,
+              256240,
+              35262
+            ]
+          },
+          {
+            "t_s": 20,
+            "segments": 9,
+            "rows": [
+              146494,
+              142004,
+              89996,
+              29502,
+              11000,
+              145502,
+              256240,
+              35262,
+              144000
+            ]
+          },
+          {
+            "t_s": 50,
+            "segments": 7,
+            "rows": [
+              146494,
+              142004,
+              145502,
+              256240,
+              35262,
+              144000,
+              130498
+            ]
+          }
+        ]
+      },
+      "settle_s": 230.0,
+      "count": 1000000,
+      "settings": {
+        "index": {
+          "index_type": "AUTOINDEX",
+          "metric_type": "COSINE",
+          "field_name": "vector",
+          "index_name": "vector",
+          "total_rows": 1000000,
+          "indexed_rows": 1000000,
+          "pending_index_rows": 0,
+          "state": "Finished"
+        },
+        "autoindex_built_as": [
+          "[index_type=HNSW_SQ] [sq_type=SQ4U] [traceID=b80179aeaec766f225e784c22369dfc8] [spanID=eef863f18d964005]"
+        ],
+        "consistency_level": 2,
+        "fields": [
+          {
+            "field_id": 100,
+            "name": "id",
+            "description": "",
+            "type": 5,
+            "params": {},
+            "is_primary": true
+          },
+          {
+            "field_id": 101,
+            "name": "vector",
+            "description": "",
+            "type": 101,
+            "params": {
+              "dim": 1024
+            }
+          }
+        ]
+      },
+      "disk_bytes_after_load": 22981881716,
+      "disk_bytes_end": 22981890792
+    },
+    "schema": {
+      "options": {
+        "schema": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "enable_dynamic_field": false,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              },
+              {
+                "name": "region",
+                "type": 5
+              },
+              {
+                "name": "dept",
+                "type": 5
+              },
+              {
+                "name": "team",
+                "type": 5
+              },
+              {
+                "name": "project",
+                "type": 5
+              },
+              {
+                "name": "topic",
+                "type": 5
+              },
+              {
+                "name": "subtopic",
+                "type": 5
+              }
+            ],
+            "indexes": {
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "schema__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 6.8
+            },
+            "schema__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.4
+            },
+            "schema__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 11.3
+            },
+            "schema__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 14.5
+            },
+            "schema__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.1
+            },
+            "schema__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 15.2
+            },
+            "schema__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 10.2
+            },
+            "schema__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.4
+            },
+            "schema__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.2
+            },
+            "schema__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.6
+            },
+            "schema__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.0
+            },
+            "schema__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.2
+            },
+            "schema__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.9
+            },
+            "schema__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.2
+            },
+            "schema__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.4
+            },
+            "schema__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.0
+            },
+            "schema__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 13.9
+            },
+            "schema__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.1
+            },
+            "schema__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "schema__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.3
+            },
+            "schema__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "schema__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.4
+            },
+            "schema__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.4
+            },
+            "schema__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 18.6
+            },
+            "schema__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.8
+            },
+            "schema__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.4
+            },
+            "schema__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.7
+            },
+            "schema__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.6
+            },
+            "schema__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 14.3
+            },
+            "schema__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 15.3
+            },
+            "schema__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 26.4
+            },
+            "schema__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.2
+            },
+            "schema__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            },
+            "schema__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.4
+            },
+            "schema__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            },
+            "schema__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.3
+            },
+            "schema__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.2
+            },
+            "schema__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 40.5
+            },
+            "schema__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.5
+            },
+            "schema__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            },
+            "schema__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.7
+            },
+            "schema__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            }
+          },
+          "plans": {}
+        },
+        "schema_index": {
+          "apply": {
+            "scalar_index_s": 7.6,
+            "scalar_indexes": {
+              "region": {
+                "index_type": "AUTOINDEX",
+                "field_name": "region",
+                "index_name": "region",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "dept": {
+                "index_type": "AUTOINDEX",
+                "field_name": "dept",
+                "index_name": "dept",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "team": {
+                "index_type": "AUTOINDEX",
+                "field_name": "team",
+                "index_name": "team",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "project": {
+                "index_type": "AUTOINDEX",
+                "field_name": "project",
+                "index_name": "project",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "topic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "topic",
+                "index_name": "topic",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "subtopic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "subtopic",
+                "index_name": "subtopic",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "apply_s": 7.6,
+          "filter_settings": {
+            "enable_dynamic_field": false,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              },
+              {
+                "name": "region",
+                "type": 5
+              },
+              {
+                "name": "dept",
+                "type": 5
+              },
+              {
+                "name": "team",
+                "type": 5
+              },
+              {
+                "name": "project",
+                "type": 5
+              },
+              {
+                "name": "topic",
+                "type": 5
+              },
+              {
+                "name": "subtopic",
+                "type": 5
+              }
+            ],
+            "indexes": {
+              "region": {
+                "index_type": "AUTOINDEX",
+                "field_name": "region",
+                "index_name": "region",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "dept": {
+                "index_type": "AUTOINDEX",
+                "field_name": "dept",
+                "index_name": "dept",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "team": {
+                "index_type": "AUTOINDEX",
+                "field_name": "team",
+                "index_name": "team",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "project": {
+                "index_type": "AUTOINDEX",
+                "field_name": "project",
+                "index_name": "project",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "topic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "topic",
+                "index_name": "topic",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "subtopic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "subtopic",
+                "index_name": "subtopic",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 1000000,
+                "indexed_rows": 1000000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "schema_index__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 6.7
+            },
+            "schema_index__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.1
+            },
+            "schema_index__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.1
+            },
+            "schema_index__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.0
+            },
+            "schema_index__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.7
+            },
+            "schema_index__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 12.3
+            },
+            "schema_index__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 7.9
+            },
+            "schema_index__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.6
+            },
+            "schema_index__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.8
+            },
+            "schema_index__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.4
+            },
+            "schema_index__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.3
+            },
+            "schema_index__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.7
+            },
+            "schema_index__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "schema_index__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.8
+            },
+            "schema_index__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.4
+            },
+            "schema_index__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "schema_index__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 13.0
+            },
+            "schema_index__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.5
+            },
+            "schema_index__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.0
+            },
+            "schema_index__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.7
+            },
+            "schema_index__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.9
+            },
+            "schema_index__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.4
+            },
+            "schema_index__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.6
+            },
+            "schema_index__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 17.9
+            },
+            "schema_index__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.9
+            },
+            "schema_index__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.2
+            },
+            "schema_index__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.2
+            },
+            "schema_index__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.2
+            },
+            "schema_index__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 14.4
+            },
+            "schema_index__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 14.4
+            },
+            "schema_index__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 25.6
+            },
+            "schema_index__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.8
+            },
+            "schema_index__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.2
+            },
+            "schema_index__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.0
+            },
+            "schema_index__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.3
+            },
+            "schema_index__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "schema_index__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "schema_index__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 39.9
+            },
+            "schema_index__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.4
+            },
+            "schema_index__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.2
+            },
+            "schema_index__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.5
+            },
+            "schema_index__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.3
+            }
+          },
+          "plans": {}
+        }
+      },
+      "startup_s": 2.0,
+      "load_s": 144.6,
+      "indexed": {
+        "index_type": "AUTOINDEX",
+        "indexed_rows": 1000000,
+        "total_rows": 1000000,
+        "state": "Finished"
+      },
+      "index_wait_s": 298.3,
+      "settle": {
+        "settle_s": 230,
+        "segment_history": [
+          {
+            "t_s": 0,
+            "segments": 16,
+            "rows": [
+              144000,
+              28000,
+              29000,
+              28495,
+              29000,
+              29000,
+              28000,
+              29495,
+              29000,
+              28000,
+              30000,
+              29505,
+              29000,
+              257616,
+              11384,
+              240505
+            ]
+          },
+          {
+            "t_s": 20,
+            "segments": 10,
+            "rows": [
+              144000,
+              29000,
+              28000,
+              30000,
+              29505,
+              29000,
+              257616,
+              11384,
+              240505,
+              200990
+            ]
+          },
+          {
+            "t_s": 50,
+            "segments": 6,
+            "rows": [
+              144000,
+              257616,
+              11384,
+              240505,
+              200990,
+              145505
+            ]
+          }
+        ]
+      },
+      "settle_s": 230.0,
+      "count": 1000000,
+      "settings": {
+        "index": {
+          "index_type": "AUTOINDEX",
+          "metric_type": "COSINE",
+          "field_name": "vector",
+          "index_name": "vector",
+          "total_rows": 1000000,
+          "indexed_rows": 1000000,
+          "pending_index_rows": 0,
+          "state": "Finished"
+        },
+        "autoindex_built_as": [
+          "[index_type=HNSW_SQ] [sq_type=SQ4U] [refine=true] [refine_type=FP16] [metric_type=COSINE] [traceID=79646331b7591ee3c723ed4032ce67a3] [spanID=533be876256a51c9]"
+        ],
+        "consistency_level": 2,
+        "fields": [
+          {
+            "field_id": 100,
+            "name": "id",
+            "description": "",
+            "type": 5,
+            "params": {},
+            "is_primary": true
+          },
+          {
+            "field_id": 101,
+            "name": "vector",
+            "description": "",
+            "type": 101,
+            "params": {
+              "dim": 1024
+            }
+          },
+          {
+            "field_id": 102,
+            "name": "region",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 103,
+            "name": "dept",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 104,
+            "name": "team",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 105,
+            "name": "project",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 106,
+            "name": "topic",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 107,
+            "name": "subtopic",
+            "description": "",
+            "type": 5,
+            "params": {}
+          }
+        ]
+      },
+      "disk_bytes_after_load": 22349464252,
+      "disk_bytes_end": 22432208902
+    }
+  },
+  "finished": "2026-11-23 13:30:04"
+}

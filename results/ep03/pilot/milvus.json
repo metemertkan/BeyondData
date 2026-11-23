@@ -1,0 +1,1097 @@
+{
+  "db": "milvus",
+  "size": "pilot",
+  "passages": 100000,
+  "questions": 600,
+  "started": "2026-11-23 04:06:43",
+  "deployments": {
+    "dynamic": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "enable_dynamic_field": true,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              }
+            ],
+            "indexes": {
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "default__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.7
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.4
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.5
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.7
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.1
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.7
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.4
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.7
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.2
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.6
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.7
+            },
+            "default__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.9
+            },
+            "default__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 7.5
+            },
+            "default__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.7
+            },
+            "default__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "default__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.8
+            },
+            "default__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            }
+          }
+        }
+      },
+      "startup_s": 1.4,
+      "load_s": 12.6,
+      "indexed": {
+        "index_type": "AUTOINDEX",
+        "indexed_rows": 100000,
+        "total_rows": 100000,
+        "state": "Finished"
+      },
+      "index_wait_s": 5.5,
+      "settle": {
+        "settle_s": 260,
+        "segment_history": [
+          {
+            "t_s": 0,
+            "segments": 1,
+            "rows": [
+              28502
+            ]
+          },
+          {
+            "t_s": 10,
+            "segments": 4,
+            "rows": [
+              28502,
+              28000,
+              29996,
+              13502
+            ]
+          },
+          {
+            "t_s": 80,
+            "segments": 1,
+            "rows": [
+              100000
+            ]
+          }
+        ]
+      },
+      "settle_s": 260.1,
+      "count": 100000,
+      "settings": {
+        "index": {
+          "index_type": "AUTOINDEX",
+          "metric_type": "COSINE",
+          "field_name": "vector",
+          "index_name": "vector",
+          "total_rows": 100000,
+          "indexed_rows": 100000,
+          "pending_index_rows": 0,
+          "state": "Finished"
+        },
+        "autoindex_built_as": [
+          "[index_type=HNSW_SQ] [sq_type=SQ4U] [refine=true] [refine_type=FP16] [metric_type=COSINE] [traceID=9b6f2c93c9dd1a1d71c76dd5595338ff] [spanID=b3b459a0d9350845]"
+        ],
+        "consistency_level": 2,
+        "fields": [
+          {
+            "field_id": 100,
+            "name": "id",
+            "description": "",
+            "type": 5,
+            "params": {},
+            "is_primary": true
+          },
+          {
+            "field_id": 101,
+            "name": "vector",
+            "description": "",
+            "type": 101,
+            "params": {
+              "dim": 1024
+            }
+          }
+        ]
+      },
+      "disk_bytes_after_load": 2352479958,
+      "disk_bytes_end": 2352479958
+    },
+    "schema": {
+      "options": {
+        "schema": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "enable_dynamic_field": false,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              },
+              {
+                "name": "region",
+                "type": 5
+              },
+              {
+                "name": "dept",
+                "type": 5
+              },
+              {
+                "name": "team",
+                "type": 5
+              },
+              {
+                "name": "project",
+                "type": 5
+              },
+              {
+                "name": "topic",
+                "type": 5
+              },
+              {
+                "name": "subtopic",
+                "type": 5
+              }
+            ],
+            "indexes": {
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "schema__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "schema__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "schema__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.4
+            },
+            "schema__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "schema__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.6
+            },
+            "schema__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.7
+            },
+            "schema__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.2
+            },
+            "schema__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "schema__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.5
+            },
+            "schema__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.7
+            },
+            "schema__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.9
+            },
+            "schema__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "schema__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.4
+            },
+            "schema__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.6
+            },
+            "schema__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "schema__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 7.5
+            },
+            "schema__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "schema__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "schema__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            }
+          }
+        },
+        "schema_index": {
+          "apply": {
+            "scalar_index_s": 6.4,
+            "scalar_indexes": {
+              "region": {
+                "index_type": "AUTOINDEX",
+                "field_name": "region",
+                "index_name": "region",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "dept": {
+                "index_type": "AUTOINDEX",
+                "field_name": "dept",
+                "index_name": "dept",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "team": {
+                "index_type": "AUTOINDEX",
+                "field_name": "team",
+                "index_name": "team",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "project": {
+                "index_type": "AUTOINDEX",
+                "field_name": "project",
+                "index_name": "project",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "topic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "topic",
+                "index_name": "topic",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "subtopic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "subtopic",
+                "index_name": "subtopic",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "apply_s": 6.4,
+          "filter_settings": {
+            "enable_dynamic_field": false,
+            "fields": [
+              {
+                "name": "id",
+                "type": 5
+              },
+              {
+                "name": "vector",
+                "type": 101
+              },
+              {
+                "name": "region",
+                "type": 5
+              },
+              {
+                "name": "dept",
+                "type": 5
+              },
+              {
+                "name": "team",
+                "type": 5
+              },
+              {
+                "name": "project",
+                "type": 5
+              },
+              {
+                "name": "topic",
+                "type": 5
+              },
+              {
+                "name": "subtopic",
+                "type": 5
+              }
+            ],
+            "indexes": {
+              "topic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "topic",
+                "index_name": "topic",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "subtopic": {
+                "index_type": "AUTOINDEX",
+                "field_name": "subtopic",
+                "index_name": "subtopic",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "vector": {
+                "index_type": "AUTOINDEX",
+                "metric_type": "COSINE",
+                "field_name": "vector",
+                "index_name": "vector",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "region": {
+                "index_type": "AUTOINDEX",
+                "field_name": "region",
+                "index_name": "region",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "dept": {
+                "index_type": "AUTOINDEX",
+                "field_name": "dept",
+                "index_name": "dept",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "team": {
+                "index_type": "AUTOINDEX",
+                "field_name": "team",
+                "index_name": "team",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              },
+              "project": {
+                "index_type": "AUTOINDEX",
+                "field_name": "project",
+                "index_name": "project",
+                "total_rows": 100000,
+                "indexed_rows": 100000,
+                "pending_index_rows": 0,
+                "state": "Finished"
+              }
+            }
+          },
+          "cells": {
+            "schema_index__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "schema_index__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.4
+            },
+            "schema_index__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema_index__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.0
+            },
+            "schema_index__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema_index__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.3
+            },
+            "schema_index__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.1
+            },
+            "schema_index__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema_index__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.1
+            },
+            "schema_index__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.6
+            },
+            "schema_index__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.6
+            },
+            "schema_index__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.4
+            },
+            "schema_index__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema_index__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema_index__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "schema_index__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.5
+            },
+            "schema_index__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.9
+            },
+            "schema_index__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema_index__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.2
+            },
+            "schema_index__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__1024__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.8
+            },
+            "schema_index__1024__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.9
+            },
+            "schema_index__1024__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 7.5
+            },
+            "schema_index__1024__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "schema_index__1024__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            },
+            "schema_index__1024__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 1.5
+            },
+            "schema_index__1024__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.9
+            }
+          }
+        }
+      },
+      "startup_s": 2.0,
+      "load_s": 12.7,
+      "indexed": {
+        "index_type": "AUTOINDEX",
+        "indexed_rows": 100000,
+        "total_rows": 100000,
+        "state": "Finished"
+      },
+      "index_wait_s": 5.5,
+      "settle": {
+        "settle_s": 260,
+        "segment_history": [
+          {
+            "t_s": 0,
+            "segments": 1,
+            "rows": [
+              28495
+            ]
+          },
+          {
+            "t_s": 10,
+            "segments": 4,
+            "rows": [
+              28495,
+              29505,
+              28505,
+              13495
+            ]
+          },
+          {
+            "t_s": 80,
+            "segments": 1,
+            "rows": [
+              100000
+            ]
+          }
+        ]
+      },
+      "settle_s": 260.0,
+      "count": 100000,
+      "settings": {
+        "index": {
+          "index_type": "AUTOINDEX",
+          "metric_type": "COSINE",
+          "field_name": "vector",
+          "index_name": "vector",
+          "total_rows": 100000,
+          "indexed_rows": 100000,
+          "pending_index_rows": 0,
+          "state": "Finished"
+        },
+        "autoindex_built_as": [
+          "[index_type=HNSW_SQ] [sq_type=SQ4U] [traceID=5379911227ffaa97ba2e43353c6c0705] [spanID=921955cd327b2995]"
+        ],
+        "consistency_level": 2,
+        "fields": [
+          {
+            "field_id": 100,
+            "name": "id",
+            "description": "",
+            "type": 5,
+            "params": {},
+            "is_primary": true
+          },
+          {
+            "field_id": 101,
+            "name": "vector",
+            "description": "",
+            "type": 101,
+            "params": {
+              "dim": 1024
+            }
+          },
+          {
+            "field_id": 102,
+            "name": "region",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 103,
+            "name": "dept",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 104,
+            "name": "team",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 105,
+            "name": "project",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 106,
+            "name": "topic",
+            "description": "",
+            "type": 5,
+            "params": {}
+          },
+          {
+            "field_id": 107,
+            "name": "subtopic",
+            "description": "",
+            "type": 5,
+            "params": {}
+          }
+        ]
+      },
+      "disk_bytes_after_load": 2336735840,
+      "disk_bytes_end": 2345077681
+    }
+  },
+  "finished": "2026-11-23 04:19:51"
+}

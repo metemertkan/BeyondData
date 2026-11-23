@@ -1,0 +1,142 @@
+18:13:19 pgvector base fresh container
+18:13:22 pgvector base   1,000 loaded, 0 s
+18:13:25 pgvector base   101,000 loaded, 4 s
+18:13:29 pgvector base   201,000 loaded, 7 s
+18:13:32 pgvector base   301,000 loaded, 10 s
+18:13:35 pgvector base   401,000 loaded, 14 s
+18:13:38 pgvector base   501,000 loaded, 17 s
+18:13:41 pgvector base   601,000 loaded, 20 s
+18:13:44 pgvector base   701,000 loaded, 23 s
+18:13:47 pgvector base   801,000 loaded, 26 s
+18:13:50 pgvector base   901,000 loaded, 29 s
+19:03:56 pgvector base load 32.1 s, index 3001.8 s, settle 0.0 s, count 1,000,000
+19:04:12 pgvector default hnsw.ef_search=None none: p50 4.3 ms, mean returned 10.00, short 0.0%
+19:04:28 pgvector default hnsw.ef_search=None region: p50 4.4 ms, mean returned 10.00, short 0.0%
+19:04:44 pgvector default hnsw.ef_search=None dept: p50 4.4 ms, mean returned 4.79, short 99.0%
+19:04:59 pgvector default hnsw.ef_search=None team: p50 4.3 ms, mean returned 1.29, short 100.0%
+19:07:17 pgvector default hnsw.ef_search=None project: p50 39.3 ms, mean returned 10.00, short 0.0%
+19:07:33 pgvector default hnsw.ef_search=None topic: p50 4.3 ms, mean returned 8.49, short 25.1%
+19:10:02 pgvector default hnsw.ef_search=None subtopic: p50 42.1 ms, mean returned 10.00, short 0.0%
+19:10:15 pgvector default hnsw.ef_search=64 none: p50 6.1 ms, mean returned 10.00, short 0.0%
+19:10:27 pgvector default hnsw.ef_search=64 region: p50 6.1 ms, mean returned 10.00, short 0.0%
+19:10:41 pgvector default hnsw.ef_search=64 dept: p50 6.3 ms, mean returned 7.02, short 83.7%
+19:10:54 pgvector default hnsw.ef_search=64 team: p50 6.2 ms, mean returned 1.55, short 100.0%
+19:12:15 pgvector default hnsw.ef_search=64 project: p50 39.4 ms, mean returned 10.00, short 0.0%
+19:12:28 pgvector default hnsw.ef_search=64 topic: p50 6.2 ms, mean returned 8.96, short 17.9%
+19:13:55 pgvector default hnsw.ef_search=64 subtopic: p50 42.3 ms, mean returned 10.00, short 0.0%
+19:14:17 pgvector default hnsw.ef_search=128 none: p50 10.5 ms, mean returned 10.00, short 0.0%
+19:14:39 pgvector default hnsw.ef_search=128 region: p50 10.5 ms, mean returned 10.00, short 0.0%
+19:15:01 pgvector default hnsw.ef_search=128 dept: p50 10.8 ms, mean returned 9.80, short 10.3%
+19:15:24 pgvector default hnsw.ef_search=128 team: p50 10.9 ms, mean returned 2.22, short 100.0%
+19:16:45 pgvector default hnsw.ef_search=128 project: p50 39.3 ms, mean returned 10.00, short 0.0%
+19:17:07 pgvector default hnsw.ef_search=128 topic: p50 10.6 ms, mean returned 9.36, short 10.5%
+19:18:34 pgvector default hnsw.ef_search=128 subtopic: p50 42.0 ms, mean returned 10.00, short 0.0%
+19:19:12 pgvector default hnsw.ef_search=256 none: p50 18.4 ms, mean returned 10.00, short 0.0%
+19:19:51 pgvector default hnsw.ef_search=256 region: p50 18.5 ms, mean returned 10.00, short 0.0%
+19:20:29 pgvector default hnsw.ef_search=256 dept: p50 18.7 ms, mean returned 10.00, short 0.0%
+19:23:25 pgvector default hnsw.ef_search=256 team: p50 85.8 ms, mean returned 10.00, short 0.0%
+19:24:46 pgvector default hnsw.ef_search=256 project: p50 39.2 ms, mean returned 10.00, short 0.0%
+19:27:48 pgvector default hnsw.ef_search=256 topic: p50 88.6 ms, mean returned 10.00, short 0.0%
+19:29:16 pgvector default hnsw.ef_search=256 subtopic: p50 42.3 ms, mean returned 10.00, short 0.0%
+19:30:26 pgvector default hnsw.ef_search=512 none: p50 34.1 ms, mean returned 10.00, short 0.0%
+19:34:01 pgvector default hnsw.ef_search=512 region: p50 1426.5 ms, mean returned 10.00, short 0.0% (sampled)
+19:35:01 pgvector default hnsw.ef_search=512 dept: p50 401.9 ms, mean returned 10.00, short 0.0% (sampled)
+19:37:58 pgvector default hnsw.ef_search=512 team: p50 86.0 ms, mean returned 10.00, short 0.0%
+19:39:18 pgvector default hnsw.ef_search=512 project: p50 39.1 ms, mean returned 10.00, short 0.0%
+19:42:21 pgvector default hnsw.ef_search=512 topic: p50 88.4 ms, mean returned 10.00, short 0.0%
+19:43:48 pgvector default hnsw.ef_search=512 subtopic: p50 42.3 ms, mean returned 10.00, short 0.0%
+19:45:53 pgvector default hnsw.ef_search=1000 none: p50 61.2 ms, mean returned 10.00, short 0.0%
+19:47:58 pgvector default hnsw.ef_search=1000 region: p50 61.1 ms, mean returned 10.00, short 0.0%
+19:50:03 pgvector default hnsw.ef_search=1000 dept: p50 61.5 ms, mean returned 10.00, short 0.0%
+19:52:14 pgvector default hnsw.ef_search=1000 team: p50 63.9 ms, mean returned 9.24, short 33.0%
+19:53:36 pgvector default hnsw.ef_search=1000 project: p50 39.9 ms, mean returned 10.00, short 0.0%
+19:55:41 pgvector default hnsw.ef_search=1000 topic: p50 61.2 ms, mean returned 9.87, short 1.9%
+19:57:08 pgvector default hnsw.ef_search=1000 subtopic: p50 42.5 ms, mean returned 10.00, short 0.0%
+19:57:09 pgvector plancache a_shipped p50 4.6 ms, mean returned 1.41, {"explain": "Index Scan docs_embedding_idx docs", "ran": "Index Scan docs_embedding_idx docs", "prepared": {"generic": 91, "custom": 5}, "ef_search": "40"}
+19:57:11 pgvector plancache b_set p50 19.2 ms, mean returned 4.04, {"explain": "Parallel Seq Scan docs", "ran": "Index Scan docs_embedding_idx docs", "prepared": {"generic": 192, "custom": 5}, "ef_search": "256"}
+19:57:20 pgvector plancache c_deallocate p50 85.9 ms, mean returned 10.00, {"explain": "Parallel Seq Scan docs", "ran": "Parallel Seq Scan docs", "prepared": {"generic": 91, "custom": 5}, "ef_search": "256"}
+19:57:37 pgvector iterative hnsw.ef_search=None none: p50 4.4 ms, mean returned 10.00, short 0.0%
+19:57:53 pgvector iterative hnsw.ef_search=None region: p50 4.5 ms, mean returned 10.00, short 0.0%
+19:58:28 pgvector iterative hnsw.ef_search=None dept: p50 9.8 ms, mean returned 10.00, short 0.0%
+20:02:02 pgvector iterative hnsw.ef_search=None team: p50 58.7 ms, mean returned 10.00, short 0.0%
+20:04:21 pgvector iterative hnsw.ef_search=None project: p50 39.8 ms, mean returned 10.00, short 0.0%
+20:04:56 pgvector iterative hnsw.ef_search=None topic: p50 4.9 ms, mean returned 10.00, short 0.0%
+20:07:27 pgvector iterative hnsw.ef_search=None subtopic: p50 42.6 ms, mean returned 10.00, short 0.0%
+20:07:41 pgvector iterative hnsw.ef_search=64 none: p50 6.4 ms, mean returned 10.00, short 0.0%
+20:07:54 pgvector iterative hnsw.ef_search=64 region: p50 6.4 ms, mean returned 10.00, short 0.0%
+20:08:17 pgvector iterative hnsw.ef_search=64 dept: p50 11.1 ms, mean returned 10.00, short 0.0%
+20:10:23 pgvector iterative hnsw.ef_search=64 team: p50 59.0 ms, mean returned 10.00, short 0.0%
+20:11:45 pgvector iterative hnsw.ef_search=64 project: p50 39.7 ms, mean returned 10.00, short 0.0%
+20:12:07 pgvector iterative hnsw.ef_search=64 topic: p50 6.6 ms, mean returned 10.00, short 0.0%
+20:13:35 pgvector iterative hnsw.ef_search=64 subtopic: p50 42.4 ms, mean returned 10.00, short 0.0%
+20:13:58 pgvector iterative hnsw.ef_search=128 none: p50 11.0 ms, mean returned 10.00, short 0.0%
+20:14:21 pgvector iterative hnsw.ef_search=128 region: p50 11.0 ms, mean returned 10.00, short 0.0%
+20:14:46 pgvector iterative hnsw.ef_search=128 dept: p50 11.7 ms, mean returned 10.00, short 0.0%
+20:16:56 pgvector iterative hnsw.ef_search=128 team: p50 60.9 ms, mean returned 10.00, short 0.0%
+20:18:17 pgvector iterative hnsw.ef_search=128 project: p50 39.7 ms, mean returned 10.00, short 0.0%
+20:18:48 pgvector iterative hnsw.ef_search=128 topic: p50 11.3 ms, mean returned 10.00, short 0.0%
+20:20:16 pgvector iterative hnsw.ef_search=128 subtopic: p50 42.5 ms, mean returned 10.00, short 0.0%
+20:20:57 pgvector iterative hnsw.ef_search=256 none: p50 19.3 ms, mean returned 10.00, short 0.0%
+20:21:37 pgvector iterative hnsw.ef_search=256 region: p50 19.5 ms, mean returned 10.00, short 0.0%
+20:22:18 pgvector iterative hnsw.ef_search=256 dept: p50 19.8 ms, mean returned 10.00, short 0.0%
+20:25:14 pgvector iterative hnsw.ef_search=256 team: p50 86.0 ms, mean returned 10.00, short 0.0%
+20:26:35 pgvector iterative hnsw.ef_search=256 project: p50 39.4 ms, mean returned 10.00, short 0.0%
+20:29:38 pgvector iterative hnsw.ef_search=256 topic: p50 88.6 ms, mean returned 10.00, short 0.0%
+20:31:06 pgvector iterative hnsw.ef_search=256 subtopic: p50 42.4 ms, mean returned 10.00, short 0.0%
+20:32:19 pgvector iterative hnsw.ef_search=512 none: p50 35.4 ms, mean returned 10.00, short 0.0%
+20:35:55 pgvector iterative hnsw.ef_search=512 region: p50 1435.7 ms, mean returned 10.00, short 0.0% (sampled)
+20:36:56 pgvector iterative hnsw.ef_search=512 dept: p50 402.8 ms, mean returned 10.00, short 0.0% (sampled)
+20:39:52 pgvector iterative hnsw.ef_search=512 team: p50 85.6 ms, mean returned 10.00, short 0.0%
+20:41:13 pgvector iterative hnsw.ef_search=512 project: p50 39.4 ms, mean returned 10.00, short 0.0%
+20:44:15 pgvector iterative hnsw.ef_search=512 topic: p50 88.2 ms, mean returned 10.00, short 0.0%
+20:45:42 pgvector iterative hnsw.ef_search=512 subtopic: p50 42.2 ms, mean returned 10.00, short 0.0%
+20:47:52 pgvector iterative hnsw.ef_search=1000 none: p50 63.5 ms, mean returned 10.00, short 0.0%
+20:50:02 pgvector iterative hnsw.ef_search=1000 region: p50 63.7 ms, mean returned 10.00, short 0.0%
+20:52:13 pgvector iterative hnsw.ef_search=1000 dept: p50 64.5 ms, mean returned 10.00, short 0.0%
+20:55:01 pgvector iterative hnsw.ef_search=1000 team: p50 74.9 ms, mean returned 10.00, short 0.0%
+20:56:23 pgvector iterative hnsw.ef_search=1000 project: p50 39.8 ms, mean returned 10.00, short 0.0%
+20:58:35 pgvector iterative hnsw.ef_search=1000 topic: p50 64.1 ms, mean returned 10.00, short 0.0%
+21:00:02 pgvector iterative hnsw.ef_search=1000 subtopic: p50 42.3 ms, mean returned 10.00, short 0.0%
+21:00:21 pgvector btree hnsw.ef_search=None none: p50 4.4 ms, mean returned 10.00, short 0.0%
+21:00:37 pgvector btree hnsw.ef_search=None region: p50 4.4 ms, mean returned 10.00, short 0.0%
+21:01:13 pgvector btree hnsw.ef_search=None dept: p50 9.7 ms, mean returned 10.00, short 0.0%
+21:04:45 pgvector btree hnsw.ef_search=None team: p50 58.5 ms, mean returned 10.00, short 0.0%
+21:05:40 pgvector btree hnsw.ef_search=None project: p50 15.7 ms, mean returned 10.00, short 0.0%
+21:06:15 pgvector btree hnsw.ef_search=None topic: p50 4.9 ms, mean returned 10.00, short 0.0%
+21:07:16 pgvector btree hnsw.ef_search=None subtopic: p50 17.0 ms, mean returned 10.00, short 0.0%
+21:07:30 pgvector btree hnsw.ef_search=64 none: p50 6.3 ms, mean returned 10.00, short 0.0%
+21:07:43 pgvector btree hnsw.ef_search=64 region: p50 6.4 ms, mean returned 10.00, short 0.0%
+21:08:06 pgvector btree hnsw.ef_search=64 dept: p50 11.0 ms, mean returned 10.00, short 0.0%
+21:10:11 pgvector btree hnsw.ef_search=64 team: p50 59.0 ms, mean returned 10.00, short 0.0%
+21:10:43 pgvector btree hnsw.ef_search=64 project: p50 15.7 ms, mean returned 10.00, short 0.0%
+21:11:07 pgvector btree hnsw.ef_search=64 topic: p50 6.6 ms, mean returned 10.00, short 0.0%
+21:11:43 pgvector btree hnsw.ef_search=64 subtopic: p50 17.1 ms, mean returned 10.00, short 0.0%
+21:12:05 pgvector btree hnsw.ef_search=128 none: p50 11.0 ms, mean returned 10.00, short 0.0%
+21:12:28 pgvector btree hnsw.ef_search=128 region: p50 10.9 ms, mean returned 10.00, short 0.0%
+21:12:53 pgvector btree hnsw.ef_search=128 dept: p50 11.8 ms, mean returned 10.00, short 0.0%
+21:17:22 pgvector btree hnsw.ef_search=128 team: p50 131.2 ms, mean returned 10.00, short 0.0%
+21:17:55 pgvector btree hnsw.ef_search=128 project: p50 15.8 ms, mean returned 10.00, short 0.0%
+21:22:35 pgvector btree hnsw.ef_search=128 topic: p50 136.0 ms, mean returned 10.00, short 0.0%
+21:23:11 pgvector btree hnsw.ef_search=128 subtopic: p50 16.9 ms, mean returned 10.00, short 0.0%
+21:23:51 pgvector btree hnsw.ef_search=256 none: p50 19.4 ms, mean returned 10.00, short 0.0%
+21:24:31 pgvector btree hnsw.ef_search=256 region: p50 19.5 ms, mean returned 10.00, short 0.0%
+21:25:29 pgvector btree hnsw.ef_search=256 dept: p50 381.0 ms, mean returned 10.00, short 0.0% (sampled)
+21:30:00 pgvector btree hnsw.ef_search=256 team: p50 132.2 ms, mean returned 10.00, short 0.0%
+21:30:33 pgvector btree hnsw.ef_search=256 project: p50 15.8 ms, mean returned 10.00, short 0.0%
+21:35:11 pgvector btree hnsw.ef_search=256 topic: p50 134.6 ms, mean returned 10.00, short 0.0%
+21:35:47 pgvector btree hnsw.ef_search=256 subtopic: p50 16.9 ms, mean returned 10.00, short 0.0%
+21:37:01 pgvector btree hnsw.ef_search=512 none: p50 35.6 ms, mean returned 10.00, short 0.0%
+21:40:37 pgvector btree hnsw.ef_search=512 region: p50 1434.7 ms, mean returned 10.00, short 0.0% (sampled)
+21:41:36 pgvector btree hnsw.ef_search=512 dept: p50 391.2 ms, mean returned 10.00, short 0.0% (sampled)
+21:46:07 pgvector btree hnsw.ef_search=512 team: p50 132.1 ms, mean returned 10.00, short 0.0%
+21:46:39 pgvector btree hnsw.ef_search=512 project: p50 15.9 ms, mean returned 10.00, short 0.0%
+21:51:21 pgvector btree hnsw.ef_search=512 topic: p50 135.5 ms, mean returned 10.00, short 0.0%
+21:51:57 pgvector btree hnsw.ef_search=512 subtopic: p50 16.9 ms, mean returned 10.00, short 0.0%
+21:54:09 pgvector btree hnsw.ef_search=1000 none: p50 64.8 ms, mean returned 10.00, short 0.0%
+21:56:20 pgvector btree hnsw.ef_search=1000 region: p50 64.1 ms, mean returned 10.00, short 0.0%
+21:58:27 pgvector btree hnsw.ef_search=1000 dept: p50 62.2 ms, mean returned 10.00, short 0.0%
+22:02:57 pgvector btree hnsw.ef_search=1000 team: p50 131.7 ms, mean returned 10.00, short 0.0%
+22:03:30 pgvector btree hnsw.ef_search=1000 project: p50 15.7 ms, mean returned 10.00, short 0.0%
+22:08:11 pgvector btree hnsw.ef_search=1000 topic: p50 135.9 ms, mean returned 10.00, short 0.0%
+22:08:47 pgvector btree hnsw.ef_search=1000 subtopic: p50 17.0 ms, mean returned 10.00, short 0.0%
+22:08:51 pgvector done

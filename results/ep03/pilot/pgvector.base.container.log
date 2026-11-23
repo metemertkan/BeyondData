@@ -1,0 +1,66 @@
+oom_killed=false exit=0 running=true
+
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-11-23 02:13:54.591 UTC [53] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-23 02:13:54.599 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-23 02:13:54.623 UTC [59] LOG:  database system was shut down at 2026-11-23 02:13:54 UTC
+2026-11-23 02:13:54.635 UTC [53] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down....2026-11-23 02:13:54.792 UTC [53] LOG:  received fast shutdown request
+2026-11-23 02:13:54.800 UTC [53] LOG:  aborting any active transactions
+2026-11-23 02:13:54.803 UTC [53] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+2026-11-23 02:13:54.803 UTC [57] LOG:  shutting down
+2026-11-23 02:13:54.812 UTC [57] LOG:  checkpoint starting: shutdown immediate
+2026-11-23 02:13:55.011 UTC [57] LOG:  checkpoint complete: wrote 950 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.142 s, total=0.209 s; sync files=303, longest=0.009 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/1BBA2B0, redo lsn=0/1BBA2B0
+2026-11-23 02:13:55.043 UTC [53] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-23 02:13:55.132 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-23 02:13:55.132 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-23 02:13:55.132 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-23 02:13:55.145 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-23 02:13:55.164 UTC [75] LOG:  database system was shut down at 2026-11-23 02:13:55 UTC
+2026-11-23 02:13:55.175 UTC [1] LOG:  database system is ready to accept connections
+2026-11-23 02:14:25.219 UTC [82] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 02:15:25.239 UTC [85] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 02:16:25.257 UTC [88] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 02:17:25.269 UTC [91] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-23 02:17:36.237 UTC [73] LOG:  checkpoint starting: wal
+2026-11-23 02:22:06.292 UTC [73] LOG:  checkpoint complete: wrote 571 buffers (3.5%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=269.751 s, sync=0.043 s, total=270.085 s; sync files=105, longest=0.009 s, average=0.001 s; distance=532843 kB, estimate=532843 kB; lsn=0/38CFF2B0, redo lsn=0/22414F40
+2026-11-23 02:42:36.668 UTC [73] LOG:  checkpoint starting: time
+2026-11-23 02:42:36.879 UTC [73] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 23 recycled; write=0.007 s, sync=0.010 s, total=0.212 s; sync files=26, longest=0.002 s, average=0.001 s; distance=373372 kB, estimate=516896 kB; lsn=0/390B3FA0, redo lsn=0/390B3F48

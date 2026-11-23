@@ -1,0 +1,924 @@
+{
+  "db": "weaviate",
+  "size": "full",
+  "passages": 1000000,
+  "questions": 3452,
+  "started": "2026-11-23 13:30:08",
+  "deployments": {
+    "base": {
+      "options": {
+        "default": {
+          "apply": {
+            "filterStrategy": "acorn"
+          },
+          "apply_s": 0.0,
+          "filter_settings": {
+            "vectorIndexConfig": {
+              "filterStrategy": "acorn",
+              "flatSearchCutoff": 40000,
+              "ef": -1,
+              "efConstruction": 128,
+              "maxConnections": 32
+            },
+            "properties": [
+              {
+                "name": "dept",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "project",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "region",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "subtopic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "team",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "topic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              }
+            ]
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.7
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 15.5
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 23.5
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 34.8
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.6
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 36.5
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.9
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.3
+            },
+            "default__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.7
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.1
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.4
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.6
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.9
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 15.7
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.3
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.4
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.4
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 17.3
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 24.6
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.3
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.6
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 17.1
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.1
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 39.4
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.3
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.4
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.2
+            },
+            "default__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 49.9
+            },
+            "default__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 63.3
+            },
+            "default__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.5
+            },
+            "default__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.3
+            },
+            "default__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.4
+            },
+            "default__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            }
+          },
+          "plans": {}
+        },
+        "sweeping": {
+          "apply": {
+            "filterStrategy": "sweeping"
+          },
+          "apply_s": 2.0,
+          "filter_settings": {
+            "vectorIndexConfig": {
+              "filterStrategy": "sweeping",
+              "flatSearchCutoff": 40000,
+              "ef": -1,
+              "efConstruction": 128,
+              "maxConnections": 32
+            },
+            "properties": [
+              {
+                "name": "dept",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "project",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "region",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "subtopic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "team",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "topic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              }
+            ]
+          },
+          "cells": {
+            "sweeping__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.5
+            },
+            "sweeping__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 15.7
+            },
+            "sweeping__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 47.8
+            },
+            "sweeping__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 34.8
+            },
+            "sweeping__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.5
+            },
+            "sweeping__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 36.6
+            },
+            "sweeping__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.9
+            },
+            "sweeping__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.4
+            },
+            "sweeping__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.3
+            },
+            "sweeping__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.8
+            },
+            "sweeping__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.2
+            },
+            "sweeping__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.4
+            },
+            "sweeping__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.8
+            },
+            "sweeping__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "sweeping__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.5
+            },
+            "sweeping__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.7
+            },
+            "sweeping__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 34.4
+            },
+            "sweeping__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.8
+            },
+            "sweeping__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.3
+            },
+            "sweeping__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.9
+            },
+            "sweeping__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "sweeping__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 11.0
+            },
+            "sweeping__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 18.5
+            },
+            "sweeping__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 59.6
+            },
+            "sweeping__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "sweeping__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "sweeping__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.7
+            },
+            "sweeping__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.9
+            },
+            "sweeping__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 17.5
+            },
+            "sweeping__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.1
+            },
+            "sweeping__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 102.3
+            },
+            "sweeping__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.3
+            },
+            "sweeping__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "sweeping__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 22.0
+            },
+            "sweeping__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "sweeping__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.4
+            },
+            "sweeping__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 50.1
+            },
+            "sweeping__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 180.4
+            },
+            "sweeping__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.5
+            },
+            "sweeping__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "sweeping__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.5
+            },
+            "sweeping__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            }
+          },
+          "plans": {}
+        },
+        "pathseer": {
+          "apply": {
+            "filterStrategy": "pathseer"
+          },
+          "apply_s": 2.0,
+          "filter_settings": {
+            "vectorIndexConfig": {
+              "filterStrategy": "pathseer",
+              "flatSearchCutoff": 40000,
+              "ef": -1,
+              "efConstruction": 128,
+              "maxConnections": 32
+            },
+            "properties": [
+              {
+                "name": "dept",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "project",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "region",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "subtopic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "team",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              },
+              {
+                "name": "topic",
+                "dataType": [
+                  "number"
+                ],
+                "indexFilterable": true,
+                "indexRangeFilters": false
+              }
+            ]
+          },
+          "cells": {
+            "pathseer__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 9.7
+            },
+            "pathseer__d__region": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 13.9
+            },
+            "pathseer__d__dept": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 17.8
+            },
+            "pathseer__d__team": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 34.7
+            },
+            "pathseer__d__project": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.5
+            },
+            "pathseer__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 35.6
+            },
+            "pathseer__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 5.8
+            },
+            "pathseer__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.1
+            },
+            "pathseer__64__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 5.6
+            },
+            "pathseer__64__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 7.2
+            },
+            "pathseer__64__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 19.7
+            },
+            "pathseer__64__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.1
+            },
+            "pathseer__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.6
+            },
+            "pathseer__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.3
+            },
+            "pathseer__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.3
+            },
+            "pathseer__128__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 9.0
+            },
+            "pathseer__128__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 12.2
+            },
+            "pathseer__128__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 19.6
+            },
+            "pathseer__128__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.1
+            },
+            "pathseer__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.6
+            },
+            "pathseer__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.4
+            },
+            "pathseer__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 10.1
+            },
+            "pathseer__256__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 14.6
+            },
+            "pathseer__256__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.3
+            },
+            "pathseer__256__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 19.6
+            },
+            "pathseer__256__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.1
+            },
+            "pathseer__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.5
+            },
+            "pathseer__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.4
+            },
+            "pathseer__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 17.2
+            },
+            "pathseer__512__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 25.6
+            },
+            "pathseer__512__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 40.4
+            },
+            "pathseer__512__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "pathseer__512__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.3
+            },
+            "pathseer__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.5
+            },
+            "pathseer__512__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            },
+            "pathseer__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 29.1
+            },
+            "pathseer__1024__region": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 44.3
+            },
+            "pathseer__1024__dept": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 76.4
+            },
+            "pathseer__1024__team": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.4
+            },
+            "pathseer__1024__project": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.2
+            },
+            "pathseer__1024__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 21.4
+            },
+            "pathseer__1024__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 3.5
+            }
+          },
+          "plans": {}
+        }
+      },
+      "startup_s": 4.5,
+      "load_s": 992.5,
+      "indexed": {
+        "vector_queue": 0
+      },
+      "index_wait_s": 0.0,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 1000000,
+      "settings": {
+        "version": "1.40.7",
+        "vectorConfig": {
+          "default": {
+            "vectorIndexConfig": {
+              "bq": {
+                "enabled": false
+              },
+              "cleanupIntervalSeconds": 300,
+              "distance": "cosine",
+              "dynamicEfFactor": 8,
+              "dynamicEfMax": 500,
+              "dynamicEfMin": 100,
+              "ef": -1,
+              "efConstruction": 128,
+              "filterStrategy": "acorn",
+              "flatSearchCutoff": 40000,
+              "maxConnections": 32,
+              "multivector": {
+                "aggregation": "maxSim",
+                "enabled": false,
+                "muvera": {
+                  "dprojections": 16,
+                  "enabled": false,
+                  "ksim": 4,
+                  "repetitions": 10
+                }
+              },
+              "pq": {
+                "bitCompression": false,
+                "centroids": 256,
+                "enabled": false,
+                "encoder": {
+                  "distribution": "log-normal",
+                  "type": "kmeans"
+                },
+                "segments": 0,
+                "trainingLimit": 100000
+              },
+              "rq": {
+                "bits": 8,
+                "centering": false,
+                "enabled": false,
+                "rescoreLimit": 20,
+                "trainingLimit": 10000
+              },
+              "skip": false,
+              "skipDefaultQuantization": false,
+              "sq": {
+                "enabled": false,
+                "rescoreLimit": 20,
+                "trainingLimit": 100000
+              },
+              "trackDefaultQuantization": false,
+              "vectorCacheMaxObjects": 1000000000000
+            },
+            "vectorIndexType": "hnsw",
+            "vectorizer": {
+              "none": {}
+            }
+          }
+        },
+        "vectorIndexConfig": null
+      },
+      "disk_bytes_after_load": 4698065560,
+      "shipped_strategy": "acorn",
+      "disk_bytes_end": 4694795136
+    }
+  },
+  "finished": "2026-11-23 14:26:56"
+}

@@ -1,0 +1,1200 @@
+{
+  "db": "pgvector",
+  "size": "pilot",
+  "passages": 100000,
+  "questions": 600,
+  "started": "2026-11-23 03:13:52",
+  "deployments": {
+    "base": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "hnsw.iterative_scan": "off",
+            "hnsw.max_scan_tuples": "20000",
+            "hnsw.scan_mem_multiplier": "1",
+            "hnsw.ef_search": "40",
+            "indexes": [
+              "CREATE UNIQUE INDEX docs_pkey ON public.docs USING btree (id)",
+              "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)"
+            ],
+            "table_bytes": 1382760448
+          },
+          "plans": {
+            "none": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "region": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "dept": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "team": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "project": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "topic": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "subtopic": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ]
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.2
+            },
+            "default__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "default__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.0
+            },
+            "default__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "default__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.4
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.2
+            },
+            "default__64__region": {
+              "sampled": true,
+              "ran": 300,
+              "wall_s": 126.8
+            },
+            "default__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 55.7
+            },
+            "default__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.5
+            },
+            "default__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.4
+            },
+            "default__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.5
+            },
+            "default__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.1
+            },
+            "default__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "default__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "default__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.5
+            },
+            "default__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 55.8
+            },
+            "default__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.5
+            },
+            "default__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.1
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.1
+            },
+            "default__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.1
+            },
+            "default__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.0
+            },
+            "default__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "default__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "default__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "default__1000__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 30.3
+            },
+            "default__1000__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 30.4
+            },
+            "default__1000__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 55.8
+            },
+            "default__1000__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "default__1000__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.0
+            },
+            "default__1000__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.0
+            },
+            "default__1000__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            }
+          }
+        },
+        "iterative": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "hnsw.iterative_scan": "relaxed_order",
+            "hnsw.max_scan_tuples": "20000",
+            "hnsw.scan_mem_multiplier": "1",
+            "hnsw.ef_search": "40",
+            "indexes": [
+              "CREATE UNIQUE INDEX docs_pkey ON public.docs USING btree (id)",
+              "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)"
+            ],
+            "table_bytes": 1382768640
+          },
+          "plans": {
+            "none": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "region": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "dept": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "team": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "project": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "topic": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ],
+            "subtopic": [
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs",
+              "Seq Scan docs"
+            ]
+          },
+          "cells": {
+            "iterative__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "iterative__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "iterative__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.6
+            },
+            "iterative__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.7
+            },
+            "iterative__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "iterative__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "iterative__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "iterative__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.2
+            },
+            "iterative__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.3
+            },
+            "iterative__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.6
+            },
+            "iterative__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "iterative__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.1
+            },
+            "iterative__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.2
+            },
+            "iterative__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "iterative__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.5
+            },
+            "iterative__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "iterative__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.5
+            },
+            "iterative__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "iterative__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "iterative__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "iterative__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "iterative__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.8
+            },
+            "iterative__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.8
+            },
+            "iterative__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.3
+            },
+            "iterative__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "iterative__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "iterative__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "iterative__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "iterative__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.3
+            },
+            "iterative__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.5
+            },
+            "iterative__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.6
+            },
+            "iterative__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.6
+            },
+            "iterative__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.3
+            },
+            "iterative__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "iterative__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            },
+            "iterative__1000__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 31.1
+            },
+            "iterative__1000__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 31.0
+            },
+            "iterative__1000__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 56.4
+            },
+            "iterative__1000__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.7
+            },
+            "iterative__1000__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.2
+            },
+            "iterative__1000__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 10.1
+            },
+            "iterative__1000__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 4.5
+            }
+          }
+        },
+        "btree": {
+          "apply": {
+            "btree_build_s": 0.2
+          },
+          "apply_s": 0.2,
+          "filter_settings": {
+            "hnsw.iterative_scan": "relaxed_order",
+            "hnsw.max_scan_tuples": "20000",
+            "hnsw.scan_mem_multiplier": "1",
+            "hnsw.ef_search": "40",
+            "indexes": [
+              "CREATE UNIQUE INDEX docs_pkey ON public.docs USING btree (id)",
+              "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)",
+              "CREATE INDEX docs_region_idx ON public.docs USING btree (region)",
+              "CREATE INDEX docs_dept_idx ON public.docs USING btree (dept)",
+              "CREATE INDEX docs_team_idx ON public.docs USING btree (team)",
+              "CREATE INDEX docs_project_idx ON public.docs USING btree (project)",
+              "CREATE INDEX docs_topic_idx ON public.docs USING btree (topic)",
+              "CREATE INDEX docs_subtopic_idx ON public.docs USING btree (subtopic)"
+            ],
+            "table_bytes": 1387126784
+          },
+          "plans": {
+            "none": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "region": [
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs",
+              "Index Scan docs_embedding_idx docs"
+            ],
+            "dept": [
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx",
+              "Bitmap Index Scan docs_dept_idx"
+            ],
+            "team": [
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx",
+              "Bitmap Index Scan docs_team_idx"
+            ],
+            "project": [
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx",
+              "Bitmap Index Scan docs_project_idx"
+            ],
+            "topic": [
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx",
+              "Bitmap Index Scan docs_topic_idx"
+            ],
+            "subtopic": [
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx",
+              "Bitmap Index Scan docs_subtopic_idx"
+            ]
+          },
+          "cells": {
+            "btree__d__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "btree__d__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 2.3
+            },
+            "btree__d__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 53.3
+            },
+            "btree__d__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.3
+            },
+            "btree__d__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__d__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__d__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "btree__64__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.2
+            },
+            "btree__64__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 3.3
+            },
+            "btree__64__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 53.1
+            },
+            "btree__64__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.4
+            },
+            "btree__64__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__64__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__64__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "btree__128__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.7
+            },
+            "btree__128__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 5.6
+            },
+            "btree__128__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 52.9
+            },
+            "btree__128__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.3
+            },
+            "btree__128__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__128__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__128__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "btree__256__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.8
+            },
+            "btree__256__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 9.8
+            },
+            "btree__256__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 52.9
+            },
+            "btree__256__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.3
+            },
+            "btree__256__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__256__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__256__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "btree__512__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.5
+            },
+            "btree__512__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 17.5
+            },
+            "btree__512__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 52.8
+            },
+            "btree__512__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.3
+            },
+            "btree__512__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__512__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__512__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            },
+            "btree__1000__none": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 31.2
+            },
+            "btree__1000__region": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 31.0
+            },
+            "btree__1000__dept": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 52.9
+            },
+            "btree__1000__team": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.3
+            },
+            "btree__1000__project": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.7
+            },
+            "btree__1000__topic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 6.6
+            },
+            "btree__1000__subtopic": {
+              "sampled": false,
+              "ran": 600,
+              "wall_s": 0.8
+            }
+          }
+        }
+      },
+      "startup_s": 2.1,
+      "load_s": 3.9,
+      "indexed": {
+        "index_build_s": 218.2,
+        "notices": [
+          "hnsw graph no longer fits into maintenance_work_mem after 13168 tuples"
+        ]
+      },
+      "index_wait_s": 218.3,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 100000,
+      "settings": {
+        "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)",
+        "reloptions (empty = m 16, ef_construction 64)": null,
+        "hnsw.ef_search": "40",
+        "hnsw.iterative_scan": "off",
+        "maintenance_work_mem": "64MB",
+        "max_parallel_maintenance_workers": "2",
+        "shared_buffers": "128MB",
+        "version": "0.8.7",
+        "plan_limit_1": "sequential scan",
+        "limit_1_ms": 627.0,
+        "plan_limit_10": "index scan",
+        "limit_10_ms": 9.5,
+        "toast_bytes": 553074688
+      },
+      "disk_bytes_after_load": 2354870589,
+      "disk_bytes_end": 2359249213
+    }
+  },
+  "finished": "2026-11-23 03:50:17"
+}

@@ -1,0 +1,278 @@
+{
+  "db": "chroma",
+  "size": "full",
+  "passages": 1000000,
+  "questions": 3452,
+  "started": "2026-11-23 15:31:12",
+  "deployments": {
+    "base": {
+      "options": {
+        "default": {
+          "apply": {},
+          "apply_s": 0.0,
+          "filter_settings": {
+            "version": "1.0.0",
+            "configuration": {
+              "hnsw": {
+                "space": "cosine",
+                "ef_construction": 100,
+                "ef_search": 100,
+                "max_neighbors": 16,
+                "resize_factor": 1.2,
+                "sync_threshold": 1000
+              },
+              "spann": null,
+              "embedding_function": {
+                "type": "known",
+                "name": "default",
+                "config": {}
+              }
+            }
+          },
+          "cells": {
+            "default__d__none": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 8.9
+            },
+            "default__d__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 250.0
+            },
+            "default__d__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 76.2
+            },
+            "default__d__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 41.8
+            },
+            "default__d__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 85.3
+            },
+            "default__d__topic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 806.1
+            },
+            "default__d__subtopic": {
+              "sampled": false,
+              "ran": 3452,
+              "wall_s": 628.6
+            },
+            "default__64__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 4.3
+            },
+            "default__64__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 254.2
+            },
+            "default__64__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 75.1
+            },
+            "default__64__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 38.8
+            },
+            "default__64__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 66.9
+            },
+            "default__64__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 466.5
+            },
+            "default__64__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 356.3
+            },
+            "default__128__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 6.0
+            },
+            "default__128__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 249.6
+            },
+            "default__128__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 76.7
+            },
+            "default__128__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 44.3
+            },
+            "default__128__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 98.8
+            },
+            "default__128__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 473.1
+            },
+            "default__128__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 380.0
+            },
+            "default__256__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 8.7
+            },
+            "default__256__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 252.0
+            },
+            "default__256__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 76.5
+            },
+            "default__256__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 53.7
+            },
+            "default__256__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 152.4
+            },
+            "default__256__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 489.1
+            },
+            "default__256__subtopic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 429.2
+            },
+            "default__512__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 12.9
+            },
+            "default__512__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 250.7
+            },
+            "default__512__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 79.8
+            },
+            "default__512__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 69.8
+            },
+            "default__512__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 227.1
+            },
+            "default__512__topic": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 513.3
+            },
+            "default__512__subtopic": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 54.7
+            },
+            "default__1024__none": {
+              "sampled": false,
+              "ran": 2000,
+              "wall_s": 20.2
+            },
+            "default__1024__region": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 249.6
+            },
+            "default__1024__dept": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 82.9
+            },
+            "default__1024__team": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 97.3
+            },
+            "default__1024__project": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 328.7
+            },
+            "default__1024__topic": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 40.8
+            },
+            "default__1024__subtopic": {
+              "sampled": true,
+              "ran": 100,
+              "wall_s": 185.6
+            }
+          },
+          "plans": {}
+        }
+      },
+      "startup_s": 0.4,
+      "load_s": 1281.9,
+      "indexed": {},
+      "index_wait_s": 0.0,
+      "settle": {},
+      "settle_s": 0.0,
+      "count": 1000000,
+      "settings": {
+        "version": "1.0.0",
+        "configuration": {
+          "hnsw": {
+            "space": "cosine",
+            "ef_construction": 100,
+            "ef_search": 100,
+            "max_neighbors": 16,
+            "resize_factor": 1.2,
+            "sync_threshold": 1000
+          },
+          "spann": null,
+          "embedding_function": {
+            "type": "known",
+            "name": "default",
+            "config": {}
+          }
+        }
+      },
+      "disk_bytes_after_load": 4802560680,
+      "disk_bytes_end": 4802560680
+    }
+  },
+  "finished": "2026-11-23 18:09:39"
+}

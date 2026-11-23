@@ -36,6 +36,8 @@ class Engine:
     knob = ""             # name of the search-time setting the sweep changes
     knob_max = 10_000
     knob_is_global = False  # True: set_knob changes the collection for every client, not just this one
+    prefix = "bd2"                # container names: <prefix>-<service>
+    project = "beyonddata-ep02"   # compose project: volumes are <project>_<service>
 
     def connect(self) -> None: ...
     def setup(self) -> None: ...
@@ -227,8 +229,8 @@ class Milvus(Engine):
     def settings(self):
         d = self.c.describe_collection(NAME)
         # describe_index says only "AUTOINDEX"; the index node logs what that resolved to
-        logs = subprocess.run(["docker", "logs", "bd2-milvus"], capture_output=True, text=True).stdout
-        logs += subprocess.run(["docker", "logs", "bd2-milvus"], capture_output=True, text=True).stderr
+        logs = subprocess.run(["docker", "logs", f"{self.prefix}-milvus"], capture_output=True, text=True).stdout
+        logs += subprocess.run(["docker", "logs", f"{self.prefix}-milvus"], capture_output=True, text=True).stderr
         built = sorted({ln[ln.find("[index_type="):][:200] for ln in logs.splitlines()
                         if "efConstruction=" in ln and "[index_type=" in ln})
         return {"index": self.c.describe_index(NAME, index_name=self._index_name()), "autoindex_built_as": built,
@@ -401,7 +403,7 @@ class Chroma(Engine):
         # restarts (the loaded index is cached), so a change here is modify + restart
         self._knob = value
         self._c().modify(configuration={"hnsw": {"ef_search": 100 if value is None else int(value)}})
-        subprocess.run(["docker", "restart", "bd2-chroma"], capture_output=True, check=True)
+        subprocess.run(["docker", "restart", f"{self.prefix}-chroma"], capture_output=True, check=True)
         self.connect()
         self._c().query(query_embeddings=[np.ones(DIM, np.float32) / DIM ** 0.5], n_results=1, include=[])
 
@@ -419,7 +421,7 @@ COMPOSE = ["docker", "compose", "-f", "docker-compose.ep02.yml"]
 
 
 def container(engine: Engine) -> str:
-    return f"bd2-{engine.service}"
+    return f"{engine.prefix}-{engine.service}"
 
 
 def mem_mib(engine: Engine) -> float:
@@ -431,7 +433,7 @@ def mem_mib(engine: Engine) -> float:
 
 
 def disk_bytes(engine: Engine) -> int:
-    vol = f"beyonddata-ep02_{engine.service}"
+    vol = f"{engine.project}_{engine.service}"
     out = subprocess.run(["docker", "run", "--rm", "-v", f"{vol}:/v:ro", "alpine:3.20", "du", "-sb", "/v"],
                          capture_output=True, text=True, check=True).stdout
     return int(out.split()[0])

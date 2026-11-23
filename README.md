@@ -13,6 +13,7 @@ No accounts, no keys.
 | :--- | :--- | :--- |
 | 1 | Can you let an AI answer questions from your database? | [`ledger/`](ledger), [`scripts/ep01_run.py`](scripts/ep01_run.py) |
 | 2 | Which vector database should you use? | [`vectors/`](vectors), [`scripts/ep02_run.py`](scripts/ep02_run.py) |
+| 3 | What happens to vector search when you add a filter? | [`vectors/filtered.py`](vectors/filtered.py), [`scripts/ep03_run.py`](scripts/ep03_run.py) |
 
 ## Episode 1: I asked my AI for the total
 
@@ -194,4 +195,87 @@ docker-compose.ep02.yml   the six databases, same limits, own compose project
 scripts/ep02_run.py       one database at a time: load, index, settle, default, sweep, throughput, write test
 scripts/ep02_summary.py   the tables
 tests/test_ep02.py
+```
+
+
+## Episode 3: I added a filter and asked for 10 results
+
+Episode 2's million passages and 2,452 test questions, with six metadata fields on every passage (seed 7): four random
+and nested like an org chart (`region` 50%, `dept` 10%, `team` 1%, `project` 0.1%) and two that follow the content
+(`topic` ~1%, `subtopic` ~0.1%: k-means clusters of the vectors). Each question is filtered to the value on its own
+answer's passage, so the answer is always inside the filter; exact search inside the filter finds a labeled answer for
+91.5% of questions unfiltered and 99.6% with the 1% filter. Same six databases, images and limits as Episode 2.
+
+Three designs: **as shipped** (fields stored the quickstart way, the filter in the query, nothing else), **tuned**
+(each database's documented filter options, with the search knob swept) and **built** (a recall target from the
+labels, a setting per filter field, a deploy check per field on 200 questions: recall ≥ target, no short result).
+
+### Results (1,000,000 passages, 2,452 test questions)
+
+As shipped, recall@10 inside the filter (results returned, of 10, where fewer):
+
+| Database | none | region 50% | dept 10% | team 1% | project 0.1% | topic ~1% | subtopic ~0.1% |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| pgvector | 0.921 | 0.905 | **0.473** (4.8) | **0.129** (1.3) | 1.000 | 0.814 (8.5) | 1.000 |
+| Qdrant | 0.970 | 0.937 | **0.345** | **0.574** (9.96) | 0.998 | 0.990 | 1.000 |
+| Milvus | 0.909 | 0.875 | 0.953 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Weaviate | 0.978 | 0.984 | 0.957 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Elasticsearch | 0.901 | 0.880 | 0.857 | **0.550** | 0.973 | 0.943 | 0.965 |
+| Chroma | 0.959 | 0.972* | 0.989* | 0.997* | 1.000* | 0.990 | 0.999 |
+
+\* Chroma: the cell averaged over 250 ms on its first 100 questions and stopped there, as the design fixed.
+
+- **Three failures, no errors.** Too few: pgvector filters after the HNSW scan, so the 1% filter returned 1.3 of 10
+  results on average and none for 6.3% of questions. The wrong ten: Qdrant without payload indexes lost the answer for
+  62% of questions at 10%, Elasticsearch's ACORN default for 40% at 1%. Too slow: Chroma took 1.6 s at 50% (2.5 ms
+  unfiltered). Milvus and Weaviate held up.
+- **Random filters fail where topical ones of the same size don't:** team vs topic recall, Qdrant 0.574 vs 0.990,
+  Elasticsearch 0.550 vs 0.943. Test with the filters your users send.
+- **Every fix is a setting** (1,000 test questions): Qdrant payload indexes created before loading, 0.342 → 0.995 at 10%
+  (created after loading: no change at 10%; graph build 531 s instead of 40 s); Elasticsearch's `fanout` heuristic,
+  0.542 → 0.960 at 1%, or 512 candidates, 1.000; Weaviate's `sweeping` strategy, 0.958 → 0.994 at 10%. pgvector's
+  iterative scans end the short results (0.940 at 1%); exact results come only from sequential scans, and `ef_search`
+  is what makes the planner switch (1% at 256: 86 ms; 50% at 512: 1.4 s; back to the index at 1,000).
+- **pgvector's plan cache.** After `SET hnsw.ef_search = 256` on a live connection, EXPLAIN showed a sequential scan
+  while the prepared statement kept the HNSW plan it had cached: 4.04 of 10 results; 10 after `DEALLOCATE ALL`. The
+  first full run's pgvector sweep had this problem; every pgvector setting now runs on its own connection, and
+  pgvector was re-run in full (the first run is kept in `results/ep03/full/first_run_pgvector/`).
+- **Built:** the labels pick a recall target of 0.99 again. The deploy check (200 test questions per field) fails 23
+  of 30 (database, field) as shipped and 12 of 30 built; 8 of those reached 0.99 on the tuning questions and landed at
+  0.984–0.989. Exploratory, chosen after the results: with a margin (0.995 when tuning), Qdrant, Milvus, Weaviate and
+  Elasticsearch pass every field.
+
+Full tables: [`results/ep03/full/summary.md`](results/ep03/full/summary.md). The 100,000-passage pilot is in
+`results/ep03/pilot/` (no short results at that size: pgvector's planner scanned exactly for every filter of 10% or
+less). Design amendments: three before the full run (sampled cells stop at 100 questions; knob cells run the tuning
+questions plus a seeded 1,000 test questions; pgvector plans recorded at every `ef_search`) and one after it (a
+connection per pgvector setting, the plan each statement ran, the plan-cache check, and the pgvector re-run).
+
+**Limits.** Synthetic fields (random, or k-means clusters); each question filtered to its answer's own value; one
+machine, one dataset, index builds at their defaults; Chroma's slow filtered cells stopped at 100 questions.
+
+### Run it
+
+```bash
+# after Episode 2's data step (bash vectors/download.sh && uv run python -m vectors.data --prepare)
+uv run python -m vectors.filters --prepare    # the six fields, exact filtered top 10 per question and filter
+uv run pytest tests/test_ep03.py
+taskset -c 6-11,18-23 uv run python -m scripts.ep03_run --size pilot --db all   # 100k passages, 600 questions
+taskset -c 6-11,18-23 uv run python -m scripts.ep03_run --size full --db all    # ~14 h
+uv run python -m scripts.ep03_summary --size full   # results/ep03/full/summary.md
+```
+
+`docker-compose.ep03.yml` has its own compose project (`beyonddata-ep03`, containers `bd3-*`), so its `down -v`
+never touches Episodes 1 and 2.
+
+### Layout
+
+```text
+vectors/
+  filters.py     the six fields, exact filtered ground truth
+  filtered.py    Episode 2's adapters with fields, filtered search and each database's filter options
+docker-compose.ep03.yml   the six databases, Episode 2's images and limits, own compose project
+scripts/ep03_run.py       one database at a time: per deployment load, then per option, knob and filter, every question
+scripts/ep03_summary.py   the tables, the target, the built settings and the deploy checks
+tests/test_ep03.py
 ```

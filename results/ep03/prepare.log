@@ -1,0 +1,52 @@
+  k-means 100: iteration 1/20, empty 0
+  k-means 100: iteration 2/20, empty 0
+  k-means 100: iteration 3/20, empty 0
+  k-means 100: iteration 4/20, empty 0
+  k-means 100: iteration 5/20, empty 0
+  k-means 100: iteration 6/20, empty 0
+  k-means 100: iteration 7/20, empty 0
+  k-means 100: iteration 8/20, empty 0
+  k-means 100: iteration 9/20, empty 0
+  k-means 100: iteration 10/20, empty 0
+  k-means 100: iteration 11/20, empty 0
+  k-means 100: iteration 12/20, empty 0
+  k-means 100: iteration 13/20, empty 0
+  k-means 100: iteration 14/20, empty 0
+  k-means 100: iteration 15/20, empty 0
+  k-means 100: iteration 16/20, empty 0
+  k-means 100: iteration 17/20, empty 0
+  k-means 100: iteration 18/20, empty 0
+  k-means 100: iteration 19/20, empty 0
+  k-means 100: iteration 20/20, empty 0
+  k-means 1000: iteration 1/20, empty 0
+  k-means 1000: iteration 2/20, empty 0
+  k-means 1000: iteration 3/20, empty 0
+  k-means 1000: iteration 4/20, empty 0
+  k-means 1000: iteration 5/20, empty 0
+  k-means 1000: iteration 6/20, empty 0
+  k-means 1000: iteration 7/20, empty 0
+  k-means 1000: iteration 8/20, empty 0
+  k-means 1000: iteration 9/20, empty 0
+  k-means 1000: iteration 10/20, empty 0
+  k-means 1000: iteration 11/20, empty 0
+  k-means 1000: iteration 12/20, empty 0
+  k-means 1000: iteration 13/20, empty 0
+  k-means 1000: iteration 14/20, empty 0
+  k-means 1000: iteration 15/20, empty 0
+  k-means 1000: iteration 16/20, empty 0
+  k-means 1000: iteration 17/20, empty 0
+  k-means 1000: iteration 18/20, empty 0
+  k-means 1000: iteration 19/20, empty 0
+  k-means 1000: iteration 20/20, empty 0
+exact pilot region: median filter size 49,881, min 49,881
+exact pilot dept: median filter size 10,024, min 9,846
+exact pilot team: median filter size 1,003, min 909
+exact pilot project: median filter size 101, min 65
+exact pilot topic: median filter size 1,032, min 337
+exact pilot subtopic: median filter size 114, min 15
+exact full region: median filter size 499,394, min 499,394
+exact full dept: median filter size 100,000, min 99,461
+exact full team: median filter size 10,004, min 9,730
+exact full project: median filter size 1,000, min 909
+exact full topic: median filter size 10,277, min 3,626
+exact full subtopic: median filter size 1,083, min 216
