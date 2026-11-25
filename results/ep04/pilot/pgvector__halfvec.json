@@ -1,0 +1,237 @@
+{
+  "db": "pgvector",
+  "deployment": "halfvec",
+  "what": "16-bit: HNSW on embedding::halfvec(1024) (README, half-precision indexing)",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-24 12:27:55",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 9.6,
+      "tune_recall": 0.952,
+      "p50_ms": 2.5933105061994866,
+      "plan": "Limit  (cost=921.50..935.26 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=921.50..138490.00 rows=100000 width=16)"
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.7,
+      "tune_recall": 0.9126000000000001,
+      "p50_ms": 1.729183000861667,
+      "plan": "Limit  (cost=576.13..589.92 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=576.13..138490.00 rows=100000 width=16)"
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.5,
+      "tune_recall": 0.9369000000000001,
+      "p50_ms": 2.1654064912581816,
+      "plan": "Limit  (cost=753.54..767.32 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=753.54..138490.00 rows=100000 width=16)"
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.3,
+      "tune_recall": 0.9595,
+      "p50_ms": 3.0092689994489774,
+      "plan": "Limit  (cost=1082.98..1096.72 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=1082.98..138490.00 rows=100000 width=16)"
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.4,
+      "tune_recall": 0.9773,
+      "p50_ms": 5.052637498010881,
+      "plan": "Limit  (cost=1833.53..1847.20 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=1833.53..138490.00 rows=100000 width=16)"
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 18.0,
+      "tune_recall": 0.9889000000000001,
+      "p50_ms": 8.82490498770494,
+      "plan": "Limit  (cost=753.89..767.66 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=753.89..138490.00 rows=100000 width=16)"
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 38.1,
+      "tune_recall": 0.9946999999999999,
+      "p50_ms": 18.772725510643795,
+      "plan": "Limit  (cost=774.47..788.24 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=774.47..138490.00 rows=100000 width=16)"
+    }
+  },
+  "startup_s": 2.0,
+  "load_s": 3.7,
+  "indexed": {
+    "index_build_s": 86.3,
+    "notices": []
+  },
+  "index_wait_s": 86.8,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 100000,
+  "settings": {
+    "version": "0.8.7",
+    "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (((embedding)::halfvec(1024)) halfvec_cosine_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "index_bytes": 272990208,
+    "table_bytes": 559128576,
+    "toast_bytes": 553074688,
+    "hnsw.ef_search": "40",
+    "shared_buffers": "128MB",
+    "plan": "Limit  (cost=921.50..935.26 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=921.50..138490.00 rows=100000 width=16)"
+  },
+  "disk_bytes": 1588216973,
+  "mem_mib_after_load": 208.0,
+  "mem_mib_after_queries": 201.9,
+  "tuned_rule": "none reaches 0.995: the c with the highest tuning recall",
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "steps": {
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1327,
+            "bytes": 1605172645
+          },
+          "ok": true,
+          "ready_s": 4.2,
+          "preread_s": 0.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.4427119933534414,
+          "recall": 0.9510000000000001,
+          "mem_mib": 154.3,
+          "wall_s": 2.2
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 18.408945994451642,
+          "recall": 0.9939999999999999,
+          "mem_mib": 154.2,
+          "wall_s": 5.6
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1325,
+            "bytes": 1604850757
+          },
+          "ok": true,
+          "ready_s": 3.7,
+          "preread_s": 0.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.6377979995450005,
+          "recall": 0.9510000000000001,
+          "mem_mib": 155.8,
+          "wall_s": 4.4
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 20.54077851062175,
+          "recall": 0.9939999999999999,
+          "mem_mib": 155.8,
+          "wall_s": 6.1
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 1325,
+            "bytes": 1604850757
+          },
+          "ok": true,
+          "ready_s": 3.8,
+          "preread_s": 0.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.7115550076123327,
+          "recall": 0.9510000000000001,
+          "mem_mib": 156.1,
+          "wall_s": 4.5
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 20.145631511695683,
+          "recall": 0.9939999999999999,
+          "mem_mib": 156.1,
+          "wall_s": 6.1
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 12:31:44"
+}

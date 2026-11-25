@@ -1,0 +1,430 @@
+{
+  "db": "milvus",
+  "deployment": "ivf_rabitq",
+  "what": "1-bit + SQ8 refine: IVF_RABITQ with the docs' refine for 0.9+ recall",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 18:47:27",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 329.1,
+      "tune_recall": 0.8917,
+      "p50_ms": 89.22291349153966
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 346.2,
+      "tune_recall": 0.9462,
+      "p50_ms": 168.31721250491682
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 502.4,
+      "tune_recall": 0.9651000000000002,
+      "p50_ms": 245.30809299903922
+    },
+    "c50": {
+      "c": 50,
+      "ran": 100,
+      "sampled": true,
+      "wall_s": 59.4,
+      "tune_recall": 0.975925925925926,
+      "p50_ms": 394.33157299936283
+    },
+    "c100": {
+      "c": 100,
+      "ran": 100,
+      "sampled": true,
+      "wall_s": 115.9,
+      "tune_recall": 0.9925925925925926,
+      "p50_ms": 771.7957779968856
+    },
+    "c200": {
+      "c": 200,
+      "ran": 100,
+      "sampled": true,
+      "wall_s": 187.2,
+      "tune_recall": 0.9944444444444445,
+      "p50_ms": 1248.0750210088445
+    },
+    "c500": {
+      "c": 500,
+      "ran": 100,
+      "sampled": true,
+      "wall_s": 187.5,
+      "tune_recall": 0.9944444444444445,
+      "p50_ms": 1249.0073795052012
+    }
+  },
+  "startup_s": 2.0,
+  "load_s": 110.9,
+  "indexed": {
+    "index_type": "IVF_RABITQ",
+    "indexed_rows": 1000000,
+    "total_rows": 1000000,
+    "state": "Finished"
+  },
+  "index_wait_s": 77.7,
+  "settle": {
+    "settle_s": 250,
+    "segment_history": [
+      {
+        "t_s": 0,
+        "segments": 24,
+        "rows": [
+          147511,
+          31000,
+          92489,
+          29000,
+          30000,
+          28000,
+          29489,
+          87000,
+          30000,
+          28511,
+          89000,
+          30489,
+          28022,
+          30489,
+          30489,
+          28511,
+          30489,
+          29000,
+          30511,
+          28489,
+          29511,
+          29000,
+          28000,
+          25000
+        ]
+      },
+      {
+        "t_s": 10,
+        "segments": 22,
+        "rows": [
+          147511,
+          30000,
+          28000,
+          29489,
+          87000,
+          30000,
+          28511,
+          89000,
+          30489,
+          28022,
+          30489,
+          30489,
+          28511,
+          30489,
+          29000,
+          30511,
+          28489,
+          29511,
+          152489,
+          29000,
+          28000,
+          25000
+        ]
+      },
+      {
+        "t_s": 40,
+        "segments": 19,
+        "rows": [
+          147511,
+          30000,
+          28000,
+          29489,
+          30000,
+          28511,
+          28022,
+          30489,
+          30489,
+          28511,
+          30489,
+          29000,
+          28489,
+          29511,
+          152489,
+          29000,
+          28000,
+          25000,
+          237000
+        ]
+      },
+      {
+        "t_s": 50,
+        "segments": 14,
+        "rows": [
+          147511,
+          30000,
+          29489,
+          30000,
+          30489,
+          30489,
+          30489,
+          29000,
+          29511,
+          152489,
+          28000,
+          25000,
+          237000,
+          170533
+        ]
+      },
+      {
+        "t_s": 70,
+        "segments": 7,
+        "rows": [
+          147511,
+          152489,
+          28000,
+          25000,
+          237000,
+          239467,
+          170533
+        ]
+      }
+    ]
+  },
+  "settle_s": 250.1,
+  "count": 1000000,
+  "settings": {
+    "index": {
+      "refine": "True",
+      "refine_type": "SQ8",
+      "metric_type": "COSINE",
+      "index_type": "IVF_RABITQ",
+      "field_name": "vector",
+      "index_name": "vector",
+      "total_rows": 1000000,
+      "indexed_rows": 1000000,
+      "pending_index_rows": 0,
+      "state": "Finished"
+    },
+    "autoindex_built_as": [],
+    "consistency_level": 2,
+    "fields": [
+      {
+        "field_id": 100,
+        "name": "id",
+        "description": "",
+        "type": 5,
+        "params": {},
+        "is_primary": true
+      },
+      {
+        "field_id": 101,
+        "name": "vector",
+        "description": "",
+        "type": 101,
+        "params": {
+          "dim": 1024
+        }
+      }
+    ]
+  },
+  "disk_bytes": 19473481728,
+  "disk_bytes_apparent": 19388721409,
+  "mem_mib_after_load": 1996.8,
+  "mem_mib_after_queries": 2016.256,
+  "tuned": {
+    "tuned": {
+      "c": 30,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 30,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 30,
+    "tuned": {
+      "tuned": {
+        "c": 30,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 30,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 30
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1117,
+            "bytes": 19105259429
+          },
+          "ok": true,
+          "ready_s": 13.8,
+          "preread_s": 7.3,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 90.51925901439972,
+          "recall": 0.8835,
+          "mem_mib": 1451.008,
+          "wall_s": 37.4
+        },
+        "tuned": {
+          "ok": true,
+          "c": 30,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 246.43304650089704,
+          "recall": 0.9630000000000001,
+          "mem_mib": 1451.008,
+          "wall_s": 62.7
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1122,
+            "bytes": 19104995193
+          },
+          "ok": true,
+          "ready_s": 12.9,
+          "preread_s": 7.3,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 90.81096400041133,
+          "recall": 0.8835,
+          "mem_mib": 1452.032,
+          "wall_s": 37.5
+        },
+        "tuned": {
+          "ok": true,
+          "c": 30,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 246.7457334860228,
+          "recall": 0.9630000000000001,
+          "mem_mib": 1452.032,
+          "wall_s": 62.7
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1126,
+            "bytes": 19105065946
+          },
+          "ok": true,
+          "ready_s": 14.4,
+          "preread_s": 7.4,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 90.92231150134467,
+          "recall": 0.8835,
+          "mem_mib": 1440.768,
+          "wall_s": 37.5
+        },
+        "tuned": {
+          "ok": true,
+          "c": 30,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 246.57327799650375,
+          "recall": 0.9630000000000001,
+          "mem_mib": 1441.792,
+          "wall_s": 62.7
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1130,
+            "bytes": 19105136673
+          },
+          "ok": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 19:39:49"
+}

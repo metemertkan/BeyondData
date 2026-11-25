@@ -1,0 +1,209 @@
+{
+  "db": "chroma",
+  "deployment": "default",
+  "what": "float32: the only option (no quantization setting in Chroma 1.5.9)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 22:49:40",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 9.4,
+      "tune_recall": 0.9547,
+      "p50_ms": 2.5261974951718003
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.3,
+      "tune_recall": 0.8583000000000001,
+      "p50_ms": 1.568646024679765
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.6,
+      "tune_recall": 0.895,
+      "p50_ms": 1.6921219939831644
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.0,
+      "tune_recall": 0.9289000000000001,
+      "p50_ms": 1.8946590134873986
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.2,
+      "tune_recall": 0.9547,
+      "p50_ms": 2.483989461325109
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.4,
+      "tune_recall": 0.9722000000000001,
+      "p50_ms": 3.581856522941962
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 12.6,
+      "tune_recall": 0.9846,
+      "p50_ms": 6.146222993265837
+    }
+  },
+  "startup_s": 0.3,
+  "load_s": 1158.3,
+  "indexed": {},
+  "index_wait_s": 0.0,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "1.0.0",
+    "configuration": {
+      "hnsw": {
+        "space": "cosine",
+        "ef_construction": 100,
+        "ef_search": 100,
+        "max_neighbors": 16,
+        "resize_factor": 1.2,
+        "sync_threshold": 1000
+      },
+      "spann": null,
+      "embedding_function": {
+        "type": "known",
+        "name": "default",
+        "config": {}
+      }
+    }
+  },
+  "disk_bytes": 4419571712,
+  "disk_bytes_apparent": 4419547680,
+  "mem_mib_after_load": 4623.36,
+  "mem_mib_after_queries": 4360.192,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 6,
+            "bytes": 4419539488
+          },
+          "ok": true,
+          "ready_s": 9.6,
+          "preread_s": 2.9,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.4630295229144394,
+          "recall": 0.9495,
+          "mem_mib": 4360.192,
+          "wall_s": 2.0
+        },
+        "restart_tuned": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 6,
+            "bytes": 4419539488
+          },
+          "ok": true,
+          "ready_s": 8.7,
+          "preread_s": 2.9,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.295222992775962,
+          "recall": 0.9815,
+          "mem_mib": 4361.216,
+          "wall_s": 3.5
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 6,
+            "bytes": 4419539488
+          },
+          "ok": false,
+          "error": "RemoteProtocolError: Server disconnected without sending a response.",
+          "status": "exited",
+          "oom_killed": true,
+          "exit_code": 137
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "RemoteProtocolError: Server disconnected without sending a response."
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 23:11:26"
+}

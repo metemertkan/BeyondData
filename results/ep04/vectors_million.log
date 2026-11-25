@@ -1,0 +1,20 @@
+09:48:05 ranges for scalar quantization
+09:48:45   100,000 passages
+09:49:20   200,000 passages
+09:49:56   300,000 passages
+09:50:32   400,000 passages
+09:51:08   500,000 passages
+09:51:44   600,000 passages
+09:52:20   700,000 passages
+09:52:55   800,000 passages
+09:53:31   900,000 passages
+09:54:07   1,000,000 passages
+09:54:08 float16 {"bytes": 2048, "c10": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c20": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c50": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c100": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}}
+09:54:09 int8 {"bytes": 1024, "c10": {"recall": 0.9946, "ndcg": 0.7385, "hit": 0.9156, "lost": 0, "nearest_missed": 0}, "c20": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c50": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c100": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}}
+09:54:10 int4 {"bytes": 512, "c10": {"recall": 0.9252, "ndcg": 0.7338, "hit": 0.9123, "lost": 20, "nearest_missed": 0}, "c20": {"recall": 0.9992, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c50": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}, "c100": {"recall": 1.0, "ndcg": 0.7386, "hit": 0.9152, "lost": 0, "nearest_missed": 0}}
+09:54:11 1bit_hamming {"bytes": 128, "c10": {"recall": 0.6516, "ndcg": 0.6762, "hit": 0.876, "lost": 119, "nearest_missed": 53}, "c20": {"recall": 0.8197, "ndcg": 0.7317, "hit": 0.9009, "lost": 51, "nearest_missed": 24}, "c50": {"recall": 0.9344, "ndcg": 0.7374, "hit": 0.9127, "lost": 12, "nearest_missed": 7}, "c100": {"recall": 0.9709, "ndcg": 0.7384, "hit": 0.916, "lost": 4, "nearest_missed": 2}}
+09:54:12 1bit_float_query {"bytes": 128, "c10": {"recall": 0.7568, "ndcg": 0.7089, "hit": 0.9013, "lost": 58, "nearest_missed": 15}, "c20": {"recall": 0.9232, "ndcg": 0.7387, "hit": 0.9156, "lost": 8, "nearest_missed": 3}, "c50": {"recall": 0.9863, "ndcg": 0.7386, "hit": 0.9156, "lost": 1, "nearest_missed": 0}, "c100": {"recall": 0.9967, "ndcg": 0.7387, "hit": 0.9156, "lost": 0, "nearest_missed": 0}}
+09:54:12 dims512 {"bytes": 2048, "c10": {"recall": 0.7006, "ndcg": 0.7065, "hit": 0.8846, "lost": 89, "nearest_missed": 21}, "c20": {"recall": 0.8683, "ndcg": 0.7339, "hit": 0.9054, "lost": 32, "nearest_missed": 6}, "c50": {"recall": 0.9573, "ndcg": 0.7363, "hit": 0.9119, "lost": 14, "nearest_missed": 4}, "c100": {"recall": 0.9834, "ndcg": 0.7375, "hit": 0.9135, "lost": 8, "nearest_missed": 1}}
+09:54:13 dims256 {"bytes": 1024, "c10": {"recall": 0.5012, "ndcg": 0.6315, "hit": 0.8161, "lost": 261, "nearest_missed": 200}, "c20": {"recall": 0.643, "ndcg": 0.7064, "hit": 0.8589, "lost": 163, "nearest_missed": 126}, "c50": {"recall": 0.7786, "ndcg": 0.7236, "hit": 0.8854, "lost": 95, "nearest_missed": 64}, "c100": {"recall": 0.8511, "ndcg": 0.7284, "hit": 0.8964, "lost": 58, "nearest_missed": 43}}
+09:54:14 dims128 {"bytes": 512, "c10": {"recall": 0.278, "ndcg": 0.4583, "hit": 0.626, "lost": 718, "nearest_missed": 692}, "c20": {"recall": 0.3625, "ndcg": 0.586, "hit": 0.6888, "lost": 569, "nearest_missed": 537}, "c50": {"recall": 0.4694, "ndcg": 0.6308, "hit": 0.7594, "lost": 409, "nearest_missed": 402}, "c100": {"recall": 0.5518, "ndcg": 0.6587, "hit": 0.7961, "lost": 315, "nearest_missed": 306}}
+09:54:15 written /home/server/Projects/AIContentCreator/BeyondData/results/ep04/vectors/million.json

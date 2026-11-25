@@ -1,0 +1,353 @@
+{
+  "db": "pgvector",
+  "deployment": "halfvec",
+  "what": "16-bit: HNSW on embedding::halfvec(1024) (README, half-precision indexing)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 15:36:17",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 16.0,
+      "tune_recall": 0.9211000000000001,
+      "p50_ms": 4.2465165024623275,
+      "plan": "Limit  (cost=1087.33..1101.15 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=1087.33..1383248.00 rows=1000000 width=16)"
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.8,
+      "tune_recall": 0.8658,
+      "p50_ms": 2.625481487484649,
+      "plan": "Limit  (cost=673.39..687.21 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=673.39..1383247.91 rows=999996 width=16)"
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.1,
+      "tune_recall": 0.9017999999999999,
+      "p50_ms": 3.350431506987661,
+      "plan": "Limit  (cost=886.02..899.85 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=886.02..1383247.91 rows=999996 width=16)"
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.1,
+      "tune_recall": 0.9306000000000001,
+      "p50_ms": 4.743304991279729,
+      "plan": "Limit  (cost=1280.86..1294.68 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=1280.86..1383247.91 rows=999996 width=16)"
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 18.1,
+      "tune_recall": 0.9544,
+      "p50_ms": 8.57763399835676,
+      "plan": "Limit  (cost=2180.45..2194.26 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=2180.45..1383247.91 rows=999996 width=16)"
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 30.9,
+      "tune_recall": 0.9705,
+      "p50_ms": 14.844981997157447,
+      "plan": "Limit  (cost=3814.14..3827.93 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=3814.14..1383247.91 rows=999996 width=16)"
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 67.1,
+      "tune_recall": 0.9829,
+      "p50_ms": 32.61529350129422,
+      "plan": "Limit  (cost=8222.99..8236.74 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=8222.99..1383247.91 rows=999996 width=16)"
+    }
+  },
+  "startup_s": 2.0,
+  "load_s": 29.7,
+  "indexed": {
+    "index_build_s": 280.9,
+    "notices": []
+  },
+  "index_wait_s": 282.1,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "0.8.7",
+    "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (((embedding)::halfvec(1024)) halfvec_cosine_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "index_bytes": 2726576128,
+    "table_bytes": 5590548480,
+    "toast_bytes": 5530271744,
+    "hnsw.ef_search": "40",
+    "shared_buffers": "128MB",
+    "plan": "Limit  (cost=1087.33..1101.15 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=1087.33..1383248.00 rows=1000000 width=16)"
+  },
+  "disk_bytes": 9446047744,
+  "disk_bytes_apparent": 9445931325,
+  "mem_mib_after_load": 406.4,
+  "mem_mib_after_queries": 401.5,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1354,
+            "bytes": 9445941344
+          },
+          "ok": true,
+          "ready_s": 5.5,
+          "preread_s": 3.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 18.47796799847856,
+          "recall": 0.91,
+          "mem_mib": 157.1,
+          "wall_s": 11.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 36.9060079974588,
+          "recall": 0.976,
+          "mem_mib": 157.3,
+          "wall_s": 12.4
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1353,
+            "bytes": 9445780400
+          },
+          "ok": true,
+          "ready_s": 4.3,
+          "preread_s": 3.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 36.22277601971291,
+          "recall": 0.91,
+          "mem_mib": 161.3,
+          "wall_s": 22.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 39.968212993699126,
+          "recall": 0.976,
+          "mem_mib": 161.9,
+          "wall_s": 15.4
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1353,
+            "bytes": 9445780400
+          },
+          "ok": true,
+          "ready_s": 4.3,
+          "preread_s": 3.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 42.09104551409837,
+          "recall": 0.91,
+          "mem_mib": 162.9,
+          "wall_s": 26.5
+        },
+        "tuned": {
+          "ok": false,
+          "c": 500,
+          "ran": 50,
+          "sampled": true,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 256.4218025072478,
+          "recall": 0.9619999999999999,
+          "mem_mib": 163.2,
+          "wall_s": 29.4
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1354,
+            "bytes": 9445941344
+          },
+          "ok": true,
+          "ready_s": 4.3,
+          "preread_s": 3.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 74.12707050389145,
+          "recall": 0.91,
+          "mem_mib": 163.0,
+          "wall_s": 33.8
+        },
+        "tuned": {
+          "ok": false,
+          "c": 500,
+          "ran": 50,
+          "sampled": true,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 553.7984469847288,
+          "recall": 0.9619999999999999,
+          "mem_mib": 162.9,
+          "wall_s": 58.8
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 1354,
+            "bytes": 9445941344
+          },
+          "ok": true,
+          "ready_s": 4.1,
+          "preread_s": 3.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 97.784800484078,
+          "recall": 0.91,
+          "mem_mib": 163.2,
+          "wall_s": 41.4
+        },
+        "tuned": {
+          "ok": false,
+          "c": 500,
+          "ran": 50,
+          "sampled": true,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 794.8808114888379,
+          "recall": 0.9619999999999999,
+          "mem_mib": 163.0,
+          "wall_s": 79.3
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 15:50:21"
+}

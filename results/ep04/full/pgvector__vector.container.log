@@ -1,0 +1,236 @@
+{"status": "running", "oom_killed": false, "exit_code": 0}
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-11-24 14:13:47.817 UTC [53] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:13:47.824 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:13:47.846 UTC [59] LOG:  database system was shut down at 2026-11-24 14:13:47 UTC
+2026-11-24 14:13:47.855 UTC [53] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2026-11-24 14:13:48.024 UTC [53] LOG:  received fast shutdown request
+.2026-11-24 14:13:48.030 UTC [53] LOG:  aborting any active transactions
+2026-11-24 14:13:48.032 UTC [53] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+2026-11-24 14:13:48.033 UTC [57] LOG:  shutting down
+2026-11-24 14:13:48.039 UTC [57] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:13:48.214 UTC [57] LOG:  checkpoint complete: wrote 950 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.125 s, total=0.182 s; sync files=303, longest=0.007 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/1BBA2B0, redo lsn=0/1BBA2B0
+2026-11-24 14:13:48.240 UTC [53] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-24 14:13:48.369 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:13:48.370 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:13:48.370 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:13:48.382 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:13:48.398 UTC [75] LOG:  database system was shut down at 2026-11-24 14:13:48 UTC
+2026-11-24 14:13:48.407 UTC [1] LOG:  database system is ready to accept connections
+2026-11-24 14:13:53.197 UTC [73] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2026-11-24 14:13:53.197 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:13:53.197 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:13:58.132 UTC [73] LOG:  checkpoint complete: wrote 306 buffers (1.9%), wrote 3 SLRU buffers; 0 WAL file(s) added, 3 removed, 30 recycled; write=3.841 s, sync=0.574 s, total=4.936 s; sync files=89, longest=0.247 s, average=0.007 s; distance=529033 kB, estimate=529033 kB; lsn=0/439AD908, redo lsn=0/2205C9B0
+2026-11-24 14:13:58.133 UTC [73] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2026-11-24 14:13:58.133 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:13:58.133 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:02.063 UTC [73] LOG:  checkpoint complete: wrote 308 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 6 removed, 31 recycled; write=3.140 s, sync=0.244 s, total=3.931 s; sync files=6, longest=0.188 s, average=0.041 s; distance=617854 kB, estimate=617854 kB; lsn=0/671D3590, redo lsn=0/47BBC3A0
+2026-11-24 14:14:02.063 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-24 14:14:02.063 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:02.063 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:06.009 UTC [73] LOG:  checkpoint complete: wrote 220 buffers (1.3%), wrote 1 SLRU buffers; 0 WAL file(s) added, 5 removed, 31 recycled; write=3.231 s, sync=0.229 s, total=3.946 s; sync files=7, longest=0.119 s, average=0.033 s; distance=593382 kB, estimate=615407 kB; lsn=0/8B39B2A0, redo lsn=0/6BF35CD8
+2026-11-24 14:14:06.009 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-24 14:14:06.009 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:06.009 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:09.688 UTC [73] LOG:  checkpoint complete: wrote 304 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 4 removed, 32 recycled; write=3.040 s, sync=0.239 s, total=3.680 s; sync files=8, longest=0.149 s, average=0.030 s; distance=579275 kB, estimate=611794 kB; lsn=0/AEC9EE48, redo lsn=0/8F4E8BD8
+2026-11-24 14:14:09.689 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-24 14:14:09.689 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:09.689 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:13.463 UTC [73] LOG:  checkpoint complete: wrote 306 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 32 recycled; write=3.036 s, sync=0.221 s, total=3.775 s; sync files=6, longest=0.173 s, average=0.037 s; distance=572675 kB, estimate=607882 kB; lsn=0/D116E798, redo lsn=0/B24298D0
+2026-11-24 14:14:13.464 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-24 14:14:13.464 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:13.464 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:17.125 UTC [73] LOG:  checkpoint complete: wrote 256 buffers (1.6%), wrote 1 SLRU buffers; 0 WAL file(s) added, 3 removed, 32 recycled; write=3.041 s, sync=0.226 s, total=3.662 s; sync files=7, longest=0.116 s, average=0.033 s; distance=577255 kB, estimate=604819 kB; lsn=0/F4B48278, redo lsn=0/D57E3750
+2026-11-24 14:14:17.125 UTC [73] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2026-11-24 14:14:17.125 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:17.125 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:20.605 UTC [80] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:14:20.669 UTC [73] LOG:  checkpoint complete: wrote 308 buffers (1.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 4 removed, 31 recycled; write=2.834 s, sync=0.268 s, total=3.544 s; sync files=8, longest=0.201 s, average=0.034 s; distance=568258 kB, estimate=601163 kB; lsn=1/1804E668, redo lsn=0/F82D41F8
+2026-11-24 14:14:20.961 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-24 14:14:20.961 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:20.962 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:14:44.278 UTC [73] LOG:  checkpoint complete: wrote 825 buffers (5.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=22.483 s, sync=0.363 s, total=23.317 s; sync files=38, longest=0.261 s, average=0.010 s; distance=537975 kB, estimate=594844 kB; lsn=1/3745A520, redo lsn=1/19031E30
+2026-11-24 14:14:45.980 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-24 14:14:45.980 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:14:45.980 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:15:08.627 UTC [73] LOG:  checkpoint complete: wrote 38 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=21.974 s, sync=0.187 s, total=22.647 s; sync files=13, longest=0.113 s, average=0.015 s; distance=541539 kB, estimate=589514 kB; lsn=1/56F5B960, redo lsn=1/3A10AAC8
+2026-11-24 14:15:11.323 UTC [73] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2026-11-24 14:15:11.323 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:15:11.323 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:15:18.477 UTC [90] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:15:29.422 UTC [73] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=17.365 s, sync=0.268 s, total=18.100 s; sync files=2, longest=0.262 s, average=0.134 s; distance=540627 kB, estimate=584625 kB; lsn=1/720DF198, redo lsn=1/5B0FF978
+2026-11-24 14:15:36.670 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-24 14:15:36.670 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:15:36.670 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:15:54.342 UTC [73] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=16.861 s, sync=0.259 s, total=17.672 s; sync files=6, longest=0.187 s, average=0.044 s; distance=540099 kB, estimate=580172 kB; lsn=1/925AE660, redo lsn=1/7C0708B0
+2026-11-24 14:16:01.986 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-24 14:16:01.986 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:16:01.986 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:16:18.498 UTC [93] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:16:20.548 UTC [73] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=17.865 s, sync=0.137 s, total=18.563 s; sync files=6, longest=0.103 s, average=0.023 s; distance=540340 kB, estimate=576189 kB; lsn=1/B4720EE8, redo lsn=1/9D01DB00
+2026-11-24 14:16:27.367 UTC [73] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2026-11-24 14:16:27.367 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:16:27.368 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:16:45.012 UTC [73] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=16.869 s, sync=0.307 s, total=17.645 s; sync files=2, longest=0.300 s, average=0.154 s; distance=540818 kB, estimate=572652 kB; lsn=1/D46268F8, redo lsn=1/BE042528
+2026-11-24 14:16:52.717 UTC [73] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2026-11-24 14:16:52.717 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:16:52.717 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:17:11.125 UTC [73] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=17.668 s, sync=0.255 s, total=18.409 s; sync files=3, longest=0.163 s, average=0.085 s; distance=540415 kB, estimate=569428 kB; lsn=1/F6571360, redo lsn=1/DF002488
+2026-11-24 14:17:18.092 UTC [73] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2026-11-24 14:17:18.092 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:17:18.093 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:17:18.517 UTC [96] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:17:36.901 UTC [73] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=18.264 s, sync=0.061 s, total=18.809 s; sync files=2, longest=0.054 s, average=0.031 s; distance=541031 kB, estimate=566589 kB; lsn=2/17D2E448, redo lsn=2/5C3B8
+2026-11-24 14:18:18.536 UTC [99] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:19:18.555 UTC [102] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:20:18.574 UTC [105] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:21:18.594 UTC [108] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:22:18.611 UTC [111] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:22:18.958 UTC [73] LOG:  checkpoint starting: time
+2026-11-24 14:22:29.632 UTC [73] LOG:  checkpoint complete: wrote 31 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 29 recycled; write=10.426 s, sync=0.011 s, total=10.674 s; sync files=6, longest=0.007 s, average=0.002 s; distance=487284 kB, estimate=558658 kB; lsn=2/1DD74138, redo lsn=2/1DC394A0
+2026-11-24 14:23:06.341 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:08.722 UTC [73] LOG:  checkpoint complete: wrote 604 buffers (3.7%), wrote 0 SLRU buffers; 0 WAL file(s) added, 3 removed, 30 recycled; write=1.433 s, sync=0.432 s, total=2.381 s; sync files=9, longest=0.224 s, average=0.048 s; distance=532257 kB, estimate=556018 kB; lsn=2/5FDBE1D0, redo lsn=2/3E4018B0
+2026-11-24 14:23:08.722 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-24 14:23:08.722 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:23:08.724 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:11.230 UTC [73] LOG:  checkpoint complete: wrote 734 buffers (4.5%), wrote 0 SLRU buffers; 0 WAL file(s) added, 14 removed, 30 recycled; write=1.615 s, sync=0.289 s, total=2.509 s; sync files=2, longest=0.223 s, average=0.145 s; distance=720978 kB, estimate=720978 kB; lsn=2/8B40D6C0, redo lsn=2/6A416380
+2026-11-24 14:23:11.230 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-24 14:23:11.230 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:23:11.230 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:13.677 UTC [73] LOG:  checkpoint complete: wrote 415 buffers (2.5%), wrote 0 SLRU buffers; 0 WAL file(s) added, 15 removed, 30 recycled; write=1.581 s, sync=0.315 s, total=2.447 s; sync files=3, longest=0.232 s, average=0.105 s; distance=740177 kB, estimate=740177 kB; lsn=2/B8407718, redo lsn=2/976EAB78
+2026-11-24 14:23:13.677 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-24 14:23:13.677 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:23:13.677 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:16.092 UTC [73] LOG:  checkpoint complete: wrote 588 buffers (3.6%), wrote 0 SLRU buffers; 0 WAL file(s) added, 14 removed, 30 recycled; write=1.597 s, sync=0.294 s, total=2.416 s; sync files=2, longest=0.164 s, average=0.147 s; distance=723770 kB, estimate=738537 kB; lsn=2/E4E94D90, redo lsn=2/C39B93E8
+2026-11-24 14:23:16.093 UTC [73] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2026-11-24 14:23:16.093 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:23:16.093 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:18.567 UTC [73] LOG:  checkpoint complete: wrote 645 buffers (3.9%), wrote 0 SLRU buffers; 0 WAL file(s) added, 15 removed, 29 recycled; write=1.593 s, sync=0.315 s, total=2.475 s; sync files=2, longest=0.206 s, average=0.158 s; distance=724884 kB, estimate=737171 kB; lsn=3/113013B8, redo lsn=2/EFD9E718
+2026-11-24 14:23:18.567 UTC [73] LOG:  checkpoints are occurring too frequently (2 seconds apart)
+2026-11-24 14:23:18.567 UTC [73] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2026-11-24 14:23:18.567 UTC [73] LOG:  checkpoint starting: wal
+2026-11-24 14:23:18.607 UTC [114] LOG:  skipping analyze of "docs" --- lock not available
+2026-11-24 14:27:48.413 UTC [73] LOG:  checkpoint complete: wrote 604 buffers (3.7%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 45 recycled; write=269.437 s, sync=0.014 s, total=269.846 s; sync files=16, longest=0.009 s, average=0.001 s; distance=730843 kB, estimate=736539 kB; lsn=3/26DD6150, redo lsn=3/1C7554B0
+2026-11-24 14:30:25.037 UTC [1] LOG:  received fast shutdown request
+2026-11-24 14:30:25.043 UTC [1] LOG:  aborting any active transactions
+2026-11-24 14:30:25.043 UTC [445] FATAL:  terminating connection due to administrator command
+2026-11-24 14:30:25.045 UTC [1] LOG:  background worker "logical replication launcher" (PID 78) exited with exit code 1
+2026-11-24 14:30:25.054 UTC [73] LOG:  shutting down
+2026-11-24 14:30:25.060 UTC [73] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:30:25.183 UTC [73] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 10 recycled; write=0.019 s, sync=0.002 s, total=0.130 s; sync files=1, longest=0.002 s, average=0.002 s; distance=170499 kB, estimate=679935 kB; lsn=3/26DD6200, redo lsn=3/26DD6200
+2026-11-24 14:30:25.241 UTC [1] LOG:  database system is shut down
+2026-11-24 14:30:27.880 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:30:27.880 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:30:27.880 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:30:27.892 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:30:27.908 UTC [32] LOG:  database system was shut down at 2026-11-24 14:30:25 UTC
+2026-11-24 14:30:27.918 UTC [1] LOG:  database system is ready to accept connections
+2026-11-24 14:31:00.321 UTC [1] LOG:  received fast shutdown request
+2026-11-24 14:31:00.328 UTC [1] LOG:  aborting any active transactions
+2026-11-24 14:31:00.328 UTC [46] FATAL:  terminating connection due to administrator command
+2026-11-24 14:31:00.331 UTC [1] LOG:  background worker "logical replication launcher" (PID 35) exited with exit code 1
+2026-11-24 14:31:00.341 UTC [30] LOG:  shutting down
+2026-11-24 14:31:00.348 UTC [30] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:31:00.402 UTC [30] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.008 s, total=0.061 s; sync files=4, longest=0.002 s, average=0.002 s; distance=15 kB, estimate=15 kB; lsn=3/26DD9F68, redo lsn=3/26DD9F68
+2026-11-24 14:31:00.446 UTC [1] LOG:  database system is shut down
+2026-11-24 14:31:02.510 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:31:02.510 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:31:02.510 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:31:02.522 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:31:02.539 UTC [32] LOG:  database system was shut down at 2026-11-24 14:31:00 UTC
+2026-11-24 14:31:02.548 UTC [1] LOG:  database system is ready to accept connections
+2026-11-24 14:31:54.278 UTC [1] LOG:  received fast shutdown request
+2026-11-24 14:31:54.284 UTC [1] LOG:  aborting any active transactions
+2026-11-24 14:31:54.284 UTC [47] FATAL:  terminating connection due to administrator command
+2026-11-24 14:31:54.287 UTC [1] LOG:  background worker "logical replication launcher" (PID 35) exited with exit code 1
+2026-11-24 14:31:54.298 UTC [30] LOG:  shutting down
+2026-11-24 14:31:54.304 UTC [30] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:31:54.346 UTC [30] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.004 s, total=0.049 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=3/26DDA030, redo lsn=3/26DDA030
+2026-11-24 14:31:54.389 UTC [1] LOG:  database system is shut down
+2026-11-24 14:31:56.806 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:31:56.806 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:31:56.806 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:31:56.818 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:31:56.837 UTC [32] LOG:  database system was shut down at 2026-11-24 14:31:54 UTC
+2026-11-24 14:31:56.846 UTC [1] LOG:  database system is ready to accept connections
+2026-11-24 14:33:09.487 UTC [1] LOG:  received fast shutdown request
+2026-11-24 14:33:09.496 UTC [1] LOG:  aborting any active transactions
+2026-11-24 14:33:09.496 UTC [47] FATAL:  terminating connection due to administrator command
+2026-11-24 14:33:09.499 UTC [1] LOG:  background worker "logical replication launcher" (PID 35) exited with exit code 1
+2026-11-24 14:33:09.511 UTC [30] LOG:  shutting down
+2026-11-24 14:33:09.520 UTC [30] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:33:09.568 UTC [30] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.004 s, total=0.058 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=3/26DDA0E0, redo lsn=3/26DDA0E0
+2026-11-24 14:33:09.617 UTC [1] LOG:  database system is shut down
+2026-11-24 14:33:11.913 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:33:11.913 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:33:11.913 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:33:11.925 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:33:11.942 UTC [32] LOG:  database system was shut down at 2026-11-24 14:33:09 UTC
+2026-11-24 14:33:11.952 UTC [1] LOG:  database system is ready to accept connections
+2026-11-24 14:34:37.780 UTC [1] LOG:  received fast shutdown request
+2026-11-24 14:34:37.786 UTC [1] LOG:  aborting any active transactions
+2026-11-24 14:34:37.786 UTC [47] FATAL:  terminating connection due to administrator command
+2026-11-24 14:34:37.789 UTC [1] LOG:  background worker "logical replication launcher" (PID 35) exited with exit code 1
+2026-11-24 14:34:37.800 UTC [30] LOG:  shutting down
+2026-11-24 14:34:37.806 UTC [30] LOG:  checkpoint starting: shutdown immediate
+2026-11-24 14:34:37.842 UTC [30] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.004 s, total=0.043 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=3/26DDA190, redo lsn=3/26DDA190
+2026-11-24 14:34:37.890 UTC [1] LOG:  database system is shut down
+2026-11-24 14:34:39.793 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-24 14:34:39.793 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-24 14:34:39.793 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-24 14:34:39.805 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-24 14:34:39.821 UTC [32] LOG:  database system was shut down at 2026-11-24 14:34:37 UTC
+2026-11-24 14:34:39.831 UTC [1] LOG:  database system is ready to accept connections

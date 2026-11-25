@@ -1,0 +1,311 @@
+{
+  "db": "weaviate",
+  "deployment": "rq4",
+  "what": "4-bit: RQ bits=4 (new in 1.40)",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-24 14:41:03",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 5.0,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.3259359984658659
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.8,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.3176060019759461
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.9,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.3785389892291278
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.0,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.405193514074199
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.1,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.4436869969358668
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.1,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.4853504981147125
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.2,
+      "tune_recall": 0.9897,
+      "p50_ms": 1.5001344872871414
+    }
+  },
+  "startup_s": 2.1,
+  "load_s": 24.1,
+  "indexed": {
+    "vector_queue": 0,
+    "shards": 1
+  },
+  "index_wait_s": 0.0,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 100000,
+  "settings": {
+    "version": "1.40.7",
+    "vectorConfig": {
+      "default": {
+        "vectorIndexConfig": {
+          "bq": {
+            "enabled": false
+          },
+          "cleanupIntervalSeconds": 300,
+          "distance": "cosine",
+          "dynamicEfFactor": 8,
+          "dynamicEfMax": 500,
+          "dynamicEfMin": 100,
+          "ef": -1,
+          "efConstruction": 128,
+          "filterStrategy": "acorn",
+          "flatSearchCutoff": 40000,
+          "maxConnections": 32,
+          "multivector": {
+            "aggregation": "maxSim",
+            "enabled": false,
+            "muvera": {
+              "dprojections": 16,
+              "enabled": false,
+              "ksim": 4,
+              "repetitions": 10
+            }
+          },
+          "pq": {
+            "bitCompression": false,
+            "centroids": 256,
+            "enabled": false,
+            "encoder": {
+              "distribution": "log-normal",
+              "type": "kmeans"
+            },
+            "segments": 0,
+            "trainingLimit": 100000
+          },
+          "rq": {
+            "bits": 4,
+            "centering": false,
+            "enabled": true,
+            "rescoreLimit": 20,
+            "trainingLimit": 10000
+          },
+          "skip": false,
+          "skipDefaultQuantization": false,
+          "sq": {
+            "enabled": false,
+            "rescoreLimit": 20,
+            "trainingLimit": 100000
+          },
+          "trackDefaultQuantization": false,
+          "vectorCacheMaxObjects": 1000000000000
+        },
+        "vectorIndexType": "hnsw",
+        "vectorizer": {
+          "none": {}
+        }
+      }
+    },
+    "vectorIndexConfig": null
+  },
+  "disk_bytes": 572153856,
+  "disk_bytes_apparent": 572133761,
+  "mem_mib_after_load": 432.1,
+  "mem_mib_after_queries": 441.1,
+  "tuned": {
+    "tuned": {
+      "c": 20,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 20,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 20,
+    "tuned": {
+      "tuned": {
+        "c": 20,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 20,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 20
+    },
+    "steps": {
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 31,
+            "bytes": 580826367
+          },
+          "ok": true,
+          "ready_s": 8.9,
+          "preread_s": 0.2,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.3030765112489462,
+          "recall": 0.9845,
+          "mem_mib": 312.7,
+          "wall_s": 1.6
+        },
+        "tuned": {
+          "ok": true,
+          "c": 20,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.370634010527283,
+          "recall": 0.9845,
+          "mem_mib": 321.1,
+          "wall_s": 1.4
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 24,
+            "bytes": 520250095
+          },
+          "ok": true,
+          "ready_s": 7.5,
+          "preread_s": 0.2,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.3594800111604854,
+          "recall": 0.9845,
+          "mem_mib": 232.3,
+          "wall_s": 1.6
+        },
+        "tuned": {
+          "ok": true,
+          "c": 20,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.3251610071165487,
+          "recall": 0.9845,
+          "mem_mib": 235.4,
+          "wall_s": 1.4
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 24,
+            "bytes": 520250095
+          },
+          "ok": true,
+          "ready_s": 4.7,
+          "preread_s": 0.2,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.734926991048269,
+          "recall": 0.9845,
+          "mem_mib": 398.7,
+          "wall_s": 1.8
+        },
+        "tuned": {
+          "ok": true,
+          "c": 20,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.5143640048336238,
+          "recall": 0.9845,
+          "mem_mib": 232.8,
+          "wall_s": 1.4
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 14:42:41"
+}

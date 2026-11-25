@@ -1,0 +1,337 @@
+{
+  "db": "weaviate",
+  "deployment": "rq8",
+  "what": "8-bit: rotational quantization (rq(), the docs' first example)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 19:57:01",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 7.3,
+      "tune_recall": 0.9777,
+      "p50_ms": 1.9616269855760038
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.2,
+      "tune_recall": 0.9149,
+      "p50_ms": 1.0660700063453987
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.5,
+      "tune_recall": 0.9392,
+      "p50_ms": 1.1965799931203946
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.1,
+      "tune_recall": 0.9618,
+      "p50_ms": 1.458910497603938
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.4,
+      "tune_recall": 0.9776,
+      "p50_ms": 2.0954870124114677
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.8,
+      "tune_recall": 0.9869000000000001,
+      "p50_ms": 3.289057480287738
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 13.1,
+      "tune_recall": 0.9929,
+      "p50_ms": 6.366137997247279
+    }
+  },
+  "startup_s": 2.1,
+  "load_s": 387.3,
+  "indexed": {
+    "vector_queue": 0,
+    "shards": 1
+  },
+  "index_wait_s": 0.0,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "1.40.7",
+    "vectorConfig": {
+      "default": {
+        "vectorIndexConfig": {
+          "bq": {
+            "enabled": false
+          },
+          "cleanupIntervalSeconds": 300,
+          "distance": "cosine",
+          "dynamicEfFactor": 8,
+          "dynamicEfMax": 500,
+          "dynamicEfMin": 100,
+          "ef": -1,
+          "efConstruction": 128,
+          "filterStrategy": "acorn",
+          "flatSearchCutoff": 40000,
+          "maxConnections": 32,
+          "multivector": {
+            "aggregation": "maxSim",
+            "enabled": false,
+            "muvera": {
+              "dprojections": 16,
+              "enabled": false,
+              "ksim": 4,
+              "repetitions": 10
+            }
+          },
+          "pq": {
+            "bitCompression": false,
+            "centroids": 256,
+            "enabled": false,
+            "encoder": {
+              "distribution": "log-normal",
+              "type": "kmeans"
+            },
+            "segments": 0,
+            "trainingLimit": 100000
+          },
+          "rq": {
+            "bits": 8,
+            "centering": false,
+            "enabled": true,
+            "rescoreLimit": 20,
+            "trainingLimit": 10000
+          },
+          "skip": false,
+          "skipDefaultQuantization": false,
+          "sq": {
+            "enabled": false,
+            "rescoreLimit": 20,
+            "trainingLimit": 100000
+          },
+          "trackDefaultQuantization": false,
+          "vectorCacheMaxObjects": 1000000000000
+        },
+        "vectorIndexType": "hnsw",
+        "vectorizer": {
+          "none": {}
+        }
+      }
+    },
+    "vectorIndexConfig": null
+  },
+  "disk_bytes": 5782495232,
+  "disk_bytes_apparent": 5782416432,
+  "mem_mib_after_load": 3432.448,
+  "mem_mib_after_queries": 3334.144,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 47,
+            "bytes": 5785912652
+          },
+          "ok": true,
+          "ready_s": 8.9,
+          "preread_s": 1.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.0870970038231462,
+          "recall": 0.9740000000000001,
+          "mem_mib": 2899.968,
+          "wall_s": 2.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 7.788655508193187,
+          "recall": 0.991,
+          "mem_mib": 2875.392,
+          "wall_s": 3.1
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 38,
+            "bytes": 5703877979
+          },
+          "ok": true,
+          "ready_s": 10.5,
+          "preread_s": 4.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.658155994140543,
+          "recall": 0.9740000000000001,
+          "mem_mib": 2575.36,
+          "wall_s": 2.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 16.087722484371625,
+          "recall": 0.991,
+          "mem_mib": 2721.792,
+          "wall_s": 6.0
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 30,
+            "bytes": 5703877763
+          },
+          "ok": true,
+          "ready_s": 9.7,
+          "preread_s": 2.3,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.1240395037457347,
+          "recall": 0.9740000000000001,
+          "mem_mib": 1743.872,
+          "wall_s": 2.3
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 31.077727995580062,
+          "recall": 0.991,
+          "mem_mib": 1823.744,
+          "wall_s": 9.0
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 30,
+            "bytes": 5703877763
+          },
+          "ok": false,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?",
+          "status": "exited",
+          "oom_killed": true,
+          "exit_code": 137
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 20:05:38"
+}

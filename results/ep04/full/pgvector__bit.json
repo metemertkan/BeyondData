@@ -1,0 +1,353 @@
+{
+  "db": "pgvector",
+  "deployment": "bit",
+  "what": "1-bit: HNSW on binary_quantize(embedding)::bit(1024), the README's re-rank query",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 15:50:22",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 18.0,
+      "tune_recall": 0.8354000000000001,
+      "p50_ms": 4.745133002870716,
+      "plan": "Limit  (cost=190.09..190.11 rows=10 width=16) / ->  Sort  (cost=190.09..190.19 rows=40 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=178.08..189.22 rows=40 width=16) / ->  Limit  (cost=178.08..188.72 rows=40 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=178.08..266188.00 rows=1000000 width=34)"
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 9.0,
+      "tune_recall": 0.7583000000000001,
+      "p50_ms": 4.196266498183832,
+      "plan": "Limit  (cost=184.09..184.11 rows=10 width=16) / ->  Sort  (cost=184.09..184.14 rows=20 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=178.08..183.65 rows=20 width=16) / ->  Limit  (cost=178.08..183.40 rows=20 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=178.08..266187.83 rows=999993 width=34)"
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 9.5,
+      "tune_recall": 0.8114000000000001,
+      "p50_ms": 4.431973487953655,
+      "plan": "Limit  (cost=187.09..187.11 rows=10 width=16) / ->  Sort  (cost=187.09..187.16 rows=30 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=178.08..186.44 rows=30 width=16) / ->  Limit  (cost=178.08..186.07 rows=30 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=178.08..266187.83 rows=999993 width=34)"
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 12.2,
+      "tune_recall": 0.8593000000000001,
+      "p50_ms": 5.791576986666769,
+      "plan": "Limit  (cost=224.79..224.81 rows=10 width=16) / ->  Sort  (cost=224.79..224.91 rows=50 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=209.78..223.71 rows=50 width=16) / ->  Limit  (cost=209.78..223.08 rows=50 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=209.78..266187.83 rows=999993 width=34)"
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 21.1,
+      "tune_recall": 0.9148000000000001,
+      "p50_ms": 10.175622490351088,
+      "plan": "Limit  (cost=387.11..387.14 rows=10 width=16) / ->  Sort  (cost=387.11..387.36 rows=100 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=357.12..384.95 rows=100 width=16) / ->  Limit  (cost=357.12..383.70 rows=100 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=357.12..266187.83 rows=999993 width=34)"
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 37.9,
+      "tune_recall": 0.9498,
+      "p50_ms": 18.338232999667525,
+      "plan": "Limit  (cost=684.62..684.65 rows=10 width=16) / ->  Sort  (cost=684.62..685.12 rows=200 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=624.69..680.30 rows=200 width=16) / ->  Limit  (cost=624.69..677.80 rows=200 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=624.69..266187.83 rows=999993 width=34)"
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 85.6,
+      "tune_recall": 0.9728,
+      "p50_ms": 41.88881900336128,
+      "plan": "Limit  (cost=1496.25..1496.27 rows=10 width=16) / ->  Sort  (cost=1496.25..1497.50 rows=500 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=1346.77..1485.44 rows=500 width=16) / ->  Limit  (cost=1346.77..1479.19 rows=500 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=1346.77..266187.83 rows=999993 width=34)"
+    }
+  },
+  "startup_s": 2.0,
+  "load_s": 30.8,
+  "indexed": {
+    "index_build_s": 90.8,
+    "notices": []
+  },
+  "index_wait_s": 91.2,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "0.8.7",
+    "index": "CREATE INDEX docs_binary_quantize_idx ON public.docs USING hnsw (((binary_quantize(embedding))::bit(1024)) bit_hamming_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "index_bytes": 433717248,
+    "table_bytes": 5590466560,
+    "toast_bytes": 5530189824,
+    "hnsw.ef_search": "40",
+    "shared_buffers": "128MB",
+    "plan": "Limit  (cost=190.09..190.11 rows=10 width=16) / ->  Sort  (cost=190.09..190.19 rows=40 width=16) / Sort Key: ((t.embedding <=> '[...]'::vector)) / ->  Subquery Scan on t  (cost=178.08..189.22 rows=40 width=16) / ->  Limit  (cost=178.08..188.72 rows=40 width=34) / ->  Index Scan using docs_binary_quantize_idx on docs  (cost=178.08..266188.00 rows=1000000 width=34)"
+  },
+  "disk_bytes": 7152959488,
+  "disk_bytes_apparent": 7152845965,
+  "mem_mib_after_load": 368.6,
+  "mem_mib_after_queries": 358.8,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1352,
+            "bytes": 7153099314
+          },
+          "ok": true,
+          "ready_s": 5.0,
+          "preread_s": 2.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 4.560208995826542,
+          "recall": 0.809,
+          "mem_mib": 154.6,
+          "wall_s": 3.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 41.36094650311861,
+          "recall": 0.966,
+          "mem_mib": 154.4,
+          "wall_s": 11.2
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1350,
+            "bytes": 7152777426
+          },
+          "ok": true,
+          "ready_s": 3.9,
+          "preread_s": 2.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 7.237912985146977,
+          "recall": 0.809,
+          "mem_mib": 159.2,
+          "wall_s": 6.9
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 68.05547449039295,
+          "recall": 0.966,
+          "mem_mib": 164.1,
+          "wall_s": 18.0
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1351,
+            "bytes": 7152938370
+          },
+          "ok": true,
+          "ready_s": 4.1,
+          "preread_s": 2.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 9.319211007095873,
+          "recall": 0.809,
+          "mem_mib": 162.1,
+          "wall_s": 8.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 79.77986449259333,
+          "recall": 0.966,
+          "mem_mib": 168.0,
+          "wall_s": 21.2
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1351,
+            "bytes": 7152938370
+          },
+          "ok": true,
+          "ready_s": 4.1,
+          "preread_s": 2.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 9.89013200160116,
+          "recall": 0.809,
+          "mem_mib": 162.1,
+          "wall_s": 8.5
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 94.77546700509265,
+          "recall": 0.966,
+          "mem_mib": 167.8,
+          "wall_s": 24.7
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 1351,
+            "bytes": 7152938370
+          },
+          "ok": true,
+          "ready_s": 4.0,
+          "preread_s": 2.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 32.54964300140273,
+          "recall": 0.809,
+          "mem_mib": 161.9,
+          "wall_s": 16.3
+        },
+        "tuned": {
+          "ok": false,
+          "c": 500,
+          "ran": 50,
+          "sampled": true,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 332.0241725014057,
+          "recall": 0.9620000000000002,
+          "mem_mib": 165.1,
+          "wall_s": 33.6
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 15:58:49"
+}

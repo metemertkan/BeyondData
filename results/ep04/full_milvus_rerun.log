@@ -1,0 +1,762 @@
+23:18:48 milvus hnsw fresh container
+23:18:52 milvus hnsw   1,000 loaded, 0 s
+23:19:10 milvus hnsw   101,000 loaded, 18 s
+23:19:34 milvus hnsw   201,000 loaded, 42 s
+23:19:55 milvus hnsw   301,000 loaded, 63 s
+23:20:18 milvus hnsw   401,000 loaded, 86 s
+23:20:42 milvus hnsw   501,000 loaded, 110 s
+23:21:04 milvus hnsw   601,000 loaded, 132 s
+23:21:29 milvus hnsw   701,000 loaded, 157 s
+23:21:49 milvus hnsw   801,000 loaded, 177 s
+23:22:14 milvus hnsw   901,000 loaded, 202 s
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:210: PyMilvusDeprecationWarning: `connections.connect` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  connections.connect("ep02", uri="http://localhost:19530")
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+00:23:11 milvus hnsw load 225.6 s, index 2979.0 s, settle 650.6 s, count 1,000,000, disk 24.26 GiB, mem 4779 MiB
+00:23:29 milvus hnsw shipped: p50 5.0 ms, tuning recall 0.9398
+00:23:40 milvus hnsw c20: p50 5.4 ms, tuning recall 0.9543
+00:23:53 milvus hnsw c30: p50 6.3 ms, tuning recall 0.9725
+00:24:09 milvus hnsw c50: p50 7.8 ms, tuning recall 0.9839
+00:24:33 milvus hnsw c100: p50 11.4 ms, tuning recall 0.9913
+00:25:09 milvus hnsw c200: p50 17.3 ms, tuning recall 0.9959
+00:26:11 milvus hnsw c500: p50 30.4 ms, tuning recall 0.9988
+00:26:12 milvus hnsw tuned: {'tuned': {'c': 200, 'level': 0.995, 'reached': True}, 'tuned_hi': {'c': 500, 'level': 0.9975, 'reached': True}}
+2026-11-25 00:26:17,304 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+00:26:40 milvus hnsw 8 GiB: restart True in 27 s {'ready_s': 17.2, 'preread_s': 10.2, 'status': 'running', 'oom_killed': False, 'error': None}
+00:26:43 milvus hnsw 8 GiB shipped: ok True, p50 5.1 ms, recall 0.933
+00:26:48 milvus hnsw 8 GiB tuned: ok True, p50 16.9 ms, recall 0.996
+00:26:57 milvus hnsw 8 GiB tuned_hi: ok True, p50 30.3 ms, recall 0.999
+2026-11-25 00:27:00,835 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+2026-11-25 00:37:02,915 [WARNING][handler]: [93m[wait_for_loading_collection] Retry timeout: 600s[0m (decorators.py:441)
+2026-11-25 00:37:02,916 [ERROR][_log_rpc_error]: RPC error: [wait_for_loading_collection], <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>, <elapsed:600029.3ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 2000, in wait_for_loading_collection
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=wait for loading collection timeout, collection: docs)>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+ (decorators.py:472)
+2026-11-25 00:37:02,916 [WARNING][handler]: [93m[load_collection] Retry timeout: 600s[0m (decorators.py:441)
+2026-11-25 00:37:02,917 [ERROR][_log_rpc_error]: RPC error: [load_collection], <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>, <elapsed:600033.6ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 1953, in load_collection
+    self.wait_for_loading_collection(
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 521, in handler
+    raise e from e
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+ (decorators.py:472)
+00:37:02 milvus hnsw 4 GiB: restart False in 606 s {'ready_s': None, 'preread_s': None, 'status': 'running', 'oom_killed': False, 'error': 'MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>'}
+00:37:02 milvus hnsw stops at 4 GiB
+00:37:05 milvus hnsw done
+00:37:05 milvus hnsw_sq8 fresh container
+2026-11-25 00:37:06,200 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+00:37:10 milvus hnsw_sq8   1,000 loaded, 0 s
+00:37:22 milvus hnsw_sq8   101,000 loaded, 12 s
+00:37:35 milvus hnsw_sq8   201,000 loaded, 26 s
+00:37:50 milvus hnsw_sq8   301,000 loaded, 40 s
+00:38:04 milvus hnsw_sq8   401,000 loaded, 54 s
+00:38:18 milvus hnsw_sq8   501,000 loaded, 68 s
+00:38:31 milvus hnsw_sq8   601,000 loaded, 82 s
+00:38:46 milvus hnsw_sq8   701,000 loaded, 96 s
+00:39:03 milvus hnsw_sq8   801,000 loaded, 113 s
+00:39:17 milvus hnsw_sq8   901,000 loaded, 127 s
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+01:03:02 milvus hnsw_sq8 load 140.5 s, index 619.1 s, settle 790.3 s, count 1,000,000, disk 17.36 GiB, mem 1920 MiB
+01:03:12 milvus hnsw_sq8 shipped: p50 2.8 ms, tuning recall 0.9340
+01:03:18 milvus hnsw_sq8 c20: p50 3.0 ms, tuning recall 0.9457
+01:03:25 milvus hnsw_sq8 c30: p50 3.3 ms, tuning recall 0.9645
+01:03:34 milvus hnsw_sq8 c50: p50 4.1 ms, tuning recall 0.9757
+01:03:45 milvus hnsw_sq8 c100: p50 5.4 ms, tuning recall 0.9859
+01:04:00 milvus hnsw_sq8 c200: p50 7.1 ms, tuning recall 0.9913
+01:04:23 milvus hnsw_sq8 c500: p50 11.2 ms, tuning recall 0.9942
+01:04:24 milvus hnsw_sq8 tuned: {'tuned': {'c': 500, 'level': 0.995, 'reached': False}, 'tuned_hi': {'c': 500, 'level': 0.9975, 'reached': False}}
+2026-11-25 01:04:28,738 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+01:04:45 milvus hnsw_sq8 8 GiB: restart True in 21 s {'ready_s': 14.1, 'preread_s': 7.2, 'status': 'running', 'oom_killed': False, 'error': None}
+01:04:48 milvus hnsw_sq8 8 GiB shipped: ok True, p50 2.6 ms, recall 0.915
+01:04:51 milvus hnsw_sq8 8 GiB tuned: ok True, p50 11.2 ms, recall 0.992
+2026-11-25 01:04:55,043 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+2026-11-25 01:04:55,044 [ERROR][_log_rpc_error]: RPC error: [list_collections], <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>, <elapsed:4.8ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 425, in handler
+    args[0]._on_rpc_error(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 512, in <lambda>
+    handler._on_rpc_error = lambda error: self.handle_error(handler, error)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 726, in handle_error
+    self._recover(managed)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+ (decorators.py:472)
+01:05:12 milvus hnsw_sq8 4 GiB: restart True in 20 s {'ready_s': 13.1, 'preread_s': 7.2, 'status': 'running', 'oom_killed': False, 'error': None}
+01:05:14 milvus hnsw_sq8 4 GiB shipped: ok True, p50 2.9 ms, recall 0.915
+01:05:18 milvus hnsw_sq8 4 GiB tuned: ok True, p50 11.4 ms, recall 0.992
+2026-11-25 01:05:21,564 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+2026-11-25 01:05:21,565 [ERROR][_log_rpc_error]: RPC error: [list_collections], <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>, <elapsed:4.7ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 425, in handler
+    args[0]._on_rpc_error(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 512, in <lambda>
+    handler._on_rpc_error = lambda error: self.handle_error(handler, error)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 726, in handle_error
+    self._recover(managed)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+ (decorators.py:472)
+01:05:39 milvus hnsw_sq8 2 GiB: restart True in 21 s {'ready_s': 13.9, 'preread_s': 7.3, 'status': 'running', 'oom_killed': False, 'error': None}
+01:05:41 milvus hnsw_sq8 2 GiB shipped: ok True, p50 2.6 ms, recall 0.915
+01:05:45 milvus hnsw_sq8 2 GiB tuned: ok True, p50 11.3 ms, recall 0.992
+2026-11-25 01:05:48,865 [WARNING][_recover]: Connection recovery failed (connection_manager.py:676)
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+2026-11-25 01:05:48,867 [ERROR][_log_rpc_error]: RPC error: [list_collections], <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>, <elapsed:4.5ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 860, in list_collections
+    response = self._stub.ShowCollections(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 438, in result
+    raise self
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:19530: recvmsg:Connection reset by peer"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 270, in _wait_for_channel_ready
+    target_final_channel, target_stub = self._setup_identifier_interceptor(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 463, in _setup_identifier_interceptor
+    else self._internal_register(user, host, stub=target_stub, timeout=timeout)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 3510, in _internal_register
+    response = target_stub.Connect(request=req, timeout=kwargs.get("timeout"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv6:%5B::1%5D:19530: recvmsg:Connection reset by peer", grpc_status:14}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 425, in handler
+    args[0]._on_rpc_error(e)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 512, in <lambda>
+    handler._on_rpc_error = lambda error: self.handle_error(handler, error)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 726, in handle_error
+    self._recover(managed)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/connection_manager.py", line 672, in _recover
+    managed.handler.reconnect(address=new_address, timeout=managed.connect_timeout)
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 331, in reconnect
+    new_final_channel, new_stub = self._wait_for_channel_ready(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 277, in _wait_for_channel_ready
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+ (decorators.py:472)
+2026-11-25 01:15:51,305 [WARNING][handler]: [93m[wait_for_loading_collection] Retry timeout: 600s[0m (decorators.py:441)
+2026-11-25 01:15:51,306 [ERROR][_log_rpc_error]: RPC error: [wait_for_loading_collection], <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>, <elapsed:600191.4ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 2000, in wait_for_loading_collection
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=wait for loading collection timeout, collection: docs)>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+ (decorators.py:472)
+2026-11-25 01:15:51,306 [WARNING][handler]: [93m[load_collection] Retry timeout: 600s[0m (decorators.py:441)
+2026-11-25 01:15:51,306 [ERROR][_log_rpc_error]: RPC error: [load_collection], <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>, <elapsed:600195.9ms>
+Traceback:
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/client/grpc_handler.py", line 1953, in load_collection
+    self.wait_for_loading_collection(
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 521, in handler
+    raise e from e
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/pymilvus/decorators.py", line 442, in handler
+    raise MilvusException(
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>
+ (decorators.py:472)
+01:15:51 milvus hnsw_sq8 1 GiB: restart False in 606 s {'ready_s': None, 'preread_s': None, 'status': 'running', 'oom_killed': False, 'error': 'MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>'}
+01:15:51 milvus hnsw_sq8 stops at 1 GiB
+01:15:53 milvus hnsw_sq8 done

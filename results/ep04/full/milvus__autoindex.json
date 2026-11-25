@@ -1,0 +1,323 @@
+{
+  "db": "milvus",
+  "deployment": "autoindex",
+  "what": "4-bit + FP16 refine: AUTOINDEX, the quick setup (Episode 2's default)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 18:24:04",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 7.1,
+      "tune_recall": 0.91,
+      "p50_ms": 1.8235750030726194
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.1,
+      "tune_recall": 0.9268,
+      "p50_ms": 1.8787679873639718
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.4,
+      "tune_recall": 0.9498,
+      "p50_ms": 2.0472324977163225
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.1,
+      "tune_recall": 0.9702999999999999,
+      "p50_ms": 2.440474010654725
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.9,
+      "tune_recall": 0.9851,
+      "p50_ms": 3.2776570005808026
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 9.5,
+      "tune_recall": 0.993,
+      "p50_ms": 4.568928998196498
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 14.6,
+      "tune_recall": 0.9969,
+      "p50_ms": 7.005013496382162
+    }
+  },
+  "startup_s": 2.0,
+  "load_s": 130.6,
+  "indexed": {
+    "index_type": "AUTOINDEX",
+    "indexed_rows": 1000000,
+    "total_rows": 1000000,
+    "state": "Finished"
+  },
+  "index_wait_s": 296.3,
+  "settle": {
+    "settle_s": 250,
+    "segment_history": [
+      {
+        "t_s": 0,
+        "segments": 17,
+        "rows": [
+          147510,
+          29980,
+          31000,
+          30000,
+          30510,
+          86510,
+          30000,
+          29980,
+          28000,
+          28000,
+          29510,
+          146490,
+          29000,
+          29490,
+          4510,
+          176000,
+          113510
+        ]
+      },
+      {
+        "t_s": 20,
+        "segments": 12,
+        "rows": [
+          147510,
+          29980,
+          28000,
+          28000,
+          29510,
+          146490,
+          29000,
+          29490,
+          4510,
+          176000,
+          238000,
+          113510
+        ]
+      },
+      {
+        "t_s": 70,
+        "segments": 6,
+        "rows": [
+          147510,
+          146490,
+          176000,
+          238000,
+          113510,
+          178490
+        ]
+      }
+    ]
+  },
+  "settle_s": 250.1,
+  "count": 1000000,
+  "settings": {
+    "index": {
+      "index_type": "AUTOINDEX",
+      "metric_type": "COSINE",
+      "field_name": "vector",
+      "index_name": "vector",
+      "total_rows": 1000000,
+      "indexed_rows": 1000000,
+      "pending_index_rows": 0,
+      "state": "Finished"
+    },
+    "autoindex_built_as": [
+      "[index_type=HNSW_SQ] [sq_type=SQ4U] [refine=true] [refine_type=FP16] [metric_type=COSINE] [traceID=7f7099e44b322e5d80323a77f42b33be] [spanID=aedc1536e0dfc1b0]"
+    ],
+    "consistency_level": 2,
+    "fields": [
+      {
+        "field_id": 100,
+        "name": "id",
+        "description": "",
+        "type": 5,
+        "params": {},
+        "is_primary": true
+      },
+      {
+        "field_id": 101,
+        "name": "vector",
+        "description": "",
+        "type": 101,
+        "params": {
+          "dim": 1024
+        }
+      }
+    ]
+  },
+  "disk_bytes": 22370107392,
+  "disk_bytes_apparent": 22282816905,
+  "mem_mib_after_load": 3317.76,
+  "mem_mib_after_queries": 3329.024,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": true
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": true
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1699,
+            "bytes": 22205503723
+          },
+          "ok": true,
+          "ready_s": 15.3,
+          "preread_s": 8.6,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.8560479948064312,
+          "recall": 0.895,
+          "mem_mib": 2917.376,
+          "wall_s": 1.8
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.824034499004483,
+          "recall": 0.9954999999999999,
+          "mem_mib": 2917.376,
+          "wall_s": 2.8
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1704,
+            "bytes": 22205233208
+          },
+          "ok": true,
+          "ready_s": 15.9,
+          "preread_s": 8.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.324527988093905,
+          "recall": 0.895,
+          "mem_mib": 2879.488,
+          "wall_s": 2.6
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 7.490872987546027,
+          "recall": 0.9954999999999999,
+          "mem_mib": 2881.536,
+          "wall_s": 2.9
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1708,
+            "bytes": 22205303907
+          },
+          "ok": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 18:47:25"
+}

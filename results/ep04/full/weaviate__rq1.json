@@ -1,0 +1,381 @@
+{
+  "db": "weaviate",
+  "deployment": "rq1",
+  "what": "1-bit: RQ bits=1",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 20:12:34",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 6.8,
+      "tune_recall": 0.9682000000000001,
+      "p50_ms": 1.8218990007881075
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.1,
+      "tune_recall": 0.8607000000000001,
+      "p50_ms": 0.9889294888125733
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.4,
+      "tune_recall": 0.9064000000000001,
+      "p50_ms": 1.1197689891560003
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.9,
+      "tune_recall": 0.9416000000000001,
+      "p50_ms": 1.3522259978344664
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.8,
+      "tune_recall": 0.9682000000000001,
+      "p50_ms": 1.8296039925189689
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.8,
+      "tune_recall": 0.9814,
+      "p50_ms": 2.7951135125476867
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.9,
+      "tune_recall": 0.9894000000000001,
+      "p50_ms": 5.264939987682737
+    }
+  },
+  "startup_s": 4.1,
+  "load_s": 243.6,
+  "indexed": {
+    "vector_queue": 0,
+    "shards": 1
+  },
+  "index_wait_s": 0.0,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "1.40.7",
+    "vectorConfig": {
+      "default": {
+        "vectorIndexConfig": {
+          "bq": {
+            "enabled": false
+          },
+          "cleanupIntervalSeconds": 300,
+          "distance": "cosine",
+          "dynamicEfFactor": 8,
+          "dynamicEfMax": 500,
+          "dynamicEfMin": 100,
+          "ef": -1,
+          "efConstruction": 128,
+          "filterStrategy": "acorn",
+          "flatSearchCutoff": 40000,
+          "maxConnections": 32,
+          "multivector": {
+            "aggregation": "maxSim",
+            "enabled": false,
+            "muvera": {
+              "dprojections": 16,
+              "enabled": false,
+              "ksim": 4,
+              "repetitions": 10
+            }
+          },
+          "pq": {
+            "bitCompression": false,
+            "centroids": 256,
+            "enabled": false,
+            "encoder": {
+              "distribution": "log-normal",
+              "type": "kmeans"
+            },
+            "segments": 0,
+            "trainingLimit": 100000
+          },
+          "rq": {
+            "bits": 1,
+            "centering": false,
+            "enabled": true,
+            "rescoreLimit": 512,
+            "trainingLimit": 10000
+          },
+          "skip": false,
+          "skipDefaultQuantization": false,
+          "sq": {
+            "enabled": false,
+            "rescoreLimit": 20,
+            "trainingLimit": 100000
+          },
+          "trackDefaultQuantization": false,
+          "vectorCacheMaxObjects": 1000000000000
+        },
+        "vectorIndexType": "hnsw",
+        "vectorizer": {
+          "none": {}
+        }
+      }
+    },
+    "vectorIndexConfig": null
+  },
+  "disk_bytes": 4819529728,
+  "disk_bytes_apparent": 4819471919,
+  "mem_mib_after_load": 1486.848,
+  "mem_mib_after_queries": 1320.96,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 36,
+            "bytes": 4824000459
+          },
+          "ok": true,
+          "ready_s": 7.3,
+          "preread_s": 1.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.7942799895536155,
+          "recall": 0.9645,
+          "mem_mib": 1081.344,
+          "wall_s": 1.8
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 4.981499980203807,
+          "recall": 0.9905000000000002,
+          "mem_mib": 1084.416,
+          "wall_s": 2.3
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 41,
+            "bytes": 4816028088
+          },
+          "ok": true,
+          "ready_s": 6.6,
+          "preread_s": 1.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.1215070048347116,
+          "recall": 0.9645,
+          "mem_mib": 3632.128,
+          "wall_s": 2.3
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 9.504021509201266,
+          "recall": 0.9905000000000002,
+          "mem_mib": 2928.64,
+          "wall_s": 3.4
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 41,
+            "bytes": 4816028088
+          },
+          "ok": true,
+          "ready_s": 10.7,
+          "preread_s": 1.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 5.065162011305802,
+          "recall": 0.9645,
+          "mem_mib": 1035.264,
+          "wall_s": 3.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 19.167271995684132,
+          "recall": 0.9905000000000002,
+          "mem_mib": 1254.4,
+          "wall_s": 6.1
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 41,
+            "bytes": 4816028088
+          },
+          "ok": true,
+          "ready_s": 6.9,
+          "preread_s": 2.7,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 7.951807987410575,
+          "recall": 0.9645,
+          "mem_mib": 928.7,
+          "wall_s": 4.3
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 33.622534974711016,
+          "recall": 0.9905000000000002,
+          "mem_mib": 910.7,
+          "wall_s": 9.5
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 41,
+            "bytes": 4816028088
+          },
+          "ok": false,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?",
+          "status": "exited",
+          "oom_killed": true,
+          "exit_code": 137
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "WeaviateConnectionError: Connection to Weaviate failed. Details: Error: [Errno 111] Connection refused. \nIs Weaviate running and reachable at http://localhost:8081?"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 20:18:53"
+}

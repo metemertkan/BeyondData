@@ -14,6 +14,7 @@ No accounts, no keys.
 | 1 | Can you let an AI answer questions from your database? | [`ledger/`](ledger), [`scripts/ep01_run.py`](scripts/ep01_run.py) |
 | 2 | Which vector database should you use? | [`vectors/`](vectors), [`scripts/ep02_run.py`](scripts/ep02_run.py) |
 | 3 | What happens to vector search when you add a filter? | [`vectors/filtered.py`](vectors/filtered.py), [`scripts/ep03_run.py`](scripts/ep03_run.py) |
+| 4 | How small can a vector get before search stops finding the answer? | [`vectors/compressed.py`](vectors/compressed.py), [`scripts/ep04_run.py`](scripts/ep04_run.py) |
 
 ## Episode 1: I asked my AI for the total
 
@@ -278,4 +279,106 @@ docker-compose.ep03.yml   the six databases, Episode 2's images and limits, own 
 scripts/ep03_run.py       one database at a time: per deployment load, then per option, knob and filter, every question
 scripts/ep03_summary.py   the tables, the target, the built settings and the deploy checks
 tests/test_ep03.py
+```
+
+## Episode 4: I compressed a million vectors to 1 bit
+
+Episode 2's million passages (Cohere embed-english-v3, 1,024 dimensions) and 2,452 test questions. Every compression
+level the six databases document, set the way their compression docs show it, everything else at its defaults: 23
+deployments, each in a fresh container with its own load and index build.
+
+| Database | float32 | 16-bit | 8-bit | 4-bit | 2-bit | 1-bit |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| pgvector 0.8.7 | `vector` | `halfvec` | | | | `binary_quantize` bit index + the README's re-rank |
+| Qdrant 1.20.2 | none (default) | | `scalar` | TurboQuant 4 | TurboQuant 2 | `binary`; TurboQuant 1 |
+| Milvus 3.0.6 | `HNSW` | | `HNSW_SQ` (SQ8) | AUTOINDEX (SQ4U + FP16 refine) | | `IVF_RABITQ` + SQ8 refine |
+| Weaviate 1.40.7 | none (default) | | RQ 8 | RQ 4 | | RQ 1; BQ |
+| Elasticsearch 9.5.5 | `hnsw` | | `int8_hnsw` | `int4_hnsw` | | `bbq_hnsw` (the default) |
+| Chroma 1.5.9 | the only option | | | | | |
+
+One knob, c: how many candidates to look at (re-scored with the original vectors for a compressed index, the graph's
+candidate list for float32), swept over 20 to 500. A **memory ladder** runs every deployment under 8, 4, 2, 1 and
+0.5 GiB with no swap, after dropping its files from the host's page cache; it **runs at full speed** under a limit if
+it answers 200 test questions with a median within 2× or 5 ms of its median at 16 GiB. **The vectors alone**: exact
+search over each compressed representation in numpy, no index. **Matryoshka**: the 100,000-passage subset embedded
+again with nomic-embed-text-v1.5, a model trained to be shortened.
+
+Three designs: **as shipped** (no search parameters), **options** (the c sweep, the ladder at the tuned setting, the
+vectors alone) and **built** (a recall target from the labels, a memory budget of 4, 2 or 1 GiB per million vectors,
+and per database the fastest deployment whose tuned setting passes a check under that limit).
+
+### Results (1,000,000 passages, 2,452 test questions)
+
+1-bit as shipped, against the same database's float32 index:
+
+| Database | 1-bit index | Recall | Answers lost | float32: recall / lost | Full speed down to: float32 → best compressed |
+| :--- | :--- | ---: | ---: | :--- | :--- |
+| Weaviate | RQ 1 | **0.972** | 37 | 0.978 / 22 | 8 GiB → 2 GiB |
+| Qdrant | TurboQuant 1 | 0.951 | 44 | 0.971 / 28 | 4 GiB → **0.5 GiB** |
+| Weaviate | BQ | 0.950 | 49 | 0.978 / 22 | 8 GiB → 2 GiB |
+| Elasticsearch | BBQ (the default) | 0.901 | 106 | 0.912 / 121 | more than 8 GiB → 2 GiB |
+| Qdrant | binary | 0.900 | 55 | 0.971 / 28 | 4 GiB → **0.5 GiB** |
+| Milvus | IVF_RABITQ + SQ8 refine | 0.886 | 146 | 0.940 / 66 | 8 GiB → 2 GiB (89 ms a question) |
+| pgvector | bit + README re-rank | **0.841** | **216** | 0.916 / 134 | more than 8 GiB → 2 GiB |
+| Chroma | no compression setting | | | 0.957 / 65 | 8 GiB |
+
+- **The defaults decided more than the bits.** Whether an index re-scores with the originals, and how many, is a
+  default: Qdrant re-scores 1- and 2-bit but not int8 or 4-bit, so as shipped 2-bit (0.970) beat 4-bit (0.941);
+  Elasticsearch re-scores only BBQ, which lost fewer answers than its own float32 index (106 against 121);
+  Weaviate's RQ 1 is documented to re-score 512 but its graph hands it 100.
+- **Memory: 4–8× saved, not 32×.** The graph, the heap, pgvector's float32 column and Milvus's refine copies stay.
+  `docker stats` misleads both ways: Qdrant float32 read 439 MiB and needed 4 GiB; Elasticsearch read ~9 GiB, its heap.
+- **Re-scoring deep nearly matches float32, and reads the originals.** At c = 500 the compressed indexes came within
+  0.005 of their own float32 index in Qdrant, Weaviate and Elasticsearch. Those 500 originals are 2 MB a question,
+  and under a limit they come off the disk: Qdrant TurboQuant 1 at 0.5 GiB took 4.6 ms as shipped (0.945) and 69 ms
+  at c = 500 (0.985); 3.7 ms with 8 GiB. Milvus HNSW_SQ8, with nothing to re-score, held 0.992 at c = 500 from 16
+  GiB down to 2 at ~11 ms.
+- **The vectors alone:** int8 lost no answers; int4 none once the top 20 were re-scored; 1 bit scored against a
+  float question lost 58 and none with the top 100 re-scored. Cohere's first 512 dimensions lost 89.
+- **Matryoshka only on a model trained for it** (100,000 subset): at 256 dimensions nomic v1.5 lost 33 answers and
+  Cohere v3 128; at 1 bit, Cohere lost 41 and nomic 85.
+- **Built:** the labels pick a target of 0.995 (at 0.99, Qdrant int8 at c = 500 lost 0.53 nDCG points). At 4, 2 and
+  1 GiB no database passes. Only Milvus HNSW reached the 0.9975 tuning margin; it passed at 8 GiB and didn't load
+  at 4. Closest miss: Milvus AUTOINDEX at c = 500, 0.9955 at 4 GiB, which reached 0.997 on tuning, short of the
+  margin. Exploratory, chosen after the results: at 0.99, Milvus HNSW_SQ8 alone passes at 2 GiB, none at 1.
+
+Full tables: [`results/ep04/full/summary.md`](results/ep04/full/summary.md); the vectors alone in
+[`results/ep04/vectors/`](results/ep04/vectors). The 100,000-passage pilot is in `results/ep04/pilot/` (float32 was
+0.4 GB there, so the ladder separated nothing). Design amendments: four after the pilot, before the full run (0.995
+added to the target levels with a margin of half the distance to 1; Weaviate RQ's knob sets `ef` with
+`rescoreLimit`; "full speed" as 2× or 5 ms; a 600 s start limit) and one after it: Milvus builds indexes for merged
+segments in the background while serving the old ones, so its settle now also waits for no pending index rows, and
+Milvus HNSW and HNSW_SQ8 were re-run (the first run is kept in `results/ep04/full/first_run_milvus/`).
+
+**Limits.** One machine (Ryzen 9 3900X, no AVX-512, NVMe); one dataset, with a model trained for int8 and binary;
+Matryoshka only on the 100,000 subset; the ladder measures right after a restart; graph parameters at defaults.
+
+### Run it
+
+```bash
+# after Episode 2's data step (bash vectors/download.sh && uv run python -m vectors.data --prepare)
+uv run --with onnxruntime --with tokenizers --with huggingface_hub \
+    python -m vectors.nomic --prepare                # nomic v1.5 on the 100k subset, ~3 hours on CPU
+uv run python -m scripts.ep04_vectors --part million  # the vectors alone
+uv run python -m scripts.ep04_vectors --part subset   # Matryoshka
+uv run pytest tests/test_ep04.py
+taskset -c 6-11,18-23 uv run python -m scripts.ep04_run --size pilot --db all   # 100k passages
+taskset -c 6-11,18-23 uv run python -m scripts.ep04_run --size full --db all    # ~8.5 h
+uv run python -m scripts.ep04_summary --size full    # results/ep04/full/summary.md
+```
+
+`docker-compose.ep04.yml` has its own compose project (`beyonddata-ep04`, containers `bd4-*`), so its `down -v`
+never touches Episodes 1–3.
+
+### Layout
+
+```text
+vectors/
+  compressed.py   Episode 2's adapters with each database's documented compression, the knob c, settings read back
+  nomic.py        nomic-embed-text-v1.5 on the 100k subset (ONNX on CPU), checked against Ollama
+docker-compose.ep04.yml   the six databases, Episode 2's images, 16 GiB each (the ladder lowers it)
+scripts/ep04_vectors.py   the vectors alone and Matryoshka: exact search over each representation
+scripts/ep04_run.py       one database at a time: per deployment load, as shipped, the c sweep, the memory ladder
+scripts/ep04_summary.py   the tables, the target, the built settings and the deploy checks
+tests/test_ep04.py
 ```

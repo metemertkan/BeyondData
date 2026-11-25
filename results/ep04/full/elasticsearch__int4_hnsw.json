@@ -1,0 +1,335 @@
+{
+  "db": "elasticsearch",
+  "deployment": "int4_hnsw",
+  "what": "4-bit: int4_hnsw",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 21:42:14",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 13.1,
+      "tune_recall": 0.8634000000000001,
+      "p50_ms": 3.0496844847220927
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.1,
+      "tune_recall": 0.9214,
+      "p50_ms": 2.852948469808325
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.9,
+      "tune_recall": 0.9325,
+      "p50_ms": 2.7872044884134084
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.0,
+      "tune_recall": 0.9471999999999999,
+      "p50_ms": 2.8410629893187433
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.5,
+      "tune_recall": 0.9604,
+      "p50_ms": 3.081442991970107
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.2,
+      "tune_recall": 0.9689,
+      "p50_ms": 3.408039512578398
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 8.6,
+      "tune_recall": 0.9779000000000001,
+      "p50_ms": 4.119343007914722
+    }
+  },
+  "startup_s": 20.1,
+  "load_s": 1622.2,
+  "indexed": {
+    "segments": 24,
+    "docs": 1000000
+  },
+  "index_wait_s": 124.4,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "9.5.5",
+    "license": "basic",
+    "mapping": {
+      "type": "dense_vector",
+      "element_type": "float",
+      "dims": 1024,
+      "index": true,
+      "similarity": "cosine",
+      "index_options": {
+        "type": "int4_hnsw",
+        "m": 16,
+        "ef_construction": 100
+      },
+      "meta": {}
+    },
+    "segments": 17
+  },
+  "disk_bytes": 5988208640,
+  "disk_bytes_apparent": 5987614691,
+  "mem_mib_after_load": 9136.128,
+  "mem_mib_after_queries": 9206.784,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 170,
+            "bytes": 4691243163
+          },
+          "ok": true,
+          "ready_s": 25.6,
+          "preread_s": 1.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 5.426105984952301,
+          "recall": 0.8420000000000002,
+          "mem_mib": 4633.6,
+          "wall_s": 4.9
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 10.372155986260623,
+          "recall": 0.9690000000000001,
+          "mem_mib": 4648.96,
+          "wall_s": 4.1
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 159,
+            "bytes": 4691283800
+          },
+          "ok": true,
+          "ready_s": 22.8,
+          "preread_s": 1.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.2833025003783405,
+          "recall": 0.8420000000000002,
+          "mem_mib": 2556.928,
+          "wall_s": 7.7
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 15.154816501308233,
+          "recall": 0.9690000000000001,
+          "mem_mib": 2582.528,
+          "wall_s": 5.4
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 159,
+            "bytes": 4691282972
+          },
+          "ok": true,
+          "ready_s": 22.7,
+          "preread_s": 1.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.304202979663387,
+          "recall": 0.8420000000000002,
+          "mem_mib": 1489.92,
+          "wall_s": 7.9
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 88.25391001300886,
+          "recall": 0.9690000000000001,
+          "mem_mib": 1512.448,
+          "wall_s": 23.5
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 159,
+            "bytes": 4691283414
+          },
+          "ok": true,
+          "ready_s": 23.0,
+          "preread_s": 1.8,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 64.07752298400737,
+          "recall": 0.8420000000000002,
+          "mem_mib": 906.1,
+          "wall_s": 27.8
+        },
+        "tuned": {
+          "ok": false,
+          "c": 500,
+          "ran": 50,
+          "sampled": true,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 270.7902889815159,
+          "recall": 0.96,
+          "mem_mib": 925.0,
+          "wall_s": 29.9
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 159,
+            "bytes": 4691282995
+          },
+          "ok": false,
+          "error": "ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(HTTPConnection(host='localhost', port=9201): Failed to establish a new connection: [Errno 111] Connection refused))",
+          "status": "exited",
+          "oom_killed": true,
+          "exit_code": 137
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(HTTPConnection(host='localhost', port=9201): Failed to establish a new connection: [Errno 111] Connection refused))"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": true,
+          "error": "ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(HTTPConnection(host='localhost', port=9201): Failed to establish a new connection: [Errno 111] Connection refused))"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 22:16:35"
+}

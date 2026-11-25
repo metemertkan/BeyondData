@@ -1,0 +1,353 @@
+{
+  "db": "pgvector",
+  "deployment": "vector",
+  "what": "float32: HNSW on the vector column (README)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 15:13:46",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 20.8,
+      "tune_recall": 0.9159,
+      "p50_ms": 5.517358993529342,
+      "plan": "Limit  (cost=3249.11..3308.41 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=3249.11..5932892.00 rows=1000000 width=16)"
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 6.3,
+      "tune_recall": 0.8647,
+      "p50_ms": 2.8758639964507893,
+      "plan": "Limit  (cost=2012.18..2071.49 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=2012.18..5932892.00 rows=1000000 width=16)"
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.9,
+      "tune_recall": 0.8944000000000001,
+      "p50_ms": 3.6818324879277498,
+      "plan": "Limit  (cost=2647.57..2706.88 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=2647.57..5932892.00 rows=1000000 width=16)"
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 11.2,
+      "tune_recall": 0.9244000000000001,
+      "p50_ms": 5.2707359864143655,
+      "plan": "Limit  (cost=3827.42..3886.71 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=3827.42..5932892.00 rows=1000000 width=16)"
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 18.8,
+      "tune_recall": 0.9525999999999999,
+      "p50_ms": 8.913849509553984,
+      "plan": "Limit  (cost=6515.55..6574.82 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=6515.55..5932875.84 rows=999992 width=16)"
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 33.4,
+      "tune_recall": 0.9702000000000001,
+      "p50_ms": 15.728190002846532,
+      "plan": "Limit  (cost=11397.31..11456.52 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=11397.31..5932875.84 rows=999992 width=16)"
+    },
+    "c500": {
+      "c": 500,
+      "ran": 100,
+      "sampled": true,
+      "wall_s": 324.3,
+      "tune_recall": 1.0,
+      "p50_ms": 2143.738749990007,
+      "plan": "Limit  (cost=22565.25..22566.42 rows=10 width=16) / ->  Sort  (cost=21565.23..22606.89 rows=416663 width=16) / Sort Key: ((embedding <=> '[...]'::vector)) / ->  Parallel Seq Scan on docs  (cost=0.00..12561.29 rows=416663 width=16)"
+    }
+  },
+  "startup_s": 2.1,
+  "load_s": 31.4,
+  "indexed": {
+    "index_build_s": 538.8,
+    "notices": []
+  },
+  "index_wait_s": 538.8,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 1000000,
+  "settings": {
+    "version": "0.8.7",
+    "index": "CREATE INDEX docs_embedding_idx ON public.docs USING hnsw (embedding vector_cosine_ops)",
+    "reloptions (empty = m 16, ef_construction 64)": null,
+    "index_bytes": 8177991680,
+    "table_bytes": 5590548480,
+    "toast_bytes": 5530271744,
+    "hnsw.ef_search": "40",
+    "shared_buffers": "128MB",
+    "plan": "Limit  (cost=3249.11..3308.41 rows=10 width=16) / ->  Index Scan using docs_embedding_idx on docs  (cost=3249.11..5932892.00 rows=1000000 width=16)"
+  },
+  "disk_bytes": 14897483776,
+  "disk_bytes_apparent": 14897346877,
+  "mem_mib_after_load": 436.9,
+  "mem_mib_after_queries": 432.6,
+  "tuned": {
+    "tuned": {
+      "c": 200,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 200,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 200,
+    "tuned": {
+      "tuned": {
+        "c": 200,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 200,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 200
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1359,
+            "bytes": 14897356896
+          },
+          "ok": true,
+          "ready_s": 4.9,
+          "preread_s": 5.1,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 23.284463488380425,
+          "recall": 0.9080000000000001,
+          "mem_mib": 164.7,
+          "wall_s": 12.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 44.0811229927931,
+          "recall": 0.9625,
+          "mem_mib": 165.5,
+          "wall_s": 13.2
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1358,
+            "bytes": 14897195952
+          },
+          "ok": true,
+          "ready_s": 4.3,
+          "preread_s": 5.2,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 42.727100488264114,
+          "recall": 0.9080000000000001,
+          "mem_mib": 174.2,
+          "wall_s": 21.5
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 80.76535300642718,
+          "recall": 0.9625,
+          "mem_mib": 174.8,
+          "wall_s": 23.0
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1358,
+            "bytes": 14897195952
+          },
+          "ok": true,
+          "ready_s": 4.6,
+          "preread_s": 5.3,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 45.663043012609705,
+          "recall": 0.9080000000000001,
+          "mem_mib": 175.0,
+          "wall_s": 22.8
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 156.93637350341305,
+          "recall": 0.9625,
+          "mem_mib": 175.1,
+          "wall_s": 42.5
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1359,
+            "bytes": 14897356896
+          },
+          "ok": true,
+          "ready_s": 4.5,
+          "preread_s": 5.3,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 58.06543902144767,
+          "recall": 0.9080000000000001,
+          "mem_mib": 175.1,
+          "wall_s": 26.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 197.8846129932208,
+          "recall": 0.9625,
+          "mem_mib": 175.3,
+          "wall_s": 52.3
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 1359,
+            "bytes": 14897356896
+          },
+          "ok": true,
+          "ready_s": 4.1,
+          "preread_s": 5.4,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 66.71414700394962,
+          "recall": 0.9080000000000001,
+          "mem_mib": 174.8,
+          "wall_s": 29.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 235.18375100684352,
+          "recall": 0.9625,
+          "mem_mib": 175.1,
+          "wall_s": 60.6
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 15:36:16"
+}

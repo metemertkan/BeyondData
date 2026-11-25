@@ -1,0 +1,337 @@
+{
+  "db": "milvus",
+  "deployment": "hnsw",
+  "what": "float32: HNSW",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-24 13:26:21",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 6.6,
+      "tune_recall": 0.9335000000000001,
+      "p50_ms": 1.7047834844561294
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.8,
+      "tune_recall": 0.9498000000000001,
+      "p50_ms": 1.7515170038677752
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.7,
+      "tune_recall": 0.9712000000000001,
+      "p50_ms": 2.2285599989118055
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 5.7,
+      "tune_recall": 0.988,
+      "p50_ms": 2.778170004603453
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.9,
+      "tune_recall": 0.9965,
+      "p50_ms": 3.9181245083454996
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.7,
+      "tune_recall": 0.9987999999999999,
+      "p50_ms": 5.206093497690745
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 16.6,
+      "tune_recall": 1.0,
+      "p50_ms": 8.089094510069117
+    }
+  },
+  "startup_s": 1.2,
+  "load_s": 16.9,
+  "indexed": {
+    "index_type": "HNSW",
+    "indexed_rows": 100000,
+    "total_rows": 100000,
+    "state": "Finished"
+  },
+  "index_wait_s": 102.2,
+  "settle": {
+    "settle_s": 350,
+    "segment_history": [
+      {
+        "t_s": 0,
+        "segments": 4,
+        "rows": [
+          30000,
+          29000,
+          29000,
+          12000
+        ]
+      },
+      {
+        "t_s": 170,
+        "segments": 2,
+        "rows": [
+          12000,
+          88000
+        ]
+      }
+    ]
+  },
+  "settle_s": 350.1,
+  "count": 100000,
+  "settings": {
+    "index": {
+      "metric_type": "COSINE",
+      "index_type": "HNSW",
+      "field_name": "vector",
+      "index_name": "vector",
+      "total_rows": 100000,
+      "indexed_rows": 100000,
+      "pending_index_rows": 0,
+      "state": "Finished"
+    },
+    "autoindex_built_as": [],
+    "consistency_level": 2,
+    "fields": [
+      {
+        "field_id": 100,
+        "name": "id",
+        "description": "",
+        "type": 5,
+        "params": {},
+        "is_primary": true
+      },
+      {
+        "field_id": 101,
+        "name": "vector",
+        "description": "",
+        "type": 101,
+        "params": {
+          "dim": 1024
+        }
+      }
+    ]
+  },
+  "disk_bytes": 2694590464,
+  "disk_bytes_apparent": 2608250527,
+  "mem_mib_after_load": 785.3,
+  "mem_mib_after_queries": 785.1,
+  "tuned": {
+    "tuned": {
+      "c": 100,
+      "level": 0.995,
+      "reached": true
+    },
+    "tuned_hi": {
+      "c": 200,
+      "level": 0.9975,
+      "reached": true
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 100,
+    "tuned": {
+      "tuned": {
+        "c": 100,
+        "level": 0.995,
+        "reached": true
+      },
+      "tuned_hi": {
+        "c": 200,
+        "level": 0.9975,
+        "reached": true
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 100,
+      "tuned_hi": 200
+    },
+    "steps": {
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 161,
+            "bytes": 2494753483
+          },
+          "ok": true,
+          "ready_s": 12.4,
+          "preread_s": 0.9,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.2987929987721145,
+          "recall": 0.925,
+          "mem_mib": 685.1,
+          "wall_s": 3.4
+        },
+        "tuned": {
+          "ok": true,
+          "c": 100,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 4.073664502357133,
+          "recall": 0.9954999999999999,
+          "mem_mib": 699.0,
+          "wall_s": 2.1
+        },
+        "tuned_hi": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 5.476003992953338,
+          "recall": 0.9984999999999999,
+          "mem_mib": 698.6,
+          "wall_s": 2.4
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 166,
+            "bytes": 2494916585
+          },
+          "ok": true,
+          "ready_s": 11.9,
+          "preread_s": 0.9,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 1.9977440097136423,
+          "recall": 0.925,
+          "mem_mib": 644.2,
+          "wall_s": 3.4
+        },
+        "tuned": {
+          "ok": true,
+          "c": 100,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 4.4601559930015355,
+          "recall": 0.9954999999999999,
+          "mem_mib": 657.2,
+          "wall_s": 2.2
+        },
+        "tuned_hi": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 5.477174490806647,
+          "recall": 0.9984999999999999,
+          "mem_mib": 657.9,
+          "wall_s": 2.4
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 168,
+            "bytes": 2409272299
+          },
+          "ok": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        },
+        "tuned": {
+          "ok": false,
+          "c": 100,
+          "ran": 0,
+          "sampled": false,
+          "error": "MilvusException: <MilvusException: (code=503, message=failed to search: failed to search/query delegator 4 for channel by-dev-rootcoord-dml_0_470685629289071601v0: fail to search on QueryNode 4: channel distribution is not serviceable: channel not available[channel=by-dev-rootcoord-dml_0_47068562928",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": null,
+          "recall": null,
+          "mem_mib": 238.2,
+          "wall_s": 7.1
+        },
+        "tuned_hi": {
+          "ok": false,
+          "c": 200,
+          "ran": 0,
+          "sampled": false,
+          "error": "MilvusException: <MilvusException: (code=503, message=failed to search: failed to search/query delegator 4 for channel by-dev-rootcoord-dml_0_470685629289071601v0: fail to search on QueryNode 4: channel distribution is not serviceable: channel not available[channel=by-dev-rootcoord-dml_0_47068562928",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": null,
+          "recall": null,
+          "mem_mib": 238.0,
+          "wall_s": 7.1
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 13:46:14"
+}

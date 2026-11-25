@@ -1,0 +1,352 @@
+{
+  "db": "milvus",
+  "deployment": "hnsw_sq8",
+  "what": "8-bit: HNSW_SQ (sq_type default SQ8, no refine)",
+  "size": "full",
+  "passages": 1000000,
+  "started": "2026-11-24 17:48:47",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 28.0,
+      "tune_recall": 0.9416000000000001,
+      "p50_ms": 7.6392530027078465
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 11.4,
+      "tune_recall": 0.9508,
+      "p50_ms": 5.244026498985477
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.3,
+      "tune_recall": 0.9678000000000001,
+      "p50_ms": 4.843713002628647
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 11.7,
+      "tune_recall": 0.9792000000000001,
+      "p50_ms": 5.684463991201483
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 10.6,
+      "tune_recall": 0.9865,
+      "p50_ms": 5.075876004411839
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 14.2,
+      "tune_recall": 0.9915,
+      "p50_ms": 6.834798492491245
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 22.2,
+      "tune_recall": 0.9941,
+      "p50_ms": 10.72983699850738
+    }
+  },
+  "startup_s": 2.3,
+  "load_s": 129.4,
+  "indexed": {
+    "index_type": "HNSW_SQ",
+    "indexed_rows": 1000000,
+    "total_rows": 1000000,
+    "state": "Finished"
+  },
+  "index_wait_s": 984.1,
+  "settle": {
+    "settle_s": 200,
+    "segment_history": [
+      {
+        "t_s": 0,
+        "segments": 16,
+        "rows": [
+          30511,
+          30000,
+          30000,
+          29000,
+          28489,
+          29000,
+          90000,
+          29511,
+          29000,
+          30489,
+          28000,
+          21511,
+          148489,
+          174511,
+          260624,
+          10865
+        ]
+      },
+      {
+        "t_s": 20,
+        "segments": 12,
+        "rows": [
+          29000,
+          90000,
+          29511,
+          29000,
+          30489,
+          28000,
+          21511,
+          148489,
+          174511,
+          260624,
+          10865,
+          148000
+        ]
+      }
+    ]
+  },
+  "settle_s": 200.1,
+  "count": 1000000,
+  "settings": {
+    "index": {
+      "metric_type": "COSINE",
+      "index_type": "HNSW_SQ",
+      "field_name": "vector",
+      "index_name": "vector",
+      "total_rows": 1000000,
+      "indexed_rows": 1000000,
+      "pending_index_rows": 257511,
+      "state": "Finished"
+    },
+    "autoindex_built_as": [],
+    "consistency_level": 2,
+    "fields": [
+      {
+        "field_id": 100,
+        "name": "id",
+        "description": "",
+        "type": 5,
+        "params": {},
+        "is_primary": true
+      },
+      {
+        "field_id": 101,
+        "name": "vector",
+        "description": "",
+        "type": 101,
+        "params": {
+          "dim": 1024
+        }
+      }
+    ]
+  },
+  "disk_bytes": 19002404864,
+  "disk_bytes_apparent": 18917584718,
+  "mem_mib_after_load": 3283.968,
+  "mem_mib_after_queries": 1942.528,
+  "tuned": {
+    "tuned": {
+      "c": 500,
+      "level": 0.995,
+      "reached": false
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": false
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 500,
+    "tuned": {
+      "tuned": {
+        "c": 500,
+        "level": 0.995,
+        "reached": false
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": false
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 500
+    },
+    "steps": {
+      "8": {
+        "restart_shipped": {
+          "budget_gib": 8,
+          "evicted": {
+            "files": 1106,
+            "bytes": 18495799239
+          },
+          "ok": true,
+          "ready_s": 13.5,
+          "preread_s": 7.0,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.1540010202443227,
+          "recall": 0.9105,
+          "mem_mib": 1572.864,
+          "wall_s": 2.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 10.678270991775207,
+          "recall": 0.993,
+          "mem_mib": 1498.112,
+          "wall_s": 3.8
+        }
+      },
+      "4": {
+        "restart_shipped": {
+          "budget_gib": 4,
+          "evicted": {
+            "files": 1111,
+            "bytes": 18495529613
+          },
+          "ok": true,
+          "ready_s": 12.8,
+          "preread_s": 7.0,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.1086120104882866,
+          "recall": 0.9105,
+          "mem_mib": 1553.408,
+          "wall_s": 2.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 10.822284486494027,
+          "recall": 0.993,
+          "mem_mib": 1502.208,
+          "wall_s": 3.7
+        }
+      },
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 1115,
+            "bytes": 18495600088
+          },
+          "ok": true,
+          "ready_s": 14.6,
+          "preread_s": 7.1,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.5466429942753166,
+          "recall": 0.9105,
+          "mem_mib": 1489.92,
+          "wall_s": 2.1
+        },
+        "tuned": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 10.66043799801264,
+          "recall": 0.993,
+          "mem_mib": 1491.968,
+          "wall_s": 3.7
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 1119,
+            "bytes": 18495670682
+          },
+          "ok": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>",
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        },
+        "tuned": {
+          "ok": false,
+          "why": "did not start",
+          "oom_killed": false,
+          "error": "MilvusException: <MilvusException: (code=1, message=[load_collection] Retry timeout: 600s, message=[wait_for_loading_collection] Retry timeout: 600s, message=wait for loading collection timeout, collection: docs)>"
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 18:24:02"
+}

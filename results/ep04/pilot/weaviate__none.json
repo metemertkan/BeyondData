@@ -1,0 +1,326 @@
+{
+  "db": "weaviate",
+  "deployment": "none",
+  "what": "float32: no compression (default; DEFAULT_QUANTIZATION unset)",
+  "size": "pilot",
+  "passages": 100000,
+  "started": "2026-11-24 14:35:10",
+  "cells": {
+    "shipped": {
+      "c": null,
+      "ran": 3452,
+      "sampled": false,
+      "wall_s": 8.6,
+      "tune_recall": 0.9891,
+      "p50_ms": 2.3192625085357577
+    },
+    "c20": {
+      "c": 20,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.2,
+      "tune_recall": 0.9341000000000002,
+      "p50_ms": 1.0659069957910106
+    },
+    "c30": {
+      "c": 30,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 2.6,
+      "tune_recall": 0.9593,
+      "p50_ms": 1.234400988323614
+    },
+    "c50": {
+      "c": 50,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 3.2,
+      "tune_recall": 0.9762000000000001,
+      "p50_ms": 1.5427900070790201
+    },
+    "c100": {
+      "c": 100,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 4.8,
+      "tune_recall": 0.9891,
+      "p50_ms": 2.316717494977638
+    },
+    "c200": {
+      "c": 200,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 7.7,
+      "tune_recall": 0.9952000000000001,
+      "p50_ms": 3.6796594940824434
+    },
+    "c500": {
+      "c": 500,
+      "ran": 2000,
+      "sampled": false,
+      "wall_s": 13.9,
+      "tune_recall": 0.9987999999999999,
+      "p50_ms": 6.793363005272113
+    }
+  },
+  "startup_s": 2.6,
+  "load_s": 75.8,
+  "indexed": {
+    "vector_queue": 0,
+    "shards": 1
+  },
+  "index_wait_s": 0.0,
+  "settle": {},
+  "settle_s": 0.0,
+  "count": 100000,
+  "settings": {
+    "version": "1.40.7",
+    "vectorConfig": {
+      "default": {
+        "vectorIndexConfig": {
+          "bq": {
+            "enabled": false
+          },
+          "cleanupIntervalSeconds": 300,
+          "distance": "cosine",
+          "dynamicEfFactor": 8,
+          "dynamicEfMax": 500,
+          "dynamicEfMin": 100,
+          "ef": -1,
+          "efConstruction": 128,
+          "filterStrategy": "acorn",
+          "flatSearchCutoff": 40000,
+          "maxConnections": 32,
+          "multivector": {
+            "aggregation": "maxSim",
+            "enabled": false,
+            "muvera": {
+              "dprojections": 16,
+              "enabled": false,
+              "ksim": 4,
+              "repetitions": 10
+            }
+          },
+          "pq": {
+            "bitCompression": false,
+            "centroids": 256,
+            "enabled": false,
+            "encoder": {
+              "distribution": "log-normal",
+              "type": "kmeans"
+            },
+            "segments": 0,
+            "trainingLimit": 100000
+          },
+          "rq": {
+            "bits": 8,
+            "centering": false,
+            "enabled": false,
+            "rescoreLimit": 20,
+            "trainingLimit": 10000
+          },
+          "skip": false,
+          "skipDefaultQuantization": false,
+          "sq": {
+            "enabled": false,
+            "rescoreLimit": 20,
+            "trainingLimit": 100000
+          },
+          "trackDefaultQuantization": false,
+          "vectorCacheMaxObjects": 1000000000000
+        },
+        "vectorIndexType": "hnsw",
+        "vectorizer": {
+          "none": {}
+        }
+      }
+    },
+    "vectorIndexConfig": null
+  },
+  "disk_bytes": 512622592,
+  "disk_bytes_apparent": 512613827,
+  "mem_mib_after_load": 1061.888,
+  "mem_mib_after_queries": 1029.12,
+  "tuned": {
+    "tuned": {
+      "c": 200,
+      "level": 0.995,
+      "reached": true
+    },
+    "tuned_hi": {
+      "c": 500,
+      "level": 0.9975,
+      "reached": true
+    }
+  },
+  "ladder": {
+    "questions": 200,
+    "tuned_c": 200,
+    "tuned": {
+      "tuned": {
+        "c": 200,
+        "level": 0.995,
+        "reached": true
+      },
+      "tuned_hi": {
+        "c": 500,
+        "level": 0.9975,
+        "reached": true
+      }
+    },
+    "settings": {
+      "shipped": null,
+      "tuned": 200,
+      "tuned_hi": 500
+    },
+    "steps": {
+      "2": {
+        "restart_shipped": {
+          "budget_gib": 2,
+          "evicted": {
+            "files": 18,
+            "bytes": 515362544
+          },
+          "ok": true,
+          "ready_s": 9.8,
+          "preread_s": 0.1,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.2886185033712536,
+          "recall": 0.9865,
+          "mem_mib": 1228.8,
+          "wall_s": 2.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.6635344877140597,
+          "recall": 0.9934999999999999,
+          "mem_mib": 1228.8,
+          "wall_s": 2.0
+        },
+        "tuned_hi": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.851951504359022,
+          "recall": 0.9990000000000001,
+          "mem_mib": 1228.8,
+          "wall_s": 2.8
+        }
+      },
+      "1": {
+        "restart_shipped": {
+          "budget_gib": 1,
+          "evicted": {
+            "files": 19,
+            "bytes": 460751830
+          },
+          "ok": true,
+          "ready_s": 8.2,
+          "preread_s": 0.1,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": true,
+          "c": null,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 2.3728109954390675,
+          "recall": 0.9865,
+          "mem_mib": 921.9,
+          "wall_s": 2.0
+        },
+        "tuned": {
+          "ok": true,
+          "c": 200,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 3.6936785036232322,
+          "recall": 0.9934999999999999,
+          "mem_mib": 939.7,
+          "wall_s": 2.0
+        },
+        "tuned_hi": {
+          "ok": true,
+          "c": 500,
+          "ran": 200,
+          "sampled": false,
+          "error": null,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0,
+          "p50_ms": 6.9481285026995465,
+          "recall": 0.9990000000000001,
+          "mem_mib": 958.0,
+          "wall_s": 2.8
+        }
+      },
+      "0.5": {
+        "restart_shipped": {
+          "budget_gib": 0.5,
+          "evicted": {
+            "files": 19,
+            "bytes": 460751830
+          },
+          "ok": true,
+          "ready_s": 5.0,
+          "preread_s": 0.2,
+          "preread_rc": 0,
+          "status": "running",
+          "oom_killed": false,
+          "exit_code": 0
+        },
+        "shipped": {
+          "ok": false,
+          "c": null,
+          "ran": 133,
+          "sampled": false,
+          "error": "WeaviateQueryError: Query call with protocol GRPC search failed with message The request to Weaviate failed after 5 retries. Details: <_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = \"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:5",
+          "status": "exited",
+          "oom_killed": true,
+          "exit_code": 137,
+          "p50_ms": 3.732497018063441,
+          "recall": 0.987218045112782,
+          "mem_mib": null,
+          "wall_s": 64.4
+        }
+      }
+    }
+  },
+  "finished": "2026-11-24 14:39:11"
+}
