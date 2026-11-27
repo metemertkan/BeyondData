@@ -1,0 +1,47 @@
+21:23:03 f16 closed: 60 items
+21:27:38 f16 closed: done (15 right)
+21:27:38 f16 rag: 60 items
+21:43:12 f16 rag: done (35 right)
+21:43:12 f16 abstain: 30 items
+21:50:09 f16 abstain: done (11 right)
+21:50:09 f16 records: 24 items
+22:04:27 f16 records: done (15 right)
+22:04:29 q4_k_m closed: 60 items
+22:06:20 q4_k_m closed: done (16 right)
+22:06:20 q4_k_m rag: 60 items
+22:15:01 q4_k_m rag: done (31 right)
+22:15:01 q4_k_m abstain: 30 items
+22:18:40 q4_k_m abstain: done (14 right)
+22:18:40 q4_k_m records: 24 items
+22:28:43 q4_k_m records: done (16 right)
+22:28:44 q2_k closed: 60 items
+22:30:19 q2_k closed: done (8 right)
+22:30:19 q2_k rag: 60 items
+22:38:54 q2_k rag: done (29 right)
+22:38:54 q2_k abstain: 30 items
+22:42:23 q2_k abstain: done (19 right)
+22:42:23 q2_k records: 24 items
+22:53:19 q2_k records: done (11 right)
+22:53:20 shipped closed: 60 items
+22:55:12 shipped closed: done (15 right)
+22:55:12 shipped rag: 60 items
+23:03:56 shipped rag: done (32 right)
+23:03:56 shipped abstain: 30 items
+23:07:32 shipped abstain: done (14 right)
+23:07:32 shipped records: 24 items
+23:13:39 shipped records: done (12 right)
+23:13:41 shipped_ctx records: 24 items
+23:23:43 shipped_ctx records: done (16 right)
+23:23:46 q4_k_m_kv_f16 rag: 60 items
+23:32:32 q4_k_m_kv_f16 rag: done (32 right)
+23:32:32 q4_k_m_kv_f16 abstain: 30 items
+23:36:07 q4_k_m_kv_f16 abstain: done (14 right)
+23:36:07 q4_k_m_kv_f16 records: 24 items
+23:46:07 q4_k_m_kv_f16 records: done (16 right)
+23:46:08 q4_k_m_kv_q4_0 rag: 60 items
+23:55:42 q4_k_m_kv_q4_0 rag: done (32 right)
+23:55:42 q4_k_m_kv_q4_0 abstain: 30 items
+23:59:39 q4_k_m_kv_q4_0 abstain: done (13 right)
+23:59:39 q4_k_m_kv_q4_0 records: 24 items
+00:15:59 q4_k_m_kv_q4_0 records: done (18 right)
+all designs done

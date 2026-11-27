@@ -1,0 +1,40 @@
+# Episode 5: the model, compressed. Its own project: `down -v` here never touches Episodes 1-4.
+name: beyonddata-ep05
+
+x-ollama: &ollama
+  image: ollama/ollama:0.40.11        # the version installed on this machine
+  cpuset: "0-23"
+  volumes:
+    - models:/root/.ollama            # the qwen3 tags from Ollama's library, and the ladder made from fp16
+    - ./data/ep05/gguf:/gguf          # GGUF files made with llama-quantize (gitignored), imported with `ollama create`
+
+services:
+  # As shipped: no Ollama settings at all (its default context, flash attention, KV cache and parallelism).
+  # Requests ask to keep the model loaded (keep_alive -1) so a run never reloads it mid-task.
+  ollama:
+    <<: *ollama
+    container_name: bd5-ollama
+    ports: ["127.0.0.1:11435:11434"]
+
+  # The KV-cache option: flash attention on (required for a quantized V cache) and the cache type from BD5_KV.
+  ollama-kv:
+    <<: *ollama
+    container_name: bd5-ollama-kv
+    ports: ["127.0.0.1:11435:11434"]
+    profiles: ["kv"]
+    environment:
+      OLLAMA_FLASH_ATTENTION: "1"
+      OLLAMA_KV_CACHE_TYPE: ${BD5_KV:-f16}
+
+  # llama.cpp tools: llama-quantize (the ladder), llama-perplexity (KL divergence against fp16).
+  llamacpp:
+    image: ghcr.io/ggml-org/llama.cpp:full-b12282   # 2026-11-11
+    container_name: bd5-llamacpp
+    profiles: ["tools"]
+    cpuset: "0-23"
+    volumes:
+      - models:/models:ro
+      - ./data/ep05/gguf:/gguf
+
+volumes:
+  models:

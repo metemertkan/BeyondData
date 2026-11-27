@@ -1,0 +1,44 @@
+00:40:59 made done
+00:41:01 q4_k_m_repeat closed: 60 items
+00:42:50 q4_k_m_repeat closed: done (16 right)
+00:42:50 q4_k_m_repeat rag: 60 items
+00:51:29 q4_k_m_repeat rag: done (31 right)
+00:51:29 q4_k_m_repeat abstain: 30 items
+00:55:07 q4_k_m_repeat abstain: done (14 right)
+00:55:07 q4_k_m_repeat records: 24 items
+01:05:10 q4_k_m_repeat records: done (20 right)
+01:05:12 q4_k_m_kv_f16_all closed: 60 items
+01:07:01 q4_k_m_kv_f16_all closed: done (16 right)
+01:07:01 q4_k_m_kv_f16_all rag: 60 items
+01:15:40 q4_k_m_kv_f16_all rag: done (31 right)
+01:15:40 q4_k_m_kv_f16_all abstain: 30 items
+01:19:18 q4_k_m_kv_f16_all abstain: done (14 right)
+01:19:18 q4_k_m_kv_f16_all records: 24 items
+01:29:17 q4_k_m_kv_f16_all records: done (20 right)
+all designs done
+f16 moved 6
+q4_k_m moved 6
+q2_k moved 6
+shipped moved 6
+shipped_ctx moved 6
+q4_k_m_kv_f16 moved 6
+q4_k_m_kv_q4_0 moved 6
+q4_k_m_made moved 6
+01:29:19 f16 records: 6 items
+01:39:49 f16 records: done (20 right)
+01:39:50 q4_k_m records: 6 items
+01:47:31 q4_k_m records: done (21 right)
+01:47:32 q2_k records: 6 items
+01:55:53 q2_k records: done (10 right)
+01:55:53 shipped records: 6 items
+01:59:06 shipped records: done (13 right)
+01:59:07 shipped_ctx records: 6 items
+02:06:47 shipped_ctx records: done (21 right)
+02:06:48 q4_k_m_made records: 6 items
+02:14:25 q4_k_m_made records: done (20 right)
+02:14:27 q4_k_m_kv_f16 records: 6 items
+02:22:06 q4_k_m_kv_f16 records: done (21 right)
+02:22:07 q4_k_m_kv_q4_0 records: 6 items
+02:36:56 q4_k_m_kv_q4_0 records: done (23 right)
+all designs done
+02:36:56 checks done

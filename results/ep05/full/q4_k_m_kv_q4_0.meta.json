@@ -1,0 +1,34 @@
+{
+ "design": "q4_k_m_kv_q4_0",
+ "model": "qwen3:8b",
+ "tasks": [
+  "rag",
+  "abstain",
+  "records"
+ ],
+ "options": {
+  "temperature": 0,
+  "seed": 1
+ },
+ "set_ctx": true,
+ "wording": "A",
+ "kv": "q4_0",
+ "loads": {
+  "rag:4096": {
+   "size": 5511630028,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  162.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q4_0):   81.00 MiB, V (q4_0):   81.00 MiB"
+  },
+  "abstain:4096": {
+   "size": 5511630028,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  162.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q4_0):   81.00 MiB, V (q4_0):   81.00 MiB"
+  },
+  "records:16384": {
+   "size": 6168049090,
+   "context_length": 16384,
+   "kv_log": "llama_kv_cache: size =  648.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (q4_0):  324.00 MiB, V (q4_0):  324.00 MiB"
+  }
+ },
+ "finished": "2026-11-26 23:12:52"
+}

@@ -1,0 +1,39 @@
+{
+ "design": "shipped",
+ "model": "qwen3:8b",
+ "tasks": [
+  "rag",
+  "abstain",
+  "records",
+  "closed"
+ ],
+ "options": {
+  "seed": 1
+ },
+ "set_ctx": false,
+ "wording": "A",
+ "kv": null,
+ "loads": {
+  "rag:None": {
+   "size": 5945656606,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  },
+  "abstain:None": {
+   "size": 5945656606,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  },
+  "records:None": {
+   "size": 5945656606,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  },
+  "closed:None": {
+   "size": 5945656606,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  }
+ },
+ "finished": "2026-11-26 04:00:26"
+}

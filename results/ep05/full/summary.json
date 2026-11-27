@@ -1,0 +1,981 @@
+{
+ "size": "full",
+ "designs": {
+  "f16": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 65,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 145,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 28
+    },
+    "abstain": {
+     "n": 100,
+     "right": 42,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 78,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    }
+   },
+   "data_lost": 0,
+   "speed": {
+    "prompt_tps": 30.4,
+    "gen_tps_short": 1.53
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 19067096268,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "f16_b": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 62,
+     "lost": 4,
+     "gained": 1,
+     "changed": 85,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 152,
+     "lost": 3,
+     "gained": 10,
+     "changed": 51,
+     "declined": 28
+    },
+    "abstain": {
+     "n": 100,
+     "right": 45,
+     "lost": 0,
+     "gained": 3,
+     "changed": 15,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 81,
+     "lost": 2,
+     "gained": 5,
+     "changed": 15,
+     "declined": 0
+    }
+   },
+   "data_lost": 5,
+   "speed": {
+    "prompt_tps": 30.0,
+    "gen_tps_short": 1.5
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 19067096268,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 17108335328,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q8_0": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 66,
+     "lost": 0,
+     "gained": 1,
+     "changed": 20,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 143,
+     "lost": 3,
+     "gained": 1,
+     "changed": 16,
+     "declined": 29
+    },
+    "abstain": {
+     "n": 100,
+     "right": 42,
+     "lost": 0,
+     "gained": 0,
+     "changed": 1,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 78,
+     "lost": 0,
+     "gained": 0,
+     "changed": 1,
+     "declined": 0
+    }
+   },
+   "data_lost": 3,
+   "speed": {
+    "prompt_tps": 33.7,
+    "gen_tps_short": 2.77
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 9571359784,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 9571359784,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 11530120724,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 9571359784,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q6_k": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 65,
+     "lost": 2,
+     "gained": 2,
+     "changed": 68,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 144,
+     "lost": 5,
+     "gained": 4,
+     "changed": 25,
+     "declined": 28
+    },
+    "abstain": {
+     "n": 100,
+     "right": 43,
+     "lost": 0,
+     "gained": 1,
+     "changed": 8,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 77,
+     "lost": 1,
+     "gained": 0,
+     "changed": 8,
+     "declined": 0
+    }
+   },
+   "data_lost": 6,
+   "speed": {
+    "prompt_tps": 41.5,
+    "gen_tps_short": 3.59
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 7446189833,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 7446189833,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 9404950773,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 7446189833,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q5_k_m": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 65,
+     "lost": 4,
+     "gained": 4,
+     "changed": 83,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 150,
+     "lost": 3,
+     "gained": 8,
+     "changed": 35,
+     "declined": 25
+    },
+    "abstain": {
+     "n": 100,
+     "right": 43,
+     "lost": 1,
+     "gained": 2,
+     "changed": 11,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 81,
+     "lost": 1,
+     "gained": 4,
+     "changed": 9,
+     "declined": 0
+    }
+   },
+   "data_lost": 5,
+   "speed": {
+    "prompt_tps": 41.1,
+    "gen_tps_short": 4.1
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 6571404819,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 6571404819,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 8530165759,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 6571404819,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q4_k_m": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 63,
+     "lost": 8,
+     "gained": 6,
+     "changed": 113,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 138,
+     "lost": 9,
+     "gained": 2,
+     "changed": 46,
+     "declined": 30
+    },
+    "abstain": {
+     "n": 100,
+     "right": 48,
+     "lost": 1,
+     "gained": 7,
+     "changed": 23,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 83,
+     "lost": 3,
+     "gained": 8,
+     "changed": 19,
+     "declined": 0
+    }
+   },
+   "data_lost": 13,
+   "speed": {
+    "prompt_tps": 41.0,
+    "gen_tps_short": 4.43
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 7904417546,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q4_k_m_made": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 63,
+     "lost": 8,
+     "gained": 6,
+     "changed": 118,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 138,
+     "lost": 9,
+     "gained": 2,
+     "changed": 52,
+     "declined": 31
+    },
+    "abstain": {
+     "n": 100,
+     "right": 49,
+     "lost": 0,
+     "gained": 7,
+     "changed": 24,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 84,
+     "lost": 1,
+     "gained": 7,
+     "changed": 18,
+     "declined": 0
+    }
+   },
+   "data_lost": 10,
+   "speed": {
+    "prompt_tps": 39.9,
+    "gen_tps_short": 4.48
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5748073430,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5748073430,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 7706834370,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 5748073430,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q3_k_m": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 52,
+     "lost": 22,
+     "gained": 9,
+     "changed": 173,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 130,
+     "lost": 24,
+     "gained": 9,
+     "changed": 73,
+     "declined": 49
+    },
+    "abstain": {
+     "n": 100,
+     "right": 61,
+     "lost": 0,
+     "gained": 19,
+     "changed": 36,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 73,
+     "lost": 12,
+     "gained": 7,
+     "changed": 35,
+     "declined": 4
+    }
+   },
+   "data_lost": 36,
+   "speed": {
+    "prompt_tps": 40.8,
+    "gen_tps_short": 5.52
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 4844452576,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 4844452576,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 6803213516,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 4844452576,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q2_k": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 27,
+     "lost": 43,
+     "gained": 5,
+     "changed": 227,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 102,
+     "lost": 53,
+     "gained": 10,
+     "changed": 125,
+     "declined": 66
+    },
+    "abstain": {
+     "n": 100,
+     "right": 56,
+     "lost": 11,
+     "gained": 25,
+     "changed": 56,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 48,
+     "lost": 36,
+     "gained": 6,
+     "changed": 79,
+     "declined": 6
+    }
+   },
+   "data_lost": 100,
+   "speed": {
+    "prompt_tps": 34.3,
+    "gen_tps_short": 6.4
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 4002016132,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 4002016132,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 5960777072,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 4002016132,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "shipped": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 54,
+     "lost": 18,
+     "gained": 7,
+     "changed": 177,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 138,
+     "lost": 14,
+     "gained": 7,
+     "changed": 64,
+     "declined": 32
+    },
+    "abstain": {
+     "n": 100,
+     "right": 47,
+     "lost": 2,
+     "gained": 7,
+     "changed": 30,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 46,
+     "lost": 35,
+     "gained": 3,
+     "changed": 67,
+     "declined": 0
+    }
+   },
+   "data_lost": 51,
+   "speed": {
+    "prompt_tps": 62.0,
+    "gen_tps_short": 4.5
+   },
+   "loads": {
+    "rag:None": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:None": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:None": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "closed:None": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "shipped_ctx": {
+   "tasks": {
+    "closed": {
+     "n": 0,
+     "right": 0,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 138,
+     "lost": 14,
+     "gained": 7,
+     "changed": 64,
+     "declined": 32
+    },
+    "abstain": {
+     "n": 100,
+     "right": 47,
+     "lost": 2,
+     "gained": 7,
+     "changed": 30,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 82,
+     "lost": 3,
+     "gained": 7,
+     "changed": 18,
+     "declined": 0
+    }
+   },
+   "data_lost": 19,
+   "speed": {
+    "prompt_tps": 39.5,
+    "gen_tps_short": 4.32
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5945656606,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 7904417546,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q4_k_m_kv_q8_0": {
+   "tasks": {
+    "closed": {
+     "n": 0,
+     "right": 0,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 138,
+     "lost": 9,
+     "gained": 2,
+     "changed": 44,
+     "declined": 29
+    },
+    "abstain": {
+     "n": 100,
+     "right": 49,
+     "lost": 1,
+     "gained": 8,
+     "changed": 25,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 88,
+     "lost": 2,
+     "gained": 12,
+     "changed": 21,
+     "declined": 0
+    }
+   },
+   "data_lost": 12,
+   "speed": {
+    "prompt_tps": 18.9,
+    "gen_tps_short": 4.22
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5662624972,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  306.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q8_0):  153.00 MiB, V (q8_0):  153.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5662624972,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  306.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q8_0):  153.00 MiB, V (q8_0):  153.00 MiB"
+    },
+    "records:16384": {
+     "size": 6772028866,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 1224.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (q8_0):  612.00 MiB, V (q8_0):  612.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q4_k_m_kv_q4_0": {
+   "tasks": {
+    "closed": {
+     "n": 0,
+     "right": 0,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 143,
+     "lost": 12,
+     "gained": 10,
+     "changed": 52,
+     "declined": 32
+    },
+    "abstain": {
+     "n": 100,
+     "right": 48,
+     "lost": 0,
+     "gained": 6,
+     "changed": 22,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 85,
+     "lost": 5,
+     "gained": 12,
+     "changed": 27,
+     "declined": 0
+    }
+   },
+   "data_lost": 17,
+   "speed": {
+    "prompt_tps": 19.0,
+    "gen_tps_short": 4.3
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5511630028,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  162.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q4_0):   81.00 MiB, V (q4_0):   81.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5511630028,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  162.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q4_0):   81.00 MiB, V (q4_0):   81.00 MiB"
+    },
+    "records:16384": {
+     "size": 6168049090,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size =  648.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (q4_0):  324.00 MiB, V (q4_0):  324.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "q6_k_kv_q8_0": {
+   "tasks": {
+    "closed": {
+     "n": 0,
+     "right": 0,
+     "lost": 0,
+     "gained": 0,
+     "changed": 0,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 146,
+     "lost": 4,
+     "gained": 5,
+     "changed": 28,
+     "declined": 25
+    },
+    "abstain": {
+     "n": 100,
+     "right": 42,
+     "lost": 1,
+     "gained": 1,
+     "changed": 13,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 86,
+     "lost": 1,
+     "gained": 9,
+     "changed": 17,
+     "declined": 0
+    }
+   },
+   "data_lost": 6,
+   "speed": {
+    "prompt_tps": 18.8,
+    "gen_tps_short": 3.41
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 7163158199,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  306.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q8_0):  153.00 MiB, V (q8_0):  153.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 7163158199,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  306.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (q8_0):  153.00 MiB, V (q8_0):  153.00 MiB"
+    },
+    "records:16384": {
+     "size": 8272562093,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 1224.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (q8_0):  612.00 MiB, V (q8_0):  612.00 MiB"
+    }
+   },
+   "sampled": null
+  },
+  "4b_q8_0": {
+   "tasks": {
+    "closed": {
+     "n": 250,
+     "right": 45,
+     "lost": 32,
+     "gained": 12,
+     "changed": 207,
+     "declined": 0
+    },
+    "rag": {
+     "n": 250,
+     "right": 147,
+     "lost": 15,
+     "gained": 17,
+     "changed": 104,
+     "declined": 28
+    },
+    "abstain": {
+     "n": 100,
+     "right": 42,
+     "lost": 6,
+     "gained": 6,
+     "changed": 44,
+     "declined": 0
+    },
+    "records": {
+     "n": 100,
+     "right": 74,
+     "lost": 12,
+     "gained": 8,
+     "changed": 35,
+     "declined": 0
+    }
+   },
+   "data_lost": 33,
+   "speed": {
+    "prompt_tps": 47.3,
+    "gen_tps_short": 4.8
+   },
+   "loads": {
+    "rag:4096": {
+     "size": 5057711963,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "abstain:4096": {
+     "size": 5057711963,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    },
+    "records:16384": {
+     "size": 6985015623,
+     "context_length": 16384,
+     "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+    },
+    "closed:4096": {
+     "size": 5057711963,
+     "context_length": 4096,
+     "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+    }
+   },
+   "sampled": null
+  }
+ },
+ "repeats": {
+  "shipped vs shipped_ctx": {
+   "n": 350,
+   "differ": 0
+  }
+ },
+ "built": [
+  {
+   "budget_gib": 6,
+   "design": "q4_k_m_kv_q4_0",
+   "model": "qwen3:8b",
+   "kv": "q4_0",
+   "gib": 5.74,
+   "lost": 17,
+   "passes": false
+  },
+  {
+   "budget_gib": 8,
+   "design": "q6_k_kv_q8_0",
+   "model": "bd5/qwen3-8b:q6_k",
+   "kv": "q8_0",
+   "gib": 7.7,
+   "lost": 6,
+   "passes": false
+  },
+  {
+   "budget_gib": 12,
+   "design": "q8_0",
+   "model": "qwen3:8b-q8_0",
+   "kv": "f16",
+   "gib": 10.74,
+   "lost": 3,
+   "passes": true
+  }
+ ],
+ "noise_floor_lost": 5
+}

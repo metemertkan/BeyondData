@@ -15,6 +15,7 @@ No accounts, no keys.
 | 2 | Which vector database should you use? | [`vectors/`](vectors), [`scripts/ep02_run.py`](scripts/ep02_run.py) |
 | 3 | What happens to vector search when you add a filter? | [`vectors/filtered.py`](vectors/filtered.py), [`scripts/ep03_run.py`](scripts/ep03_run.py) |
 | 4 | How small can a vector get before search stops finding the answer? | [`vectors/compressed.py`](vectors/compressed.py), [`scripts/ep04_run.py`](scripts/ep04_run.py) |
+| 5 | What does a 4-bit model forget about your data? | [`quant/`](quant), [`scripts/ep05_run.py`](scripts/ep05_run.py) |
 
 ## Episode 1: I asked my AI for the total
 
@@ -381,4 +382,107 @@ scripts/ep04_vectors.py   the vectors alone and Matryoshka: exact search over ea
 scripts/ep04_run.py       one database at a time: per deployment load, as shipped, the c sweep, the memory ladder
 scripts/ep04_summary.py   the tables, the target, the built settings and the deploy checks
 tests/test_ep04.py
+```
+
+## Episode 5: what does a 4-bit model forget about your data?
+
+qwen3:8b (thinking off) on Ollama 0.40.11 in Docker, on the CPU (Ryzen 9 3900X, 12 threads), one request at a time.
+700 test questions about four places your data can be when a model answers:
+
+| Task | What it measures | Questions |
+| :--- | :--- | ---: |
+| closed | what the model knows: Episode 2's Natural Questions alone, NQ-open's short answers | 250 |
+| rag | what it reads: the same questions with the 3 nearest passages (exact search over Episode 2's million) | 250 |
+| abstain | whether it sticks to your data: 3 near passages without the answer; right is "not in the passages" | 100 |
+| records | what it copies: Episode 1's invoices as an export in the prompt (80 invoices, or 320 = 13,329 tokens), one field looked up | 100 |
+
+The weights: Ollama's `qwen3:8b-fp16` (the reference), `qwen3:8b-q8_0` and `qwen3:8b` (Q4_K_M, the default), and
+Q6_K, Q5_K_M, Q3_K_M and Q2_K made here from Ollama's fp16 with llama.cpp's `llama-quantize` (static, no importance
+matrix). **Answers lost** = right at fp16, wrong here. The **noise floor** is fp16 with every prompt reworded. Designs:
+**as shipped** (`qwen3:8b` with no settings: 4,096-token context, temperature 0.6), the **ladder** (context set to
+hold the data, greedy), as shipped with the context set, a KV cache at q8_0 and q4_0, qwen3:4b at Q8_0, and **built**
+(per memory budget of 6, 8 or 12 GiB, the most weight bits that fit with the KV cache that fits, checked against the
+noise floor).
+
+### Results (700 test questions; data tasks = rag + abstain + records, 450)
+
+| qwen3:8b | Loaded at 16,384 tokens (GiB) | Data right, of 450 | Data answers lost | Closed-book lost (of fp16's 65) | Writing, tokens/s |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| fp16 | 17.76 | 265 | — | — | 1.5 |
+| fp16, prompt reworded (noise floor) | 17.76 | 278 | **5** | 4 | 1.5 |
+| Q8_0 | 10.74 | 263 | 3 | 0 | 2.8 |
+| Q6_K | 8.76 | 264 | 6 | 2 | 3.6 |
+| Q5_K_M | 7.94 | 274 | 5 | 4 | 4.1 |
+| Q4_K_M (Ollama's default) | 7.36 | 269 | **13** | 8 | 4.4 |
+| Q3_K_M | 6.34 | 264 | **36** | 22 | 5.5 |
+| Q2_K | 5.55 | 206 | 100 | 43 | 6.4 |
+| **as shipped** (Q4_K_M, default context, sampled) | 5.54 (at 4,096) | 231 | **51** | 18 | 4.5 |
+| qwen3:4b Q8_0 | 6.51 | 263 | 33 | 32 | 4.8 |
+
+- **The default context forgot more than the bits.** As shipped, every lookup in the 13,329-token export was read
+  as 2,050 tokens: the end of the prompt (invoices 272–320), without the instructions. 9 of 60 right, against 45 with
+  the context set; 33 of the 60 replies gave another invoice's value (asked for INV-00018's amount, 74.00, it answered
+  USD 244.00, INV-00272's). No error. Taken apart: the default context cost 32 answers, sampling 6, the 4 bits 13.
+- **Accuracy hides which answers moved.** Q3_K_M scored 264 against fp16's 265 and lost 36 (gained 35). Q4_K_M scored
+  269 and lost 13. Below 4 bits the model says "not in the passages" more: with the answer in the passages, fp16 17
+  times, Q3_K_M 34, Q2_K 51.
+- **Same label, different file.** Ollama's Q4_K_M and Q8_0 keep `attn_v` in F16 in every layer; llama-quantize's
+  don't. The two Q4_K_M files lost 13 and 10 and differed on 134 of 700 replies.
+- **KV cache (Q4_K_M):** q8_0 lost 12, q4_0 17 (f16: 13), saving 1.05 and 1.62 GiB at 16,384 tokens. On this CPU
+  both halved reading speed (the 13,329-token export: 5.8 → 13 minutes). Exploratory: in the middle third of the long export, the three
+  designs with a compressed KV cache got 15 of 20 right, every f16-cache design 8 to 11.
+- **Built:** 12 GiB, Q8_0, lost 3: passes. 8 GiB, Q6_K with KV q8_0, lost 6: misses the noise floor (5) by one answer
+  (Q6_K with an f16 cache also lost 6). 6 GiB, Q4_K_M with KV q4_0, lost 17: fails. Exploratory: Q5_K_M with an f16
+  cache (7.94 GiB) lost 5.
+- **The number on the box** (KL divergence against fp16 on the test passages, `llama-perplexity`): mean KLD Q8_0
+  0.001, Q6_K 0.011, Q5_K_M 0.019, Q4_K_M 0.043 (llama-quantize's 0.049), Q3_K_M 0.162, Q2_K 0.722; same top token
+  98.6% down to 68.2%. It ranks the big steps as the answers lost do; perplexity doesn't (Q6_K 8.04, below Q8_0's
+  8.07; fp16 8.01).
+
+Full tables: [`results/ep05/full/summary.md`](results/ep05/full/summary.md); KL divergence in
+[`results/ep05/kld.json`](results/ep05/kld.json); the pilot (tuning questions) in `results/ep05/pilot/`. Design
+amendments, all before the full run: Q4_K_M made with llama-quantize added as its own design (Ollama's files keep
+`attn_v` in F16); the invoice-number question reworded ("Which invoice was issued to …" got the amount back); and one
+task order for every design, data tasks first, because llama-server's prompt cache makes a reply depend on what ran
+before it (a rerun in the same order repeats exactly: 0 of 168 replies differ).
+
+**Limits.** One machine, CPU only (GPU kernels differ, especially for a compressed KV cache); one model, thinking
+off; static quantization; short answers and at most 16,384 tokens; one noise floor (one rewording); one run per
+design.
+
+### Run it
+
+```bash
+# after Episode 2's data step (bash vectors/download.sh && uv run python -m vectors.data --prepare)
+curl -L -o data/ep05/raw/nq_open_validation.parquet \
+  https://huggingface.co/datasets/google-research-datasets/nq_open/resolve/main/nq_open/validation-00000-of-00001.parquet
+uv run python -m quant.tasks --prepare               # data/ep05/tasks_{pilot,full}.json
+docker compose -f docker-compose.ep05.yml up -d ollama
+for m in qwen3:8b qwen3:8b-fp16 qwen3:8b-q8_0 qwen3:4b-q8_0; do docker exec bd5-ollama ollama pull $m; done
+uv run python -m scripts.ep05_models --ladder --readback --tensors   # Q6_K..Q2_K from Ollama's fp16
+uv run python -m scripts.ep05_budget                 # Act 3's picks from loaded sizes (results/ep05/budget.json)
+uv run pytest tests/test_ep05.py
+uv run python -m scripts.ep05_run --size pilot --designs all
+uv run python -m scripts.ep05_run --size full --designs all     # ~23 h on this CPU
+uv run python -m scripts.ep05_summary --size full    # results/ep05/full/summary.md
+uv run python -m scripts.ep05_models --kld           # results/ep05/kld.json
+```
+
+`docker-compose.ep05.yml` has its own compose project (`beyonddata-ep05`, containers `bd5-*`), so its `down -v`
+never touches Episodes 1–4.
+
+### Layout
+
+```text
+quant/
+  tasks.py        the four tasks: NQ questions with passages from Episode 2, Episode 1's invoices as an export
+  prompts.py      wording A (every design) and wording B (the noise floor)
+  score.py        the NQ rule, the refusal phrase, exact values for the records
+  llm.py          one Ollama chat call: thinking off, 64-token cap, timings and token counts
+docker-compose.ep05.yml   Ollama as shipped, Ollama with a KV cache type, llama.cpp tools (b12282)
+scripts/ep05_models.py    the ladder (llama-quantize), read-back, tensor types, KL divergence
+scripts/ep05_budget.py    loaded sizes per level and KV cache type, and Act 3's picks
+scripts/ep05_run.py       every design over its tasks, one request at a time
+scripts/ep05_summary.py   lost and gained against fp16, declines, records by position, speed, memory, built
+tests/test_ep05.py
 ```

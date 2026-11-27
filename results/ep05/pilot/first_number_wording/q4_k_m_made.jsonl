@@ -1,0 +1,6 @@
+{"task": "records", "id": "S-tune:INV-00111:number", "score": "wrong", "reply": "USD 59.00", "prompt_tokens": 3404, "gen_tokens": 8, "prompt_s": 2.014, "gen_s": 2.005, "load_s": 0.001, "wall_s": 4.029, "done_reason": "stop"}
+{"task": "records", "id": "S-tune:INV-00150:number", "score": "right", "reply": "INV-00150", "prompt_tokens": 3401, "gen_tokens": 8, "prompt_s": 1.65, "gen_s": 2.034, "load_s": 0.001, "wall_s": 3.695, "done_reason": "stop"}
+{"task": "records", "id": "S-tune:INV-00166:number", "score": "right", "reply": "INV-00166", "prompt_tokens": 3401, "gen_tokens": 8, "prompt_s": 1.633, "gen_s": 2.014, "load_s": 0.001, "wall_s": 3.657, "done_reason": "stop"}
+{"task": "records", "id": "L:INV-00099:number", "score": "wrong", "reply": "USD 59.00", "prompt_tokens": 13334, "gen_tokens": 8, "prompt_s": 14.031, "gen_s": 2.818, "load_s": 0.001, "wall_s": 16.89, "done_reason": "stop"}
+{"task": "records", "id": "L:INV-00199:number", "score": "wrong", "reply": "USD 49.00", "prompt_tokens": 13332, "gen_tokens": 8, "prompt_s": 11.143, "gen_s": 2.85, "load_s": 0.001, "wall_s": 14.036, "done_reason": "stop"}
+{"task": "records", "id": "L:INV-00225:number", "score": "wrong", "reply": "USD 74.00", "prompt_tokens": 13334, "gen_tokens": 8, "prompt_s": 11.453, "gen_s": 2.8, "load_s": 0.001, "wall_s": 14.297, "done_reason": "stop"}

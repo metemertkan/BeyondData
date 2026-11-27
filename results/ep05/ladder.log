@@ -1,0 +1,13 @@
++ docker exec bd5-ollama ollama show --modelfile qwen3:8b-fp16
++ docker exec bd5-ollama ollama show --modelfile qwen3:8b
++ docker exec bd5-ollama ollama create bd5/qwen3-8b:q6_k -f /gguf/Modelfile.q6_k
++ docker compose -f /home/server/Projects/AIContentCreator/BeyondData/docker-compose.ep05.yml --profile tools run --rm --entrypoint /app/llama-quantize llamacpp /models/models/blobs/sha256-8a571487237a265daf6eda5a266db146b79b6765bd81e6b284a0aa524578a521 /gguf/qwen3-8b-q5_k_m.gguf Q5_K_M
++ docker exec bd5-ollama ollama show --modelfile qwen3:8b
++ docker exec bd5-ollama ollama create bd5/qwen3-8b:q5_k_m -f /gguf/Modelfile.q5_k_m
++ docker compose -f /home/server/Projects/AIContentCreator/BeyondData/docker-compose.ep05.yml --profile tools run --rm --entrypoint /app/llama-quantize llamacpp /models/models/blobs/sha256-8a571487237a265daf6eda5a266db146b79b6765bd81e6b284a0aa524578a521 /gguf/qwen3-8b-q4_k_m.gguf Q4_K_M
++ docker compose -f /home/server/Projects/AIContentCreator/BeyondData/docker-compose.ep05.yml --profile tools run --rm --entrypoint /app/llama-quantize llamacpp /models/models/blobs/sha256-8a571487237a265daf6eda5a266db146b79b6765bd81e6b284a0aa524578a521 /gguf/qwen3-8b-q3_k_m.gguf Q3_K_M
++ docker exec bd5-ollama ollama show --modelfile qwen3:8b
++ docker exec bd5-ollama ollama create bd5/qwen3-8b:q3_k_m -f /gguf/Modelfile.q3_k_m
++ docker compose -f /home/server/Projects/AIContentCreator/BeyondData/docker-compose.ep05.yml --profile tools run --rm --entrypoint /app/llama-quantize llamacpp /models/models/blobs/sha256-8a571487237a265daf6eda5a266db146b79b6765bd81e6b284a0aa524578a521 /gguf/qwen3-8b-q2_k.gguf Q2_K
++ docker exec bd5-ollama ollama show --modelfile qwen3:8b
++ docker exec bd5-ollama ollama create bd5/qwen3-8b:q2_k -f /gguf/Modelfile.q2_k

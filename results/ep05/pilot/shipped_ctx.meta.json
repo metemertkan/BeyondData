@@ -1,0 +1,21 @@
+{
+ "design": "shipped_ctx",
+ "model": "qwen3:8b",
+ "tasks": [
+  "records"
+ ],
+ "options": {
+  "seed": 1
+ },
+ "set_ctx": true,
+ "wording": "A",
+ "kv": null,
+ "loads": {
+  "records:16384": {
+   "size": 7904417546,
+   "context_length": 16384,
+   "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+  }
+ },
+ "finished": "2026-11-26 02:06:47"
+}

@@ -1,0 +1,40 @@
+{
+ "design": "q3_k_m",
+ "model": "bd5/qwen3-8b:q3_k_m",
+ "tasks": [
+  "rag",
+  "abstain",
+  "records",
+  "closed"
+ ],
+ "options": {
+  "temperature": 0,
+  "seed": 1
+ },
+ "set_ctx": true,
+ "wording": "A",
+ "kv": null,
+ "loads": {
+  "rag:4096": {
+   "size": 4844452576,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  },
+  "abstain:4096": {
+   "size": 4844452576,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  },
+  "records:16384": {
+   "size": 6803213516,
+   "context_length": 16384,
+   "kv_log": "llama_kv_cache: size = 2304.00 MiB ( 16384 cells,  36 layers,  1/1 seqs), K (f16): 1152.00 MiB, V (f16): 1152.00 MiB"
+  },
+  "closed:4096": {
+   "size": 4844452576,
+   "context_length": 4096,
+   "kv_log": "llama_kv_cache: size =  576.00 MiB (  4096 cells,  36 layers,  1/1 seqs), K (f16):  288.00 MiB, V (f16):  288.00 MiB"
+  }
+ },
+ "finished": "2026-11-26 15:16:30"
+}

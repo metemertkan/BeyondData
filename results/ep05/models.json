@@ -1,0 +1,64 @@
+{
+ "F16": {
+  "model": "qwen3:8b-fp16",
+  "source": "Ollama library",
+  "quantization_level": "F16",
+  "parameter_size": "8.2B",
+  "blob": "sha256-8a571487237a265daf6eda5a266db146b79b6765bd81e6b284a0aa524578a521"
+ },
+ "Q8_0": {
+  "model": "qwen3:8b-q8_0",
+  "source": "Ollama library",
+  "quantization_level": "Q8_0",
+  "parameter_size": "8.2B",
+  "blob": "sha256-d87f4a5a2f1a6051d9fac010c12f76f3ba2137b137d413ba8f4d3a3d06b3a25b",
+  "made_here_sha256": "d6ead60e0f95e88701c0e5ba10dca29781cffcec90e1a89922fb2db68f8ab460",
+  "made_here_bytes": 8709518112,
+  "same_as_made_here": false
+ },
+ "Q4_K_M": {
+  "model": "qwen3:8b",
+  "source": "Ollama library",
+  "quantization_level": "Q4_K_M",
+  "parameter_size": "8.2B",
+  "blob": "sha256-a3de86cd1c132c822487ededd47a324c50491393e6565cd14bafa40d0b8e686f",
+  "made_here_sha256": "0d0875e47da0bf2db193c9d408d9adde9bf8e80db707c2ed71a6409e2a3069b7",
+  "made_here_bytes": 5027783456,
+  "same_as_made_here": false
+ },
+ "Q6_K": {
+  "model": "bd5/qwen3-8b:q6_k",
+  "source": "llama-quantize from Ollama's fp16",
+  "quantization_level": "Q6_K",
+  "parameter_size": "8.2B",
+  "blob": "sha256-30b7622932c2068b49a8c82d56927c502ad1129c354042de5f54ebe7f3c22de5"
+ },
+ "Q5_K_M": {
+  "model": "bd5/qwen3-8b:q5_k_m",
+  "source": "llama-quantize from Ollama's fp16",
+  "quantization_level": "Q5_K_M",
+  "parameter_size": "8.2B",
+  "blob": "sha256-86ba55566fa746a80781c4781cd19d9ad296b55c98338926224c63dece26315b"
+ },
+ "Q4_K_M (made here)": {
+  "model": "bd5/qwen3-8b:q4_k_m",
+  "source": "llama-quantize from Ollama's fp16",
+  "quantization_level": "Q4_K_M",
+  "parameter_size": "8.2B",
+  "blob": "sha256-0d0875e47da0bf2db193c9d408d9adde9bf8e80db707c2ed71a6409e2a3069b7"
+ },
+ "Q3_K_M": {
+  "model": "bd5/qwen3-8b:q3_k_m",
+  "source": "llama-quantize from Ollama's fp16",
+  "quantization_level": "Q3_K_M",
+  "parameter_size": "8.2B",
+  "blob": "sha256-626d78c15de168426a44d8cceb13e1fd868b786d2e59e7036d10d414f1303338"
+ },
+ "Q2_K": {
+  "model": "bd5/qwen3-8b:q2_k",
+  "source": "llama-quantize from Ollama's fp16",
+  "quantization_level": "Q2_K",
+  "parameter_size": "8.2B",
+  "blob": "sha256-538068ebbd56ca96999e70a8f47c762a9e17b3b1882805917704bf8d00cfce0d"
+ }
+}
