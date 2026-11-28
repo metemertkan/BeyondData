@@ -1,0 +1,2101 @@
+{
+ "designs": [
+  {
+   "design": "once",
+   "label": "once (as shipped)",
+   "act": 1,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 0,
+   "month_embed_cpu_s": 0.0,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1649,
+    "outdated": 708,
+    "current": 921,
+    "deleted": 20,
+    "record_chunks": 1665,
+    "missing": 744,
+    "pending": 650,
+    "queue": 0
+   },
+   "worst_day_bad": 728,
+   "worst_day_bad_share": 0.441,
+   "changes": 650,
+   "never_current": 650,
+   "never_clean": 650,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": null,
+   "current_p95_s": null,
+   "current_max_s": null,
+   "migration_current_max_s": null,
+   "migration_never": 488,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 81,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 23,
+    "stale": 66,
+    "other": 11
+   },
+   "answers_by_kind": {
+    "changed": {
+     "stale": 60
+    },
+    "unchanged": {
+     "current": 19,
+     "other": 1
+    },
+    "deleted": {
+     "current": 4,
+     "stale": 6
+    },
+    "new": {
+     "other": 10
+    }
+   },
+   "stale_from_index": 66,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "15 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "1 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "4 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "12 h": {
+     "n": 8,
+     "current": 0,
+     "stale": 8
+    },
+    "1 day": {
+     "n": 8,
+     "current": 0,
+     "stale": 8
+    },
+    "3 days": {
+     "n": 8,
+     "current": 0,
+     "stale": 8
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "rerun",
+   "label": "rerun nightly (as shipped)",
+   "act": 1,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 9969,
+   "month_embed_cpu_s": 344.9,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 11618,
+    "outdated": 2835,
+    "current": 1665,
+    "duplicate": 7058,
+    "deleted": 60,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 632,
+    "queue": 0
+   },
+   "worst_day_bad": 9953,
+   "worst_day_bad_share": 0.857,
+   "changes": 658,
+   "never_current": 0,
+   "never_clean": 632,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 40983.47404837608,
+   "current_p95_s": 58948.61245679855,
+   "current_max_s": 63756.231833934784,
+   "migration_current_max_s": 18057.612456798553,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 60,
+   "context_duplicate": 37,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 28,
+    "stale": 49,
+    "other": 10,
+    "both": 4,
+    "declined": 9
+   },
+   "answers_by_kind": {
+    "changed": {
+     "stale": 45,
+     "current": 6,
+     "both": 4,
+     "other": 1,
+     "declined": 4
+    },
+    "unchanged": {
+     "current": 13,
+     "declined": 5,
+     "other": 2
+    },
+    "deleted": {
+     "current": 6,
+     "stale": 4
+    },
+    "new": {
+     "other": 7,
+     "current": 3
+    }
+   },
+   "stale_from_index": 53,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 8
+    },
+    "15 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 8
+    },
+    "1 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 8
+    },
+    "4 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 8
+    },
+    "12 h": {
+     "n": 8,
+     "current": 2,
+     "stale": 6
+    },
+    "1 day": {
+     "n": 8,
+     "current": 1,
+     "stale": 7
+    },
+    "3 days": {
+     "n": 8,
+     "current": 3,
+     "stale": 4
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "rebuild",
+   "label": "rebuild nightly",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 9969,
+   "month_embed_cpu_s": 344.9,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 25,
+   "worst_day_bad_share": 0.015,
+   "changes": 746,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 42064.47404837608,
+   "current_p95_s": 59749.61245679855,
+   "current_max_s": 64088.61245679855,
+   "migration_current_max_s": 18057.612456798553,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 52,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 45,
+    "stale": 45,
+    "other": 10
+   },
+   "answers_by_kind": {
+    "changed": {
+     "stale": 39,
+     "current": 21
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 4,
+     "stale": 6
+    },
+    "new": {
+     "other": 7,
+     "current": 3
+    }
+   },
+   "stale_from_index": 45,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "15 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "1 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "4 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "12 h": {
+     "n": 8,
+     "current": 5,
+     "stale": 3
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "upsert",
+   "label": "upsert nightly",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 9969,
+   "month_embed_cpu_s": 344.9,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1699,
+    "current": 1665,
+    "outdated": 8,
+    "deleted": 20,
+    "duplicate": 6,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 18,
+    "queue": 0
+   },
+   "worst_day_bad": 45,
+   "worst_day_bad_share": 0.027,
+   "changes": 741,
+   "never_current": 0,
+   "never_clean": 18,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 41966.231833934784,
+   "current_p95_s": 59749.61245679855,
+   "current_max_s": 64088.61245679855,
+   "migration_current_max_s": 18057.612456798553,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 54,
+   "context_duplicate": 1,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 45,
+    "stale": 45,
+    "other": 10
+   },
+   "answers_by_kind": {
+    "changed": {
+     "stale": 39,
+     "current": 21
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 4,
+     "stale": 6
+    },
+    "new": {
+     "other": 7,
+     "current": 3
+    }
+   },
+   "stale_from_index": 45,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "15 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "1 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "4 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 9
+    },
+    "12 h": {
+     "n": 8,
+     "current": 5,
+     "stale": 3
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "record_manager",
+   "label": "record manager",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 2179,
+   "month_embed_cpu_s": 75.4,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 5,
+   "worst_day_bad_share": 0.003,
+   "changes": 769,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 136.5536332130432,
+   "current_p95_s": 292.03460216522217,
+   "current_max_s": 298.1038062572479,
+   "migration_current_max_s": 36.26297569274902,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 13,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 84,
+    "stale": 10,
+    "other": 6
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 53,
+     "stale": 4,
+     "other": 3
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 4,
+     "stale": 6
+    },
+    "new": {
+     "current": 10
+    }
+   },
+   "stale_from_index": 10,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 4,
+     "stale": 4
+    },
+    "15 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "1 h": {
+     "n": 9,
+     "current": 9,
+     "stale": 0
+    },
+    "4 h": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "12 h": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": true,
+    "fresh_migration": true,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "poll",
+   "label": "poll updated_at",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 305,
+   "month_embed_cpu_s": 10.6,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1685,
+    "current": 1081,
+    "outdated": 584,
+    "deleted": 20,
+    "record_chunks": 1665,
+    "missing": 584,
+    "pending": 529,
+    "queue": 0
+   },
+   "worst_day_bad": 626,
+   "worst_day_bad_share": 0.372,
+   "changes": 735,
+   "never_current": 529,
+   "never_clean": 529,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 136.5536332130432,
+   "current_p95_s": 292.06920409202576,
+   "current_max_s": 298.1730103492737,
+   "migration_current_max_s": 72000.03460216522,
+   "migration_never": 521,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 37,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 75,
+    "stale": 17,
+    "other": 8
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 43,
+     "stale": 11,
+     "other": 6
+    },
+    "unchanged": {
+     "current": 18,
+     "other": 2
+    },
+    "deleted": {
+     "current": 4,
+     "stale": 6
+    },
+    "new": {
+     "current": 10
+    }
+   },
+   "stale_from_index": 17,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 3,
+     "stale": 5
+    },
+    "15 min": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "1 h": {
+     "n": 9,
+     "current": 8,
+     "stale": 1
+    },
+    "4 h": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "12 h": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    },
+    "1 day": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    },
+    "3 days": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "cdc",
+   "label": "CDC",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 1368,
+   "month_embed_cpu_s": 47.3,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 0,
+   "worst_day_bad_share": 0.0,
+   "changes": 769,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 0.03460216522216797,
+   "current_p95_s": 0.1038062572479248,
+   "current_max_s": 0.13840842247009277,
+   "migration_current_max_s": 36.78201413154602,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 0,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 94,
+    "other": 6
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 57,
+     "other": 3
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "current": 10
+    }
+   },
+   "stale_from_index": 0,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "15 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "1 h": {
+     "n": 9,
+     "current": 9,
+     "stale": 0
+    },
+    "4 h": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "12 h": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": true,
+    "fresh_normal": true,
+    "fresh_migration": true,
+    "agrees_at_audits": true,
+    "passes": true
+   }
+  },
+  {
+   "design": "same_db",
+   "label": "same database",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 305,
+   "month_embed_cpu_s": 10.6,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1081,
+    "outdated": 584,
+    "record_chunks": 1665,
+    "missing": 584,
+    "pending": 519,
+    "queue": 0
+   },
+   "worst_day_bad": 606,
+   "worst_day_bad_share": 0.364,
+   "changes": 735,
+   "never_current": 519,
+   "never_clean": 519,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 0.0,
+   "current_p95_s": 0.0,
+   "current_max_s": 0.0,
+   "migration_current_max_s": 71984.0,
+   "migration_never": 519,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 24,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 85,
+    "other": 8,
+    "stale": 7
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 47,
+     "other": 6,
+     "stale": 7
+    },
+    "unchanged": {
+     "current": 18,
+     "other": 2
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "current": 10
+    }
+   },
+   "stale_from_index": 7,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "15 min": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "1 h": {
+     "n": 9,
+     "current": 8,
+     "stale": 1
+    },
+    "4 h": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "12 h": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    },
+    "1 day": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    },
+    "3 days": {
+     "n": 8,
+     "current": 6,
+     "stale": 1
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": true,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "built",
+   "label": "built",
+   "act": 3,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 850,
+   "month_embed_cpu_s": 29.4,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 0,
+   "worst_day_bad_share": 0.0,
+   "changes": 769,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 0.03460216522216797,
+   "current_p95_s": 0.06920409202575684,
+   "current_max_s": 0.1038062572479248,
+   "migration_current_max_s": 21.48792839050293,
+   "migration_never": 0,
+   "notes": {
+    "reconciliation": [
+     {
+      "t": "2026-09-08T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-09T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-10T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-11T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-12T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-13T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     }
+    ]
+   },
+   "questions": 100,
+   "context_outdated_or_deleted": 0,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 94,
+    "other": 6
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 57,
+     "other": 3
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "current": 10
+    }
+   },
+   "stale_from_index": 0,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "15 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "1 h": {
+     "n": 9,
+     "current": 9,
+     "stale": 0
+    },
+    "4 h": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "12 h": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": true,
+    "fresh_normal": true,
+    "fresh_migration": true,
+    "agrees_at_audits": true,
+    "passes": true
+   }
+  },
+  {
+   "design": "rebuild_check",
+   "label": "rebuild + check (expl.)",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 9969,
+   "month_embed_cpu_s": 344.9,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 25,
+   "worst_day_bad_share": 0.015,
+   "changes": 746,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 42064.47404837608,
+   "current_p95_s": 59749.61245679855,
+   "current_max_s": 64088.61245679855,
+   "migration_current_max_s": 18057.612456798553,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 0,
+   "context_duplicate": 0,
+   "context_short": 9,
+   "dropped_chunks": 144,
+   "answers": {
+    "current": 50,
+    "declined": 11,
+    "other": 35,
+    "stale": 4
+   },
+   "answers_by_kind": {
+    "changed": {
+     "declined": 11,
+     "other": 25,
+     "current": 20,
+     "stale": 4
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "other": 7,
+     "current": 3
+    }
+   },
+   "stale_from_index": 0,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 1
+    },
+    "15 min": {
+     "n": 9,
+     "current": 0,
+     "stale": 1
+    },
+    "1 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 1
+    },
+    "4 h": {
+     "n": 9,
+     "current": 0,
+     "stale": 1
+    },
+    "12 h": {
+     "n": 8,
+     "current": 5,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 7,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": true,
+    "fresh_normal": false,
+    "fresh_migration": false,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "cdc_outage",
+   "label": "CDC, worker down 12 h (expl.)",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 1368,
+   "month_embed_cpu_s": 47.3,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 6,
+   "worst_day_bad_share": 0.004,
+   "changes": 769,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 0.03460216522216797,
+   "current_p95_s": 26760.519031763077,
+   "current_max_s": 38849.03460216522,
+   "migration_current_max_s": 36.78201413154602,
+   "migration_never": 0,
+   "notes": {},
+   "questions": 100,
+   "context_outdated_or_deleted": 3,
+   "context_duplicate": 0,
+   "context_short": 0,
+   "dropped_chunks": 0,
+   "answers": {
+    "current": 91,
+    "stale": 2,
+    "other": 7
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 55,
+     "stale": 2,
+     "other": 3
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "current": 9,
+     "other": 1
+    }
+   },
+   "stale_from_index": 2,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "15 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "1 h": {
+     "n": 9,
+     "current": 9,
+     "stale": 0
+    },
+    "4 h": {
+     "n": 9,
+     "current": 7,
+     "stale": 1
+    },
+    "12 h": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": false,
+    "fresh_normal": false,
+    "fresh_migration": true,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  },
+  {
+   "design": "built_outage",
+   "label": "built, worker down 12 h (expl.)",
+   "act": 2,
+   "initial_chunks": 1649,
+   "month_chunks_embedded": 850,
+   "month_embed_cpu_s": 29.4,
+   "final": {
+    "t": "2026-09-13T12:00:00+00:00",
+    "entries": 1665,
+    "current": 1665,
+    "record_chunks": 1665,
+    "missing": 0,
+    "pending": 0,
+    "queue": 0
+   },
+   "worst_day_bad": 6,
+   "worst_day_bad_share": 0.004,
+   "changes": 769,
+   "never_current": 0,
+   "never_clean": 0,
+   "last_day_changes": 0,
+   "last_day_not_current": 0,
+   "current_p50_s": 0.03460216522216797,
+   "current_p95_s": 26760.380623817444,
+   "current_max_s": 38849.03460216522,
+   "migration_current_max_s": 21.48792839050293,
+   "migration_never": 0,
+   "notes": {
+    "reconciliation": [
+     {
+      "t": "2026-09-08T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-09T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-10T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-11T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-12T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     },
+     {
+      "t": "2026-09-13T02:00:00+00:00",
+      "added": 0,
+      "deleted": 0,
+      "restamped": 0
+     }
+    ]
+   },
+   "questions": 100,
+   "context_outdated_or_deleted": 0,
+   "context_duplicate": 0,
+   "context_short": 2,
+   "dropped_chunks": 13,
+   "answers": {
+    "current": 91,
+    "other": 9
+   },
+   "answers_by_kind": {
+    "changed": {
+     "current": 55,
+     "other": 5
+    },
+    "unchanged": {
+     "current": 17,
+     "other": 3
+    },
+    "deleted": {
+     "current": 10
+    },
+    "new": {
+     "current": 9,
+     "other": 1
+    }
+   },
+   "stale_from_index": 0,
+   "by_delay": {
+    "2 min": {
+     "n": 9,
+     "current": 7,
+     "stale": 0
+    },
+    "15 min": {
+     "n": 9,
+     "current": 8,
+     "stale": 0
+    },
+    "1 h": {
+     "n": 9,
+     "current": 9,
+     "stale": 0
+    },
+    "4 h": {
+     "n": 9,
+     "current": 7,
+     "stale": 0
+    },
+    "12 h": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "1 day": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    },
+    "3 days": {
+     "n": 8,
+     "current": 8,
+     "stale": 0
+    }
+   },
+   "target": {
+    "no_stale_context": true,
+    "fresh_normal": false,
+    "fresh_migration": true,
+    "agrees_at_audits": false,
+    "passes": false
+   }
+  }
+ ],
+ "realtime": {},
+ "stores": {
+  "chroma": {
+   "add_again": {
+    "error": null,
+    "count_before": 100000,
+    "count_after": 100000,
+    "found_by_new": 0,
+    "found_by_old": 200,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "upsert",
+   "update_new_at_once": 200,
+   "update_new_max_s": 1.2409989722073078e-05,
+   "update_old_at_once_gone": 200,
+   "update_old_gone_max_s": 1.2409989722073078e-05,
+   "delete_at_once": 200,
+   "delete_max_s": 2.787896664813161e-05,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.9809,
+    "p50_ms": 4.09,
+    "p95_ms": 14.87,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.9809,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 589.4,
+    "disk_bytes": 446189692,
+    "stats": {}
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 21.4,
+     "per_s": 466.7,
+     "label": "round 1",
+     "recall": 0.9811,
+     "p50_ms": 11.68,
+     "p95_ms": 17.78,
+     "recall_with_replaced": 0.9818,
+     "recall_without_replaced": 0.9782,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 600.8,
+     "disk_bytes": 447272868,
+     "stats": {}
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 24.9,
+     "per_s": 402.1,
+     "label": "round 2",
+     "recall": 0.9796,
+     "p50_ms": 12.1,
+     "p95_ms": 22.8,
+     "recall_with_replaced": 0.9797,
+     "recall_without_replaced": 0.978,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 603.0,
+     "disk_bytes": 447272868,
+     "stats": {}
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 29.1,
+     "per_s": 344.2,
+     "label": "round 3",
+     "recall": 0.9819,
+     "p50_ms": 12.9,
+     "p95_ms": 21.63,
+     "recall_with_replaced": 0.9821,
+     "recall_without_replaced": 0.975,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 605.5,
+     "disk_bytes": 447272868,
+     "stats": {}
+    }
+   ],
+   "maintain": {
+    "s": 600
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.9819,
+    "p50_ms": 4.99,
+    "p95_ms": 16.93,
+    "recall_with_replaced": 0.9821,
+    "recall_without_replaced": 0.975,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 605.8,
+    "disk_bytes": 447272868,
+    "stats": {}
+   }
+  },
+  "elasticsearch": {
+   "add_again": {
+    "error": null,
+    "count_before": 100000,
+    "count_after": 100000,
+    "found_by_new": 200,
+    "found_by_old": 0,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "bulk index with the same _id (replaces the document)",
+   "update_new_at_once": 0,
+   "update_new_max_s": 1.0738938369904645,
+   "update_old_at_once_gone": 0,
+   "update_old_gone_max_s": 1.0553004529792815,
+   "delete_at_once": 0,
+   "delete_max_s": 1.0654229079955257,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.9419,
+    "p50_ms": 12.25,
+    "p95_ms": 22.71,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.9419,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 9129.0,
+    "disk_bytes": 725946682,
+    "stats": {
+     "docs": 100000,
+     "deleted_docs": 0,
+     "segments": 6
+    }
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 14.2,
+     "per_s": 703.3,
+     "label": "round 1",
+     "recall": 0.9486,
+     "p50_ms": 6.49,
+     "p95_ms": 12.24,
+     "recall_with_replaced": 0.9534,
+     "recall_without_replaced": 0.9285,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 9193.5,
+     "disk_bytes": 671996248,
+     "stats": {
+      "docs": 99800,
+      "deleted_docs": 10748,
+      "segments": 5
+     }
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 14.1,
+     "per_s": 707.1,
+     "label": "round 2",
+     "recall": 0.9513,
+     "p50_ms": 7.53,
+     "p95_ms": 15.62,
+     "recall_with_replaced": 0.9524,
+     "recall_without_replaced": 0.9339,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 9197.6,
+     "disk_bytes": 716212312,
+     "stats": {
+      "docs": 99800,
+      "deleted_docs": 20506,
+      "segments": 5
+     }
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 12.8,
+     "per_s": 781.8,
+     "label": "round 3",
+     "recall": 0.9509,
+     "p50_ms": 11.6,
+     "p95_ms": 17.95,
+     "recall_with_replaced": 0.9514,
+     "recall_without_replaced": 0.9321,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 9215.0,
+     "disk_bytes": 1076456179,
+     "stats": {
+      "docs": 99800,
+      "deleted_docs": 29631,
+      "segments": 10
+     }
+    }
+   ],
+   "maintain": {
+    "s": 0.3,
+    "before": {
+     "docs": 99800,
+     "deleted_docs": 29631,
+     "segments": 10
+    },
+    "after": {
+     "docs": 99800,
+     "deleted_docs": 29631,
+     "segments": 10
+    }
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.9486,
+    "p50_ms": 2.98,
+    "p95_ms": 4.86,
+    "recall_with_replaced": 0.9491,
+    "recall_without_replaced": 0.9321,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 9206.8,
+    "disk_bytes": 695196268,
+    "stats": {
+     "docs": 99800,
+     "deleted_docs": 29631,
+     "segments": 10
+    }
+   }
+  },
+  "milvus": {
+   "add_again": {
+    "error": null,
+    "count_before": 100000,
+    "count_after": 101000,
+    "found_by_new": 200,
+    "found_by_old": 200,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "upsert",
+   "update_new_at_once": 0,
+   "update_new_max_s": 0.23689533898141235,
+   "update_old_at_once_gone": 0,
+   "update_old_gone_max_s": 0.23615148302633315,
+   "delete_at_once": 0,
+   "delete_max_s": 0.22277322900481522,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.8568,
+    "p50_ms": 1.28,
+    "p95_ms": 2.05,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.8568,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 962.1,
+    "disk_bytes": 2336052141,
+    "stats": {
+     "loaded_segments": 1
+    }
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 1.0,
+     "per_s": 9573.3,
+     "label": "round 1",
+     "recall": 0.8765,
+     "p50_ms": 2.04,
+     "p95_ms": 3.11,
+     "recall_with_replaced": 0.8895,
+     "recall_without_replaced": 0.8223,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1535.0,
+     "disk_bytes": 2424818247,
+     "stats": {
+      "loaded_segments": 1
+     }
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 1.0,
+     "per_s": 9545.7,
+     "label": "round 2",
+     "recall": 0.8811,
+     "p50_ms": 3.22,
+     "p95_ms": 4.33,
+     "recall_with_replaced": 0.8849,
+     "recall_without_replaced": 0.8203,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1476.6,
+     "disk_bytes": 2421194420,
+     "stats": {
+      "loaded_segments": 1
+     }
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 1.0,
+     "per_s": 10244.6,
+     "label": "round 3",
+     "recall": 0.8889,
+     "p50_ms": 5.73,
+     "p95_ms": 8.43,
+     "recall_with_replaced": 0.8903,
+     "recall_without_replaced": 0.8393,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1265.7,
+     "disk_bytes": 2699104968,
+     "stats": {
+      "loaded_segments": 1
+     }
+    }
+   ],
+   "maintain": {
+    "s": 225.1,
+    "compaction": "Completed",
+    "segments_after": 1,
+    "settle": {
+     "settle_s": 220,
+     "segment_history": [
+      {
+       "t_s": 0,
+       "segments": 1,
+       "rows": [
+        100000
+       ]
+      },
+      {
+       "t_s": 10,
+       "segments": 2,
+       "rows": [
+        100000,
+        29200
+       ]
+      },
+      {
+       "t_s": 40,
+       "segments": 1,
+       "rows": [
+        129200
+       ]
+      }
+     ]
+    }
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.8344,
+    "p50_ms": 5.33,
+    "p95_ms": 12.69,
+    "recall_with_replaced": 0.8348,
+    "recall_without_replaced": 0.8214,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 1115.1,
+    "disk_bytes": 3578127908,
+    "stats": {
+     "loaded_segments": 1
+    }
+   }
+  },
+  "pgvector": {
+   "add_again": {
+    "error": "UniqueViolation: duplicate key value violates unique constraint \"docs_pkey\"\nDETAIL:  Key (id)=(451922) already exists.\nCONTEXT:  COPY docs, line 1",
+    "count_before": 100000,
+    "count_after": 100000,
+    "found_by_new": 0,
+    "found_by_old": 200,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "INSERT \u2026 ON CONFLICT (id) DO UPDATE SET embedding = EXCLUDED.embedding",
+   "update_new_at_once": 200,
+   "update_new_max_s": 4.690024070441723e-06,
+   "update_old_at_once_gone": 200,
+   "update_old_gone_max_s": 4.690024070441723e-06,
+   "delete_at_once": 200,
+   "delete_max_s": 9.300012607127428e-06,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.9582,
+    "p50_ms": 3.51,
+    "p95_ms": 5.0,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.9582,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 217.8,
+    "disk_bytes": 1899460925,
+    "stats": {
+     "dead_tuples": 0,
+     "index_bytes": 821215232
+    }
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 59.9,
+     "per_s": 167.1,
+     "label": "round 1",
+     "recall": 0.9614,
+     "p50_ms": 3.79,
+     "p95_ms": 5.68,
+     "recall_with_replaced": 0.9608,
+     "recall_without_replaced": 0.9637,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 242.4,
+     "disk_bytes": 2595764541,
+     "stats": {
+      "dead_tuples": 12400,
+      "index_bytes": 912941056
+     }
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 62.0,
+     "per_s": 161.2,
+     "label": "round 2",
+     "recall": 0.957,
+     "p50_ms": 4.02,
+     "p95_ms": 6.22,
+     "recall_with_replaced": 0.9572,
+     "recall_without_replaced": 0.9542,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 246.7,
+     "disk_bytes": 2734463293,
+     "stats": {
+      "dead_tuples": 22400,
+      "index_bytes": 994828288
+     }
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 67.7,
+     "per_s": 147.6,
+     "label": "round 3",
+     "recall": 0.9518,
+     "p50_ms": 4.13,
+     "p95_ms": 6.3,
+     "recall_with_replaced": 0.952,
+     "recall_without_replaced": 0.9464,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 251.7,
+     "disk_bytes": 2816358717,
+     "stats": {
+      "dead_tuples": 29000,
+      "index_bytes": 1057038336
+     }
+    }
+   ],
+   "maintain": {
+    "s": 547.7,
+    "dead_tuples_before": 29000,
+    "dead_tuples_after": 0
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.9649,
+    "p50_ms": 3.46,
+    "p95_ms": 4.92,
+    "recall_with_replaced": 0.9648,
+    "recall_without_replaced": 0.9679,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 243.5,
+    "disk_bytes": 2816383293,
+    "stats": {
+     "dead_tuples": 0,
+     "index_bytes": 1057038336
+    }
+   }
+  },
+  "qdrant": {
+   "add_again": {
+    "error": null,
+    "count_before": 100000,
+    "count_after": 100000,
+    "found_by_new": 200,
+    "found_by_old": 0,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "upsert (wait=True, the client's default)",
+   "update_new_at_once": 200,
+   "update_new_max_s": 8.549017366021872e-06,
+   "update_old_at_once_gone": 200,
+   "update_old_gone_max_s": 8.549017366021872e-06,
+   "delete_at_once": 200,
+   "delete_max_s": 1.2699980288743973e-05,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.9945,
+    "p50_ms": 13.43,
+    "p95_ms": 22.61,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.9945,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 210.6,
+    "disk_bytes": 755246767,
+    "stats": {
+     "segments": 6,
+     "status": "green",
+     "indexed": 99000
+    }
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 8.4,
+     "per_s": 1186.7,
+     "label": "round 1",
+     "recall": 0.9946,
+     "p50_ms": 6.21,
+     "p95_ms": 25.88,
+     "recall_with_replaced": 0.9941,
+     "recall_without_replaced": 0.9969,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 210.4,
+     "disk_bytes": 749541545,
+     "stats": {
+      "segments": 6,
+      "status": "green",
+      "indexed": 105683
+     }
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 9.3,
+     "per_s": 1075.1,
+     "label": "round 2",
+     "recall": 0.993,
+     "p50_ms": 16.94,
+     "p95_ms": 35.32,
+     "recall_with_replaced": 0.9929,
+     "recall_without_replaced": 0.9949,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 191.2,
+     "disk_bytes": 753928275,
+     "stats": {
+      "segments": 6,
+      "status": "green",
+      "indexed": 106739
+     }
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 6.8,
+     "per_s": 1477.0,
+     "label": "round 3",
+     "recall": 0.9936,
+     "p50_ms": 6.89,
+     "p95_ms": 26.71,
+     "recall_with_replaced": 0.9936,
+     "recall_without_replaced": 0.9929,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 212.2,
+     "disk_bytes": 1175760022,
+     "stats": {
+      "segments": 6,
+      "status": "green",
+      "indexed": 107518
+     }
+    }
+   ],
+   "maintain": {
+    "s": 6.0,
+    "points": 99800,
+    "indexed_vectors": 107518
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.994,
+    "p50_ms": 12.45,
+    "p95_ms": 19.1,
+    "recall_with_replaced": 0.9939,
+    "recall_without_replaced": 0.9964,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 190.0,
+    "disk_bytes": 790746013,
+    "stats": {
+     "segments": 6,
+     "status": "green",
+     "indexed": 107518
+    }
+   }
+  },
+  "weaviate": {
+   "add_again": {
+    "error": null,
+    "count_before": 100000,
+    "count_after": 100000,
+    "found_by_new": 200,
+    "found_by_old": 0,
+    "searched": 200,
+    "after_upsert_count": 100000,
+    "after_upsert_found_by_new": 200,
+    "after_upsert_found_by_old": 0
+   },
+   "upsert_call": "insert_many with the same ids (batch import replaces an existing object)",
+   "update_new_at_once": 200,
+   "update_new_max_s": 1.8799910321831703e-06,
+   "update_old_at_once_gone": 200,
+   "update_old_gone_max_s": 1.8799910321831703e-06,
+   "delete_at_once": 200,
+   "delete_max_s": 1.2699747458100319e-06,
+   "delete_never": 0,
+   "n_vis": 200,
+   "fresh": {
+    "label": "fresh",
+    "recall": 0.9909,
+    "p50_ms": 2.54,
+    "p95_ms": 3.35,
+    "recall_with_replaced": null,
+    "recall_without_replaced": 0.9909,
+    "questions_with_replaced": 0,
+    "count": 100000,
+    "expected_count": 100000,
+    "mem_mib": 1015.0,
+    "disk_bytes": 514072599,
+    "stats": {
+     "vector_queue": 0
+    }
+   },
+   "churn": [
+    {
+     "round": 1,
+     "replaced": 10000,
+     "write_s": 8.8,
+     "per_s": 1141.0,
+     "label": "round 1",
+     "recall": 0.9914,
+     "p50_ms": 2.7,
+     "p95_ms": 3.53,
+     "recall_with_replaced": 0.9914,
+     "recall_without_replaced": 0.9912,
+     "questions_with_replaced": 807,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1206.3,
+     "disk_bytes": 575632582,
+     "stats": {
+      "vector_queue": 0
+     }
+    },
+    {
+     "round": 2,
+     "replaced": 10000,
+     "write_s": 9.2,
+     "per_s": 1089.7,
+     "label": "round 2",
+     "recall": 0.9913,
+     "p50_ms": 2.95,
+     "p95_ms": 3.79,
+     "recall_with_replaced": 0.9916,
+     "recall_without_replaced": 0.9864,
+     "questions_with_replaced": 941,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1229.8,
+     "disk_bytes": 619204283,
+     "stats": {
+      "vector_queue": 0
+     }
+    },
+    {
+     "round": 3,
+     "replaced": 10000,
+     "write_s": 9.9,
+     "per_s": 1010.3,
+     "label": "round 3",
+     "recall": 0.9918,
+     "p50_ms": 3.24,
+     "p95_ms": 4.23,
+     "recall_with_replaced": 0.992,
+     "recall_without_replaced": 0.9857,
+     "questions_with_replaced": 972,
+     "count": 99800,
+     "expected_count": 99800,
+     "mem_mib": 1422.3,
+     "disk_bytes": 667351800,
+     "stats": {
+      "vector_queue": 0
+     }
+    }
+   ],
+   "maintain": {
+    "s": 600.0
+   },
+   "after_cleanup": {
+    "label": "after clean-up",
+    "recall": 0.993,
+    "p50_ms": 9.71,
+    "p95_ms": 16.85,
+    "recall_with_replaced": 0.993,
+    "recall_without_replaced": 0.9929,
+    "questions_with_replaced": 972,
+    "count": 99800,
+    "expected_count": 99800,
+    "mem_mib": 812.6,
+    "disk_bytes": 605091343,
+    "stats": {
+     "vector_queue": 0
+    }
+   }
+  }
+ }
+}

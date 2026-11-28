@@ -1,0 +1,96 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2026-11-27 08:28:35.662 UTC [53] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-27 08:28:35.671 UTC [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-27 08:28:35.700 UTC [59] LOG:  database system was shut down at 2026-11-27 08:28:35 UTC
+2026-11-27 08:28:35.712 UTC [53] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down....2026-11-27 08:28:35.871 UTC [53] LOG:  received fast shutdown request
+2026-11-27 08:28:35.880 UTC [53] LOG:  aborting any active transactions
+2026-11-27 08:28:35.882 UTC [53] LOG:  background worker "logical replication launcher" (PID 63) exited with exit code 1
+2026-11-27 08:28:35.884 UTC [57] LOG:  shutting down
+2026-11-27 08:28:35.893 UTC [57] LOG:  checkpoint starting: shutdown immediate
+2026-11-27 08:28:36.099 UTC [57] LOG:  checkpoint complete: wrote 950 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.042 s, sync=0.128 s, total=0.215 s; sync files=303, longest=0.009 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/1BBA2B0, redo lsn=0/1BBA2B0
+2026-11-27 08:28:36.130 UTC [53] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-27 08:28:36.213 UTC [1] LOG:  starting PostgreSQL 18.7 (Debian 18.7-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-27 08:28:36.213 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-27 08:28:36.213 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-27 08:28:36.249 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-27 08:28:36.290 UTC [75] LOG:  database system was shut down at 2026-11-27 08:28:36 UTC
+2026-11-27 08:28:36.307 UTC [1] LOG:  database system is ready to accept connections
+2026-11-27 08:29:06.355 UTC [80] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:30:06.375 UTC [83] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:31:06.396 UTC [93] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:32:06.407 UTC [96] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:33:06.425 UTC [99] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:33:36.178 UTC [73] LOG:  checkpoint starting: time
+2026-11-27 08:34:06.435 UTC [102] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:34:58.016 UTC [73] LOG:  checkpoint complete: wrote 32 buffers (0.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 28 recycled; write=80.846 s, sync=0.335 s, total=81.838 s; sync files=104, longest=0.196 s, average=0.004 s; distance=457006 kB, estimate=457006 kB; lsn=0/1DA05DF0, redo lsn=0/1DA05D00
+2026-11-27 08:35:06.444 UTC [105] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:36:06.459 UTC [108] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:37:06.479 UTC [111] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:37:35.444 UTC [79] ERROR:  duplicate key value violates unique constraint "docs_pkey"
+2026-11-27 08:37:35.444 UTC [79] DETAIL:  Key (id)=(451922) already exists.
+2026-11-27 08:37:35.444 UTC [79] CONTEXT:  COPY docs, line 1
+2026-11-27 08:37:35.444 UTC [79] STATEMENT:  COPY docs (id, embedding) FROM STDIN WITH (FORMAT BINARY)
+2026-11-27 08:38:16.233 UTC [73] LOG:  checkpoint starting: wal
+2026-11-27 08:39:05.847 UTC [73] LOG:  checkpoint complete: wrote 23 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=48.915 s, sync=0.043 s, total=49.614 s; sync files=15, longest=0.012 s, average=0.003 s; distance=530541 kB, estimate=530541 kB; lsn=0/59872D78, redo lsn=0/3E021178
+2026-11-27 08:39:16.077 UTC [73] LOG:  checkpoint starting: wal
+2026-11-27 08:39:50.769 UTC [73] LOG:  checkpoint complete: wrote 30 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=33.800 s, sync=0.207 s, total=34.693 s; sync files=10, longest=0.140 s, average=0.021 s; distance=540609 kB, estimate=540609 kB; lsn=0/7CCE4280, redo lsn=0/5F011900
+2026-11-27 08:39:57.744 UTC [73] LOG:  checkpoint starting: wal
+2026-11-27 08:40:50.178 UTC [73] LOG:  checkpoint complete: wrote 29 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=51.534 s, sync=0.147 s, total=52.434 s; sync files=8, longest=0.098 s, average=0.019 s; distance=541076 kB, estimate=541076 kB; lsn=0/9C905088, redo lsn=0/80076BE0
+2026-11-27 08:41:04.039 UTC [73] LOG:  checkpoint starting: wal
+2026-11-27 08:41:29.608 UTC [123] ERROR:  canceling autovacuum task
+2026-11-27 08:41:29.608 UTC [123] CONTEXT:  while vacuuming index "docs_embedding_idx" of relation "public.docs"
+	automatic vacuum of table "bench.public.docs"
+2026-11-27 08:41:40.209 UTC [73] LOG:  checkpoint complete: wrote 26 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=35.506 s, sync=0.069 s, total=36.170 s; sync files=17, longest=0.057 s, average=0.005 s; distance=540264 kB, estimate=540995 kB; lsn=0/BA2B18A8, redo lsn=0/A1010F70
+2026-11-27 08:42:06.566 UTC [127] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:43:06.567 UTC [130] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:43:20.963 UTC [73] LOG:  checkpoint starting: wal
+2026-11-27 08:43:57.271 UTC [73] LOG:  checkpoint complete: wrote 20 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 33 recycled; write=35.555 s, sync=0.105 s, total=36.309 s; sync files=2, longest=0.105 s, average=0.053 s; distance=540710 kB, estimate=540967 kB; lsn=0/CC6FD3E0, redo lsn=0/C201AA00
+2026-11-27 08:44:06.585 UTC [133] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:45:06.604 UTC [136] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:46:06.623 UTC [139] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:47:06.625 UTC [142] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:48:06.628 UTC [145] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:48:20.627 UTC [73] LOG:  checkpoint starting: time
+2026-11-27 08:48:40.925 UTC [73] LOG:  checkpoint complete: wrote 17 buffers (0.1%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 25 recycled; write=19.835 s, sync=0.011 s, total=20.298 s; sync files=1, longest=0.011 s, average=0.011 s; distance=422497 kB, estimate=529120 kB; lsn=0/E09D9CB0, redo lsn=0/DBCB30A8
+2026-11-27 08:49:06.639 UTC [148] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:50:06.659 UTC [151] LOG:  skipping vacuum of "docs" --- lock not available
+2026-11-27 08:50:34.629 UTC [73] LOG:  checkpoint starting: wal

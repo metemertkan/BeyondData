@@ -1,0 +1,296 @@
+12:06:33 once: start
+simsimd not available — falling back to SciPy/NumPy implementation for vector math. To enable the accelerated path, install the optional dependency 'simsimd' (note: simsimd may require newer glibc on some systems).
+12:06:46 once: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.9, "entries": 1649}, "month": {"chunks_embedded": 0, "embed_cpu_s": 0.0, "jobs": 0}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1649, "outdated": 825, "current": 766, "deleted": 58, "record_chunks": 1720, "missing": 954, "pending": 778, "queue": 0}, "wall_s": 13.2}
+12:06:46 rerun: start
+12:09:15 rerun: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.7, "entries": 1649}, "month": {"chunks_embedded": 48771, "embed_cpu_s": 1687.6, "jobs": 29}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 50420, "current": 1720, "outdated": 15248, "duplicate": 32636, "deleted": 816, "record_chunks": 1720, "missing": 0, "pending": 701, "queue": 0}, "wall_s": 149.0}
+12:09:15 rebuild: start
+12:10:16 rebuild: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.7, "entries": 1649}, "month": {"chunks_embedded": 48771, "embed_cpu_s": 1687.6, "jobs": 29}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 60.2}
+12:10:16 upsert: start
+12:11:06 upsert: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.7, "entries": 1649}, "month": {"chunks_embedded": 48771, "embed_cpu_s": 1687.6, "jobs": 29}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1830, "current": 1720, "deleted": 58, "outdated": 36, "duplicate": 16, "record_chunks": 1720, "missing": 0, "pending": 64, "queue": 0}, "wall_s": 50.1}
+12:11:06 record_manager: start
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/langchain_core/indexing/api.py:409: UserWarning: Using SHA-1 for document hashing. SHA-1 is *not* collision-resistant; a motivated attacker can construct distinct inputs that map to the same fingerprint. If this matters in your threat model, switch to a stronger algorithm such as 'blake2b', 'sha256', or 'sha512' by specifying  `key_encoder` parameter in the `index` or `aindex` function. 
+  _warn_about_sha1()
+12:23:59   record_manager: 2026-10-24T01:55 queue 0 pending 7
+12:33:50   record_manager: 2026-10-29T17:50 queue 0 pending 2
+12:43:23   record_manager: 2026-11-04T08:15 queue 0 pending 1
+12:57:15   record_manager: 2026-11-09T16:45 queue 0 pending 0
+13:09:40   record_manager: 2026-11-14T20:05 queue 0 pending 0
+13:12:14 record_manager: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 19.1, "entries": 1649}, "month": {"chunks_embedded": 5469, "embed_cpu_s": 189.2, "jobs": 529}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 3667.7}
+13:12:14 poll: start
+13:12:16   poll: 2026-10-21T05:00 queue 0 pending 4
+13:12:17   poll: 2026-10-23T10:09 queue 0 pending 9
+13:12:18   poll: 2026-10-25T14:35 queue 0 pending 9
+13:12:19   poll: 2026-10-27T19:35 queue 1 pending 9
+13:12:20   poll: 2026-10-30T00:45 queue 0 pending 12
+13:12:20   poll: 2026-11-01T05:00 queue 0 pending 16
+13:12:21   poll: 2026-11-03T11:10 queue 0 pending 17
+13:12:22   poll: 2026-11-05T15:30 queue 1 pending 19
+13:12:23   poll: 2026-11-07T19:25 queue 0 pending 538
+13:12:23   poll: 2026-11-10T01:45 queue 1 pending 525
+13:12:24   poll: 2026-11-12T06:45 queue 0 pending 499
+13:12:25   poll: 2026-11-14T08:50 queue 1 pending 455
+13:12:26   poll: 2026-11-16T15:00 queue 0 pending 446
+13:12:26 poll: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 2.0, "entries": 1649}, "month": {"chunks_embedded": 1209, "embed_cpu_s": 41.8, "jobs": 8639}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1778, "current": 1256, "outdated": 464, "deleted": 58, "record_chunks": 1720, "missing": 464, "pending": 444, "queue": 0}, "wall_s": 12.6}
+13:12:26 cdc: start
+13:12:35   cdc: 2026-11-05T21:00 queue 408 pending 409
+13:12:41 cdc: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.6, "entries": 1649}, "month": {"chunks_embedded": 2280, "embed_cpu_s": 78.9, "jobs": 1313}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 14.7}
+13:12:41 same_db: start
+13:12:51 same_db: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 4.3, "entries": 1649}, "month": {"chunks_embedded": 1209, "embed_cpu_s": 41.8, "jobs": 0}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1256, "outdated": 464, "record_chunks": 1720, "missing": 464, "pending": 412, "queue": 0}, "wall_s": 9.8}
+13:12:51 built: start
+13:13:04   built: 2026-11-05T21:00 queue 434 pending 434
+13:13:12 built: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.5, "entries": 1649}, "month": {"chunks_embedded": 1455, "embed_cpu_s": 50.3, "jobs": 1342}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 21.5}
+13:13:12 rebuild_check: start
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x79497cf6a060> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+13:14:14 rebuild_check: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.7, "entries": 1649}, "month": {"chunks_embedded": 48771, "embed_cpu_s": 1687.6, "jobs": 29}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 61.6}
+13:14:14 cdc_outage: start
+13:14:23   cdc_outage: 2026-11-05T21:00 queue 409 pending 409
+13:14:29 cdc_outage: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.5, "entries": 1649}, "month": {"chunks_embedded": 2280, "embed_cpu_s": 78.9, "jobs": 1313}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 14.7}
+13:14:29 built_outage: start
+13:14:39   built_outage: 2026-11-05T21:00 queue 434 pending 435
+13:14:47 built_outage: done {"initial": {"chunks_embedded": 1649, "computed": 0, "wall_s": 1.5, "entries": 1649}, "month": {"chunks_embedded": 1455, "embed_cpu_s": 50.3, "jobs": 1342}, "final": {"t": "2026-11-17T12:00:00+00:00", "entries": 1720, "current": 1720, "record_chunks": 1720, "missing": 0, "pending": 0, "queue": 0}, "wall_s": 18.3}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x7949af280bc0> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+13:14:49 answers: 788 distinct prompts, 788 to go
+13:22:34 answers: 25/788, 18.6 s each, about 3.9 h left
+13:30:12 answers: 50/788, 18.5 s each, about 3.8 h left
+13:38:28 answers: 75/788, 18.9 s each, about 3.7 h left
+13:46:23 answers: 100/788, 18.9 s each, about 3.6 h left
+13:54:15 answers: 125/788, 18.9 s each, about 3.5 h left
+14:02:31 answers: 150/788, 19.1 s each, about 3.4 h left
+14:10:55 answers: 175/788, 19.2 s each, about 3.3 h left
+14:19:01 answers: 200/788, 19.3 s each, about 3.1 h left
+14:27:27 answers: 225/788, 19.4 s each, about 3.0 h left
+14:35:10 answers: 250/788, 19.3 s each, about 2.9 h left
+14:42:43 answers: 275/788, 19.2 s each, about 2.7 h left
+14:51:19 answers: 300/788, 19.3 s each, about 2.6 h left
+14:59:40 answers: 325/788, 19.4 s each, about 2.5 h left
+15:07:56 answers: 350/788, 19.4 s each, about 2.4 h left
+15:15:25 answers: 375/788, 19.3 s each, about 2.2 h left
+15:23:38 answers: 400/788, 19.3 s each, about 2.1 h left
+15:31:25 answers: 425/788, 19.3 s each, about 1.9 h left
+15:38:46 answers: 450/788, 19.2 s each, about 1.8 h left
+15:46:49 answers: 475/788, 19.2 s each, about 1.7 h left
+15:55:05 answers: 500/788, 19.2 s each, about 1.5 h left
+16:02:59 answers: 525/788, 19.2 s each, about 1.4 h left
+16:12:04 answers: 550/788, 19.3 s each, about 1.3 h left
+16:19:21 answers: 575/788, 19.3 s each, about 1.1 h left
+16:28:44 answers: 600/788, 19.4 s each, about 1.0 h left
+16:36:43 answers: 625/788, 19.4 s each, about 0.9 h left
+16:45:23 answers: 650/788, 19.4 s each, about 0.7 h left
+16:53:48 answers: 675/788, 19.5 s each, about 0.6 h left
+17:02:02 answers: 700/788, 19.5 s each, about 0.5 h left
+17:10:55 answers: 725/788, 19.5 s each, about 0.3 h left
+17:19:19 answers: 750/788, 19.6 s each, about 0.2 h left
+17:27:24 answers: 775/788, 19.6 s each, about 0.1 h left
+17:31:16 answers: done
+sys:1: ResourceWarning: unclosed <socket.socket fd=5, family=2, type=1, proto=6, laddr=('127.0.0.1', 53218), raddr=('127.0.0.1', 11436)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x724e2fc11fd0> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x724e2fc11e80> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x724e2fc10d40> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+{"design": "poll", "saves": 420, "synced": 412, "never": 1, "lag_p50": 190.6, "lag_p95": 250.39, "lag_max": 613.69, "save_p50": 0.004, "computed": 2171, "compute_s": 62.8}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x71ec4a91b9e0> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x71ec49c25d60> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x71ec4a52e750> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+{"design": "cdc", "saves": 420, "synced": 420, "never": 0, "lag_p50": 4.94, "lag_p95": 13.53, "lag_max": 14.03, "save_p50": 0.004, "computed": 2180, "compute_s": 63.3}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x78ea50e160c0> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x78ea50e15f40> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x78ea51161c40> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+{"design": "same_db", "saves": 420, "synced": 420, "never": 0, "lag_p50": 0.25, "lag_p95": 0.49, "lag_max": 0.5, "save_p50": 0.029, "computed": 2180, "compute_s": 62.0}
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x7560a001e030> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x7560a001de20> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+/home/server/Projects/AIContentCreator/BeyondData/.venv/lib/python3.12/site-packages/psycopg/_connection_base.py:153: ResourceWarning: <psycopg.Connection object at 0x7560a09d33e0> was deleted while still open. Please use 'with' or '.close()' to close the connection properly
+  __warn(
+{"design": "built", "saves": 420, "synced": 420, "never": 0, "lag_p50": 5.04, "lag_p95": 13.75, "lag_max": 14.71, "save_p50": 0.003, "computed": 2180, "compute_s": 63.2}
+19:01:50 reading 1,000,000 vectors
+19:01:52 pgvector full fresh container
+19:52:31 pgvector loaded 1,000,000 in 36.4 s, indexed and settled in 3000.0 s
+19:52:50 pgvector fresh {'recall': 0.9223, 'recall_with_replaced': None, 'recall_without_replaced': 0.9223, 'p50_ms': 5.91, 'count': 1000000, 'expected_count': 1000000}
+19:53:10 pgvector add again {'error': 'UniqueViolation: duplicate key value violates unique constraint "docs_pkey"\nDETAIL:  Key (id)=(668784) already exists.\nCONTEXT:  COPY docs, line 1', 'count_before': 1000000, 'count_after': 1000000, 'found_by_new': 0, 'found_by_old': 200, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 199, 'after_upsert_found_by_old': 0}
+19:53:15 pgvector update: new found {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} old gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0}
+20:05:28 pgvector round 1 {'recall': 0.9222, 'recall_with_replaced': 0.9234, 'recall_without_replaced': 0.9178, 'p50_ms': 4.74, 'count': 999800, 'expected_count': 999800}
+20:17:17 pgvector round 2 {'recall': 0.9162, 'recall_with_replaced': 0.9179, 'recall_without_replaced': 0.901, 'p50_ms': 5.51, 'count': 999800, 'expected_count': 999800}
+20:28:47 pgvector round 3 {'recall': 0.9098, 'recall_with_replaced': 0.9098, 'recall_without_replaced': 0.9091, 'p50_ms': 5.47, 'count': 999800, 'expected_count': 999800}
+22:00:52 pgvector after clean-up {'recall': 0.9294, 'recall_with_replaced': 0.9292, 'recall_without_replaced': 0.9341, 'p50_ms': 4.71, 'count': 999800, 'expected_count': 999800}
+22:00:54 reading 1,000,000 vectors
+22:00:55 qdrant full fresh container
+22:10:58 qdrant loaded 1,000,000 in 568.3 s, indexed and settled in 30.1 s
+22:11:13 qdrant fresh {'recall': 0.9723, 'recall_with_replaced': None, 'recall_without_replaced': 0.9723, 'p50_ms': 4.92, 'count': 1000000, 'expected_count': 1000000}
+22:11:29 qdrant add again {'error': None, 'count_before': 1000000, 'count_after': 1000000, 'found_by_new': 200, 'found_by_old': 0, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 200, 'after_upsert_found_by_old': 0}
+22:11:34 qdrant update: new found {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} old gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0}
+22:13:23 qdrant round 1 {'recall': 0.9716, 'recall_with_replaced': 0.9741, 'recall_without_replaced': 0.9624, 'p50_ms': 43.52, 'count': 999800, 'expected_count': 999800}
+22:15:32 qdrant round 2 {'recall': 0.9695, 'recall_with_replaced': 0.9714, 'recall_without_replaced': 0.9525, 'p50_ms': 27.04, 'count': 999800, 'expected_count': 999800}
+22:17:55 qdrant round 3 {'recall': 0.9683, 'recall_with_replaced': 0.9687, 'recall_without_replaced': 0.9591, 'p50_ms': 87.87, 'count': 999800, 'expected_count': 999800}
+22:18:58 qdrant after clean-up {'recall': 0.9705, 'recall_with_replaced': 0.971, 'recall_without_replaced': 0.9591, 'p50_ms': 4.94, 'count': 999800, 'expected_count': 999800}
+22:18:59 reading 1,000,000 vectors
+22:19:01 milvus full fresh container
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:210: PyMilvusDeprecationWarning: `connections.connect` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  connections.connect("ep02", uri="http://localhost:19530")
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:30:18 milvus loaded 1,000,000 in 134.2 s, indexed and settled in 538.0 s
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:30:32 milvus fresh {'recall': 0.9118, 'recall_with_replaced': None, 'recall_without_replaced': 0.9118, 'p50_ms': 2.02, 'count': 1000000, 'expected_count': 1000000}
+22:30:45 milvus add again {'error': None, 'count_before': 1000000, 'count_after': 1001000, 'found_by_new': 200, 'found_by_old': 200, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 200, 'after_upsert_found_by_old': 0}
+22:32:05 milvus update: new found {'n': 200, 'at_once': 0, 'within_1s': 200, 'never_5s': 0} old gone {'n': 200, 'at_once': 0, 'within_1s': 200, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 0, 'within_1s': 200, 'never_5s': 0}
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:32:34 milvus round 1 {'recall': 0.9058, 'recall_with_replaced': 0.9071, 'recall_without_replaced': 0.9009, 'p50_ms': 4.87, 'count': 999800, 'expected_count': 999800}
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:33:12 milvus round 2 {'recall': 0.8983, 'recall_with_replaced': 0.899, 'recall_without_replaced': 0.8919, 'p50_ms': 10.3, 'count': 999800, 'expected_count': 999800}
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:33:57 milvus round 3 {'recall': 0.8962, 'recall_with_replaced': 0.8971, 'recall_without_replaced': 0.8773, 'p50_ms': 14.53, 'count': 999800, 'expected_count': 999800}
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:209: PyMilvusDeprecationWarning: `connections.has_connection` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  if not connections.has_connection("ep02"):
+/home/server/Projects/AIContentCreator/BeyondData/vectors/engines.py:211: PyMilvusDeprecationWarning: `utility.get_query_segment_info` is an ORM-style PyMilvus API and will be removed in PyMilvus 3.1. Use `MilvusClient` instead.
+  return sorted((s.segmentID, s.num_rows) for s in utility.get_query_segment_info(NAME, using="ep02"))
+22:42:44 milvus after clean-up {'recall': 0.8813, 'recall_with_replaced': 0.8806, 'recall_without_replaced': 0.8955, 'p50_ms': 6.01, 'count': 999800, 'expected_count': 999800}
+22:42:46 reading 1,000,000 vectors
+22:42:48 weaviate full fresh container
+22:58:23 weaviate loaded 1,000,000 in 930.8 s, indexed and settled in 0.0 s
+22:58:36 weaviate fresh {'recall': 0.9793, 'recall_with_replaced': None, 'recall_without_replaced': 0.9793, 'p50_ms': 2.87, 'count': 1000000, 'expected_count': 1000000}
+22:58:49 weaviate add again {'error': None, 'count_before': 1000000, 'count_after': 1000000, 'found_by_new': 200, 'found_by_old': 0, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 200, 'after_upsert_found_by_old': 0}
+22:58:52 weaviate update: new found {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} old gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0}
+23:00:40 weaviate round 1 {'recall': 0.9819, 'recall_with_replaced': 0.9821, 'recall_without_replaced': 0.9812, 'p50_ms': 3.16, 'count': 999800, 'expected_count': 999800}
+23:02:36 weaviate round 2 {'recall': 0.9826, 'recall_with_replaced': 0.9826, 'recall_without_replaced': 0.9828, 'p50_ms': 3.45, 'count': 999800, 'expected_count': 999800}
+23:05:32 weaviate round 3 {'recall': 0.9837, 'recall_with_replaced': 0.9836, 'recall_without_replaced': 0.9864, 'p50_ms': 8.9, 'count': 999800, 'expected_count': 999800}
+23:15:46 weaviate after clean-up {'recall': 0.9826, 'recall_with_replaced': 0.9821, 'recall_without_replaced': 0.9932, 'p50_ms': 3.66, 'count': 999800, 'expected_count': 999800}
+23:15:49 reading 1,000,000 vectors
+23:15:50 elasticsearch full fresh container
+23:43:14 elasticsearch loaded 1,000,000 in 1566.4 s, indexed and settled in 54.4 s
+23:43:30 elasticsearch fresh {'recall': 0.9037, 'recall_with_replaced': None, 'recall_without_replaced': 0.9037, 'p50_ms': 5.07, 'count': 1000000, 'expected_count': 1000000}
+23:43:45 elasticsearch add again {'error': None, 'count_before': 1000000, 'count_after': 1000000, 'found_by_new': 200, 'found_by_old': 0, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 200, 'after_upsert_found_by_old': 0}
+23:50:29 elasticsearch update: new found {'n': 200, 'at_once': 0, 'within_1s': 147, 'never_5s': 0} old gone {'n': 200, 'at_once': 0, 'within_1s': 156, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 0, 'within_1s': 127, 'never_5s': 0}
+23:52:47 elasticsearch round 1 {'recall': 0.9068, 'recall_with_replaced': 0.9074, 'recall_without_replaced': 0.9047, 'p50_ms': 2.55, 'count': 999800, 'expected_count': 999800}
+23:55:06 elasticsearch round 2 {'recall': 0.9085, 'recall_with_replaced': 0.9089, 'recall_without_replaced': 0.9051, 'p50_ms': 2.57, 'count': 999800, 'expected_count': 999800}
+23:57:25 elasticsearch round 3 {'recall': 0.9089, 'recall_with_replaced': 0.9091, 'recall_without_replaced': 0.9045, 'p50_ms': 3.15, 'count': 999800, 'expected_count': 999800}
+/home/server/Projects/AIContentCreator/BeyondData/vectors/churn.py:140: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+  self.c.indices.forcemerge(index=NAME, only_expunge_deletes=True, wait_for_completion=True,
+23:57:39 elasticsearch after clean-up {'recall': 0.9089, 'recall_with_replaced': 0.9091, 'recall_without_replaced': 0.9045, 'p50_ms': 3.12, 'count': 999800, 'expected_count': 999800}
+23:57:44 reading 1,000,000 vectors
+23:57:45 chroma full fresh container
+00:17:06 chroma loaded 1,000,000 in 1159.2 s, indexed and settled in 0.0 s
+00:17:20 chroma fresh {'recall': 0.9594, 'recall_with_replaced': None, 'recall_without_replaced': 0.9594, 'p50_ms': 2.91, 'count': 1000000, 'expected_count': 1000000}
+00:17:35 chroma add again {'error': None, 'count_before': 1000000, 'count_after': 1000000, 'found_by_new': 0, 'found_by_old': 200, 'searched': 200, 'after_upsert_count': 1000000, 'after_upsert_found_by_new': 200, 'after_upsert_found_by_old': 0}
+00:18:02 chroma update: new found {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} old gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0} | delete gone {'n': 200, 'at_once': 200, 'within_1s': 200, 'never_5s': 0}
+00:21:49 chroma round 1 {'recall': 0.9542, 'recall_with_replaced': 0.9562, 'recall_without_replaced': 0.9469, 'p50_ms': 3.12, 'count': 999800, 'expected_count': 999800}
+00:25:55 chroma round 2 {'recall': 0.9569, 'recall_with_replaced': 0.9573, 'recall_without_replaced': 0.9535, 'p50_ms': 3.07, 'count': 999800, 'expected_count': 999800}
+00:30:29 chroma round 3 {'recall': 0.957, 'recall_with_replaced': 0.9576, 'recall_without_replaced': 0.9432, 'p50_ms': 2.92, 'count': 999800, 'expected_count': 999800}
+00:40:42 chroma after clean-up {'recall': 0.957, 'recall_with_replaced': 0.9576, 'recall_without_replaced': 0.9432, 'p50_ms': 3.11, 'count': 999800, 'expected_count': 999800}
+sys:1: ResourceWarning: unclosed <socket.socket fd=10, family=2, type=1, proto=6, laddr=('127.0.0.1', 51256), raddr=('127.0.0.1', 8001)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=9, family=2, type=1, proto=6, laddr=('127.0.0.1', 39362), raddr=('127.0.0.1', 8001)>
+# Episode 6 summary (full)
+
+## The month, per design (questions: retrieval; answers: qwen3:8b)
+
+| Design | index at the end: entries / outdated / deleted / duplicate / missing | questions with an outdated or deleted chunk | answers current / stale / both / declined / other | stale from the index | chunks embedded in the month |
+| :--- | :--- | ---: | :--- | ---: | ---: |
+| once (as shipped) | 1,649 / 825 / 58 / 0 / 954 | 428 of 500 | 95 / 305 / 0 / 1 / 99 | 297 | 0 |
+| rerun nightly (as shipped) | 50,420 / 15248 / 816 / 32636 / 0 | 261 of 500 | 166 / 212 / 8 / 10 / 104 | 181 | 48,771 |
+| rebuild nightly | 1,720 / 0 / 0 / 0 / 0 | 178 of 500 | 234 / 177 / 4 / 5 / 80 | 168 | 48,771 |
+| upsert nightly | 1,830 / 36 / 58 / 16 / 0 | 223 of 500 | 212 / 201 / 4 / 5 / 78 | 192 | 48,771 |
+| record manager | 1,720 / 0 / 0 / 0 / 0 | 48 of 500 | 367 / 53 / 6 / 5 / 69 | 47 | 5,469 |
+| poll updated_at | 1,778 / 464 / 58 / 0 / 464 | 148 of 500 | 353 / 77 / 6 / 1 / 63 | 71 | 1,209 |
+| CDC | 1,720 / 0 / 0 / 0 / 0 | 0 of 500 | 412 / 6 / 6 / 5 / 71 | 0 | 2,280 |
+| same database | 1,720 / 464 / 0 / 0 / 464 | 87 of 500 | 416 / 13 / 6 / 1 / 64 | 7 | 1,209 |
+| built | 1,720 / 0 / 0 / 0 / 0 | 0 of 500 | 412 / 6 / 6 / 5 / 71 | 0 | 1,455 |
+| rebuild + check (expl.) | 1,720 / 0 / 0 / 0 / 0 | 0 of 500 | 276 / 25 / 4 / 22 / 173 | 0 | 48,771 |
+| CDC, worker down 12 h (expl.) | 1,720 / 0 / 0 / 0 / 0 | 7 of 500 | 405 / 13 / 6 / 5 / 71 | 7 | 2,280 |
+| built, worker down 12 h (expl.) | 1,720 / 0 / 0 / 0 / 0 | 0 of 500 | 405 / 6 / 6 / 9 / 74 | 0 | 1,455 |
+
+## How long a change took to reach the index (replay clock; changes in the month's last 24 h left out)
+
+| Design | changes | current: p50 / p95 / max (normal) | migration: max / never | never current | never clean |
+| :--- | ---: | :--- | :--- | ---: | ---: |
+| once (as shipped) | 778 | — / — / — | — / 341 | 778 | 778 |
+| rerun nightly (as shipped) | 797 | 12.8 h / 17.4 h / 18.0 h | 5.0 h / 0 | 0 | 701 |
+| rebuild nightly | 1266 | 12.9 h / 17.5 h / 18.0 h | 5.0 h / 0 | 0 | 0 |
+| upsert nightly | 1232 | 12.8 h / 17.5 h / 18.0 h | 5.0 h / 0 | 0 | 64 |
+| record manager | 1311 | 3 min / 5 min / 5 min | 37 s / 0 | 0 | 0 |
+| poll updated_at | 1165 | 3 min / 5 min / 5 min | 10.8 d / 420 | 444 | 444 |
+| CDC | 1313 | 0 s / 0 s / 0 s | 37 s / 0 | 0 | 0 |
+| same database | 1165 | 0 s / 0 s / 0 s | 10.8 d / 412 | 412 | 412 |
+| built | 1313 | 0 s / 0 s / 0 s | 22 s / 0 | 0 | 0 |
+| rebuild + check (expl.) | 1266 | 12.9 h / 17.5 h / 18.0 h | 5.0 h / 0 | 0 | 0 |
+| CDC, worker down 12 h (expl.) | 1313 | 0 s / 0 s / 11.2 h | 37 s / 0 | 0 | 0 |
+| built, worker down 12 h (expl.) | 1313 | 0 s / 0 s / 11.2 h | 22 s / 0 | 0 | 0 |
+
+## Changed facts: current answers by time since the change
+
+| Design | 2 min | 15 min | 1 h | 4 h | 12 h | 1 day | 3 days | 7 days |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| once (as shipped) | 0/38 | 0/38 | 0/38 | 0/38 | 0/38 | 0/37 | 0/37 | 0/36 |
+| rerun nightly (as shipped) | 2/38 | 2/38 | 3/38 | 2/38 | 4/38 | 9/37 | 20/37 | 22/36 |
+| rebuild nightly | 0/38 | 1/38 | 1/38 | 1/38 | 12/38 | 31/37 | 31/37 | 30/36 |
+| upsert nightly | 0/38 | 1/38 | 1/38 | 1/38 | 11/38 | 30/37 | 30/37 | 28/36 |
+| record manager | 11/38 | 26/38 | 32/38 | 32/38 | 31/38 | 31/37 | 31/37 | 28/36 |
+| poll updated_at | 12/38 | 27/38 | 32/38 | 32/38 | 31/38 | 32/37 | 32/37 | 29/36 |
+| CDC | 29/38 | 26/38 | 32/38 | 32/38 | 31/38 | 31/37 | 31/37 | 28/36 |
+| same database | 30/38 | 27/38 | 32/38 | 32/38 | 31/38 | 32/37 | 32/37 | 29/36 |
+| built | 29/38 | 26/38 | 32/38 | 32/38 | 31/38 | 31/37 | 31/37 | 28/36 |
+| rebuild + check (expl.) | 4/38 | 4/38 | 4/38 | 4/38 | 14/38 | 32/37 | 31/37 | 29/36 |
+| CDC, worker down 12 h (expl.) | 27/38 | 25/38 | 30/38 | 30/38 | 31/38 | 31/37 | 31/37 | 28/36 |
+| built, worker down 12 h (expl.) | 27/38 | 25/38 | 30/38 | 30/38 | 31/38 | 31/37 | 31/37 | 28/36 |
+
+## The target (Act 3)
+
+| Design | no stale context | fresh (normal) | fresh (migration) | agrees at audits | passes |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| once (as shipped) | no | no | no | no | **no** |
+| rerun nightly (as shipped) | no | no | no | no | **no** |
+| rebuild nightly | no | no | no | no | **no** |
+| upsert nightly | no | no | no | no | **no** |
+| record manager | no | yes | yes | no | **no** |
+| poll updated_at | no | no | no | no | **no** |
+| CDC | yes | yes | yes | yes | **yes** |
+| same database | no | yes | no | no | **no** |
+| built | yes | yes | yes | yes | **yes** |
+| rebuild + check (expl.) | yes | no | no | no | **no** |
+| CDC, worker down 12 h (expl.) | no | no | yes | no | **no** |
+| built, worker down 12 h (expl.) | yes | no | yes | no | **no** |
+
+## Real time (writer: an edit every 10 s, a 300-article burst at minute 7)
+
+| Design | saves | synced | never | steady p50 / max | burst p50 / max | save p50 | burst saves total |
+| :--- | ---: | ---: | ---: | :--- | :--- | :--- | :--- |
+| poll updated_at | 420 | 412 | 1 | 3 min / 10 min | 3 min / 5 min | 0.012 s | 1.0 s |
+| CDC | 420 | 420 | 0 | 1 s / 2 s | 7 s / 14 s | 0.012 s | 1.1 s |
+| same database | 420 | 420 | 0 | 0 s / 0 s | 0 s / 0 s | 0.034 s | 12.7 s |
+| built | 420 | 420 | 0 | 1 s / 2 s | 7 s / 15 s | 0.012 s | 1.0 s |
+
+## The six databases
+
+| Database | add again: error / count after / found by new / by old (of 200) | update: new at once, old gone at once (of 200) | delete gone at once (of 200), max | recall fresh → rounds → after clean-up | p50 ms fresh → round 3 → after |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| chroma | ok / 1,000,000 / 0 / 200 | 200, 200 | 200, 0 s | 0.9594 → 0.9542 → 0.9569 → 0.957 → 0.957 | 2.91 → 2.92 → 3.11 |
+| elasticsearch | ok / 1,000,000 / 200 / 0 | 0, 0 | 0, 1 s | 0.9037 → 0.9068 → 0.9085 → 0.9089 → 0.9089 | 5.07 → 3.15 → 3.12 |
+| milvus | ok / 1,001,000 / 200 / 200 | 0, 0 | 0, 0 s | 0.9118 → 0.9058 → 0.8983 → 0.8962 → 0.8813 | 2.02 → 14.53 → 6.01 |
+| pgvector | error / 1,000,000 / 0 / 200 | 200, 200 | 200, 0 s | 0.9223 → 0.9222 → 0.9162 → 0.9098 → 0.9294 | 5.91 → 5.47 → 4.71 |
+| qdrant | ok / 1,000,000 / 200 / 0 | 200, 200 | 200, 0 s | 0.9723 → 0.9716 → 0.9695 → 0.9683 → 0.9705 | 4.92 → 87.87 → 4.94 |
+| weaviate | ok / 1,000,000 / 200 / 0 | 200, 200 | 200, 0 s | 0.9793 → 0.9819 → 0.9826 → 0.9837 → 0.9826 | 2.87 → 8.9 → 3.66 |
+full run done Sat Nov 28 12:40:48 AM CET 2026

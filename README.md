@@ -16,6 +16,7 @@ No accounts, no keys.
 | 3 | What happens to vector search when you add a filter? | [`vectors/filtered.py`](vectors/filtered.py), [`scripts/ep03_run.py`](scripts/ep03_run.py) |
 | 4 | How small can a vector get before search stops finding the answer? | [`vectors/compressed.py`](vectors/compressed.py), [`scripts/ep04_run.py`](scripts/ep04_run.py) |
 | 5 | What does a 4-bit model forget about your data? | [`quant/`](quant), [`scripts/ep05_run.py`](scripts/ep05_run.py) |
+| 6 | Your data changed. When does your AI find out? | [`sync/`](sync), [`scripts/ep06_run.py`](scripts/ep06_run.py) |
 
 ## Episode 1: I asked my AI for the total
 
@@ -485,4 +486,126 @@ scripts/ep05_budget.py    loaded sizes per level and KV cache type, and Act 3's 
 scripts/ep05_run.py       every design over its tasks, one request at a time
 scripts/ep05_summary.py   lost and gained against fp16, declines, records by position, speed, memory, built
 tests/test_ep05.py
+```
+
+## Episode 6: your data changed. When does your AI find out?
+
+Acme Cloud's help center (Episode 1's company) in Postgres: 1,140 generated articles, 1,649 chunks with LangChain's
+`RecursiveCharacterTextSplitter(1000, 200)`. One month of changes is replayed into eight ways of keeping a vector
+index in step with it, and the one I'd build. The month holds 721 saves through the app: 44 facts changed (168 saves), 400 wording edits,
+110 new articles, 15 renames and 20 rewrites. It also holds 32 hard deletes and one SQL `UPDATE` that renames the
+console in 560 articles without touching `updated_at`.
+
+500 questions are asked at set moments, each with the right value at that moment:
+
+- 300 about a changed fact, 2 minutes to 7 days after the change;
+- 100 about unchanged facts;
+- 50 about a deleted article;
+- 50 about a new one.
+
+The stack:
+
+- **Index:** Weaviate 1.40.7 (flat, exact), the 4 nearest chunks.
+- **Embeddings:** bge-small-en-v1.5 (fastembed, 28.9 chunks/s on the CPU).
+- **Answers:** qwen3:8b (thinking off, greedy) with LangChain's classic RAG prompt.
+- **Clock:** the month runs on a simulated clock with real database operations; a sync job takes its chunks times
+  the measured time per chunk.
+
+A reply is **stale** if it gives the old value and not the new one. **Stale from the index** means an outdated or
+deleted chunk in its context gave it that value.
+
+### Results (one month, 500 questions)
+
+| Design | Questions with an outdated or deleted chunk | Stale replies | Stale from the index | A change reached the index | Chunks embedded |
+| :--- | ---: | ---: | ---: | :--- | ---: |
+| **indexed once** (the tutorial, as shipped) | 428 | 297 | 297 | never | 0 |
+| **re-run nightly** (as the tutorial says) | 261 | 208 | 181 | 12.8 h (p50); old copies never left | 48,771 |
+| rebuild nightly | 178 | 173 | 168 | 12.9 h | 48,771 |
+| upsert nightly, ids from URL | 223 | 197 | 192 | 12.8 h; deletes never | 48,771 |
+| LangChain record manager, every 5 min | 48 | 51 | 47 | 3 min; deletes at night | 5,469 |
+| poll `updated_at`, every 5 min | 148 | 75 | 71 | 3 min; the migration and deletes never | 1,209 |
+| same database (pgvector, in the save) | 87 | 11 | 7 | at the save; the migration never | 1,209 |
+| change data capture (logical decoding) | **0** | 4 | **0** | under 1 s; 15 s for 300 saves at once | 2,280 |
+| **built** (CDC, changed chunks only, a check, nightly reconciliation) | **0** | 4 | **0** | under 1 s; 16 s for 300 saves at once | **1,455** |
+
+- **Re-running the tutorial's script adds, it doesn't replace.** After 30 nights the collection held 50,420 entries
+  for 1,720 chunks: 97% outdated, deleted or duplicate. 3 days after the Business plan's API rate limit went from
+  6,000 to 12,000 per minute, the context held the release note saying 12,000 (three times) and the old plan page
+  saying 6,000; the reply was 6,000.
+- **Nightly means the next day.** Rebuild, upsert and rerun took 12.8–12.9 h (median) to reflect a change; a fact
+  asked about 1 hour after its change came back current at most 3 times in 38.
+- **What a design never sees:** poll and same database never saw the migration (420 and 412 of 560 articles never
+  reached the index; the rest only through later app edits). Once, rerun, upsert and poll never removed a deleted
+  article: 44 of 50 deleted-article questions gave the retired detail (rerun: 35).
+- **CDC and built pass the target** (no stale context, fresh within 5 minutes, record and index agree at every
+  daily check). Built embedded 36% fewer chunks and got the migration in within 22 s, against CDC's 37 s.
+- **In real time** (20 minutes per design, an edit every 10 s and 300 saves at once): CDC and built under 1.5 s
+  steady and 16 s for the burst. Same database at the save, but saves took 34 ms instead of 12 (12.7 s for the 300).
+  Poll lost one save outright: an article stamped before the poll's cut-off but committed after its query.
+- **The model doesn't notice an out-of-date context** (exploratory): in 24 prompts with the new value in a current
+  chunk and the old value in an outdated one, the reply gave the old value 17 times, the new one 4, both 3.
+- **A check alone isn't enough** (exploratory): nightly rebuild plus the query-time check had no stale context and
+  its stale replies fell from 173 to 21, but 177 replies missed the answer (rebuild alone: 84) and only 22 said they
+  didn't know. With the "in beta" line dropped, qwen3:8b guessed "generally available", the old value.
+- **Six vector databases at one million, the same 1,000 ids sent again** through each quickstart's insert call:
+  Qdrant, Weaviate and Elasticsearch replaced the vectors; pgvector refused the batch (duplicate key); Chroma kept the
+  old vectors with no error; Milvus kept both (1,001,000 vectors). Each database's upsert call replaced them in all
+  six. Updates and deletes showed in the next search, Milvus's within 0.24 s and Elasticsearch's within 1.04 s. After
+  three rounds of 100,000 updates, recall held in four of six; pgvector lost 0.0125 until a 92-minute `VACUUM`;
+  Milvus lost 0.0156, and more after its compaction. Qdrant's searches were up to 18 times slower until its optimizer
+  finished.
+
+Full tables: [`results/ep06/full/summary.md`](results/ep06/full/summary.md); raw replies and audits in
+`results/ep06/full/`. Design amendments before the full run (pilot week, 100 questions) include: changes limited to
+values nothing else in the help center states; the record manager uses LangChain's default SHA-1 key (SHA-256 ids
+aren't UUIDs for Weaviate); the check compares the chunk's text against the article rather than a stored hash;
+worker-down designs added as exploratory. Recorded after the run started: the six-database test uses 200 ids for
+visibility, polled every 50 ms, and the real-time check runs 20 minutes per design. After the results, one scoring
+fix: a menu-path pattern read "team members" as the old path "Team → Members" (the same question's 8 replies in
+every design).
+
+**Limits.** One generated help center (1,140 articles), whose release notes quote the question they answer; a
+simulated clock for the month; one embedding model, one vector store for the split designs, one answering model; one
+run.
+
+### Run it
+
+```bash
+uv run python -m sync.kb --prepare                  # data/ep06/{pilot,full}/: the help center, the month, the questions
+docker compose -f docker-compose.ep06.yml up -d record weaviate ollama
+docker exec bd6-ollama ollama pull qwen3:8b
+uv run pytest tests/test_ep06.py
+uv run python -m scripts.ep06_run --calibrate       # embedding speed on the help center's chunks
+uv run python -m scripts.ep06_run --size pilot      # the pilot week into every design
+uv run python -m scripts.ep06_run --size pilot --answers
+uv run python -m scripts.ep06_stores --prepare      # after Episode 2's data step: vectors from outside the million
+sh scripts/ep06_full.sh > results/ep06/full.log 2>&1    # replay, answers, real time, the six databases (~13 h here)
+uv run python -m scripts.ep06_summary --size full   # results/ep06/full/summary.md
+```
+
+`docker-compose.ep06.yml` (project `beyonddata-ep06`, containers `bd6-*`) holds the record, its index and the model;
+`docker-compose.ep06-stores.yml` (project `beyonddata-ep06s`, containers `bd6s-*`) holds Act 2's six databases, so
+the stores harness's `down -v` never touches the record or Episodes 1–5.
+
+### Layout
+
+```text
+sync/
+  kb.py         Acme Cloud's help center (1,140 articles), one month of changes, questions with the right value
+  record.py     the record in Postgres (logical decoding on), the application's save, the tutorial's splitter
+  index.py      Weaviate collections (flat, exact) and the same-database chunks table (pgvector)
+  designs.py    the eight designs, the built one, and the exploratory ones
+  replay.py     the month on a simulated clock: jobs take chunks x seconds per chunk; questions, audits, sync times
+  embed.py      bge-small-en-v1.5 (fastembed) as LangChain Embeddings, with a cache and a charge per chunk
+  answer.py     qwen3:8b on every distinct prompt (LangChain's classic RAG prompt, 4 chunks)
+  realtime.py   poll, CDC, same database and built in real time: an edit every 10 s and a 300-save burst
+  score.py      replies (current, stale, both, declined, other) and index entries (current, outdated, deleted, duplicate)
+vectors/churn.py          Episode 2's adapters with upsert, delete and each database's clean-up
+docker-compose.ep06.yml           the record (pgvector pg18, wal_level=logical), Weaviate 1.40.7, Ollama 0.40.11
+docker-compose.ep06-stores.yml    Episode 2's six databases, images and limits
+scripts/ep06_run.py       calibration, the replay of every design, the answers
+scripts/ep06_stores.py    the six databases at one million: add again, update and delete visibility, churn, clean-up
+scripts/ep06_summary.py   the tables
+scripts/ep06_full.sh      the full run, one step after another
+tests/test_ep06.py
 ```
